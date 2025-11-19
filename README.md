@@ -1,1 +1,0 @@
-# ali-efe-web-sayfasi
