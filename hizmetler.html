@@ -1,0 +1,306 @@
+<!-- ========================================
+     DOSYA: hizmetler.html
+     ======================================== -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz - BotMatik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': {
+                            900: '#0B1221',
+                            800: '#0F1829',
+                            700: '#152033',
+                            600: '#1A283D',
+                            500: '#1F3347',
+                        },
+                        'cyan': {
+                            500: '#06B6D4',
+                            400: '#22D3EE',
+                            300: '#67E8F9',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-navy-900 text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-navy-800/95 backdrop-blur-sm border-b border-cyan-500/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                        <span class="text-navy-900 font-bold text-xl">B</span>
+                    </div>
+                    <span class="text-2xl font-bold text-white">BotMatik</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link hover:text-cyan-400 transition-colors">Ana Sayfa</a>
+                    <a href="hizmetler.html" class="nav-link text-cyan-400 font-semibold">Hizmetler</a>
+                    <a href="iletisim.html" class="nav-link hover:text-cyan-400 transition-colors">İletişim</a>
+                </div>
+                <a href="iletisim.html" class="hidden md:block bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+                    Ücretsiz Demo
+                </a>
+                <button id="mobileMenuBtn" class="md:hidden text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2">
+                <a href="index.html" class="block py-2 hover:text-cyan-400 transition-colors">Ana Sayfa</a>
+                <a href="hizmetler.html" class="block py-2 text-cyan-400 font-semibold">Hizmetler</a>
+                <a href="iletisim.html" class="block py-2 hover:text-cyan-400 transition-colors">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center fade-in">
+                <div class="inline-block mb-4 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full">
+                    <span class="text-cyan-400 text-sm font-semibold">🤖 Otomasyon Çözümleri</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Botlarımız ve <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600">Uzmanlık Alanları</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    İşletmenizin ihtiyaçlarına özel olarak tasarlanmış yapay zeka destekli otomasyon botları
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Envanter Botu -->
+                <div class="service-card bg-navy-800 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
+                    <div class="p-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Envanter Botu</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Stok takibi, sipariş yönetimi ve tedarik zinciri optimizasyonu için akıllı çözüm. Gerçek zamanlı envanter kontrolü ve otomatik sipariş tetikleme.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300">Otomatik stok uyarıları</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300">Tedarikçi entegrasyonu</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300">Tahmine dayalı sipariş</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+                            Detayları Gör →
+                        </button>
+                    </div>
+                    <div class="h-2 bg-gradient-to-r from-cyan-500 to-cyan-600"></div>
+                </div>
+
+                <!-- Müşteri Hizmetleri Botu -->
+                <div class="service-card bg-navy-800 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/50 transition-all duration-300" style="animation-delay: 0.2s;">
+                    <div class="p-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Müşteri Hizmetleri Botu</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            7/24 müşteri desteği, anında yanıt ve akıllı problem çözümü. Müşteri memnuniyetini artırırken operasyonel maliyetleri %70'e kadar azaltın.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300">Çok kanallı destek</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300">Doğal dil işleme</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300">Akıllı yönlendirme</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+                            Detayları Gör →
+                        </button>
+                    </div>
+                    <div class="h-2 bg-gradient-to-r from-cyan-500 to-cyan-600"></div>
+                </div>
+
+                <!-- Satış Otomasyon Botu -->
+                <div class="service-card bg-navy-800 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/50 transition-all duration-300" style="animation-delay: 0.4s;">
+                    <div class="p-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Satış Otomasyon Botu</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Lead yakalama, müşteri takibi ve satış süreçlerini otomatikleştirin. Potansiyel müşterilerinizi kaçırmayın, dönüşüm oranınızı artırın.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300">Otomatik lead takibi</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300">CRM entegrasyonu</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-cyan-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300">Performans analizi</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+                            Detayları Gör →
+                        </button>
+                    </div>
+                    <div class="h-2 bg-gradient-to-r from-cyan-500 to-cyan-600"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-navy-800/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Nasıl Çalışır?</h2>
+                <p class="text-xl text-gray-400">Basit 4 adımda işinizi otomatikleştirin</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center fade-in">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-navy-900">1</div>
+                    <h3 class="text-xl font-bold mb-2">Analiz</h3>
+                    <p class="text-gray-400">İhtiyaçlarınızı analiz ediyoruz</p>
+                </div>
+                <div class="text-center fade-in" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-navy-900">2</div>
+                    <h3 class="text-xl font-bold mb-2">Tasarım</h3>
+                    <p class="text-gray-400">Özel çözümünüzü tasarlıyoruz</p>
+                </div>
+                <div class="text-center fade-in" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-navy-900">3</div>
+                    <h3 class="text-xl font-bold mb-2">Entegrasyon</h3>
+                    <p class="text-gray-400">Sisteminize entegre ediyoruz</p>
+                </div>
+                <div class="text-center fade-in" style="animation-delay: 0.6s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-navy-900">4</div>
+                    <h3 class="text-xl font-bold mb-2">Destek</h3>
+                    <p class="text-gray-400">7/24 destek sağlıyoruz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-cyan-500/10 to-navy-700 p-12 rounded-2xl border border-cyan-500/30 text-center fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Hemen Başlayın</h2>
+                <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                    İşletmeniz için en uygun otomasyon çözümünü birlikte belirleyelim. Ücretsiz danışmanlık için iletişime geçin.
+                </p>
+                <a href="iletisim.html" class="inline-block bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 px-10 py-5 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
+                    Ücretsiz Danışmanlık Al →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-800 border-t border-cyan-500/20 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                            <span class="text-navy-900 font-bold text-xl">B</span>
+                        </div>
+                        <span class="text-2xl font-bold text-white">BotMatik</span>
+                    </div>
+                    <p class="text-gray-400">İşletmelere yapay zeka destekli otomasyon çözümleri sunuyoruz.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Hızlı Linkler</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Ana Sayfa</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Hizmetler</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-cyan-400 transition-colors">İletişim</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Hizmetler</h4>
+                    <ul class="space-y-2">
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Envanter Botu</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Müşteri Hizmetleri</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Satış Otomasyonu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">İletişim</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📧 info@botmatik.com</li>
+                        <li>📞 +90 (555) 123 45 67</li>
+                        <li>📍 İstanbul, Türkiye</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-cyan-500/20 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 BotMatik. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
