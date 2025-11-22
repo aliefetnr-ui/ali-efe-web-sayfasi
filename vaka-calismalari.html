@@ -1,5 +1,5 @@
 <!-- ========================================
-     DOSYA: vaka-calismalari.html (YENİ SAYFA)
+     DOSYA: vaka-calismalari.html (HIGH-END AI AGENCY DESIGN)
      ======================================== -->
 <!DOCTYPE html>
 <html lang="tr">
@@ -9,61 +9,103 @@
     <title>Vaka Çalışmaları - BotMatik</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'navy': {
-                            900: '#0B1221',
-                            800: '#0F1829',
-                            700: '#152033',
-                            600: '#1A283D',
-                            500: '#1F3347',
-                        },
-                        'cyan': {
-                            500: '#06B6D4',
-                            400: '#22D3EE',
-                            300: '#67E8F9',
+                        'dark': {
+                            900: '#0B0C15',
+                            800: '#13141F',
+                            700: '#1A1B2E',
+                            600: '#252640',
                         }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    <style>
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        .glassmorphism {
+            background: rgba(26, 27, 46, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glow-button {
+            position: relative;
+            background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
+            box-shadow: 0 4px 24px rgba(139, 92, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .glow-button:hover {
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.6), 0 0 48px rgba(6, 182, 212, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .glow-border {
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .glow-border:hover {
+            box-shadow: 0 0 32px rgba(139, 92, 246, 0.4), 0 0 48px rgba(6, 182, 212, 0.2);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+    </style>
 </head>
-<body class="bg-navy-900 text-white">
+<body class="bg-[#0B0C15] text-white">
     
     <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 bg-navy-800/95 backdrop-blur-sm border-b border-cyan-500/20">
+    <nav class="fixed w-full top-0 z-50 glassmorphism border-b border-purple-500/10">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
-                        <span class="text-navy-900 font-bold text-xl">B</span>
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">B</span>
                     </div>
-                    <span class="text-2xl font-bold text-white">BotMatik</span>
+                    <span class="text-2xl font-bold gradient-text">BotMatik</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link hover:text-cyan-400 transition-colors">Ana Sayfa</a>
-                    <a href="hizmetler.html" class="nav-link hover:text-cyan-400 transition-colors">Hizmetler</a>
-                    <a href="vaka-calismalari.html" class="nav-link text-cyan-400 font-semibold">Vaka Çalışmaları</a>
-                    <a href="iletisim.html" class="nav-link hover:text-cyan-400 transition-colors">İletişim</a>
+                    <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-colors">Ana Sayfa</a>
+                    <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-colors">Hizmetler</a>
+                    <a href="vaka-calismalari.html" class="text-purple-400 font-semibold hover:text-purple-300 transition-colors">Vaka Çalışmaları</a>
+                    <a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-colors">İletişim</a>
                 </div>
-                <a href="iletisim.html" class="hidden md:block bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+                <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">
                     Ücretsiz Demo
                 </a>
-                <button id="mobileMenuBtn" class="md:hidden text-cyan-400">
+                <button id="mobileMenuBtn" class="md:hidden text-purple-400">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2">
-                <a href="index.html" class="block py-2 hover:text-cyan-400 transition-colors">Ana Sayfa</a>
-                <a href="hizmetler.html" class="block py-2 hover:text-cyan-400 transition-colors">Hizmetler</a>
-                <a href="vaka-calismalari.html" class="block py-2 text-cyan-400 font-semibold">Vaka Çalışmaları</a>
-                <a href="iletisim.html" class="block py-2 hover:text-cyan-400 transition-colors">İletişim</a>
+            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">Ana Sayfa</a>
+                <a href="hizmetler.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">Hizmetler</a>
+                <a href="vaka-calismalari.html" class="block py-2 text-purple-400 font-semibold">Vaka Çalışmaları</a>
+                <a href="iletisim.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">İletişim</a>
             </div>
         </div>
     </nav>
@@ -71,14 +113,14 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-20">
         <div class="container mx-auto px-6">
-            <div class="text-center fade-in">
-                <div class="inline-block mb-4 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full">
-                    <span class="text-cyan-400 text-sm font-semibold">📊 Başarı Hikayeleri</span>
+            <div class="text-center fade-in max-w-4xl mx-auto">
+                <div class="inline-block mb-6 px-4 py-2 glassmorphism rounded-full glow-border">
+                    <span class="gradient-text text-sm font-semibold">📊 Başarı Hikayeleri</span>
                 </div>
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600">Vaka Çalışmaları</span>
+                <h1 class="text-6xl md:text-7xl font-bold mb-6">
+                    <span class="gradient-text">Vaka Çalışmaları</span>
                 </h1>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-400 leading-relaxed">
                     Müşterilerimizin BotMatik ile elde ettiği gerçek sonuçlar ve ölçülebilir başarılar
                 </p>
             </div>
@@ -91,56 +133,59 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
                 <!-- Case Study 1: Envanter Optimizasyonu -->
-                <div class="case-study-card bg-navy-800 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group">
-                    <!-- Header with Icon -->
-                    <div class="bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 p-8 border-b border-cyan-500/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                                </svg>
+                <div class="case-study-card glassmorphism rounded-3xl overflow-hidden glow-border group">
+                    <!-- Header -->
+                    <div class="relative p-10 border-b border-purple-500/10">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-cyan-500/5"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                                    </svg>
+                                </div>
+                                <span class="bg-purple-500/20 text-purple-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase">Envanter</span>
                             </div>
-                            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-bold uppercase">Envanter</span>
+                            <h3 class="text-2xl font-bold text-white mb-3">Envanter Optimizasyonu ile Stok Maliyetlerinde %45 Düşüş</h3>
+                            <p class="text-purple-400 text-sm font-semibold">RetailPlus Gıda A.Ş.</p>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Envanter Optimizasyonu ile Stok Maliyetlerinde %45 Düşüş</h3>
-                        <p class="text-cyan-400 text-sm font-semibold">RetailPlus Gıda A.Ş.</p>
                     </div>
                     
                     <!-- Content -->
-                    <div class="p-8">
-                        <div class="mb-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Müşteri Profili</h4>
+                    <div class="p-10">
+                        <div class="mb-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Müşteri Profili</h4>
                             <p class="text-gray-300 leading-relaxed">
                                 25 şubesi bulunan orta ölçekli market zinciri. Günlük ortalama 15,000 ürün hareketi ve 800+ aktif ürün çeşidi.
                             </p>
                         </div>
                         
-                        <div class="mb-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Sorun</h4>
-                            <ul class="space-y-2 text-gray-300">
+                        <div class="mb-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Sorun</h4>
+                            <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-start">
-                                    <span class="text-red-400 mr-2">•</span>
+                                    <span class="text-red-400 mr-2 text-xl">•</span>
                                     <span>Manuel stok takibi nedeniyle sık yaşanan stok tükenmesi</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-red-400 mr-2">•</span>
+                                    <span class="text-red-400 mr-2 text-xl">•</span>
                                     <span>Fazla stokta tutulan ürünlerden dolayı yüksek maliyet</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-red-400 mr-2">•</span>
+                                    <span class="text-red-400 mr-2 text-xl">•</span>
                                     <span>Son kullanma tarihi geçen ürünlerden kaynaklı fire</span>
                                 </li>
                             </ul>
                         </div>
                         
-                        <div class="mb-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Çözüm</h4>
-                            <p class="text-gray-300 leading-relaxed mb-3">
+                        <div class="mb-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Çözüm</h4>
+                            <p class="text-gray-300 leading-relaxed mb-4">
                                 BotMatik Envanter Botu ile gerçek zamanlı stok takibi, otomatik sipariş oluşturma ve AI destekli talep tahmini sistemi kuruldu.
                             </p>
-                            <div class="bg-navy-700/50 p-4 rounded-lg border border-cyan-500/10">
-                                <p class="text-cyan-400 text-sm font-semibold mb-2">Uygulanan Özellikler:</p>
-                                <ul class="space-y-1 text-gray-300 text-sm">
+                            <div class="glassmorphism p-6 rounded-2xl border border-purple-500/10">
+                                <p class="text-purple-400 text-sm font-semibold mb-3">Uygulanan Özellikler:</p>
+                                <ul class="space-y-2 text-gray-300 text-sm">
                                     <li>✓ WhatsApp üzerinden anlık stok sorgulama</li>
                                     <li>✓ Kritik seviye otomatik uyarı sistemi</li>
                                     <li>✓ Geçmiş veri analizi ile talep tahmini</li>
@@ -149,92 +194,95 @@
                             </div>
                         </div>
                         
-                        <div class="border-t border-cyan-500/10 pt-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Ölçülebilir Sonuçlar</h4>
+                        <div class="border-t border-purple-500/10 pt-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-6">Ölçülebilir Sonuçlar</h4>
                             <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-gradient-to-br from-cyan-500/10 to-transparent p-4 rounded-lg border border-cyan-500/20">
-                                    <div class="text-3xl font-bold text-cyan-400 mb-1">%45</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-purple-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">%45</div>
                                     <div class="text-gray-300 text-sm">Stok Maliyeti Azalışı</div>
                                 </div>
-                                <div class="bg-gradient-to-br from-cyan-500/10 to-transparent p-4 rounded-lg border border-cyan-500/20">
-                                    <div class="text-3xl font-bold text-cyan-400 mb-1">%92</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-purple-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">%92</div>
                                     <div class="text-gray-300 text-sm">Stok Doğruluk Oranı</div>
                                 </div>
-                                <div class="bg-gradient-to-br from-cyan-500/10 to-transparent p-4 rounded-lg border border-cyan-500/20">
-                                    <div class="text-3xl font-bold text-cyan-400 mb-1">%60</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-purple-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">%60</div>
                                     <div class="text-gray-300 text-sm">Fire Azalması</div>
                                 </div>
-                                <div class="bg-gradient-to-br from-cyan-500/10 to-transparent p-4 rounded-lg border border-cyan-500/20">
-                                    <div class="text-3xl font-bold text-cyan-400 mb-1">3 Saat</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-purple-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">3 Saat</div>
                                     <div class="text-gray-300 text-sm">Günlük Zaman Tasarrufu</div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="mt-6 p-4 bg-cyan-500/5 border border-cyan-500/20 rounded-lg">
+                        <div class="mt-8 p-6 glassmorphism border border-purple-500/20 rounded-2xl">
                             <p class="text-gray-300 italic text-sm leading-relaxed">
                                 "BotMatik sayesinde stok yönetimi tamamen otomatikleşti. Artık hangi ürünün ne zaman biteceğini tahmin edebiliyor ve önceden sipariş verebiliyoruz. ROI'miz 4 ayda kendini geri ödedi."
                             </p>
-                            <p class="text-cyan-400 text-sm font-semibold mt-2">— Mehmet Yılmaz, Operasyon Müdürü</p>
+                            <p class="text-purple-400 text-sm font-semibold mt-3">— Mehmet Yılmaz, Operasyon Müdürü</p>
                         </div>
                         
-                        <button class="w-full mt-6 bg-gradient-to-r from-cyan-500/10 to-cyan-600/10 border border-cyan-500/30 text-cyan-400 py-3 rounded-lg font-semibold hover:bg-cyan-500/20 transition-all duration-300">
+                        <button class="w-full mt-8 glassmorphism glow-border text-purple-400 py-4 rounded-xl font-semibold hover:text-purple-300 transition-all">
                             Detaylı Raporu İndir →
                         </button>
                     </div>
                 </div>
 
-                <!-- Case Study 2: Müşteri Hizmetleri Dönüşümü -->
-                <div class="case-study-card bg-navy-800 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group" style="animation-delay: 0.2s;">
-                    <!-- Header with Icon -->
-                    <div class="bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 p-8 border-b border-cyan-500/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                                </svg>
+                <!-- Case Study 2: Müşteri Hizmetleri -->
+                <div class="case-study-card glassmorphism rounded-3xl overflow-hidden glow-border group" style="animation-delay: 0.2s;">
+                    <!-- Header -->
+                    <div class="relative p-10 border-b border-purple-500/10">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-cyan-500/5"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                </div>
+                                <span class="bg-cyan-500/20 text-cyan-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase">Müşteri Hizmetleri</span>
                             </div>
-                            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-bold uppercase">Müşteri Hizmetleri</span>
+                            <h3 class="text-2xl font-bold text-white mb-3">7/24 Müşteri Desteği ile %78 Memnuniyet Artışı</h3>
+                            <p class="text-purple-400 text-sm font-semibold">TechSolutions Elektronik</p>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">7/24 Müşteri Desteği ile %78 Memnuniyet Artışı</h3>
-                        <p class="text-cyan-400 text-sm font-semibold">TechSolutions Elektronik</p>
                     </div>
                     
                     <!-- Content -->
-                    <div class="p-8">
-                        <div class="mb-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Müşteri Profili</h4>
+                    <div class="p-10">
+                        <div class="mb-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Müşteri Profili</h4>
                             <p class="text-gray-300 leading-relaxed">
-                                 Online teknoloji mağazası. Aylık 50,000+ müşteri etkileşimi ve 2,000+ sipariş.
+                                Online teknoloji mağazası. Aylık 50,000+ müşteri etkileşimi ve 2,000+ sipariş.
                             </p>
                         </div>
                         
-                        <div class="mb-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Sorun</h4>
-                            <ul class="space-y-2 text-gray-300">
+                        <div class="mb-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Sorun</h4>
+                            <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-start">
-                                    <span class="text-red-400 mr-2">•</span>
+                                    <span class="text-red-400 mr-2 text-xl">•</span>
                                     <span>Müşteri destek ekibinin iş yükü altında ezilmesi</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-red-400 mr-2">•</span>
+                                    <span class="text-red-400 mr-2 text-xl">•</span>
                                     <span>Ortalama 4 saatlik yanıt süresi ve müşteri şikayetleri</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-red-400 mr-2">•</span>
+                                    <span class="text-red-400 mr-2 text-xl">•</span>
                                     <span>Mesai dışı saatlerde gelen taleplerin ertelenmesi</span>
                                 </li>
                             </ul>
                         </div>
                         
-                        <div class="mb-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Çözüm</h4>
-                            <p class="text-gray-300 leading-relaxed mb-3">
+                        <div class="mb-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Çözüm</h4>
+                            <p class="text-gray-300 leading-relaxed mb-4">
                                 BotMatik Müşteri Hizmetleri Botu ile WhatsApp, web sitesi ve Instagram'dan gelen tüm soruları otomatik yanıtlama sistemi kuruldu.
                             </p>
-                            <div class="bg-navy-700/50 p-4 rounded-lg border border-cyan-500/10">
-                                <p class="text-cyan-400 text-sm font-semibold mb-2">Uygulanan Özellikler:</p>
-                                <ul class="space-y-1 text-gray-300 text-sm">
+                            <div class="glassmorphism p-6 rounded-2xl border border-purple-500/10">
+                                <p class="text-purple-400 text-sm font-semibold mb-3">Uygulanan Özellikler:</p>
+                                <ul class="space-y-2 text-gray-300 text-sm">
                                     <li>✓ Çok kanallı 7/24 destek sistemi</li>
                                     <li>✓ Sipariş takibi ve kargo sorgulama</li>
                                     <li>✓ Akıllı canlı destek yönlendirmesi</li>
@@ -243,92 +291,95 @@
                             </div>
                         </div>
                         
-                        <div class="border-t border-cyan-500/10 pt-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Ölçülebilir Sonuçlar</h4>
+                        <div class="border-t border-purple-500/10 pt-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-6">Ölçülebilir Sonuçlar</h4>
                             <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-gradient-to-br from-purple-500/10 to-transparent p-4 rounded-lg border border-purple-500/20">
-                                    <div class="text-3xl font-bold text-purple-400 mb-1">%78</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-cyan-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">%78</div>
                                     <div class="text-gray-300 text-sm">Memnuniyet Artışı</div>
                                 </div>
-                                <div class="bg-gradient-to-br from-purple-500/10 to-transparent p-4 rounded-lg border border-purple-500/20">
-                                    <div class="text-3xl font-bold text-purple-400 mb-1">%85</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-cyan-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">%85</div>
                                     <div class="text-gray-300 text-sm">Otomatik Çözüm</div>
                                 </div>
-                                <div class="bg-gradient-to-br from-purple-500/10 to-transparent p-4 rounded-lg border border-purple-500/20">
-                                    <div class="text-3xl font-bold text-purple-400 mb-1">2 Dk</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-cyan-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">2 Dk</div>
                                     <div class="text-gray-300 text-sm">Ortalama Yanıt Süresi</div>
                                 </div>
-                                <div class="bg-gradient-to-br from-purple-500/10 to-transparent p-4 rounded-lg border border-purple-500/20">
-                                    <div class="text-3xl font-bold text-purple-400 mb-1">%70</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-cyan-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">%70</div>
                                     <div class="text-gray-300 text-sm">Maliyet Tasarrufu</div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="mt-6 p-4 bg-purple-500/5 border border-purple-500/20 rounded-lg">
+                        <div class="mt-8 p-6 glassmorphism border border-cyan-500/20 rounded-2xl">
                             <p class="text-gray-300 italic text-sm leading-relaxed">
                                 "Müşterilerimiz artık gece yarısı bile sipariş durumlarını sorgulayabiliyor. Bot %85 oranında sorunları çözüyor, sadece karmaşık durumlar bize geliyor. Ekibimiz artık gerçekten kritik işlere odaklanabiliyor."
                             </p>
-                            <p class="text-purple-400 text-sm font-semibold mt-2">— Ayşe Demir, Müşteri Deneyimi Müdürü</p>
+                            <p class="text-cyan-400 text-sm font-semibold mt-3">— Ayşe Demir, Müşteri Deneyimi Müdürü</p>
                         </div>
                         
-                        <button class="w-full mt-6 bg-gradient-to-r from-purple-500/10 to-purple-600/10 border border-purple-500/30 text-purple-400 py-3 rounded-lg font-semibold hover:bg-purple-500/20 transition-all duration-300">
+                        <button class="w-full mt-8 glassmorphism glow-border text-purple-400 py-4 rounded-xl font-semibold hover:text-purple-300 transition-all">
                             Detaylı Raporu İndir →
                         </button>
                     </div>
                 </div>
 
-                <!-- Case Study 3: Satış Otomasyonu Başarısı -->
-                <div class="case-study-card bg-navy-800 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group" style="animation-delay: 0.4s;">
-                    <!-- Header with Icon -->
-                    <div class="bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 p-8 border-b border-cyan-500/10">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                </svg>
+                <!-- Case Study 3: Satış Otomasyonu -->
+                <div class="case-study-card glassmorphism rounded-3xl overflow-hidden glow-border group" style="animation-delay: 0.4s;">
+                    <!-- Header -->
+                    <div class="relative p-10 border-b border-purple-500/10">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-cyan-500/5"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </div>
+                                <span class="bg-amber-500/20 text-amber-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase">Satış</span>
                             </div>
-                            <span class="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-xs font-bold uppercase">Satış</span>
+                            <h3 class="text-2xl font-bold text-white mb-3">Akıllı Lead Yönetimi ile 3x Dönüşüm Artışı</h3>
+                            <p class="text-purple-400 text-sm font-semibold">EduPro Eğitim Platformu</p>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Akıllı Lead Yönetimi ile 3x Dönüşüm Artışı</h3>
-                        <p class="text-cyan-400 text-sm font-semibold">EduPro Eğitim Platformu</p>
                     </div>
                     
                     <!-- Content -->
-                    <div class="p-8">
-                        <div class="mb-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Müşteri Profili</h4>
+                    <div class="p-10">
+                        <div class="mb-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Müşteri Profili</h4>
                             <p class="text-gray-300 leading-relaxed">
                                 Online eğitim platformu. Aylık 8,000+ potansiyel müşteri ziyareti ve 300+ deneme kaydı.
                             </p>
                         </div>
                         
-                        <div class="mb-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Sorun</h4>
-                            <ul class="space-y-2 text-gray-300">
+                        <div class="mb-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Sorun</h4>
+                            <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-start">
-                                    <span class="text-red-400 mr-2">•</span>
+                                    <span class="text-red-400 mr-2 text-xl">•</span>
                                     <span>Web sitesine gelen ziyaretçilerin %85'i kayıt olmadan ayrılıyor</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-red-400 mr-2">•</span>
+                                    <span class="text-red-400 mr-2 text-xl">•</span>
                                     <span>Satış ekibi tüm lead'lere zamanında ulaşamıyor</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-red-400 mr-2">•</span>
+                                    <span class="text-red-400 mr-2 text-xl">•</span>
                                     <span>Potansiyel müşteri takibi manuel ve düzensiz</span>
                                 </li>
                             </ul>
                         </div>
                         
-                        <div class="mb-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Çözüm</h4>
-                            <p class="text-gray-300 leading-relaxed mb-3">
+                        <div class="mb-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Çözüm</h4>
+                            <p class="text-gray-300 leading-relaxed mb-4">
                                 BotMatik Satış Otomasyon Botu ile web sitesi ziyaretçilerini otomatik karşılama, lead yakalama ve CRM entegrasyonu sağlandı.
                             </p>
-                            <div class="bg-navy-700/50 p-4 rounded-lg border border-cyan-500/10">
-                                <p class="text-cyan-400 text-sm font-semibold mb-2">Uygulanan Özellikler:</p>
-                                <ul class="space-y-1 text-gray-300 text-sm">
+                            <div class="glassmorphism p-6 rounded-2xl border border-purple-500/10">
+                                <p class="text-purple-400 text-sm font-semibold mb-3">Uygulanan Özellikler:</p>
+                                <ul class="space-y-2 text-gray-300 text-sm">
                                     <li>✓ Proaktif ziyaretçi etkileşimi</li>
                                     <li>✓ Akıllı lead skorlama sistemi</li>
                                     <li>✓ Otomatik takip ve hatırlatma</li>
@@ -337,36 +388,36 @@
                             </div>
                         </div>
                         
-                        <div class="border-t border-cyan-500/10 pt-6">
-                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Ölçülebilir Sonuçlar</h4>
+                        <div class="border-t border-purple-500/10 pt-8">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-6">Ölçülebilir Sonuçlar</h4>
                             <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-gradient-to-br from-amber-500/10 to-transparent p-4 rounded-lg border border-amber-500/20">
-                                    <div class="text-3xl font-bold text-amber-400 mb-1">3x</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-amber-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">3x</div>
                                     <div class="text-gray-300 text-sm">Dönüşüm Artışı</div>
                                 </div>
-                                <div class="bg-gradient-to-br from-amber-500/10 to-transparent p-4 rounded-lg border border-amber-500/20">
-                                    <div class="text-3xl font-bold text-amber-400 mb-1">%65</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-amber-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">%65</div>
                                     <div class="text-gray-300 text-sm">Lead Yakalama Oranı</div>
                                 </div>
-                                <div class="bg-gradient-to-br from-amber-500/10 to-transparent p-4 rounded-lg border border-amber-500/20">
-                                    <div class="text-3xl font-bold text-amber-400 mb-1">%42</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-amber-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">%42</div>
                                     <div class="text-gray-300 text-sm">Satış Artışı</div>
                                 </div>
-                                <div class="bg-gradient-to-br from-amber-500/10 to-transparent p-4 rounded-lg border border-amber-500/20">
-                                    <div class="text-3xl font-bold text-amber-400 mb-1">5 Dk</div>
+                                <div class="glassmorphism p-6 rounded-2xl border border-amber-500/20 text-center">
+                                    <div class="text-4xl font-bold gradient-text mb-2">5 Dk</div>
                                     <div class="text-gray-300 text-sm">İlk Temas Süresi</div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="mt-6 p-4 bg-amber-500/5 border border-amber-500/20 rounded-lg">
+                        <div class="mt-8 p-6 glassmorphism border border-amber-500/20 rounded-2xl">
                             <p class="text-gray-300 italic text-sm leading-relaxed">
                                 "Bot sayesinde web sitesine gelen her ziyaretçi ile 5 dakika içinde etkileşim kuruyoruz. Sıcak lead'leri otomatik olarak satış ekibine yönlendiriyor. Kayıt oranımız üçe katlandı!"
                             </p>
-                            <p class="text-amber-400 text-sm font-semibold mt-2">— Can Öztürk, Satış Direktörü</p>
+                            <p class="text-amber-400 text-sm font-semibold mt-3">— Can Öztürk, Satış Direktörü</p>
                         </div>
                         
-                        <button class="w-full mt-6 bg-gradient-to-r from-amber-500/10 to-amber-600/10 border border-amber-500/30 text-amber-400 py-3 rounded-lg font-semibold hover:bg-amber-500/20 transition-all duration-300">
+                        <button class="w-full mt-8 glassmorphism glow-border text-purple-400 py-4 rounded-xl font-semibold hover:text-purple-300 transition-all">
                             Detaylı Raporu İndir →
                         </button>
                     </div>
@@ -377,75 +428,79 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-navy-800/50">
-        <div class="container mx-auto px-6">
-            <div class="bg-gradient-to-r from-cyan-500/10 to-navy-700 p-12 rounded-2xl border border-cyan-500/30 text-center fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Siz de Başarı Hikayenizi Yazın</h2>
-                <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                    İşletmeniz için özel bir çözüm tasarlayalım. Ücretsiz demo ile potansiyelinizi keşfedin.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="iletisim.html" class="inline-block bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 px-10 py-5 rounded-lg font-bold text-xl hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
-                        Ücretsiz Demo Talep Et →
-                    </a>
-                    <a href="hizmetler.html" class="inline-block border-2 border-cyan-500 text-cyan-400 px-10 py-5 rounded-lg font-bold text-xl hover:bg-cyan-500/10 transition-all duration-300">
-                        Tüm Hizmetleri Gör
-                    </a>
+    <section class="py-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="glassmorphism glow-border p-16 rounded-3xl text-center fade-in relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-cyan-500/10"></div>
+                <div class="relative z-10">
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">Siz de Başarı Hikayenizi Yazın</h2>
+                    <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                        İşletmeniz için özel bir çözüm tasarlayalım. Ücretsiz demo ile potansiyelinizi keşfedin.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="iletisim.html" class="glow-button text-white px-10 py-5 rounded-xl font-bold text-xl inline-block">
+                            Ücretsiz Demo Talep Et →
+                        </a>
+                        <a href="hizmetler.html" class="glassmorphism glow-border text-purple-400 px-10 py-5 rounded-xl font-bold text-xl hover:text-purple-300 transition-all inline-block">
+                            Tüm Hizmetleri Gör
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="py-20">
+    <section class="py-32">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Toplu Sonuçlar</h2>
+            <div class="text-center mb-20 fade-in">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Toplu <span class="gradient-text">Sonuçlar</span></h2>
                 <p class="text-xl text-gray-400">Tüm müşterilerimizden elde edilen ortalama sonuçlar</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center fade-in">
-                    <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="text-center fade-in glassmorphism p-10 rounded-3xl glow-border">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                         </svg>
                     </div>
-                    <div class="text-5xl font-bold text-cyan-400 mb-2">%156</div>
-                    <div class="text-gray-400 text-lg">Ortalama ROI</div>
+                    <div class="text-6xl font-bold gradient-text mb-3">%156</div>
+                    <div class="text-gray-400 text-lg font-semibold">Ortalama ROI</div>
                     <p class="text-gray-500 text-sm mt-2">İlk 6 ayda</p>
                 </div>
                 
-                <div class="text-center fade-in" style="animation-delay: 0.2s;">
-                    <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="text-center fade-in glassmorphism p-10 rounded-3xl glow-border" style="animation-delay: 0.2s;">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <div class="text-5xl font-bold text-cyan-400 mb-2">72 Saat</div>
-                    <div class="text-gray-400 text-lg">Ortalama Kurulum</div>
+                    <div class="text-6xl font-bold gradient-text mb-3">72 Saat</div>
+                    <div class="text-gray-400 text-lg font-semibold">Ortalama Kurulum</div>
                     <p class="text-gray-500 text-sm mt-2">Hızlı başlangıç</p>
                 </div>
                 
-                <div class="text-center fade-in" style="animation-delay: 0.4s;">
-                    <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="text-center fade-in glassmorphism p-10 rounded-3xl glow-border" style="animation-delay: 0.4s;">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <div class="text-5xl font-bold text-cyan-400 mb-2">%94</div>
-                    <div class="text-gray-400 text-lg">Müşteri Memnuniyeti</div>
+                    <div class="text-6xl font-bold gradient-text mb-3">%94</div>
+                    <div class="text-gray-400 text-lg font-semibold">Müşteri Memnuniyeti</div>
                     <p class="text-gray-500 text-sm mt-2">NPS skoru</p>
                 </div>
                 
-                <div class="text-center fade-in" style="animation-delay: 0.6s;">
-                    <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="text-center fade-in glassmorphism p-10 rounded-3xl glow-border" style="animation-delay: 0.6s;">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <div class="text-5xl font-bold text-cyan-400 mb-2">%67</div>
-                    <div class="text-gray-400 text-lg">Maliyet Azalması</div>
+                    <div class="text-6xl font-bold gradient-text mb-3">%67</div>
+                    <div class="text-gray-400 text-lg font-semibold">Maliyet Azalması</div>
                     <p class="text-gray-500 text-sm mt-2">Operasyonel</p>
                 </div>
             </div>
@@ -453,45 +508,45 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-navy-800 border-t border-cyan-500/20 py-12">
+    <footer class="border-t border-purple-500/10 py-16">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
-                            <span class="text-navy-900 font-bold text-xl">B</span>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">B</span>
                         </div>
-                        <span class="text-2xl font-bold text-white">BotMatik</span>
+                        <span class="text-2xl font-bold gradient-text">BotMatik</span>
                     </div>
-                    <p class="text-gray-400">İşletmelere yapay zeka destekli otomasyon çözümleri sunuyoruz.</p>
+                    <p class="text-gray-400 leading-relaxed">İşletmelere yapay zeka destekli otomasyon çözümleri sunuyoruz.</p>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">Hızlı Linkler</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Ana Sayfa</a></li>
-                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Hizmetler</a></li>
-                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Vaka Çalışmaları</a></li>
-                        <li><a href="iletisim.html" class="text-gray-400 hover:text-cyan-400 transition-colors">İletişim</a></li>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-colors">Ana Sayfa</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-colors">Hizmetler</a></li>
+                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-colors">Vaka Çalışmaları</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-colors">İletişim</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">Hizmetler</h4>
-                    <ul class="space-y-2">
-                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Envanter Botu</a></li>
-                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Müşteri Hizmetleri</a></li>
-                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Satış Otomasyonu</a></li>
+                    <ul class="space-y-3">
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-colors">Envanter Botu</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-colors">Müşteri Hizmetleri</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-colors">Satış Otomasyonu</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">İletişim</h4>
-                    <ul class="space-y-2 text-gray-400">
+                    <ul class="space-y-3 text-gray-400">
                         <li>📧 info@botmatik.com</li>
                         <li>📞 +90 (555) 123 45 67</li>
                         <li>📍 İstanbul, Türkiye</li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-cyan-500/20 mt-8 pt-8 text-center text-gray-400">
+            <div class="border-t border-purple-500/10 mt-12 pt-8 text-center text-gray-500">
                 <p>&copy; 2024 BotMatik. Tüm hakları saklıdır.</p>
             </div>
         </div>
