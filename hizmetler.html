@@ -1,5 +1,5 @@
 <!-- ========================================
-     DOSYA: hizmetler.html (KOMPLE)
+     DOSYA: hizmetler.html (GÜNCELLENMIŞ - Fiyatlandırma Eklendi)
      ======================================== -->
 <!DOCTYPE html>
 <html lang="tr">
@@ -47,6 +47,7 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="nav-link hover:text-cyan-400 transition-colors">Ana Sayfa</a>
                     <a href="hizmetler.html" class="nav-link text-cyan-400 font-semibold">Hizmetler</a>
+                    <a href="vaka-calismalari.html" class="nav-link hover:text-cyan-400 transition-colors">Vaka Çalışmaları</a>
                     <a href="iletisim.html" class="nav-link hover:text-cyan-400 transition-colors">İletişim</a>
                 </div>
                 <a href="iletisim.html" class="hidden md:block bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
@@ -61,6 +62,7 @@
             <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2">
                 <a href="index.html" class="block py-2 hover:text-cyan-400 transition-colors">Ana Sayfa</a>
                 <a href="hizmetler.html" class="block py-2 text-cyan-400 font-semibold">Hizmetler</a>
+                <a href="vaka-calismalari.html" class="block py-2 hover:text-cyan-400 transition-colors">Vaka Çalışmaları</a>
                 <a href="iletisim.html" class="block py-2 hover:text-cyan-400 transition-colors">İletişim</a>
             </div>
         </div>
@@ -251,8 +253,252 @@
         </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- Pricing Section -->
     <section class="py-20 bg-navy-800/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-block mb-4 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full">
+                    <span class="text-cyan-400 text-sm font-semibold">💎 Fiyatlandırma</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Size Uygun Paketi Seçin</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    İşletmenizin büyüklüğüne ve ihtiyaçlarına göre esnek fiyatlandırma seçenekleri
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Basic Plan -->
+                <div class="pricing-card bg-navy-800 rounded-2xl border border-cyan-500/20 p-8 hover:border-cyan-500/40 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Basic</h3>
+                        <p class="text-gray-400 text-sm">Küçük işletmeler için</p>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <div class="flex items-end justify-center">
+                            <span class="text-5xl font-bold text-cyan-400">$99</span>
+                            <span class="text-gray-400 ml-2 mb-2">/ay</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-2">Aylık faturalandırma</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">1 Bot (Envanter veya Müşteri Hizmetleri)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Aylık 1,000 konuşma</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">WhatsApp entegrasyonu</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Temel raporlama</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">E-posta desteği</span>
+                        </li>
+                        <li class="flex items-start text-gray-500">
+                            <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                            <span>Özel API entegrasyonu</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="iletisim.html" class="block w-full text-center bg-navy-700 border-2 border-cyan-500/30 text-cyan-400 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 hover:border-cyan-500/50 transition-all duration-300">
+                        Başlayın
+                    </a>
+                </div>
+
+                <!-- Pro Plan (Featured) -->
+                <div class="pricing-card bg-gradient-to-br from-navy-700 to-navy-800 rounded-2xl border-2 border-cyan-500 p-8 transform md:scale-105 shadow-2xl shadow-cyan-500/20 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 px-4 py-1 rounded-full text-sm font-bold">
+                            🔥 EN POPÜLER
+                        </span>
+                    </div>
+                    
+                    <div class="text-center mb-6 pt-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Pro</h3>
+                        <p class="text-gray-400 text-sm">Büyüyen işletmeler için</p>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <div class="flex items-end justify-center">
+                            <span class="text-5xl font-bold text-cyan-400">$299</span>
+                            <span class="text-gray-400 ml-2 mb-2">/ay</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-2">Aylık faturalandırma</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300 font-semibold">3 Bot (Tüm botlar dahil)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300 font-semibold">Aylık 10,000 konuşma</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Çoklu kanal entegrasyonu (WhatsApp, Web, Social)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Gelişmiş analitik ve raporlama</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">CRM entegrasyonu (Salesforce, HubSpot)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Öncelikli telefon ve e-posta desteği</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Özel eğitim oturumu</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="iletisim.html" class="block w-full text-center bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 py-3 rounded-lg font-bold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">
+                        Şimdi Başlayın →
+                    </a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card bg-navy-800 rounded-2xl border border-cyan-500/20 p-8 hover:border-cyan-500/40 transition-all duration-300">
+                    <div class="text-center mb-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Enterprise</h3>
+                        <p class="text-gray-400 text-sm">Kurumsal çözümler</p>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <div class="flex flex-col items-center justify-center">
+                            <span class="text-4xl font-bold text-cyan-400">Özel Teklif</span>
+                            <p class="text-gray-500 text-sm mt-2">İhtiyaçlarınıza göre</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300 font-semibold">Sınırsız bot</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300 font-semibold">Sınırsız konuşma</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Özel API geliştirme</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Özelleştirilmiş AI modelleri</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Özel sistem entegrasyonları</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">Özel hesap yöneticisi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">24/7 premium destek</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-300">SLA garantisi</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="iletisim.html" class="block w-full text-center bg-navy-700 border-2 border-cyan-500/30 text-cyan-400 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 hover:border-cyan-500/50 transition-all duration-300">
+                        Teklif Alın
+                    </a>
+                </div>
+
+            </div>
+            
+            <!-- Pricing Note -->
+            <div class="mt-12 text-center fade-in">
+                <p class="text-gray-400 mb-4">
+                    💳 Tüm planlar için 14 gün ücretsiz deneme süresi | 🔒 Kurumsal güvenlik standartları | ⚡ Anında kurulum
+                </p>
+                <p class="text-gray-500 text-sm">
+                    Fiyatlar USD cinsindendir. KDV dahil değildir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Nasıl Çalışır?</h2>
@@ -285,7 +531,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20">
+    <section class="py-20 bg-navy-800/50">
         <div class="container mx-auto px-6">
             <div class="bg-gradient-to-r from-cyan-500/10 to-navy-700 p-12 rounded-2xl border border-cyan-500/30 text-center fade-in">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">Hemen Başlayın</h2>
@@ -317,6 +563,7 @@
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Ana Sayfa</a></li>
                         <li><a href="hizmetler.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Hizmetler</a></li>
+                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-cyan-400 transition-colors">Vaka Çalışmaları</a></li>
                         <li><a href="iletisim.html" class="text-gray-400 hover:text-cyan-400 transition-colors">İletişim</a></li>
                     </ul>
                 </div>
