@@ -1,0 +1,207 @@
+<!-- ========================================
+     DOSYA: vaka-calismalari.html (YENİ SAYFA)
+     ======================================== -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaka Çalışmaları - BotMatik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': {
+                            900: '#0B1221',
+                            800: '#0F1829',
+                            700: '#152033',
+                            600: '#1A283D',
+                            500: '#1F3347',
+                        },
+                        'cyan': {
+                            500: '#06B6D4',
+                            400: '#22D3EE',
+                            300: '#67E8F9',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-navy-900 text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-navy-800/95 backdrop-blur-sm border-b border-cyan-500/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center">
+                        <span class="text-navy-900 font-bold text-xl">B</span>
+                    </div>
+                    <span class="text-2xl font-bold text-white">BotMatik</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link hover:text-cyan-400 transition-colors">Ana Sayfa</a>
+                    <a href="hizmetler.html" class="nav-link hover:text-cyan-400 transition-colors">Hizmetler</a>
+                    <a href="vaka-calismalari.html" class="nav-link text-cyan-400 font-semibold">Vaka Çalışmaları</a>
+                    <a href="iletisim.html" class="nav-link hover:text-cyan-400 transition-colors">İletişim</a>
+                </div>
+                <a href="iletisim.html" class="hidden md:block bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+                    Ücretsiz Demo
+                </a>
+                <button id="mobileMenuBtn" class="md:hidden text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2">
+                <a href="index.html" class="block py-2 hover:text-cyan-400 transition-colors">Ana Sayfa</a>
+                <a href="hizmetler.html" class="block py-2 hover:text-cyan-400 transition-colors">Hizmetler</a>
+                <a href="vaka-calismalari.html" class="block py-2 text-cyan-400 font-semibold">Vaka Çalışmaları</a>
+                <a href="iletisim.html" class="block py-2 hover:text-cyan-400 transition-colors">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center fade-in">
+                <div class="inline-block mb-4 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full">
+                    <span class="text-cyan-400 text-sm font-semibold">📊 Başarı Hikayeleri</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600">Vaka Çalışmaları</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Müşterilerimizin BotMatik ile elde ettiği gerçek sonuçlar ve ölçülebilir başarılar
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section class="pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Case Study 1: Envanter Optimizasyonu -->
+                <div class="case-study-card bg-navy-800 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group">
+                    <!-- Header with Icon -->
+                    <div class="bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 p-8 border-b border-cyan-500/10">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                                </svg>
+                            </div>
+                            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-bold uppercase">Envanter</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Envanter Optimizasyonu ile Stok Maliyetlerinde %45 Düşüş</h3>
+                        <p class="text-cyan-400 text-sm font-semibold">RetailPlus Gıda A.Ş.</p>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Müşteri Profili</h4>
+                            <p class="text-gray-300 leading-relaxed">
+                                25 şubesi bulunan orta ölçekli market zinciri. Günlük ortalama 15,000 ürün hareketi ve 800+ aktif ürün çeşidi.
+                            </p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Sorun</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-start">
+                                    <span class="text-red-400 mr-2">•</span>
+                                    <span>Manuel stok takibi nedeniyle sık yaşanan stok tükenmesi</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-400 mr-2">•</span>
+                                    <span>Fazla stokta tutulan ürünlerden dolayı yüksek maliyet</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-400 mr-2">•</span>
+                                    <span>Son kullanma tarihi geçen ürünlerden kaynaklı fire</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Çözüm</h4>
+                            <p class="text-gray-300 leading-relaxed mb-3">
+                                BotMatik Envanter Botu ile gerçek zamanlı stok takibi, otomatik sipariş oluşturma ve AI destekli talep tahmini sistemi kuruldu.
+                            </p>
+                            <div class="bg-navy-700/50 p-4 rounded-lg border border-cyan-500/10">
+                                <p class="text-cyan-400 text-sm font-semibold mb-2">Uygulanan Özellikler:</p>
+                                <ul class="space-y-1 text-gray-300 text-sm">
+                                    <li>✓ WhatsApp üzerinden anlık stok sorgulama</li>
+                                    <li>✓ Kritik seviye otomatik uyarı sistemi</li>
+                                    <li>✓ Geçmiş veri analizi ile talep tahmini</li>
+                                    <li>✓ Tedarikçi entegrasyonu ve otomatik sipariş</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-cyan-500/10 pt-6">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-4">Ölçülebilir Sonuçlar</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-gradient-to-br from-cyan-500/10 to-transparent p-4 rounded-lg border border-cyan-500/20">
+                                    <div class="text-3xl font-bold text-cyan-400 mb-1">%45</div>
+                                    <div class="text-gray-300 text-sm">Stok Maliyeti Azalışı</div>
+                                </div>
+                                <div class="bg-gradient-to-br from-cyan-500/10 to-transparent p-4 rounded-lg border border-cyan-500/20">
+                                    <div class="text-3xl font-bold text-cyan-400 mb-1">%92</div>
+                                    <div class="text-gray-300 text-sm">Stok Doğruluk Oranı</div>
+                                </div>
+                                <div class="bg-gradient-to-br from-cyan-500/10 to-transparent p-4 rounded-lg border border-cyan-500/20">
+                                    <div class="text-3xl font-bold text-cyan-400 mb-1">%60</div>
+                                    <div class="text-gray-300 text-sm">Fire Azalması</div>
+                                </div>
+                                <div class="bg-gradient-to-br from-cyan-500/10 to-transparent p-4 rounded-lg border border-cyan-500/20">
+                                    <div class="text-3xl font-bold text-cyan-400 mb-1">3 Saat</div>
+                                    <div class="text-gray-300 text-sm">Günlük Zaman Tasarrufu</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-cyan-500/5 border border-cyan-500/20 rounded-lg">
+                            <p class="text-gray-300 italic text-sm leading-relaxed">
+                                "BotMatik sayesinde stok yönetimi tamamen otomatikleşti. Artık hangi ürünün ne zaman biteceğini tahmin edebiliyor ve önceden sipariş verebiliyoruz. ROI'miz 4 ayda kendini geri ödedi."
+                            </p>
+                            <p class="text-cyan-400 text-sm font-semibold mt-2">— Mehmet Yılmaz, Operasyon Müdürü</p>
+                        </div>
+                        
+                        <button class="w-full mt-6 bg-gradient-to-r from-cyan-500/10 to-cyan-600/10 border border-cyan-500/30 text-cyan-400 py-3 rounded-lg font-semibold hover:bg-cyan-500/20 transition-all duration-300">
+                            Detaylı Raporu İndir →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Case Study 2: Müşteri Hizmetleri Dönüşümü -->
+                <div class="case-study-card bg-navy-800 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group" style="animation-delay: 0.2s;">
+                    <!-- Header with Icon -->
+                    <div class="bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 p-8 border-b border-cyan-500/10">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </div>
+                            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-bold uppercase">Müşteri Hizmetleri</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">7/24 Müşteri Desteği ile %78 Memnuniyet Artışı</h3>
+                        <p class="text-cyan-400 text-sm font-semibold">TechSolutions Elektronik</p>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h4 class="text-gray-400 text-sm font-semibold uppercase mb-3">Müşteri Profili</h4>
+                            <p class="text-gray-300 leading-relaxed">
