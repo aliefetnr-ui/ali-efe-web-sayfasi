@@ -1,12 +1,33 @@
 <!-- ========================================
-     DOSYA: iletisim.html (FOOTER + RESPONSIVE)
+     DOSYA: iletisim.html (COMPLETE - WITH FAVICON & SEO)
      ======================================== -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim - BotMatik</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>İletişim & Ücretsiz Teklif Al | BotMatik - AI Otomasyon</title>
+    <meta name="description" content="BotMatik ile iletişime geçin! Ücretsiz demo talep edin, işletmeniz için özel AI otomasyon çözümü alın. 24 saat içinde yanıt garantisi. İstanbul, Türkiye merkezli profesyonel destek!">
+    <meta name="keywords" content="AI bot teklif al, chatbot demo, ücretsiz danışmanlık, botmatik iletişim, yapay zeka otomasyon danışmanlığı, whatsapp bot kurulum">
+    <meta name="author" content="BotMatik">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon - AI Brain Icon (SVG Data URI) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238B5CF6'/%3E%3Cstop offset='100%25' style='stop-color:%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='%230B0C15'/%3E%3Cpath d='M50 20 Q30 25 25 45 L25 55 Q30 75 50 80 Q70 75 75 55 L75 45 Q70 25 50 20 Z' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ccircle cx='35' cy='40' r='5' fill='%238B5CF6'/%3E%3Ccircle cx='65' cy='40' r='5' fill='%2306B6D4'/%3E%3Cpath d='M35 40 L50 30 L65 40 M35 40 L50 50 L65 40 M50 50 L50 65' stroke='url(%23g)' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='50' cy='30' r='4' fill='%2306B6D4'/%3E%3Ccircle cx='50' cy='50' r='4' fill='%238B5CF6'/%3E%3Ccircle cx='50' cy='65' r='4' fill='%2306B6D4'/%3E%3Cpath d='M30 60 Q50 70 70 60' stroke='url(%23g)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BotMatik İletişim - Ücretsiz Demo & Teklif">
+    <meta property="og:description" content="AI otomasyon çözümleri için bizimle iletişime geçin. Ücretsiz demo, 24 saat içinde yanıt garantisi!">
+    <meta property="og:url" content="https://botmatik.com/iletisim.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="BotMatik - İletişim & Demo">
+    <meta name="twitter:description" content="Ücretsiz demo talep edin, AI ile tanışın!">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts - Space Grotesk -->
@@ -164,6 +185,16 @@
             border-color: rgba(139, 92, 246, 0.7);
         }
         
+        .tilt-card {
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .tilt-card:hover {
+            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4), 0 0 80px rgba(6, 182, 212, 0.3);
+        }
+        
         .social-icon {
             transition: all 0.3s ease;
         }
@@ -180,6 +211,21 @@
         
         #mobileMenu.show {
             max-height: 500px;
+        }
+        
+        .error-message {
+            display: none;
+            font-size: 0.875rem;
+            color: #f87171;
+            margin-top: 0.5rem;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        input.error, textarea.error {
+            border-color: #f87171 !important;
         }
     </style>
 </head>
@@ -232,220 +278,180 @@
         </div>
     </nav>
 
-    <!-- Success Notification (Hidden by default) -->
-    <div id="successNotification" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[100] hidden">
-        <div class="glassmorphism glow-border rounded-3xl p-8 sm:p-10 max-w-md mx-auto text-center">
-            <div class="flex items-center justify-center mb-6">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-full flex items-center justify-center">
-                    <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                </div>
-            </div>
-            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Mesajınız Alındı!</h3>
-            <p class="text-gray-300 leading-relaxed mb-6 text-sm sm:text-base">
-                AI Sistemlerimiz mesajınızı analiz ediyor. Uzman ekibimiz en kısa sürede size dönüş yapacaktır.
-            </p>
-        </div>
-    </div>
-
-    <!-- Overlay (Hidden by default) -->
-    <div id="overlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90] hidden"></div>
-
     <!-- Hero Section -->
     <section class="pt-32 pb-20">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center max-w-4xl mx-auto">
                 <div class="inline-block mb-6 px-4 sm:px-6 py-2 sm:py-3 glassmorphism rounded-full glow-border" data-aos="fade-down" data-aos-duration="1000">
-                    <span class="gradient-text text-xs sm:text-sm font-bold tracking-wide">📞 BİZİMLE İLETİŞİME GEÇİN</span>
+                    <span class="gradient-text text-xs sm:text-sm font-bold tracking-wide">💬 BİZE ULAŞIN</span>
                 </div>
                 <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 px-4" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
-                    <span class="gradient-text">Ücretsiz Demo</span> İçin<br class="hidden sm:block">Hemen Başvurun
+                    Hemen <span class="gradient-text">İletişime Geçin</span>
                 </h1>
                 <p class="text-lg sm:text-xl text-gray-400 leading-relaxed px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    Uzman ekibimiz sizinle iletişime geçerek ihtiyaçlarınızı analiz edecek ve en uygun çözümü sunacaktır
+                    İşletmeniz için en uygun çözümü birlikte belirleyelim. Ücretsiz danışmanlık için formu doldurun.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Form & Info Section -->
     <section class="pb-20">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 
                 <!-- Contact Form -->
-                <div data-aos="fade-right" data-aos-duration="1000">
-                    <div class="glassmorphism rounded-3xl p-8 sm:p-10 lg:p-12 glow-border">
-                        <div class="flex items-center mb-8">
-                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h2 class="text-3xl sm:text-4xl font-bold text-white">İletişim Formu</h2>
-                                <p class="text-gray-400 text-xs sm:text-sm mt-1">Tüm alanları doldurmanız önerilir</p>
-                            </div>
+                <div class="glassmorphism rounded-3xl p-8 sm:p-12 glow-border" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Ücretsiz Demo Talep Edin</h2>
+                    
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-2 text-sm sm:text-base">İsim Soyisim *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                class="w-full px-4 py-3 sm:py-4 rounded-xl glassmorphism border border-purple-500/20 focus:border-purple-500/60 focus:outline-none transition-all text-white text-sm sm:text-base"
+                                placeholder="Ahmet Yılmaz"
+                            >
+                            <span class="error-message" id="nameError">Lütfen isminizi girin</span>
                         </div>
                         
-                        <form id="contactForm" class="space-y-5 sm:space-y-6" novalidate>
-                            <!-- İsim Soyad -->
-                            <div>
-                                <label for="fullName" class="block text-gray-300 font-semibold mb-3 text-sm sm:text-base">
-                                    İsim Soyad <span class="text-purple-400">*</span>
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="fullName" 
-                                    name="fullName"
-                                    required 
-                                    class="w-full glassmorphism border border-purple-500/20 rounded-xl px-4 py-3 sm:py-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all text-sm sm:text-base" 
-                                    placeholder="Adınız ve soyadınız">
-                                <p class="text-red-400 text-xs sm:text-sm mt-2 hidden" id="fullNameError">Lütfen adınızı ve soyadınızı girin</p>
-                            </div>
-                            
-                            <!-- E-posta -->
-                            <div>
-                                <label for="email" class="block text-gray-300 font-semibold mb-3 text-sm sm:text-base">
-                                    E-posta <span class="text-purple-400">*</span>
-                                </label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email"
-                                    required 
-                                    class="w-full glassmorphism border border-purple-500/20 rounded-xl px-4 py-3 sm:py-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all text-sm sm:text-base" 
-                                    placeholder="ornek@email.com">
-                                <p class="text-red-400 text-xs sm:text-sm mt-2 hidden" id="emailError">Lütfen geçerli bir e-posta adresi girin</p>
-                            </div>
-                            
-                            <!-- Şirket Adı -->
-                            <div>
-                                <label for="company" class="block text-gray-300 font-semibold mb-3 text-sm sm:text-base">
-                                    Şirket Adı <span class="text-purple-400">*</span>
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="company" 
-                                    name="company"
-                                    required 
-                                    class="w-full glassmorphism border border-purple-500/20 rounded-xl px-4 py-3 sm:py-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all text-sm sm:text-base" 
-                                    placeholder="Şirketinizin adı">
-                                <p class="text-red-400 text-xs sm:text-sm mt-2 hidden" id="companyError">Lütfen şirket adını girin</p>
-                            </div>
-                            
-                            <!-- Mesaj -->
-                            <div>
-                                <label for="message" class="block text-gray-300 font-semibold mb-3 text-sm sm:text-base">
-                                    Mesajınız <span class="text-purple-400">*</span>
-                                </label>
-                                <textarea 
-                                    id="message" 
-                                    name="message"
-                                    rows="4" 
-                                    required 
-                                    class="w-full glassmorphism border border-purple-500/20 rounded-xl px-4 py-3 sm:py-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all resize-none text-sm sm:text-base" 
-                                    placeholder="Projeniz hakkında bize detaylı bilgi verin..."></textarea>
-                                <p class="text-red-400 text-xs sm:text-sm mt-2 hidden" id="messageError">Lütfen mesajınızı yazın (minimum 10 karakter)</p>
-                            </div>
-                            
-                            <!-- KVKK Checkbox -->
-                            <div class="flex items-start">
-                                <input 
-                                    type="checkbox" 
-                                    id="kvkk" 
-                                    name="kvkk"
-                                    required
-                                    class="w-5 h-5 mt-1 bg-transparent border-purple-500/30 rounded text-purple-500 focus:ring-2 focus:ring-purple-500/20">
-                                <label for="kvkk" class="ml-3 text-gray-400 text-xs sm:text-sm leading-relaxed">
-                                    <a href="#" class="text-purple-400 hover:text-purple-300 underline">KVKK</a> kapsamında kişisel verilerimin işlenmesini kabul ediyorum.
-                                </label>
-                            </div>
-                            <p class="text-red-400 text-xs sm:text-sm mt-1 hidden" id="kvkkError">Devam etmek için KVKK onayı gereklidir</p>
-                            
-                            <!-- Submit Button -->
-                            <button 
-                                type="submit" 
-                                id="submitBtn"
-                                class="w-full glow-button text-white py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center group">
-                                <span id="btnText">Mesajı Gönder</span>
-                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </button>
-                        </form>
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-2 text-sm sm:text-base">E-posta Adresi *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                class="w-full px-4 py-3 sm:py-4 rounded-xl glassmorphism border border-purple-500/20 focus:border-purple-500/60 focus:outline-none transition-all text-white text-sm sm:text-base"
+                                placeholder="ahmet@sirket.com"
+                            >
+                            <span class="error-message" id="emailError">Lütfen geçerli bir e-posta adresi girin</span>
+                        </div>
                         
-                        <!-- Trust Badge -->
-                        <div class="mt-8 pt-8 border-t border-purple-500/10 flex items-center justify-center text-gray-400 text-xs sm:text-sm">
-                            <svg class="w-5 h-5 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div>
+                            <label for="company" class="block text-gray-300 mb-2 text-sm sm:text-base">Şirket Adı</label>
+                            <input 
+                                type="text" 
+                                id="company" 
+                                name="company"
+                                class="w-full px-4 py-3 sm:py-4 rounded-xl glassmorphism border border-purple-500/20 focus:border-purple-500/60 focus:outline-none transition-all text-white text-sm sm:text-base"
+                                placeholder="Şirket A.Ş."
+                            >
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2 text-sm sm:text-base">Mesajınız *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="5" 
+                                required
+                                class="w-full px-4 py-3 sm:py-4 rounded-xl glassmorphism border border-purple-500/20 focus:border-purple-500/60 focus:outline-none transition-all text-white resize-none text-sm sm:text-base"
+                                placeholder="Hangi alanlarda otomasyon ihtiyacınız var?"
+                            ></textarea>
+                            <span class="error-message" id="messageError">Lütfen mesajınızı girin</span>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <input 
+                                type="checkbox" 
+                                id="privacy" 
+                                name="privacy" 
+                                required
+                                class="mt-1 w-5 h-5 rounded border-purple-500/20 bg-transparent focus:ring-purple-500"
+                            >
+                            <label for="privacy" class="ml-3 text-gray-400 text-xs sm:text-sm">
+                                <a href="#" class="text-purple-400 hover:text-purple-300">KVKK</a> kapsamında kişisel verilerimin işlenmesini kabul ediyorum. *
+                            </label>
+                        </div>
+                        <span class="error-message" id="privacyError">Lütfen KVKK metnini onaylayın</span>
+                        
+                        <button type="submit" class="w-full glow-button text-white py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center group">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>Mesajı Gönder</span>
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </button>
+                        
+                        <div class="glassmorphism p-4 rounded-xl flex items-center border border-purple-500/20">
+                            <svg class="w-6 h-6 text-purple-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                             </svg>
-                            Verileriniz 256-bit SSL ile şifrelenir
+                            <p class="text-gray-400 text-xs sm:text-sm">Verileriniz 256-bit SSL ile şifrelenir ve güvenle saklanır.</p>
                         </div>
-                    </div>
+                    </form>
                 </div>
-
-                <!-- Contact Info -->
-                <div class="space-y-6 sm:space-y-8">
+                
+                <!-- Contact Info Cards -->
+                <div class="space-y-6 sm:space-y-8" data-aos="fade-left" data-aos-duration="1000">
                     
-                    <!-- Contact Cards -->
-                    <div data-aos="fade-left" data-aos-duration="1000">
-                        <div class="glassmorphism rounded-3xl p-8 sm:p-10 glow-border group">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl sm:text-2xl font-bold mb-3">E-posta</h3>
-                                    <p class="text-gray-400 mb-1 text-sm sm:text-base">info@botmatik.com</p>
-                                    <p class="text-purple-400 text-xs sm:text-sm mt-3 font-semibold">📧 24 saat içinde yanıt garantisi</p>
-                                </div>
-                            </div>
+                    <!-- Email Card -->
+                    <div class="glassmorphism rounded-3xl p-8 sm:p-10 glow-border tilt-card">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
                         </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">E-posta</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">7/24 e-posta desteği</p>
+                        <a href="mailto:info@botmatik.com" class="text-purple-400 hover:text-purple-300 font-semibold text-base sm:text-lg">info@botmatik.com</a>
                     </div>
-
-                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="glassmorphism rounded-3xl p-8 sm:p-10 glow-border group">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Telefon</h3>
-                                    <p class="text-gray-400 mb-1 text-sm sm:text-base">+90 (555) 123 45 67</p>
-                                    <p class="text-xs sm:text-sm text-gray-500 mt-1">Hafta içi 09:00 - 18:00</p>
-                                </div>
-                            </div>
+                    
+                    <!-- Phone Card -->
+                    <div class="glassmorphism rounded-3xl p-8 sm:p-10 glow-border tilt-card">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
                         </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Telefon</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">Hafta içi 09:00 - 18:00</p>
+                        <a href="tel:+905551234567" class="text-purple-400 hover:text-purple-300 font-semibold text-base sm:text-lg">+90 555 123 45 67</a>
                     </div>
-
-                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                        <div class="glassmorphism rounded-3xl p-8 sm:p-10 glow-border group">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Adres</h3>
-                                    <p class="text-gray-400 mb-1 text-sm sm:text-base">Maslak, Büyükdere Caddesi</p>
-                                    <p class="text-gray-400 text-sm sm:text-base">No: 123, İstanbul, Türkiye</p>
-                                </div>
-                            </div>
+                    
+                    <!-- Address Card -->
+                    <div class="glassmorphism rounded-3xl p-8 sm:p-10 glow-border tilt-card">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
                         </div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Adres</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">Merkez Ofis</p>
+                        <p class="text-purple-400 font-semibold text-base sm:text-lg">Maslak, Büyükdere Cad. No:123<br>Sarıyer, İstanbul, Türkiye</p>
                     </div>
-
+                    
                 </div>
+                
             </div>
         </div>
     </section>
+
+    <!-- Success Modal (Hidden by default) -->
+    <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeSuccessModal()"></div>
+        <div class="relative glassmorphism rounded-3xl p-12 max-w-md mx-4 glow-border" data-aos="zoom-in">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-3xl font-bold mb-4 gradient-text">Mesajınız Alındı!</h3>
+                <p class="text-gray-400 mb-6">Ekibimiz en kısa sürede sizinle iletişime geçecektir. Teşekkür ederiz!</p>
+                <button onclick="closeSuccessModal()" class="glow-button text-white px-8 py-3 rounded-xl font-semibold">
+                    Tamam
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Premium Footer -->
     <footer class="relative border-t border-purple-500/10 py-16 sm:py-20">
@@ -542,5 +548,68 @@
     <!-- AOS Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    
+    <!-- Form Validation Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form fields
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+            const privacy = document.getElementById('privacy');
+            
+            // Get error messages
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const messageError = document.getElementById('messageError');
+            const privacyError = document.getElementById('privacyError');
+            
+            // Reset errors
+            [name, email, message].forEach(field => field.classList.remove('error'));
+            [nameError, emailError, messageError, privacyError].forEach(error => error.classList.remove('show'));
+            
+            let isValid = true;
+            
+            // Validate name
+            if (name.value.trim() === '') {
+                name.classList.add('error');
+                nameError.classList.add('show');
+                isValid = false;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                email.classList.add('error');
+                emailError.classList.add('show');
+                isValid = false;
+            }
+            
+            // Validate message
+            if (message.value.trim() === '') {
+                message.classList.add('error');
+                messageError.classList.add('show');
+                isValid = false;
+            }
+            
+            // Validate privacy checkbox
+            if (!privacy.checked) {
+                privacyError.classList.add('show');
+                isValid = false;
+            }
+            
+            // If form is valid, show success modal
+            if (isValid) {
+                document.getElementById('successModal').classList.remove('hidden');
+                this.reset();
+            }
+        });
+        
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
