@@ -1,8 +1,8 @@
 <!-- ========================================
-     DOSYA: hizmetler.html (COMPLETE - WITH FAVICON & SEO)
+     DOSYA: hizmetler.html (WITH DETAIL SECTIONS)
      ======================================== -->
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,6 +68,10 @@
         
         body {
             overflow-x: hidden;
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
         
         /* Animated Background */
@@ -319,9 +323,9 @@
                                 <span class="text-gray-300 text-sm">AI destekli talep tahmini</span>
                             </div>
                         </div>
-                        <button class="w-full glow-button text-white py-4 rounded-xl font-semibold text-sm sm:text-base">
+                        <a href="#envanter-detay" class="w-full glow-button text-white py-4 rounded-xl font-semibold text-sm sm:text-base block text-center">
                             Detayları Gör →
-                        </button>
+                        </a>
                     </div>
                     <div class="h-1 bg-gradient-to-r from-purple-500 to-cyan-500"></div>
                 </div>
@@ -358,9 +362,9 @@
                                 <span class="text-gray-300 text-sm">7/24 profesyonel hizmet</span>
                             </div>
                         </div>
-                        <button class="w-full glow-button text-white py-4 rounded-xl font-semibold text-sm sm:text-base">
+                        <a href="#musteri-detay" class="w-full glow-button text-white py-4 rounded-xl font-semibold text-sm sm:text-base block text-center">
                             Detayları Gör →
-                        </button>
+                        </a>
                     </div>
                     <div class="h-1 bg-gradient-to-r from-purple-500 to-cyan-500"></div>
                 </div>
@@ -397,9 +401,9 @@
                                 <span class="text-gray-300 text-sm">Akıllı lead skorlama</span>
                             </div>
                         </div>
-                        <button class="w-full glow-button text-white py-4 rounded-xl font-semibold text-sm sm:text-base">
+                        <a href="#satis-detay" class="w-full glow-button text-white py-4 rounded-xl font-semibold text-sm sm:text-base block text-center">
                             Detayları Gör →
-                        </button>
+                        </a>
                     </div>
                     <div class="h-1 bg-gradient-to-r from-purple-500 to-cyan-500"></div>
                 </div>
@@ -407,6 +411,383 @@
             </div>
         </div>
     </section>
+
+    <!-- DETAIL SECTIONS START -->
+    
+    <!-- Envanter Botu Detay -->
+    <section id="envanter-detay" class="py-20 sm:py-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent"></div>
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
+                    <span class="gradient-text text-sm font-bold tracking-wide">📦 ENVANTER BOTU</span>
+                </div>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 px-4" data-aos="zoom-in">
+                    <span class="gradient-text">Stok Yönetiminde</span> Yeni Dönem
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto px-4" data-aos="fade-up">
+                    Gerçek zamanlı stok takibi, akıllı sipariş önerileri ve tam ERP entegrasyonu
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                
+                <!-- Feature 1: ERP Entegrasyonu -->
+                <div class="glassmorphism rounded-3xl p-10 glow-border tilt-card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">ERP Entegrasyonu</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        SAP, Oracle, Microsoft Dynamics gibi tüm popüler ERP sistemleriyle sorunsuz entegrasyon. Gerçek zamanlı senkronizasyon ile stok verileriniz her zaman güncel.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Çift yönlü veri senkronizasyonu
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            API tabanlı güvenli bağlantı
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Saniyeler içinde veri aktarımı
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Otomatik hata düzeltme
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Otomatik Sipariş -->
+                <div class="glassmorphism rounded-3xl p-10 glow-border tilt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Otomatik Sipariş Yönetimi</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Stok seviyeleri kritik eşiklere ulaştığında otomatik sipariş oluşturma. Tedarikçilerinize doğrudan WhatsApp veya e-posta ile sipariş gönderin.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Akıllı eşik değer belirleme
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Tedarikçi önceliklendirme
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Otomatik sipariş takibi
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Fiyat karşılaştırma sistemi
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: AI Stok Tahmini -->
+                <div class="glassmorphism rounded-3xl p-10 glow-border tilt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Destekli Talep Tahmini</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Geçmiş satış verilerinizi analiz ederek gelecekteki talepleri tahmin edin. Sezonluk değişimleri, trendleri ve özel günleri dikkate alan akıllı algoritmalar.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Makine öğrenmesi algoritmaları
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Sezonluk trend analizi
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Özel gün optimizasyonu
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            %95 doğruluk oranı
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <a href="iletisim.html" class="inline-flex items-center glow-button text-white px-12 py-6 rounded-2xl font-bold text-xl">
+                    <span>Envanter Botu Hakkında Bilgi Al</span>
+                    <svg class="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Müşteri Hizmetleri Botu Detay -->
+    <section id="musteri-detay" class="py-20 sm:py-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/5 via-transparent to-transparent"></div>
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
+                    <span class="gradient-text text-sm font-bold tracking-wide">💬 MÜŞTERİ HİZMETLERİ BOTU</span>
+                </div>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 px-4" data-aos="zoom-in">
+                    <span class="gradient-text">Müşteri Memnuniyetinde</span> Devrim
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto px-4" data-aos="fade-up">
+                    Doğal dil işleme, çoklu dil desteği ve akıllı yönlendirme ile 7/24 profesyonel hizmet
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                
+                <!-- Feature 1: NLP -->
+                <div class="glassmorphism rounded-3xl p-10 glow-border tilt-card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Doğal Dil İşleme (NLP)</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        En gelişmiş NLP teknolojileri ile müşterilerinizin sorularını insan gibi anlayıp yanıtlayan sistem. Argo, yazım hataları ve bağlam farketmeksizin doğru yanıtlar.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Bağlam anlama teknolojisi
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Yazım hatası toleransı
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Anlam çıkarma motoru
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Sürekli öğrenme algoritması
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Çoklu Dil -->
+                <div class="glassmorphism rounded-3xl p-10 glow-border tilt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Çoklu Dil Desteği</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        40+ dilde anlık çeviri ve yanıt verme yeteneği. Müşteriniz hangi dilde yazarsa yazsın, botumuz o dilde profesyonel yanıtlar üretir.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            40+ dil desteği
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Otomatik dil algılama
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Kültürel uyum optimizasyonu
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Anlık çeviri teknolojisi
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Canlı Destek Devri -->
+                <div class="glassmorphism rounded-3xl p-10 glow-border tilt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Akıllı Canlı Destek Devri</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Bot çözemediği karmaşık sorunları otomatik olarak algılar ve müşteriyi uygun ekip üyesine yönlendirir. Tüm konuşma geçmişi ile birlikte sorunsuz geçiş.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Sorun karmaşıklık analizi
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Ekip üyesi eşleştirme
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Konuşma geçmişi aktarımı
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Duygu durumu tespiti
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <a href="iletisim.html" class="inline-flex items-center glow-button text-white px-12 py-6 rounded-2xl font-bold text-xl">
+                    <span>Müşteri Hizmetleri Botu Hakkında Bilgi Al</span>
+                    <svg class="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Satış Otomasyon Botu Detay -->
+    <section id="satis-detay" class="py-20 sm:py-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent"></div>
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
+                    <span class="gradient-text text-sm font-bold tracking-wide">📈 SATIŞ OTOMASYON BOTU</span>
+                </div>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 px-4" data-aos="zoom-in">
+                    <span class="gradient-text">Satışlarınızı</span> 3X Artırın
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto px-4" data-aos="fade-up">
+                    Lead puanlama, CRM entegrasyonu ve akıllı kampanya yönetimi ile satış hunisini optimize edin
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                
+                <!-- Feature 1: Lead Scoring -->
+                <div class="glassmorphism rounded-3xl p-10 glow-border tilt-card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Akıllı Lead Puanlama</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Her lead'i davranışlarına göre otomatik puanlayan sistem. Hangi potansiyel müşterilere öncelik vereceğinizi AI ile belirleyin ve satış ekibinizin zamanını optimize edin.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Davranış bazlı puanlama
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Demografik analiz
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Etkileşim geçmişi değerlendirmesi
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Dinamik skor güncelleme
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: CRM Integration -->
+                <div class="glassmorphism rounded-3xl p-10 glow-border tilt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">CRM Bağlantısı</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Salesforce, HubSpot, Pipedrive gibi tüm popüler CRM'lerle tam entegrasyon. Lead'ler otomatik CRM'e kaydedilir, tüm etkileşimler loglanır.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Otomatik lead kaydı
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Çift yönlü senkronizasyon
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Aktivite loglama
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Özel alan eşleştirme
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Campaign Management -->
+                <div class="glassmorphism rounded-3xl p-10 glow-border tilt-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Kampanya Yönetimi</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Hedefli kampanyalar oluşturun ve performanslarını gerçek zamanlı takip edin. A/B testing, segmentasyon ve otomatik optimizasyon ile ROI'yi maksimize edin.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Segmentasyon motoru
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            A/B testing altyapısı
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Performans analytics
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <span class="text-purple-400 mr-2">•</span>
+                            Otomatik optimizasyon
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center" data-aos="fade-up">
+                <a href="iletisim.html" class="inline-flex items-center glow-button text-white px-12 py-6 rounded-2xl font-bold text-xl">
+                    <span>Satış Botu Hakkında Bilgi Al</span>
+                    <svg class="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAIL SECTIONS END -->
 
     <!-- CTA Section -->
     <section class="py-20 sm:py-32">
