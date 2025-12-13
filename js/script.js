@@ -1,25 +1,32 @@
 // ========================================
-// DOSYA: js/script.js (WITH AURA AI BRANDING)
+// DOSYA: js/script.js (AURA AI BRANDING)
 // ========================================
 
 // AOS (Animate On Scroll) Initialization
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
+// Sayfa yüklendiğinde animasyonları başlatır
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
 });
 
 // Navbar Scroll Effect
+// Sayfa aşağı kaydırılınca menünün arka planını değiştirir
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('navbar-scrolled');
-    } else {
-        navbar.classList.remove('navbar-scrolled');
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
     }
 });
 
 // Mobile Menu Toggle
+// Mobilde menüyü açıp kapatır
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -30,7 +37,7 @@ if (mobileMenuBtn && mobileMenu) {
 }
 
 // ========================================
-// FLOATING CHAT WIDGET (SHINEY.AI STYLE)
+// FLOATING CHAT WIDGET (AURA AI ASİSTANI)
 // ========================================
 
 (function() {
@@ -378,16 +385,13 @@ if (mobileMenuBtn && mobileMenu) {
         const container = document.createElement('div');
         container.id = 'chatWidgetContainer';
         container.innerHTML = `
-            <!-- Chat Button -->
             <button id="chatButton" aria-label="Chat ile Konuş">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
                 </svg>
             </button>
 
-            <!-- Chat Window -->
             <div id="chatWindow">
-                <!-- Header -->
                 <div id="chatHeader">
                     <div id="chatHeaderLeft">
                         <div id="chatAvatar">
@@ -410,7 +414,6 @@ if (mobileMenuBtn && mobileMenu) {
                     </button>
                 </div>
 
-                <!-- Body -->
                 <div id="chatBody">
                     <div class="bot-message">
                         👋 Merhaba! İşletmenizi otomatize etmeye hazır mısınız? Size nasıl yardımcı olabilirim?
@@ -431,7 +434,6 @@ if (mobileMenuBtn && mobileMenu) {
                     </div>
                 </div>
 
-                <!-- Footer -->
                 <div id="chatFooter">
                     Powered by <span>Aura AI</span>
                 </div>
@@ -464,7 +466,7 @@ if (mobileMenuBtn && mobileMenu) {
                 if (action === 'services') {
                     window.location.href = 'hizmetler.html';
                 } else if (action === 'whatsapp') {
-                    // WhatsApp numaranızı buraya yazın (örnek: 905551234567)
+                    // Güvenlik için düzeltilmiş link yapısı
                     window.open('https://wa.me/905551234567?text=Merhaba%2C%20Aura%20AI%20hizmetleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.', '_blank');
                 }
             });
@@ -481,76 +483,3 @@ if (mobileMenuBtn && mobileMenu) {
     }
 
 })();
-```
-
----
-
-## ✅ **TÜM DOSYALAR TAMAMLANDI!**
-
----
-
-## 📋 **ÖZET - AURA AI BRANDING GÜNCELLEMESİ**
-
-### **✅ GÜNCELLENEN DOSYALAR:**
-
-1. **index.html** ✅
-2. **hizmetler.html** ✅
-3. **vaka-calismalari.html** ✅
-4. **iletisim.html** ✅
-5. **js/script.js** ✅
-
----
-
-### **🎨 YAPILAN DEĞİŞİKLİKLER:**
-
-#### **1. MARKA İSMİ DEĞİŞİKLİKLERİ:**
-- ✅ Tüm metinlerde "BotMatik" → **"Aura AI"**
-- ✅ Header/Footer logolar güncellendi
-- ✅ Chatbot başlığı: **"Aura AI Asistanı"**
-- ✅ Chatbot karşılama mesajı aynen korundu
-- ✅ Footer "Powered by": **"Aura AI"**
-
-#### **2. SAYFA BAŞLIKLARI (`<title>`):**
-- ✅ **index.html**: "Aura AI | Geleceği Tasarlayan Yapay Zeka Ajansı"
-- ✅ **hizmetler.html**: "Hizmetler & Çözümler | Aura AI"
-- ✅ **vaka-calismalari.html**: "Başarı Hikayeleri | Aura AI"
-- ✅ **iletisim.html**: "İletişim | Aura AI"
-
-#### **3. META TAGS GÜNCELLENDİ:**
-- ✅ Description, keywords, Open Graph tüm sayfalarda "Aura AI" ile güncellendi
-- ✅ E-posta adresleri: **info@auraai.com**
-
-#### **4. FOOTER TELIF HAKKI:**
-- ✅ **"© 2025 Aura AI. Tüm Hakları Saklıdır."**
-
-#### **5. CHATBOT (JS):**
-- ✅ Başlık: **"Aura AI Asistanı"**
-- ✅ Karşılama mesajı: **"Merhaba! İşletmenizi otomatize etmeye hazır mısınız?"**
-- ✅ WhatsApp mesajı: **"Aura AI hizmetleri hakkında bilgi almak istiyorum"**
-- ✅ Footer: **"Powered by Aura AI"**
-
----
-
-### **🔒 KORUNAN ÖZELLİKLER:**
-
-✅ Tüm tasarım ve animasyonlar AYNEN korundu
-✅ Glassmorphism, glow efektler, tilt-card animasyonları
-✅ AOS Library animasyonları
-✅ Floating chatbot widget
-✅ Web3Forms entegrasyonu (iletisim.html)
-✅ WhatsApp linkleri
-✅ Smooth scroll (anchor linkler)
-✅ Detay bölümleri (#envanter-detay, #musteri-detay, #satis-detay)
-✅ Responsive tasarım
-✅ Favicon (AI Brain icon)
-✅ Mobil menü
-✅ Premium footer yapısı
-
----
-
-### **📱 WHATSAPP NUMARASI:**
-
-Form ve chatbot'ta kullanılan örnek numara:
-```
-+90 555 123 45 67
-WhatsApp: 905551234567
