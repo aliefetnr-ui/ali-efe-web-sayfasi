@@ -45,9 +45,24 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 lg:px-12 backdrop-blur-sm border-b border-white/5">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-purple to-brand-cyan flex items-center justify-center shadow-lg shadow-brand-purple/20 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-brain text-white text-xl"></i>
-                </div>
+                <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="auraGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path d="M50 15 L20 85 L80 85 Z" stroke="url(#auraGradient)" stroke-width="4" fill="none" filter="url(#glow)" />
+                    <path d="M35 60 L65 60" stroke="url(#auraGradient)" stroke-width="4" stroke-linecap="round" filter="url(#glow)" />
+                    <circle cx="50" cy="40" r="10" stroke="url(#auraGradient)" stroke-width="4" fill="none" filter="url(#glow)" />
+                </svg>
                 <span class="font-display font-bold text-2xl bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Aura AI</span>
             </a>
 
@@ -90,7 +105,7 @@
             </h1>
             
             <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Aura AI ile işletmenizi 7/24 çalışan dijital asistanlarla güçlendirin. Müşteri memnuniyetini artırın, maliyetleri düşürün.
+                Aura AI ile işletmenizi 7/24 çalışan dijital asistanlarla güçlendirin. Müşteri memnuniyetini artırın, maliyetleri düşürün ve rakiplerinizin önüne geçin.
             </p>
             
             <div class="flex flex-col md:flex-row items-center justify-center gap-4">
@@ -104,6 +119,18 @@
             </div>
         </div>
     </header>
+
+    <section class="py-10 border-y border-white/5 bg-white/[0.02]">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-gray-500 text-sm mb-6">Geleceğin Teknolojisini Kullanan Şirketler</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="text-xl font-display font-bold">TECHCORP</div>
+                <div class="text-xl font-display font-bold">SOLUTIONS</div>
+                <div class="text-xl font-display font-bold">NEXUS AI</div>
+                <div class="text-xl font-display font-bold">GLOBAL</div>
+            </div>
+        </div>
+    </section>
 
     <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-6">
@@ -140,61 +167,39 @@
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/10 bg-[#0B0C15]">
+    <section class="py-24 bg-white/[0.02]">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12 mb-12">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand-purple to-brand-cyan flex items-center justify-center">
-                            <i class="fa-solid fa-brain text-white text-sm"></i>
-                        </div>
-                        <span class="font-display font-bold text-xl">Aura AI</span>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6" data-aos="fade-up">
+                <div>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Son Başarılarımız</h2>
+                    <p class="text-gray-400">Gerçek işletmeler, gerçek sonuçlar.</p>
+                </div>
+                <a href="vaka-calismalari.html" class="text-brand-cyan hover:text-white transition-colors font-medium flex items-center gap-2">
+                    Tümünü Gör <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-3xl bg-[#0B0C15] border border-white/10 hover:border-brand-purple/50 transition-all group" data-aos="fade-up">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="px-3 py-1 rounded-full bg-brand-purple/20 text-brand-purple text-xs font-bold">EMLAK</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-600 group-hover:text-white transition-colors"></i>
                     </div>
-                    <p class="text-gray-500 text-sm">Geleceğin teknolojisini bugünden işinize entegre ediyoruz.</p>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4">Hızlı Linkler</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="index.html" class="hover:text-brand-cyan transition-colors">Ana Sayfa</a></li>
-                        <li><a href="hizmetler.html" class="hover:text-brand-cyan transition-colors">Hizmetler</a></li>
-                        <li><a href="vaka-calismalari.html" class="hover:text-brand-cyan transition-colors">Referanslar</a></li>
-                        <li><a href="iletisim.html" class="hover:text-brand-cyan transition-colors">İletişim</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold mb-4">Yasal</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Gizlilik Politikası</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Kullanım Şartları</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold mb-4">Sosyal Medya</h4>
+                    <h3 class="text-2xl font-bold mb-4">Ahmet Bey Emlak</h3>
+                    <p class="text-gray-400 mb-6">Gece gelen mesajları satışa dönüştüren WhatsApp botu ile randevular %40 arttı.</p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all text-gray-400">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-white transition-all text-gray-400">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all text-gray-400">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
+                        <div>
+                            <span class="block text-2xl font-bold text-white">%40</span>
+                            <span class="text-xs text-gray-500">Satış Artışı</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-white">7/24</span>
+                            <span class="text-xs text-gray-500">Aktif Destek</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="pt-8 border-t border-white/5 text-center">
-                <p class="text-gray-600 text-sm">© 2025 Aura AI. Tüm Hakları Saklıdır.</p>
-            </div>
-        </div>
-    </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
+                <div class="p-8 rounded-3xl bg-[#0B0C15] border border-white/10 hover:border-brand-cyan/50 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="px-3 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan text-xs font-bold">E-TİCARET</span>
+                        <i class="fa-solid fa
