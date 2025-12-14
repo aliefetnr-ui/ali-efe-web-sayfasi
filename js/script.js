@@ -1,5 +1,5 @@
 // ========================================
-// DOSYA: js/script.js (AURA AI BRANDING)
+// DOSYA: js/script.js (AURA AI BRANDING & FIX)
 // ========================================
 
 // AOS (Animate On Scroll) Initialization
