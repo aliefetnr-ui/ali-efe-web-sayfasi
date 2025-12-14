@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Yasal Bilgilendirme | Aura AI</title>
+    <meta name="description" content="Aura AI Gizlilik Politikası, Kullanım Şartları, KVKK Aydınlatma Metni ve Çerez Politikası. Kişisel verilerinizin korunması ve kullanım şartlarımız hakkında detaylı bilgi.">
+    <meta name="keywords" content="gizlilik politikası, kullanım şartları, KVKK, çerez politikası, kişisel verilerin korunması, aura ai yasal">
+    <meta name="author" content="Aura AI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 15 L20 85 L80 85 Z' stroke='url(%23g)' stroke-width='4' fill='none'/%3E%3Ccircle cx='50' cy='40' r='10' stroke='url(%23g)' stroke-width='4'/%3E%3C/svg%3E">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark': {
+                            900: '#0B0C15',
+                            800: '#13141F',
+                            700: '#1A1B2E',
+                            600: '#252640',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Space Grotesk', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: #0B0C15;
+        }
+        
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
+            top: -10%;
+            left: -10%;
+        }
+        
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
+            bottom: -10%;
+            right: -10%;
+            animation-delay: 5s;
+        }
+        
+        .orb-3 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 10s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(100px, -100px) scale(1.1); }
+            66% { transform: translate(-100px, 100px) scale(0.9); }
+        }
+        
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            z-index: -1;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .glassmorphism {
+            background: rgba(26, 27, 46, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+        
+        .navbar-scrolled {
+            background: rgba(19, 20, 31, 0.8) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glow-button {
+            background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
+            box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4);
+            transition: all 0.4s ease;
+        }
+        
+        .glow-button:hover {
+            box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6);
+            transform: translateY(-4px) scale(1.02);
+        }
+        
+        .glow-border {
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            transition: all 0.4s ease;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        #mobileMenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        #mobileMenu.show {
+            max-height: 500px;
+        }
+        
+        /* Sticky Sidebar */
+        .sticky-sidebar {
+            position: sticky;
+            top: 100px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+        
+        .sticky-sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .sticky-sidebar::-webkit-scrollbar-track {
+            background: rgba(139, 92, 246, 0.05);
+            border-radius: 10px;
+        }
+        
+        .sticky-sidebar::-webkit-scrollbar-thumb {
+            background: rgba(139, 92, 246, 0.3);
+            border-radius: 10px;
+        }
+        
+        /* Active Section Highlight */
+        .sidebar-link.active {
+            background: rgba(139, 92, 246, 0.2);
+            border-left: 3px solid #A78BFA;
+        }
+        
+        /* Content Section */
+        .content-section {
+            scroll-margin-top: 100px;
+        }
+        
+        /* Legal Text Styling */
+        .legal-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #A78BFA;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .legal-content h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #06B6D4;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .legal-content p {
+            color: #E5E7EB;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .legal-content ul {
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .legal-content ul li {
+            color: #E5E7EB;
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        
+        .legal-content ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #A78BFA;
+            font-weight: bold;
+        }
+        
+        .legal-content strong {
+            color: #A78BFA;
+            font-weight: 600;
+        }
+        
+        .legal-content a {
+            color: #06B6D4;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+        
+        .legal-content a:hover {
+            color: #A78BFA;
+        }
+    </style>
+</head>
+<body class="bg-[#0B0C15] text-white">
+    
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="grid-bg"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 group" data-aos="fade-right">
+                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 100 100" fill="none">
+                        <defs>
+                            <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#8B5CF6"/>
+                                <stop offset="100%" stop-color="#06B6D4"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g)" stroke-width="4" fill="none"/>
+                        <circle cx="50" cy="40" r="10" stroke="url(#g)" stroke-width="4" fill="none"/>
+                    </svg>
+                    <span class="text-xl sm:text-2xl font-bold gradient-text">Aura AI</span>
+                </div>
+                <div class="hidden md:flex space-x-8" data-aos="fade-down" data-aos-delay="100">
+                    <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300 hover:scale-110">Ana Sayfa</a>
+                    <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300 hover:scale-110">Hizmetler</a>
+                    <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300 hover:scale-110">Vaka Çalışmaları</a>
+                    <a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300 hover:scale-110">İletişim</a>
+                </div>
+                <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm" data-aos="fade-left" data-aos-delay="200">
+                    Ücretsiz Demo
+                </a>
+                <button id="mobileMenuBtn" class="md:hidden text-purple-400 p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="md:hidden">
+                <div class="pt-4 pb-2 space-y-2">
+                    <a href="index.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">Ana Sayfa</a>
+                    <a href="hizmetler.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">Hizmetler</a>
+                    <a href="vaka-calismalari.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">Vaka Çalışmaları</a>
+                    <a href="iletisim.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">İletişim</a>
+                    <a href="iletisim.html" class="block mt-4 glow-button text-white px-6 py-3 rounded-xl font-semibold text-sm text-center">
+                        Ücretsiz Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-block mb-6 px-4 sm:px-6 py-2 sm:py-3 glassmorphism rounded-full glow-border" data-aos="fade-down" data-aos-duration="1000">
+                    <span class="gradient-text text-xs sm:text-sm font-bold tracking-wide">⚖️ YASAL BİLGİLENDİRME</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 px-4" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+                    <span class="gradient-text">Yasal</span> Bilgiler
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-400 leading-relaxed px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    Gizlilik politikamız, kullanım şartlarımız ve veri koruma uygulamalarımız hakkında detaylı bilgi
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="pb-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                
+                <!-- Sticky Sidebar (Left) -->
+                <div class="lg:col-span-1">
+                    <div class="sticky-sidebar glassmorphism rounded-3xl p-6 glow-border" data-aos="fade-right" data-aos-duration="1000">
+                        <h3 class="text-xl font-bold mb-6 gradient-text">İçindekiler</h3>
+                        <nav class="space-y-2">
+                            <a href="#gizlilik" class="sidebar-link block px-4 py-3 rounded-xl text-gray-300 hover:bg-purple-500/10 transition-all text-sm">
+                                Gizlilik Politikası
+                            </a>
+                            <a href="#kullanim" class="sidebar-link block px-4 py-3 rounded-xl text-gray-300 hover:bg-purple-500/10 transition-all text-sm">
+                                Kullanım Şartları
+                            </a>
+                            <a href="#kvkk" class="sidebar-link block px-4 py-3 rounded-xl text-gray-300 hover:bg-purple-500/10 transition-all text-sm">
+                                KVKK Aydınlatma Metni
+                            </a>
+                            <a href="#cerez" class="sidebar-link block px-4 py-3 rounded-xl text-gray-300 hover:bg-purple-500/10 transition-all text-sm">
+                                Çerez Politikası
+                            </a>
+                        </nav>
+                        
+                        <div class="mt-8 p-4 rounded-xl bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/20">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-purple-400 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <div>
+                                    <p class="text-xs text-gray-400">
+                                        Son Güncelleme:<br>
+                                        <span class="text-purple-400 font-semibold">14 Aralık 2025</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content Area (Right) -->
+                <div class="lg:col-span-3">
+                    <div class="glassmorphism rounded-3xl p-8 sm:p-12 glow-border legal-content" data-aos="fade-left" data-aos-duration="1000">
+                        
+                        <!-- 1. GİZLİLİK POLİTİKASI -->
+                        <section id="gizlilik" class="content-section mb-16">
+                            <h2 class="text-3xl sm:text-4xl font-bold mb-6 gradient-text">1. Gizlilik Politikası</h2>
+                            <p class="text-gray-400 mb-6"><em>Son Güncelleme: 14 Aralık 2025</em></p>
+                            
+                            <p>
+                                Aura AI olarak, kullanıcılarımızın gizliliğine saygı duyuyor ve kişisel verilerinizi korumak için her türlü önlemi alıyoruz. Bu Gizlilik Politikası, web sitemizi (auraai.com) ziyaret ettiğinizde veya hizmetlerimizi kullandığınızda kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklamaktadır.
+                            </p>
+                            
+                            <h3>1.1. Toplanan Bilgiler</h3>
+                            <p>Hizmetlerimizi kullanırken aşağıdaki bilgileri toplayabiliriz:</p>
+                            <ul>
+                                <li><strong>Kişisel Bilgiler:</strong> Ad, soyad, e-posta adresi, telefon numarası, şirket adı</li>
+                                <li><strong>Teknik Bilgiler:</strong> IP adresi, tarayıcı türü, işletim sistemi, ziyaret edilen sayfalar</li>
+                                <li><strong>İletişim Bilgileri:</strong> İletişim formları ve e-posta yoluyla paylaştığınız bilgiler</li>
+                                <li><strong>Çerez Verileri:</strong> Tarayıcı çerezleri ve benzeri teknolojiler aracılığıyla toplanan bilgiler</li>
+                            </ul>
+                            
+                            <h3>1.2. Bilgilerin Kullanımı</h3>
+                            <p>Topladığımız kişisel verilerinizi aşağıdaki amaçlarla kullanabiliriz:</p>
+                            <ul>
+                                <li>Hizmet taleplerini yanıtlamak ve müşteri desteği sağlamak</li>
+                                <li>Ürün ve hizmetlerimizi geliştirmek</li>
+                                <li>Pazarlama ve iletişim faaliyetleri yürütmek (onayınız dahilinde)</li>
+                                <li>Web sitesi performansını analiz etmek ve iyileştirmek</li>
+                                <li>Yasal yükümlülüklere uymak</li>
+                            </ul>
+                            
+                            <h3>1.3. Bilgi Güvenliği</h3>
+                            <p>
+                                Kişisel verilerinizi yetkisiz erişim, değişiklik, ifşa veya imhaya karşı korumak için endüstri standardı güvenlik önlemleri kullanıyoruz. Verileriniz SSL/TLS şifrelemesi ile korunmaktadır.
+                            </p>
+                            
+                            <h3>1.4. Üçüncü Taraflarla Paylaşım</h3>
+                            <p>Kişisel bilgilerinizi aşağıdaki durumlar dışında üçüncü taraflarla paylaşmayız:</p>
+                            <ul>
+                                <li>Açık onayınız olduğunda</li>
+                                <li>Yasal zorunluluk halinde (mahkeme kararı, yasal süreç)</li>
+                                <li>Hizmet sağlayıcılarımızla (veri işleme, hosting, analitik hizmetler)</li>
+                            </ul>
+                            
+                            <h3>1.5. Haklarınız</h3>
+                            <p>KVKK kapsamında aşağıdaki haklara sahipsiniz:</p>
+                            <ul>
+                                <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                                <li>İşlenmişse bilgi talep etme</li>
+                                <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+                                <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
+                                <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+                                <li>Silinmesini veya yok edilmesini isteme</li>
+                            </ul>
+                            
+                            <p class="mt-6">
+                                Gizlilik politikamız hakkında sorularınız için: <a href="mailto:info@auraai.com">info@auraai.com</a>
+                            </p>
+                        </section>
+
+                        <!-- 2. KULLANIM ŞARTLARI -->
+                        <section id="kullanim" class="content-section mb-16">
+                            <h2 class="text-3xl sm:text-4xl font-bold mb-6 gradient-text">2. Kullanım Şartları</h2>
+                            <p class="text-gray-400 mb-6"><em>Son Güncelleme: 14 Aralık 2025</em></p>
+                            
+                            <p>
+                                Bu web sitesini (auraai.com) kullanarak aşağıdaki şartları kabul etmiş sayılırsınız. Lütfen bu şartları dikkatlice okuyunuz.
+                            </p>
+                            
+                            <h3>2.1. Fikri Mülkiyet Hakları</h3>
+                            <p>
+                                Bu web sitesinde yer alan tüm içerikler (metin, görsel, logo, tasarım, yazılım, kod) Aura AI'nın veya lisans verenlerin mülkiyetindedir ve telif hakkı yasaları ile korunmaktadır.
+                            </p>
+                            <ul>
+                                <li>İçeriklerin izinsiz kopyalanması, çoğaltılması, dağıtılması veya değiştirilmesi yasaktır</li>
+                                <li>Ticari amaçlarla kullanılması önceden yazılı izin gerektirir</li>
+                                <li>"Aura AI" markası ve logosu tescilli markadır</li>
+                            </ul>
+                            
+                            <h3>2.2. Kabul Edilebilir Kullanım</h3>
+                            <p>Web sitemizi kullanırken aşağıdaki faaliyetler yasaktır:</p>
+                            <ul>
+                                <li>Yasadışı, zararlı, tehdit edici, taciz edici içerik paylaşmak</li>
+                                <li>Sistemlere yetkisiz erişim sağlamaya çalışmak</li>
+                                <li>Virüs, truva atı veya zararlı yazılım göndermek</li>
+                                <li>Spam veya istenmeyen e-posta göndermek</li>
+                                <li>Başkalarının haklarını ihlal etmek</li>
+                                <li>Web sitesinin normal işleyişini engellemek</li>
+                            </ul>
+                            
+                            <h3>2.3. Hizmet Kullanımı</h3>
+                            <p>
+                                Aura AI, web sitesinde sunulan bilgilerin doğruluğunu ve güncelliğini sağlamak için çaba gösterse de, herhangi bir garanti vermez. Hizmetlerimiz "olduğu gibi" sunulmaktadır.
+                            </p>
+                            
+                            <h3>2.4. Sorumluluk Reddi</h3>
+                            <ul>
+                                <li>Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmiyoruz</li>
+                                <li>Üçüncü taraf web sitelerine verilen linklerden sorumlu değiliz</li>
+                                <li>Web sitesi kullanımından kaynaklanan dolaylı zararlardan sorumlu tutulamayız</li>
+                            </ul>
+                            
+                            <h3>2.5. Değişiklikler</h3>
+                            <p>
+                                Aura AI, bu kullanım şartlarını önceden haber vermeksizin değiştirme hakkını saklı tutar. Değişiklikler bu sayfada yayınlandığı anda yürürlüğe girer.
+                            </p>
+                            
+                            <h3>2.6. Uygulanacak Hukuk</h3>
+                            <p>
+                                Bu şartlar Türkiye Cumhuriyeti yasalarına tabidir. Uyuşmazlık durumunda İstanbul mahkemeleri ve icra daireleri yetkilidir.
+                            </p>
+                            
+                            <p class="mt-6">
+                                Kullanım şartları hakkında sorularınız için: <a href="mailto:info@auraai.com">info@auraai.com</a>
+                            </p>
+                        </section>
+
+                        <!-- 3. KVKK AYDINLATMA METNİ -->
+                        <section id="kvkk" class="content-section mb-16">
+                            <h2 class="text-3xl sm:text-4xl font-bold mb-6 gradient-text">3. KVKK Aydınlatma Metni</h2>
+                            <p class="text-gray-400 mb-6"><em>6698 Sayılı Kişisel Verilerin Korunması Kanunu Kapsamında Bilgilendirme</em></p>
+                            
+                            <h3>3.1. Veri Sorumlusu</h3>
+                            <p>
+                                <strong>Aura AI</strong><br>
+                                Adres: Maslak, Büyükdere Cad. No:123, Sarıyer, İstanbul, Türkiye<br>
+                                E-posta: <a href="mailto:info@auraai.com">info@auraai.com</a><br>
+                                Telefon: +90 555 123 45 67
+                            </p>
+                            
+                            <h3>3.2. Kişisel Verilerin İşlenme Amaçları</h3>
+                            <p>Kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:</p>
+                            <ul>
+                                <li>Hizmet sunumu ve müşteri ilişkileri yönetimi</li>
+                                <li>Sözleşmelerin kurulması ve ifası</li>
+                                <li>Müşteri memnuniyeti ve hizmet kalitesini artırma</li>
+                                <li>İletişim faaliyetlerinin yürütülmesi</li>
+                                <li>Pazarlama ve analiz faaliyetleri (onayınız dahilinde)</li>
+                                <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+                                <li>Web sitesi performansının iyileştirilmesi</li>
+                            </ul>
+                            
+                            <h3>3.3. Kişisel Verilerin Toplanma Yöntemi</h3>
+                            <p>Kişisel verileriniz aşağıdaki yollarla toplanmaktadır:</p>
+                            <ul>
+                                <li>Web sitesi iletişim formları</li>
+                                <li>E-posta iletişimi</li>
+                                <li>Telefon görüşmeleri</li>
+                                <li>Çerezler ve benzeri teknolojiler</li>
+                                <li>Üçüncü taraf analitik araçlar (Google Analytics)</li>
+                            </ul>
+                            
+                            <h3>3.4. İşlenen Kişisel Veri Kategorileri</h3>
+                            <ul>
+                                <li><strong>Kimlik Bilgisi:</strong> Ad, soyad</li>
+                                <li><strong>İletişim Bilgisi:</strong> E-posta, telefon, adres</li>
+                                <li><strong>Müşteri İşlem Bilgisi:</strong> Talep konusu, iletişim geçmişi</li>
+                                <li><strong>İşlem Güvenliği Bilgisi:</strong> IP adresi, log kayıtları</li>
+                                <li><strong>Pazarlama Bilgisi:</strong> Çerez kayıtları, tercihler</li>
+                            </ul>
+                            
+                            <h3>3.5. Kişisel Verilerin Aktarılması</h3>
+                            <p>Kişisel verileriniz aşağıdaki durumlarda aktarılabilir:</p>
+                            <ul>
+                                <li>Hizmet sağlayıcılarımıza (hosting, e-posta servisleri, analitik araçlar)</li>
+                                <li>Yasal yükümlülükler gereği resmi kurumlara</li>
+                                <li>İş ortaklarımıza (açık rızanız dahilinde)</li>
+                            </ul>
+                            
+                            <h3>3.6. KVKK Kapsamında Haklarınız</h3>
+                            <p>6698 sayılı KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
+                            <ul>
+                                <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                                <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme</li>
+                                <li>Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+                                <li>Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme</li>
+                                <li>Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
+                                <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini veya yok edilmesini isteme</li>
+                                <li>Düzeltme, silme ve yok edilme işlemlerinin kişisel verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
+                                <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme</li>
+                                <li>Kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
+                            </ul>
+                            
+                            <h3>3.7. Başvuru Yöntemi</h3>
+                            <p>
+                                Haklarınızı kullanmak için <a href="mailto:info@auraai.com">info@auraai.com</a> adresine yazılı olarak veya KVKK'da belirtilen diğer yöntemlerle başvurabilirsiniz. Başvurularınız en geç 30 gün içinde yanıtlanacaktır.
+                            </p>
+                        </section>
+
+                        <!-- 4. ÇEREZ POLİTİKASI -->
+                        <section id="cerez" class="content-section">
+                            <h2 class="text-3xl sm:text-4xl font-bold mb-6 gradient-text">4. Çerez (Cookie) Politikası</h2>
+                            <p class="text-gray-400 mb-6"><em>Son Güncelleme: 14 Aralık 2025</em></p>
+                            
+                            <h3>4.1. Çerez Nedir?</h3>
+                            <p>
+                                Çerezler, bir web sitesini ziyaret ettiğinizde tarayıcınız aracılığıyla cihazınıza kaydedilen küçük metin dosyalarıdır. Çerezler, web sitelerinin daha iyi çalışmasını ve kullanıcı deneyimini iyileştirmesini sağlar.
+                            </p>
+                            
+                            <h3>4.2. Kullandığımız Çerez Türleri</h3>
+                            
+                            <h4>4.2.1. Zorunlu Çerezler</h4>
+                            <p>Web sitesinin temel işlevlerini yerine getirmesi için gerekli çerezlerdir:</p>
+                            <ul>
+                                <li>Oturum çerezleri (session cookies)</li>
+                                <li>Güvenlik çerezleri</li>
+                                <li>Tercih çerezleri (dil, tema vb.)</li>
+                            </ul>
+                            
+                            <h4>4.2.2. Performans Çerezleri</h4>
+                            <p>Web sitesinin performansını ölçmek ve iyileştirmek için kullanılır:</p>
+                            <ul>
+                                <li><strong>Google Analytics:</strong> Ziyaretçi istatistikleri, sayfa görüntüleme sayıları, kullanıcı davranışları</li>
+                                <li>Sayfa yükleme süreleri ve hata raporları</li>
+                            </ul>
+                            
+                            <h4>4.2.3. İşlevsellik Çerezleri</h4>
+                            <p>Kullanıcı deneyimini kişiselleştirmek için kullanılır:</p>
+                            <ul>
+                                <li>Dil tercihleri</li>
+                                <li>Bölge/konum bilgileri</li>
+                                <li>Önceki ziyaretlerin hatırlanması</li>
+                            </ul>
+                            
+                            <h4>4.2.4. Pazarlama/Hedefleme Çerezleri</h4>
+                            <p>İlgi alanlarınıza uygun içerik sunmak için kullanılır (onayınız dahilinde):</p>
+                            <ul>
+                                <li>Davranışsal reklamcılık çerezleri</li>
+                                <li>Sosyal medya çerezleri (Facebook, LinkedIn, Twitter)</li>
+                                <li>Yeniden pazarlama çerezleri</li>
+                            </ul>
+                            
+                            <h3>4.3. Üçüncü Taraf Çerezleri</h3>
+                            <p>Web sitemizde aşağıdaki üçüncü taraf hizmetleri çerez kullanabilir:</p>
+                            <ul>
+                                <li><strong>Google Analytics:</strong> Ziyaretçi analizi ve performans ölçümü</li>
+                                <li><strong>Google Ads:</strong> Reklamcılık ve yeniden pazarlama</li>
+                                <li><strong>Facebook Pixel:</strong> Sosyal medya entegrasyonu ve reklam optimizasyonu</li>
+                            </ul>
+                            
+                            <h3>4.4. Çerez Yönetimi</h3>
+                            <p>Çerezleri kontrol etmek için aşağıdaki yöntemleri kullanabilirsiniz:</p>
+                            
+                            <h4>Tarayıcı Ayarları</h4>
+                            <p>Tarayıcınızın ayarlarından çerezleri engelleyebilir veya silebilirsiniz:</p>
+                            <ul>
+                                <li><strong>Chrome:</strong> Ayarlar → Gizlilik ve Güvenlik → Çerezler</li>
+                                <li><strong>Firefox:</strong> Ayarlar → Gizlilik ve Güvenlik → Çerezler ve Site Verileri</li>
+                                <li><strong>Safari:</strong> Tercihler → Gizlilik → Çerezleri Yönet</li>
+                                <li><strong>Edge:</strong> Ayarlar → Çerezler ve Site İzinleri</li>
+                            </ul>
+                            
+                            <h4>Çerez Tercihleri</h4>
+                            <p>
+                                Web sitemize ilk ziyaretinizde görüntülenen çerez bildiriminden tercihlerinizi yönetebilirsiniz. Zorunlu çerezler devre dışı bırakılamaz.
+                            </p>
+                            
+                            <h3>4.5. Çerezleri Reddetmenin Etkileri</h3>
+                            <p>
+                                Çerezleri tamamen devre dışı bırakırsanız, web sitesinin bazı özellikleri düzgün çalışmayabilir. Örneğin, tercihleriniz hatırlanmayabilir veya bazı sayfalar doğru şekilde yüklenmeyebilir.
+                            </p>
+                            
+                            <h3>4.6. Daha Fazla Bilgi</h3>
+                            <p>
+                                Çerezler hakkında daha fazla bilgi için: <a href="https://www.aboutcookies.org" target="_blank">www.aboutcookies.org</a>
+                            </p>
+                            <p class="mt-4">
+                                Çerez politikamız hakkında sorularınız için: <a href="mailto:info@auraai.com">info@auraai.com</a>
+                            </p>
+                        </section>
+
+                        <!-- Contact Info Box -->
+                        <div class="mt-12 p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/20">
+                            <h3 class="text-xl font-bold mb-4 gradient-text">İletişim Bilgileri</h3>
+                            <div class="space-y-3 text-gray-300">
+                                <p><strong>Şirket Adı:</strong> Aura AI</p>
+                                <p><strong>Adres:</strong> Maslak, Büyükdere Cad. No:123, Sarıyer, İstanbul, Türkiye</p>
+                                <p><strong>E-posta:</strong> <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-purple-300">info@auraai.com</a></p>
+                                <p><strong>Telefon:</strong> <a href="tel:+905551234567" class="text-purple-400 hover:text-purple-300">+90 555 123 45 67</a></p>
+                            </div>
+                            <div class="mt-6 pt-6 border-t border-purple-500/20">
+                                <p class="text-sm text-gray-400">
+                                    Bu yasal metinler son olarak 14 Aralık 2025 tarihinde güncellenmiştir. Aura AI, bu metinleri önceden haber vermeksizin değiştirme hakkını saklı tutar.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="relative border-t border-purple-500/10 py-16 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12" data-aos="fade-up">
+                
+                <!-- Column 1: Logo & Slogan -->
+                <div class="text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group">
+                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 100 100" fill="none">
+                            <defs>
+                                <linearGradient id="g-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#8B5CF6"/>
+                                    <stop offset="100%" stop-color="#06B6D4"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g-footer)" stroke-width="4" fill="none"/>
+                            <circle cx="50" cy="40" r="10" stroke="url(#g-footer)" stroke-width="4" fill="none"/>
+                        </svg>
+                        <span class="text-3xl font-bold gradient-text">Aura AI</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed text-sm sm:text-base mb-6">
+                        Yapay zeka destekli otomasyon çözümleriyle işletmenizi geleceğe taşıyoruz.
+                    </p>
+                    <div class="glassmorphism inline-block px-4 py-2 rounded-lg">
+                        <span class="text-purple-400 text-xs font-semibold">🚀 2025'te Daha Güçlüyüz</span>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div class="text-center sm:text-left">
+                    <h4 class="text-white font-bold mb-6 text-lg sm:text-xl flex items-center justify-center sm:justify-start">
+                        <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Hızlı Linkler
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Ana Sayfa</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Hizmetler</a></li>
+                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Vaka Çalışmaları</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Legal -->
+                <div class="text-center sm:text-left">
+                    <h4 class="text-white font-bold mb-6 text-lg sm:text-xl flex items-center justify-center sm:justify-start">
+                        <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        Yasal
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="yasal.html#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Gizlilik Politikası</a></li>
+                        <li><a href="yasal.html#kullanim" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Kullanım Şartları</a></li>
+                        <li><a href="yasal.html#kvkk" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ KVKK</a></li>
+                        <li><a href="yasal.html#cerez" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Çerez Politikası</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Social Media -->
+                <div class="text-center sm:text-left">
+                    <h4 class="text-white font-bold mb-6 text-lg sm:text-xl flex items-center justify-center sm:justify-start">
+                        <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                        </svg>
+                        Sosyal Medya
+                    </h4>
+                    <div class="flex space-x-4 justify-center sm:justify-start mb-6">
+                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                    <div class="glassmorphism p-4 rounded-xl">
+                        <p class="text-gray-400 text-sm mb-2">📧 İletişim</p>
+                        <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-purple-300 font-semibold text-sm">info@auraai.com</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-purple-500/10 pt-8 text-center">
+                <p class="text-gray-500 text-sm sm:text-base">
+                    © 2025 <span class="gradient-text font-semibold">Aura AI</span>. Tüm Hakları Saklıdır.
+                </p>
+                <p class="text-gray-600 text-xs sm:text-sm mt-2">
+                    Yapay Zeka ile Güçlendirilmiş 🤖
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Sidebar Active Link Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.content-section');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            
+            function updateActiveLink() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink();
+        });
+    </script>
+</body>
+</html>
