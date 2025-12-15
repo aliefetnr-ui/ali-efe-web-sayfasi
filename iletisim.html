@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>İletişim | Aura AI - Ücretsiz Danışmanlık</title>
-    <meta name="description" content="Aura AI ile iletişime geçin. Ücretsiz danışmanlık alın ve işletmenizi yapay zeka ile dönüştürün. Hemen toplantı planlayın.">
-    <meta name="keywords" content="aura ai iletişim, chatbot danışmanlık, AI otomasyon toplantı, ücretsiz danışmanlık">
+    <title>İletişim | Aura AI - Bize Ulaşın</title>
+    <meta name="description" content="Aura AI ile iletişime geçin. Ücretsiz danışmanlık alın, chatbot otomasyon çözümlerimiz hakkında bilgi edinin.">
+    <meta name="keywords" content="iletişim, destek, chatbot danışmanlık, AI otomasyon">
     <meta name="author" content="Aura AI">
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 15 L20 85 L80 85 Z' stroke='url(%23g)' stroke-width='4' fill='none'/%3E%3Ccircle cx='50' cy='40' r='10' stroke='url(%23g)' stroke-width='4'/%3E%3C/svg%3E">
@@ -169,6 +169,19 @@
         .glow-border:hover {
             box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3);
             border-color: rgba(139, 92, 246, 0.7);
+            transform: translateY(-8px);
+        }
+        
+        .tilt-card {
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .tilt-card:hover {
+            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
+            box-shadow: 
+                0 20px 60px rgba(139, 92, 246, 0.4),
+                0 0 80px rgba(6, 182, 212, 0.3);
         }
         
         .social-icon {
@@ -187,12 +200,6 @@
         
         #mobileMenu.show {
             max-height: 500px;
-        }
-        
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: rgba(139, 92, 246, 0.6);
-            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
         }
     </style>
 </head>
@@ -224,7 +231,7 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
                     <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
-                    <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Vaka Çalışmaları</a>
+                    <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Bize Güvenenler</a>
                     <a href="iletisim.html" class="text-purple-400 font-semibold hover:text-purple-300 transition-all duration-300">İletişim</a>
                 </div>
                 <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">
@@ -240,7 +247,7 @@
                 <div class="pt-4 pb-2 space-y-2">
                     <a href="index.html" class="block py-2 text-gray-400 hover:text-purple-400">Ana Sayfa</a>
                     <a href="hizmetler.html" class="block py-2 text-gray-400 hover:text-purple-400">Hizmetler</a>
-                    <a href="vaka-calismalari.html" class="block py-2 text-gray-400 hover:text-purple-400">Vaka Çalışmaları</a>
+                    <a href="vaka-calismalari.html" class="block py-2 text-gray-400 hover:text-purple-400">Bize Güvenenler</a>
                     <a href="iletisim.html" class="block py-2 text-purple-400 font-semibold">İletişim</a>
                     <a href="iletisim.html" class="block mt-4 glow-button text-white px-6 py-3 rounded-xl font-semibold text-sm text-center">
                         Ücretsiz Danışmanlık
@@ -260,7 +267,7 @@
                     <span class="gradient-text">Ücretsiz Toplantı</span> Planlayın
                 </h1>
                 <p class="text-xl text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-                    İşletmenizi nasıl dönüştürebileceğimizi konuşalım. Size özel çözümler sunalım.
+                    Size özel chatbot çözümü için hemen iletişime geçin
                 </p>
             </div>
         </div>
@@ -268,194 +275,121 @@
 
     <section class="py-20">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 
-                <div class="glassmorphism p-10 rounded-3xl glow-border" data-aos="fade-right" data-aos-duration="1000">
-                    <h2 class="text-3xl font-bold mb-8 gradient-text">Bilgi Formu</h2>
-                    
-                    <form id="contactForm" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-semibold text-gray-300 mb-2">Ad Soyad *</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                required
-                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all"
-                                placeholder="Adınız Soyadınız"
-                            >
-                        </div>
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="glassmorphism glow-border p-10 rounded-3xl">
+                        <h2 class="text-3xl font-bold mb-8 gradient-text">Bize Ulaşın</h2>
                         
-                        <div>
-                            <label for="email" class="block text-sm font-semibold text-gray-300 mb-2">E-posta *</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                required
-                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all"
-                                placeholder="ornek@email.com"
-                            >
-                        </div>
-                        
-                        <div>
-                            <label for="phone" class="block text-sm font-semibold text-gray-300 mb-2">Telefon *</label>
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                name="phone" 
-                                required
-                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all"
-                                placeholder="+90 555 123 45 67"
-                            >
-                        </div>
-                        
-                        <div>
-                            <label for="company" class="block text-sm font-semibold text-gray-300 mb-2">Şirket Adı</label>
-                            <input 
-                                type="text" 
-                                id="company" 
-                                name="company"
-                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all"
-                                placeholder="Şirketinizin Adı"
-                            >
-                        </div>
-                        
-                        <div>
-                            <label for="service" class="block text-sm font-semibold text-gray-300 mb-2">İlgilendiğiniz Hizmet *</label>
-                            <select 
-                                id="service" 
-                                name="service" 
-                                required
-                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 transition-all"
-                            >
-                                <option value="">Seçiniz</option>
-                                <option value="envanter">Envanter Yönetimi Botu</option>
-                                <option value="musteri-hizmetleri">Müşteri Hizmetleri Botu</option>
-                                <option value="satis">Satış Otomasyonu Botu</option>
-                                <option value="ozel">Özel Çözüm</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-sm font-semibold text-gray-300 mb-2">Mesajınız</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                rows="4"
-                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all resize-none"
-                                placeholder="Projeniz hakkında kısaca bilgi verin..."
-                            ></textarea>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <input 
-                                type="checkbox" 
-                                id="terms" 
-                                name="terms" 
-                                required
-                                class="mt-1 mr-3 w-5 h-5 rounded border-purple-500/30 bg-dark-800 text-purple-500 focus:ring-purple-500"
-                            >
-                            <label for="terms" class="text-sm text-gray-400">
-                                <a href="yasal.html#kvkk" class="text-purple-400 hover:text-purple-300">KVKK Aydınlatma Metni</a>'ni okudum, kabul ediyorum. *
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="w-full glow-button text-white py-4 rounded-xl font-bold text-lg transition-all">
-                            Ücretsiz Toplantı Planla
-                        </button>
-                        
-                        <p class="text-xs text-gray-500 text-center">
-                            * İşaretli alanlar zorunludur
-                        </p>
-                    </form>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-300 font-semibold mb-3">Ad Soyad</label>
+                                <input type="text" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all" placeholder="İsminiz">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 font-semibold mb-3">E-posta</label>
+                                <input type="email" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all" placeholder="ornek@email.com">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 font-semibold mb-3">Telefon</label>
+                                <input type="tel" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all" placeholder="+90 555 123 45 67">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 font-semibold mb-3">Şirket</label>
+                                <input type="text" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all" placeholder="Şirket adınız">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 font-semibold mb-3">Hangi hizmetle ilgileniyorsunuz?</label>
+                                <select class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all">
+                                    <option>Envanter Yönetimi</option>
+                                    <option>Müşteri Hizmetleri</option>
+                                    <option>Satış Otomasyonu</option>
+                                    <option>Tümü</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 font-semibold mb-3">Mesajınız</label>
+                                <textarea rows="5" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all resize-none" placeholder="Projeniz hakkında detay verin..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full glow-button text-white px-8 py-5 rounded-2xl font-bold text-lg inline-flex items-center justify-center group">
+                                <span>Ücretsiz Toplantı Planla</span>
+                                <svg class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
                 </div>
                 
                 <div class="space-y-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     
-                    <div class="glassmorphism p-8 rounded-3xl glow-border">
+                    <div class="glassmorphism glow-border p-8 rounded-2xl">
                         <div class="flex items-start space-x-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold mb-2 text-white">E-posta</h3>
-                                <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-purple-300 transition-colors text-lg">
-                                    info@auraai.com
-                                </a>
-                                <p class="text-gray-400 text-sm mt-2">7/24 e-posta desteği</p>
+                                <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-purple-300 transition-all text-lg">info@auraai.com</a>
+                                <p class="text-gray-400 text-sm mt-2">7/24 destek için bize yazın</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="glassmorphism p-8 rounded-3xl glow-border">
+                    <div class="glassmorphism glow-border p-8 rounded-2xl">
                         <div class="flex items-start space-x-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                                 </svg>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold mb-2 text-white">Telefon</h3>
-                                <a href="tel:+905551234567" class="text-purple-400 hover:text-purple-300 transition-colors text-lg">
-                                    +90 555 123 45 67
-                                </a>
-                                <p class="text-gray-400 text-sm mt-2">Hafta içi 09:00 - 18:00</p>
+                                <a href="tel:+905551234567" class="text-purple-400 hover:text-purple-300 transition-all text-lg">+90 555 123 45 67</a>
+                                <p class="text-gray-400 text-sm mt-2">Pazartesi - Cuma: 09:00 - 18:00</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="glassmorphism p-8 rounded-3xl glow-border">
+                    <div class="glassmorphism glow-border p-8 rounded-2xl">
                         <div class="flex items-start space-x-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 </svg>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold mb-2 text-white">Adres</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Maslak, Büyükdere Cad. No:123<br>
-                                    Sarıyer / İstanbul, Türkiye
-                                </p>
+                                <p class="text-gray-300 text-lg">İstanbul, Türkiye</p>
+                                <p class="text-gray-400 text-sm mt-2">Ofisimizde randevulu görüşme</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="glassmorphism p-8 rounded-3xl glow-border">
+                    <div class="glassmorphism glow-border p-8 rounded-2xl">
                         <h3 class="text-xl font-bold mb-6 text-white">Sosyal Medya</h3>
                         <div class="flex space-x-4">
-                            <a href="#" class="social-icon w-14 h-14 glassmorphism rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300 glow-border">
+                            <a href="#" class="social-icon w-14 h-14 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
                                 <i class="fab fa-linkedin-in text-2xl"></i>
                             </a>
-                            <a href="#" class="social-icon w-14 h-14 glassmorphism rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300 glow-border">
+                            <a href="#" class="social-icon w-14 h-14 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
                                 <i class="fab fa-twitter text-2xl"></i>
                             </a>
-                            <a href="#" class="social-icon w-14 h-14 glassmorphism rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300 glow-border">
+                            <a href="#" class="social-icon w-14 h-14 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
                                 <i class="fab fa-instagram text-2xl"></i>
                             </a>
-                            <a href="#" class="social-icon w-14 h-14 glassmorphism rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300 glow-border">
+                            <a href="#" class="social-icon w-14 h-14 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
                                 <i class="fab fa-whatsapp text-2xl"></i>
                             </a>
-                        </div>
-                    </div>
-                    
-                    <div class="glassmorphism p-8 rounded-3xl border-2 border-green-500/30">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2 text-white">Hızlı Yanıt Garantisi</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Formunuzu gönderdikten sonra <span class="text-green-400 font-semibold">24 saat içinde</span> size geri dönüş yapacağız.
-                                </p>
-                            </div>
                         </div>
                     </div>
                     
@@ -469,47 +403,47 @@
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl sm:text-6xl font-bold mb-6" data-aos="zoom-in">
-                    <span class="gradient-text">Sıkça Sorulan</span> Sorular
+                    Sıkça Sorulan <span class="gradient-text">Sorular</span>
                 </h2>
                 <p class="text-xl text-gray-400" data-aos="fade-up" data-aos-delay="200">
-                    Merak ettiklerinizin cevapları
+                    Merak ettiklerinizin yanıtları
                 </p>
             </div>
             
             <div class="max-w-4xl mx-auto space-y-6">
                 
-                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-3 text-white">Chatbot ne kadar sürede hazır olur?</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Standart çözümlerimiz 48 saat içinde kurulur ve aktif hale getirilir. Özel geliştirmeler için süre projenin kapsamına göre 1-2 hafta arasında değişir.
+                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Chatbot'ları ne kadar sürede kurabiliriz?</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Basit projeler için 1-2 hafta, kapsamlı entegrasyonlar için 4-6 hafta sürebilir. İlk görüşmede size özel tahmini süre vereceğiz.
                     </p>
                 </div>
                 
-                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-bold mb-3 text-white">Fiyatlandırma nasıl çalışıyor?</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Aylık abonelik modeliyle çalışıyoruz. Fiyatlandırma, seçtiğiniz hizmet paketine, kullanıcı sayısına ve özelleştirme ihtiyaçlarınıza göre değişir. Ücretsiz danışmanlıkta size özel teklif hazırlarız.
+                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Fiyatlandırma nasıl çalışıyor?</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Aylık abonelik modelimiz var. Fiyat, kullandığınız hizmetlere, mesaj sayısına ve entegrasyonlara göre değişir. Ücretsiz danışmanlıkta size özel teklif hazırlıyoruz.
                     </p>
                 </div>
                 
-                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-bold mb-3 text-white">Mevcut sistemlerimle entegre olur mu?</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Evet! CRM sistemleri, e-ticaret platformları, ERP yazılımları ve WhatsApp Business gibi popüler araçlarla entegrasyon sağlıyoruz.
+                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Mevcut sistemlerimizle entegre olabilir mi?</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Evet! WhatsApp, Telegram, CRM sistemleri, e-ticaret platformları ve daha fazlasıyla entegrasyon sağlıyoruz. API desteği olan her sistemle çalışabiliriz.
                     </p>
                 </div>
                 
-                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-xl font-bold mb-3 text-white">Teknik bilgi gerekli mi?</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Hayır! Sistemimiz kullanıcı dostu bir arayüze sahip. Kurulum ve eğitim konusunda size tam destek sağlıyoruz. Ekibiniz günlük kullanımda hiçbir teknik zorluk yaşamaz.
+                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Verilerimiz güvende mi?</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Kesinlikle. KVKK ve GDPR uyumlu çalışıyoruz. Tüm veriler şifreli olarak saklanır ve üçüncü taraflarla paylaşılmaz.
                     </p>
                 </div>
                 
-                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="text-xl font-bold mb-3 text-white">Destek hizmeti sunuyor musunuz?</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Kesinlikle! 7/24 teknik destek, düzenli sistem güncellemeleri ve aylık performans raporları sunuyoruz. Ayrıca ihtiyaç duyduğunuzda chatbot'unuzu optimize etmek için danışmanlık hizmeti veriyoruz.
+                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Destek alabiliyor muyuz?</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        7/24 teknik destek sağlıyoruz. WhatsApp, e-posta veya telefon ile ulaşabilirsiniz. Ayrıca düzenli eğitimler ve dokümantasyon sunuyoruz.
                     </p>
                 </div>
                 
@@ -548,7 +482,7 @@
                     <ul class="space-y-3">
                         <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Ana Sayfa</a></li>
                         <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Hizmetler</a></li>
-                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Vaka Çalışmaları</a></li>
+                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Bize Güvenenler</a></li>
                         <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all">→ İletişim</a></li>
                     </ul>
                 </div>
@@ -597,15 +531,5 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
-    
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            alert('Teşekkürler! Formunuz alındı. 24 saat içinde size geri dönüş yapacağız.');
-            
-            this.reset();
-        });
-    </script>
 </body>
 </html>
