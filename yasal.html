@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Yasal Bilgilendirme | Aura AI</title>
-    <meta name="description" content="Aura AI Gizlilik Politikası, Kullanım Şartları, KVKK Aydınlatma Metni ve Çerez Politikası. Kişisel verilerinizin korunması ve yasal haklarınız hakkında detaylı bilgi.">
+    <meta name="description" content="Aura AI Gizlilik Politikası, Kullanım Şartları, KVKK Aydınlatma Metni ve Çerez Politikası.">
     <meta name="keywords" content="gizlilik politikası, kullanım şartları, KVKK, çerez politikası, kişisel verilerin korunması">
     <meta name="author" content="Aura AI">
     <meta name="robots" content="index, follow">
@@ -27,12 +26,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'dark': {
-                            900: '#0B0C15',
-                            800: '#13141F',
-                            700: '#1A1B2E',
-                            600: '#252640',
-                        }
+                        'dark': { 900: '#0B0C15', 800: '#13141F', 700: '#1A1B2E', 600: '#252640' }
                     },
                     fontFamily: {
                         'heading': ['Space Grotesk', 'system-ui', 'sans-serif'],
@@ -44,238 +38,43 @@
     </script>
     
     <style>
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: #0B0C15;
-        }
-        
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 20s infinite ease-in-out;
-        }
-        
-        .orb-1 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
-            top: -10%;
-            left: -10%;
-        }
-        
-        .orb-2 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
-            bottom: -10%;
-            right: -10%;
-            animation-delay: 5s;
-        }
-        
-        .orb-3 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: 10s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(100px, -100px) scale(1.1); }
-            66% { transform: translate(-100px, 100px) scale(0.9); }
-        }
-        
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-            z-index: -1;
-        }
-        
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        
-        .glassmorphism {
-            background: rgba(26, 27, 46, 0.5);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-        }
-        
-        .navbar-scrolled {
-            background: rgba(19, 20, 31, 0.8) !important;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glow-button {
-            background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
-            box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4);
-            transition: all 0.4s ease;
-        }
-        
-        .glow-button:hover {
-            box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6);
-            transform: translateY(-4px) scale(1.02);
-        }
-        
-        .social-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            transform: translateY(-5px) scale(1.1);
-        }
-        
-        #mobileMenu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        
-        #mobileMenu.show {
-            max-height: 500px;
-        }
-        
-        .sticky-nav {
-            position: sticky;
-            top: 120px;
-            max-height: calc(100vh - 140px);
-            overflow-y: auto;
-        }
-        
-        .sticky-nav::-webkit-scrollbar {
-            width: 4px;
-        }
-        
-        .sticky-nav::-webkit-scrollbar-track {
-            background: rgba(139, 92, 246, 0.05);
-        }
-        
-        .sticky-nav::-webkit-scrollbar-thumb {
-            background: rgba(139, 92, 246, 0.3);
-            border-radius: 10px;
-        }
-        
-        .nav-link {
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link.active {
-            background: rgba(139, 92, 246, 0.15);
-            border-left: 3px solid #8B5CF6;
-            color: #A78BFA;
-        }
-        
-        .content-section {
-            scroll-margin-top: 100px;
-        }
-        
-        .legal-text p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-        
-        .legal-text h3 {
-            color: #A78BFA;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .legal-text h4 {
-            color: #06B6D4;
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .legal-text ul {
-            list-style: none;
-            margin-left: 0;
-            margin-bottom: 1.5rem;
-        }
-        
-        .legal-text ul li {
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.75rem;
-            line-height: 1.8;
-        }
-        
-        .legal-text ul li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #8B5CF6;
-            font-weight: bold;
-        }
-        
-        .legal-text strong {
-            color: #A78BFA;
-            font-weight: 600;
-        }
-        
-        .legal-text a {
-            color: #06B6D4;
-            text-decoration: underline;
-            transition: color 0.3s;
-        }
-        
-        .legal-text a:hover {
-            color: #A78BFA;
-        }
-        
-        .info-box {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #0B0C15; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
+        .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%); top: -10%; left: -10%; }
+        .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%); bottom: -10%; right: -10%; animation-delay: 5s; }
+        .orb-3 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 10s; }
+        @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(100px, -100px) scale(1.1); } 66% { transform: translate(-100px, 100px) scale(0.9); } }
+        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
+        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
+        .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
+        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
+        .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-5px) scale(1.1); }
+        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        #mobileMenu.show { max-height: 500px; }
+        .sticky-nav { position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow-y: auto; }
+        .sticky-nav::-webkit-scrollbar { width: 4px; }
+        .sticky-nav::-webkit-scrollbar-track { background: rgba(139, 92, 246, 0.05); }
+        .sticky-nav::-webkit-scrollbar-thumb { background: rgba(139, 92, 246, 0.3); border-radius: 10px; }
+        .nav-link { transition: all 0.3s ease; }
+        .nav-link.active { background: rgba(139, 92, 246, 0.15); border-left: 3px solid #8B5CF6; color: #A78BFA; }
+        .content-section { scroll-margin-top: 100px; }
+        .legal-text p { margin-bottom: 1rem; line-height: 1.8; }
+        .legal-text h3 { color: #A78BFA; font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .legal-text h4 { color: #06B6D4; font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .legal-text ul { list-style: none; margin-left: 0; margin-bottom: 1.5rem; }
+        .legal-text ul li { padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem; line-height: 1.8; }
+        .legal-text ul li::before { content: "→"; position: absolute; left: 0; color: #8B5CF6; font-weight: bold; }
+        .legal-text strong { color: #A78BFA; font-weight: 600; }
+        .legal-text a { color: #06B6D4; text-decoration: underline; transition: color 0.3s; }
+        .legal-text a:hover { color: #A78BFA; }
+        .info-box { background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; }
     </style>
 </head>
 <body class="bg-[#0B0C15] text-white">
@@ -306,7 +105,7 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
                     <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
-                    <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Vaka Çalışmaları</a>
+                    <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Bize Güvenenler</a>
                     <a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">İletişim</a>
                 </div>
                 <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">Ücretsiz Danışmanlık</a>
@@ -320,7 +119,7 @@
                 <div class="pt-4 pb-2 space-y-2">
                     <a href="index.html" class="block py-2 text-gray-400 hover:text-purple-400">Ana Sayfa</a>
                     <a href="hizmetler.html" class="block py-2 text-gray-400 hover:text-purple-400">Hizmetler</a>
-                    <a href="vaka-calismalari.html" class="block py-2 text-gray-400 hover:text-purple-400">Vaka Çalışmaları</a>
+                    <a href="vaka-calismalari.html" class="block py-2 text-gray-400 hover:text-purple-400">Bize Güvenenler</a>
                     <a href="iletisim.html" class="block py-2 text-gray-400 hover:text-purple-400">İletişim</a>
                 </div>
             </div>
@@ -488,7 +287,7 @@
                             <p class="text-sm text-gray-500 mb-6"><em>Yürürlük Tarihi: 14 Aralık 2025</em></p>
                             
                             <h3>1. Çerez Nedir?</h3>
-                            <p>Çerezler, web sitelerinin tarayıcınıza yerleştirdiği küçük metin dosyalarıdır. Bu dosyalar site deneyiminizi iyileştirmek ve site performansını analiz etmek için kullanılır.</p>
+                            <p>Çerezler, web sitelerinin tarayıcılar aracılığıyla cihazınıza yerleştirdiği küçük metin dosyalarıdır. Bu dosyalar site deneyiminizi iyileştirmek için kullanılır.</p>
 
                             <h3>2. Kullandığımız Çerez Türleri</h3>
                             
@@ -496,38 +295,17 @@
                             <ul>
                                 <li><strong>session_id:</strong> Oturum yönetimi (Süre: Oturum)</li>
                                 <li><strong>csrf_token:</strong> Güvenlik (Süre: Oturum)</li>
-                                <li><strong>cookie_consent:</strong> Çerez tercihi (Süre: 1 yıl)</li>
                             </ul>
 
                             <h4>2.2. Performans Çerezleri</h4>
                             <ul>
                                 <li><strong>_ga:</strong> Google Analytics - Ziyaretçi istatistikleri (Süre: 2 yıl)</li>
-                                <li><strong>_gid:</strong> Google Analytics - Oturum takibi (Süre: 24 saat)</li>
-                            </ul>
-
-                            <h4>2.3. Hedefleme/Reklam Çerezleri (Onay Gerekir)</h4>
-                            <ul>
-                                <li><strong>_gcl_au:</strong> Google Ads dönüşüm takibi (Süre: 90 gün)</li>
-                                <li><strong>_fbp:</strong> Facebook Pixel (Süre: 90 gün)</li>
                             </ul>
 
                             <h3>3. Çerez Yönetimi</h3>
-                            <p>Çerezleri tarayıcı ayarlarınızdan yönetebilirsiniz:</p>
-                            <ul>
-                                <li><strong>Chrome:</strong> Ayarlar → Gizlilik ve Güvenlik → Çerezler</li>
-                                <li><strong>Firefox:</strong> Ayarlar → Gizlilik ve Güvenlik → Çerezler</li>
-                                <li><strong>Safari:</strong> Tercihler → Gizlilik → Çerezleri Yönet</li>
-                            </ul>
+                            <p>Çerezleri tarayıcı ayarlarınızdan dilediğiniz zaman yönetebilir veya silebilirsiniz.</p>
 
-                            <h3>4. Üçüncü Taraf Hizmetler</h3>
-                            <p>Web sitemizde kullanılan üçüncü taraf hizmetler:</p>
-                            <ul>
-                                <li><strong>Google Analytics:</strong> Ziyaretçi analizi</li>
-                                <li><strong>Google Ads:</strong> Reklam optimizasyonu</li>
-                                <li><strong>Facebook Pixel:</strong> Reklam performansı</li>
-                            </ul>
-
-                            <h3>5. İletişim</h3>
+                            <h3>4. İletişim</h3>
                             <p>Çerez politikası hakkında sorularınız için: <a href="mailto:info@auraai.com">info@auraai.com</a></p>
                         </section>
 
@@ -576,7 +354,7 @@
                     <ul class="space-y-3">
                         <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Ana Sayfa</a></li>
                         <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Hizmetler</a></li>
-                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Vaka Çalışmaları</a></li>
+                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Bize Güvenenler</a></li>
                         <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ İletişim</a></li>
                     </ul>
                 </div>
