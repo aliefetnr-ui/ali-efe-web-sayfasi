@@ -28,12 +28,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'dark': {
-                            900: '#0B0C15',
-                            800: '#13141F',
-                            700: '#1A1B2E',
-                            600: '#252640',
-                        }
+                        'dark': { 900: '#0B0C15', 800: '#13141F', 700: '#1A1B2E', 600: '#252640' }
                     },
                     fontFamily: {
                         'sans': ['Space Grotesk', 'system-ui', 'sans-serif'],
@@ -44,163 +39,30 @@
     </script>
     
     <style>
-        * {
-            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-        
-        body {
-            overflow-x: hidden;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            background: #0B0C15;
-        }
-        
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 20s infinite ease-in-out;
-        }
-        
-        .orb-1 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
-            top: -10%;
-            left: -10%;
-        }
-        
-        .orb-2 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
-            bottom: -10%;
-            right: -10%;
-            animation-delay: 5s;
-        }
-        
-        .orb-3 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: 10s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(100px, -100px) scale(1.1); }
-            66% { transform: translate(-100px, 100px) scale(0.9); }
-        }
-        
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-            z-index: -1;
-        }
-        
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        
-        .glassmorphism {
-            background: rgba(26, 27, 46, 0.5);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-        }
-        
-        .navbar-scrolled {
-            background: rgba(19, 20, 31, 0.8) !important;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glow-button {
-            background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
-            box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4);
-            transition: all 0.4s ease;
-        }
-        
-        .glow-button:hover {
-            box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6);
-            transform: translateY(-4px) scale(1.02);
-        }
-        
-        .glow-border {
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-            border: 1px solid rgba(139, 92, 246, 0.4);
-            transition: all 0.4s ease;
-        }
-        
-        .glow-border:hover {
-            box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3);
-            border-color: rgba(139, 92, 246, 0.7);
-            transform: translateY(-8px);
-        }
-        
-        .tilt-card {
-            transition: transform 0.6s ease, box-shadow 0.6s ease;
-            transform-style: preserve-3d;
-        }
-        
-        .tilt-card:hover {
-            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
-            box-shadow: 
-                0 20px 60px rgba(139, 92, 246, 0.4),
-                0 0 80px rgba(6, 182, 212, 0.3);
-        }
-        
-        .social-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            transform: translateY(-5px) scale(1.1);
-        }
-        
-        #mobileMenu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        
-        #mobileMenu.show {
-            max-height: 500px;
-        }
+        * { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        body { overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+        .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #0B0C15; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
+        .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%); top: -10%; left: -10%; }
+        .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%); bottom: -10%; right: -10%; animation-delay: 5s; }
+        .orb-3 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 10s; }
+        @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(100px, -100px) scale(1.1); } 66% { transform: translate(-100px, 100px) scale(0.9); } }
+        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
+        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
+        .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
+        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
+        .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
+        .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
+        .glow-border:hover { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3); border-color: rgba(139, 92, 246, 0.7); transform: translateY(-8px); }
+        .tilt-card { transition: transform 0.6s ease, box-shadow 0.6s ease; transform-style: preserve-3d; }
+        .tilt-card:hover { transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px); box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4), 0 0 80px rgba(6, 182, 212, 0.3); }
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-5px) scale(1.1); }
+        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        #mobileMenu.show { max-height: 500px; }
     </style>
 </head>
 <body class="bg-[#0B0C15] text-white">
@@ -260,24 +122,24 @@
     <section class="min-h-screen flex items-center justify-center pt-20">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center max-w-5xl mx-auto">
-              <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-    <i class="fa-solid fa-robot text-purple-400 text-xl mr-2 flex-shrink-0"></i>
-    <span class="gradient-text text-sm font-bold tracking-wide">YAPAY ZEKA DESTEKLİ OTOMASYON</span>
-</div>
-                <h1 class="text-6xl sm:text-8xl font-bold mb-8 leading-tight" data-aos="zoom-in" data-aos-delay="200">
+                <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
+                    <i class="fa-solid fa-robot text-purple-400 text-xl mr-2 flex-shrink-0"></i>
+                    <span class="gradient-text text-sm font-bold tracking-wide">YAPAY ZEKA DESTEKLİ OTOMASYON</span>
+                </div>
+                <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold mb-8 leading-tight" data-aos="zoom-in" data-aos-delay="200">
                     İşletmenizi <span class="gradient-text">Otomatikleştirin</span>
                 </h1>
-                <p class="text-xl sm:text-2xl text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="400">
+                <p class="text-lg sm:text-2xl text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="400">
                     Envanter, müşteri hizmetleri ve satış süreçlerinizi yapay zeka chatbot'larıyla 7/24 yönetin. Maliyetleri %85 azaltın, verimliliği 3 katına çıkarın.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="600">
-                    <a href="iletisim.html" class="glow-button text-white px-10 py-5 rounded-2xl font-bold text-lg inline-flex items-center justify-center group">
+                    <a href="iletisim.html" class="glow-button text-white px-10 py-5 rounded-2xl font-bold text-lg inline-flex items-center justify-center group w-full sm:w-auto">
                         <span>Ücretsiz Toplantı Planla</span>
                         <svg class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                         </svg>
                     </a>
-                    <a href="hizmetler.html" class="glassmorphism glow-border text-white px-10 py-5 rounded-2xl font-bold text-lg inline-flex items-center justify-center hover:bg-purple-500/10 transition-all">
+                    <a href="hizmetler.html" class="glassmorphism glow-border text-white px-10 py-5 rounded-2xl font-bold text-lg inline-flex items-center justify-center hover:bg-purple-500/10 transition-all w-full sm:w-auto">
                         <span>Hizmetleri Keşfet</span>
                         <svg class="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -288,52 +150,53 @@
         </div>
     </section>
 
-    <section class="py-20 border-y border-purple-500/10">
+    <section class="py-12 md:py-20 border-y border-purple-500/10">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="flip-up" data-aos-duration="800">
-                    <div class="text-5xl font-bold gradient-text mb-4">%85</div>
-                    <p class="text-gray-400 text-lg">Maliyet Düşüşü</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+                <div class="glassmorphism p-6 md:p-8 rounded-2xl glow-border" data-aos="flip-up" data-aos-duration="800">
+                    <div class="text-3xl md:text-5xl font-bold gradient-text mb-2 md:mb-4">%85</div>
+                    <p class="text-gray-400 text-sm md:text-lg">Maliyet Düşüşü</p>
                 </div>
-                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="flip-up" data-aos-duration="800" data-aos-delay="200">
-                    <div class="text-5xl font-bold gradient-text mb-4">7/24</div>
-                    <p class="text-gray-400 text-lg">Kesintisiz Hizmet</p>
+                <div class="glassmorphism p-6 md:p-8 rounded-2xl glow-border" data-aos="flip-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="text-3xl md:text-5xl font-bold gradient-text mb-2 md:mb-4">7/24</div>
+                    <p class="text-gray-400 text-sm md:text-lg">Kesintisiz Hizmet</p>
                 </div>
-                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="flip-up" data-aos-duration="800" data-aos-delay="400">
-                    <div class="text-5xl font-bold gradient-text mb-4">%0</div>
-                    <p class="text-gray-400 text-lg">Hata Oranı</p>
+                <div class="glassmorphism p-6 md:p-8 rounded-2xl glow-border" data-aos="flip-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="text-3xl md:text-5xl font-bold gradient-text mb-2 md:mb-4">%0</div>
+                    <p class="text-gray-400 text-sm md:text-lg">Hata Oranı</p>
                 </div>
-                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="flip-up" data-aos-duration="800" data-aos-delay="600">
-                    <div class="text-5xl font-bold gradient-text mb-4">3x</div>
-                    <p class="text-gray-400 text-lg">Daha Hızlı Yanıt</p>
+                <div class="glassmorphism p-6 md:p-8 rounded-2xl glow-border" data-aos="flip-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="text-3xl md:text-5xl font-bold gradient-text mb-2 md:mb-4">3x</div>
+                    <p class="text-gray-400 text-sm md:text-lg">Daha Hızlı Yanıt</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-40">
+    <section class="py-20 lg:py-32">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="text-center mb-20">
+            <div class="text-center mb-16 lg:mb-20">
                 <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-                    <span class="gradient-text text-sm font-bold tracking-wide">🚀 HİZMETLERİMİZ</span>
+                    <i class="fa-solid fa-rocket text-purple-400 text-xl mr-2 flex-shrink-0"></i>
+                    <span class="gradient-text text-sm font-bold tracking-wide">HİZMETLERİMİZ</span>
                 </div>
-                <h2 class="text-5xl sm:text-6xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="100">
+                <h2 class="text-4xl sm:text-6xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="100">
                     <span class="gradient-text">Yapay Zeka</span> Çözümlerimiz
                 </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                     İşletmenizi otomatikleştiren, 7/24 çalışan akıllı asistanlar
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-right" data-aos-duration="1000">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+                <div class="glassmorphism tilt-card p-8 md:p-10 rounded-3xl glow-border" data-aos="fade-right" data-aos-duration="1000">
                     <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
                         <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
                         </svg>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 gradient-text">Envanter Yönetimi</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 gradient-text">Envanter Yönetimi</h3>
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-6">
                         Stok seviyelerini otomatik takip edin, kritik seviyelerde uyarı alın, siparişleri otomatikleştirin.
                     </p>
                     <ul class="space-y-3 mb-8">
@@ -364,14 +227,14 @@
                     </a>
                 </div>
 
-                <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="glassmorphism tilt-card p-8 md:p-10 rounded-3xl glow-border" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
                         <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 gradient-text">Müşteri Hizmetleri</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 gradient-text">Müşteri Hizmetleri</h3>
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-6">
                         7/24 müşterilerinize anında yanıt verin. Sıkça sorulan sorular, sipariş takibi, iade süreçleri otomatik yönetilsin.
                     </p>
                     <ul class="space-y-3 mb-8">
@@ -402,14 +265,14 @@
                     </a>
                 </div>
 
-                <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                <div class="glassmorphism tilt-card p-8 md:p-10 rounded-3xl glow-border" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                     <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
                         <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 gradient-text">Satış Otomasyonu</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 gradient-text">Satış Otomasyonu</h3>
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-6">
                         Potansiyel müşterileri yakala, takip et, satışa dönüştür. Lead'lerinizi hiçbir zaman kaybetmeyin.
                     </p>
                     <ul class="space-y-3 mb-8">
@@ -443,18 +306,18 @@
         </div>
     </section>
 
-    <section class="py-40">
+    <section class="py-20 lg:py-32">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="glassmorphism glow-border p-20 rounded-[3rem] text-center relative overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="glassmorphism glow-border p-10 md:p-20 rounded-[2rem] md:rounded-[3rem] text-center relative overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
                 <div class="relative z-10">
-                    <h2 class="text-6xl font-bold mb-8">Başlamaya Hazır mısınız?</h2>
-                    <p class="text-2xl text-gray-400 mb-12 max-w-3xl mx-auto">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6 md:mb-8">Başlamaya Hazır mısınız?</h2>
+                    <p class="text-lg md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-3xl mx-auto">
                         İşletmenizi otomatikleştirmek için bugün harekete geçin. Ücretsiz danışmanlık ile başlayın.
                     </p>
-                    <a href="iletisim.html" class="glow-button text-white px-16 py-7 rounded-2xl font-bold text-2xl inline-flex items-center justify-center group">
+                    <a href="iletisim.html" class="glow-button text-white px-10 md:px-16 py-5 md:py-7 rounded-2xl font-bold text-xl md:text-2xl inline-flex items-center justify-center group w-full sm:w-auto">
                         <span>Ücretsiz Toplantı Planla</span>
-                        <svg class="w-7 h-7 ml-4 group-hover:translate-x-3 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 md:w-7 md:h-7 ml-3 md:ml-4 group-hover:translate-x-3 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                         </svg>
                     </a>
@@ -463,7 +326,7 @@
         </div>
     </section>
 
-  <footer class="relative border-t border-purple-500/10 py-16 sm:py-20 bg-[#0B0C15]">
+    <footer class="relative border-t border-purple-500/10 py-16 sm:py-20 bg-[#0B0C15]">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
                 
@@ -484,8 +347,9 @@
                     <p class="text-gray-400 leading-relaxed text-sm sm:text-base mb-6">
                         Yapay zeka destekli otomasyon çözümleriyle işletmenizi geleceğe taşıyoruz.
                     </p>
-                    <div class="glassmorphism inline-block px-4 py-2 rounded-lg">
-                        <span class="text-purple-400 text-xs font-semibold">🚀 2025'te Daha Güçlüyüz</span>
+                    <div class="glassmorphism inline-block px-4 py-2 rounded-lg flex items-center justify-center sm:justify-start gap-2">
+                        <i class="fa-solid fa-shuttle-space text-purple-400"></i>
+                        <span class="text-purple-400 text-xs font-semibold">2025'te Daha Güçlüyüz</span>
                     </div>
                 </div>
                 
