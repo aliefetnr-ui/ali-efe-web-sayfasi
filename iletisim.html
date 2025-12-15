@@ -3,204 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>İletişim | Aura AI - Bize Ulaşın</title>
-    <meta name="description" content="Aura AI ile iletişime geçin. Ücretsiz danışmanlık alın, chatbot otomasyon çözümlerimiz hakkında bilgi edinin.">
-    <meta name="keywords" content="iletişim, destek, chatbot danışmanlık, AI otomasyon">
-    <meta name="author" content="Aura AI">
-    
+    <title>İletişim | Aura AI</title>
+    <meta name="description" content="Aura AI ile iletişime geçin. Yapay zeka otomasyon çözümleri için ücretsiz danışmanlık alın.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 15 L20 85 L80 85 Z' stroke='url(%23g)' stroke-width='4' fill='none'/%3E%3Ccircle cx='50' cy='40' r='10' stroke='url(%23g)' stroke-width='4'/%3E%3C/svg%3E">
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
-    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'dark': {
-                            900: '#0B0C15',
-                            800: '#13141F',
-                            700: '#1A1B2E',
-                            600: '#252640',
-                        }
+                        'dark': { 900: '#0B0C15', 800: '#13141F', 700: '#1A1B2E', 600: '#252640' }
                     },
                     fontFamily: {
-                        'sans': ['Space Grotesk', 'system-ui', 'sans-serif'],
+                        'heading': ['Space Grotesk', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    
     <style>
-        * {
-            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-        
-        body {
-            overflow-x: hidden;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            background: #0B0C15;
-        }
-        
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 20s infinite ease-in-out;
-        }
-        
-        .orb-1 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
-            top: -10%;
-            left: -10%;
-        }
-        
-        .orb-2 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
-            bottom: -10%;
-            right: -10%;
-            animation-delay: 5s;
-        }
-        
-        .orb-3 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: 10s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(100px, -100px) scale(1.1); }
-            66% { transform: translate(-100px, 100px) scale(0.9); }
-        }
-        
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-            z-index: -1;
-        }
-        
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        
-        .glassmorphism {
-            background: rgba(26, 27, 46, 0.5);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-        }
-        
-        .navbar-scrolled {
-            background: rgba(19, 20, 31, 0.8) !important;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glow-button {
-            background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
-            box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4);
-            transition: all 0.4s ease;
-        }
-        
-        .glow-button:hover {
-            box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6);
-            transform: translateY(-4px) scale(1.02);
-        }
-        
-        .glow-border {
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-            border: 1px solid rgba(139, 92, 246, 0.4);
-            transition: all 0.4s ease;
-        }
-        
-        .glow-border:hover {
-            box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3);
-            border-color: rgba(139, 92, 246, 0.7);
-            transform: translateY(-8px);
-        }
-        
-        .tilt-card {
-            transition: transform 0.6s ease, box-shadow 0.6s ease;
-            transform-style: preserve-3d;
-        }
-        
-        .tilt-card:hover {
-            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
-            box-shadow: 
-                0 20px 60px rgba(139, 92, 246, 0.4),
-                0 0 80px rgba(6, 182, 212, 0.3);
-        }
-        
-        .social-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            transform: translateY(-5px) scale(1.1);
-        }
-        
-        #mobileMenu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        
-        #mobileMenu.show {
-            max-height: 500px;
-        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #0B0C15; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
+        .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%); top: -10%; left: -10%; }
+        .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%); bottom: -10%; right: -10%; animation-delay: 5s; }
+        .orb-3 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 10s; }
+        @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(100px, -100px) scale(1.1); } 66% { transform: translate(-100px, 100px) scale(0.9); } }
+        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
+        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
+        .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
+        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
+        .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-5px) scale(1.1); }
+        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        #mobileMenu.show { max-height: 500px; }
+        .form-input { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); color: white; transition: all 0.3s ease; }
+        .form-input:focus { border-color: #8B5CF6; box-shadow: 0 0 15px rgba(139, 92, 246, 0.3); outline: none; }
+        .faq-item { border-bottom: 1px solid rgba(139, 92, 246, 0.2); }
+        .faq-question { cursor: pointer; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
     </style>
 </head>
 <body class="bg-[#0B0C15] text-white">
@@ -226,7 +80,7 @@
                         <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g)" stroke-width="4" fill="none"/>
                         <circle cx="50" cy="40" r="10" stroke="url(#g)" stroke-width="4" fill="none"/>
                     </svg>
-                    <span class="text-xl sm:text-2xl font-bold gradient-text">Aura AI</span>
+                    <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
@@ -261,199 +115,122 @@
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center max-w-4xl mx-auto">
                 <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-                    <span class="gradient-text text-sm font-bold tracking-wide">📞 İLETİŞİM</span>
+                    <span class="gradient-text text-sm font-bold tracking-wide font-heading">📞 BİZE ULAŞIN</span>
                 </div>
-                <h1 class="text-5xl sm:text-7xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="200">
-                    <span class="gradient-text">Ücretsiz Toplantı</span> Planlayın
+                <h1 class="text-5xl sm:text-7xl font-bold mb-6 font-heading">
+                    <span class="gradient-text">Geleceği</span> Birlikte Planlayalım
                 </h1>
-                <p class="text-xl text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-                    Size özel chatbot çözümü için hemen iletişime geçin
+                <p class="text-xl text-gray-400 leading-relaxed">
+                    İşletmeniz için en uygun yapay zeka çözümlerini konuşmak için ücretsiz bir danışmanlık görüşmesi planlayın.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="py-20">
+    <section class="pb-20">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 
-                <div data-aos="fade-right" data-aos-duration="1000">
-                    <div class="glassmorphism glow-border p-10 rounded-3xl">
-                        <h2 class="text-3xl font-bold mb-8 gradient-text">Bize Ulaşın</h2>
-                        
-                        <form class="space-y-6">
+                <div class="glassmorphism rounded-3xl p-8 sm:p-12">
+                    <h2 class="text-3xl font-bold mb-8 gradient-text font-heading">Mesaj Gönderin</h2>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-gray-300 font-semibold mb-3">Ad Soyad</label>
-                                <input type="text" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all" placeholder="İsminiz">
+                                <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Adınız Soyadınız</label>
+                                <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 rounded-xl" placeholder="İsminiz">
                             </div>
-                            
                             <div>
-                                <label class="block text-gray-300 font-semibold mb-3">E-posta</label>
-                                <input type="email" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all" placeholder="ornek@email.com">
+                                <label for="company" class="block text-sm font-medium text-gray-400 mb-2">Şirket Adı</label>
+                                <input type="text" id="company" name="company" class="form-input w-full px-4 py-3 rounded-xl" placeholder="Şirketiniz">
                             </div>
-                            
-                            <div>
-                                <label class="block text-gray-300 font-semibold mb-3">Telefon</label>
-                                <input type="tel" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all" placeholder="+90 555 123 45 67">
-                            </div>
-                            
-                            <div>
-                                <label class="block text-gray-300 font-semibold mb-3">Şirket</label>
-                                <input type="text" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all" placeholder="Şirket adınız">
-                            </div>
-                            
-                            <div>
-                                <label class="block text-gray-300 font-semibold mb-3">Hangi hizmetle ilgileniyorsunuz?</label>
-                                <select class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all">
-                                    <option>Envanter Yönetimi</option>
-                                    <option>Müşteri Hizmetleri</option>
-                                    <option>Satış Otomasyonu</option>
-                                    <option>Tümü</option>
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label class="block text-gray-300 font-semibold mb-3">Mesajınız</label>
-                                <textarea rows="5" class="w-full px-6 py-4 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all resize-none" placeholder="Projeniz hakkında detay verin..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="w-full glow-button text-white px-8 py-5 rounded-2xl font-bold text-lg inline-flex items-center justify-center group">
-                                <span>Ücretsiz Toplantı Planla</span>
-                                <svg class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">E-posta Adresiniz</label>
+                            <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 rounded-xl" placeholder="ornek@email.com">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-400 mb-2">İlgilendiğiniz Hizmet</label>
+                            <select id="service" name="service" class="form-input w-full px-4 py-3 rounded-xl bg-[#0B0C15]">
+                                <option value="">Seçiniz...</option>
+                                <option value="Envanter Yönetimi">Envanter Yönetimi Chatbot</option>
+                                <option value="Müşteri Hizmetleri">Müşteri Hizmetleri Chatbot</option>
+                                <option value="Satış Otomasyonu">Satış Otomasyonu Chatbot</option>
+                                <option value="Diğer">Diğer</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Mesajınız</label>
+                            <textarea id="message" name="message" rows="4" required class="form-input w-full px-4 py-3 rounded-xl" placeholder="Projenizden kısaca bahsedin..."></textarea>
+                        </div>
+                        <button type="submit" class="glow-button w-full text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center group">
+                            <span>Gönder</span>
+                            <svg class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </form>
+                    <div id="formFeedback" class="mt-4 hidden p-4 rounded-xl glassmorphism text-center"></div>
                 </div>
                 
-                <div class="space-y-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    
-                    <div class="glassmorphism glow-border p-8 rounded-2xl">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                </svg>
+                <div class="space-y-8">
+                    <div class="glassmorphism rounded-3xl p-8 flex items-start space-x-6">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-2xl text-purple-400 flex-shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2 font-heading">E-posta</h3>
+                            <a href="mailto:info@auraai.com" class="text-gray-400 hover:text-purple-400 transition-colors text-lg">info@auraai.com</a>
+                            <p class="text-gray-400 text-sm mt-2">7/24 destek için bize yazın</p>
+                        </div>
+                    </div>
+
+                    <div class="glassmorphism rounded-3xl p-8 sm:p-12">
+                        <h2 class="text-2xl font-bold mb-8 gradient-text font-heading">Sıkça Sorulan Sorular</h2>
+                        <div class="space-y-4">
+                            <div class="faq-item">
+                                <button class="faq-question w-full flex justify-between items-center py-4 text-left">
+                                    <span class="text-lg font-medium">Danışmanlık ücretli mi?</span>
+                                    <svg class="faq-icon w-6 h-6 text-purple-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p class="text-gray-400 pb-4">Hayır, ilk keşif ve danışmanlık görüşmemiz tamamen ücretsizdir. İşletmenizin ihtiyaçlarını analiz edip size özel bir yol haritası sunuyoruz.</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2 text-white">E-posta</h3>
-                                <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-purple-300 transition-all text-lg">info@auraai.com</a>
-                                <p class="text-gray-400 text-sm mt-2">7/24 destek için bize yazın</p>
+                            <div class="faq-item">
+                                <button class="faq-question w-full flex justify-between items-center py-4 text-left">
+                                    <span class="text-lg font-medium">Kurulum ne kadar sürer?</span>
+                                    <svg class="faq-icon w-6 h-6 text-purple-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p class="text-gray-400 pb-4">Projenin kapsamına göre değişmekle birlikte, standart bir chatbot kurulumu genellikle 2-4 hafta içinde tamamlanıp canlıya alınmaktadır.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question w-full flex justify-between items-center py-4 text-left">
+                                    <span class="text-lg font-medium">Teknik destek sağlıyor musunuz?</span>
+                                    <svg class="faq-icon w-6 h-6 text-purple-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p class="text-gray-400 pb-4">Evet, tüm paketlerimizde kurulum sonrası bakım ve teknik destek hizmeti sunuyoruz. Sisteminizin sorunsuz çalışması bizim önceliğimizdir.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="glassmorphism glow-border p-8 rounded-2xl">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2 text-white">Telefon</h3>
-                                <a href="tel:+905551234567" class="text-purple-400 hover:text-purple-300 transition-all text-lg">+90 555 123 45 67</a>
-                                <p class="text-gray-400 text-sm mt-2">Pazartesi - Cuma: 09:00 - 18:00</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="glassmorphism glow-border p-8 rounded-2xl">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2 text-white">Adres</h3>
-                                <p class="text-gray-300 text-lg">İstanbul, Türkiye</p>
-                                <p class="text-gray-400 text-sm mt-2">Ofisimizde randevulu görüşme</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="glassmorphism glow-border p-8 rounded-2xl">
-                        <h3 class="text-xl font-bold mb-6 text-white">Sosyal Medya</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="social-icon w-14 h-14 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
-                                <i class="fab fa-linkedin-in text-2xl"></i>
-                            </a>
-                            <a href="#" class="social-icon w-14 h-14 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
-                                <i class="fab fa-twitter text-2xl"></i>
-                            </a>
-                            <a href="#" class="social-icon w-14 h-14 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
-                                <i class="fab fa-instagram text-2xl"></i>
-                            </a>
-                            <a href="#" class="social-icon w-14 h-14 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
-                                <i class="fab fa-whatsapp text-2xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
                 </div>
                 
             </div>
         </div>
     </section>
 
-    <section class="py-20 border-y border-purple-500/10">
+    <footer class="relative border-t border-purple-500/10 py-16 sm:py-20">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-6xl font-bold mb-6" data-aos="zoom-in">
-                    Sıkça Sorulan <span class="gradient-text">Sorular</span>
-                </h2>
-                <p class="text-xl text-gray-400" data-aos="fade-up" data-aos-delay="200">
-                    Merak ettiklerinizin yanıtları
-                </p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto space-y-6">
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Chatbot'ları ne kadar sürede kurabiliriz?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Basit projeler için 1-2 hafta, kapsamlı entegrasyonlar için 4-6 hafta sürebilir. İlk görüşmede size özel tahmini süre vereceğiz.
-                    </p>
-                </div>
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Fiyatlandırma nasıl çalışıyor?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Aylık abonelik modelimiz var. Fiyat, kullandığınız hizmetlere, mesaj sayısına ve entegrasyonlara göre değişir. Ücretsiz danışmanlıkta size özel teklif hazırlıyoruz.
-                    </p>
-                </div>
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Mevcut sistemlerimizle entegre olabilir mi?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Evet! WhatsApp, Telegram, CRM sistemleri, e-ticaret platformları ve daha fazlasıyla entegrasyon sağlıyoruz. API desteği olan her sistemle çalışabiliriz.
-                    </p>
-                </div>
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Verilerimiz güvende mi?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Kesinlikle. KVKK ve GDPR uyumlu çalışıyoruz. Tüm veriler şifreli olarak saklanır ve üçüncü taraflarla paylaşılmaz.
-                    </p>
-                </div>
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Destek alabiliyor muyuz?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        7/24 teknik destek sağlıyoruz. WhatsApp, e-posta veya telefon ile ulaşabilirsiniz. Ayrıca düzenli eğitimler ve dokümantasyon sunuyoruz.
-                    </p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <footer class="relative border-t border-purple-500/10 py-20">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
                 
                 <div class="text-center sm:text-left">
                     <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group">
@@ -467,7 +244,7 @@
                             <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g-footer)" stroke-width="4" fill="none"/>
                             <circle cx="50" cy="40" r="10" stroke="url(#g-footer)" stroke-width="4" fill="none"/>
                         </svg>
-                        <span class="text-3xl font-bold gradient-text">Aura AI</span>
+                        <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
                     </div>
                     <p class="text-gray-400 leading-relaxed text-sm sm:text-base mb-6">
                         Yapay zeka destekli otomasyon çözümleriyle işletmenizi geleceğe taşıyoruz.
@@ -478,35 +255,35 @@
                 </div>
                 
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-xl">Hızlı Linkler</h4>
+                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Hızlı Linkler</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Ana Sayfa</a></li>
-                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Hizmetler</a></li>
-                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Bize Güvenenler</a></li>
-                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all">→ İletişim</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Ana Sayfa</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Hizmetler</a></li>
+                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Bize Güvenenler</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ İletişim</a></li>
                     </ul>
                 </div>
                 
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-xl">Yasal</h4>
+                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Yasal</h4>
                     <ul class="space-y-3">
-                        <li><a href="yasal.html#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all">→ Gizlilik Politikası</a></li>
-                        <li><a href="yasal.html#kullanim" class="text-gray-400 hover:text-purple-400 transition-all">→ Kullanım Şartları</a></li>
-                        <li><a href="yasal.html#kvkk" class="text-gray-400 hover:text-purple-400 transition-all">→ KVKK</a></li>
-                        <li><a href="yasal.html#cerez" class="text-gray-400 hover:text-purple-400 transition-all">→ Çerez Politikası</a></li>
+                        <li><a href="yasal.html#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
+                        <li><a href="yasal.html#kullanim" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Kullanım Şartları</a></li>
+                        <li><a href="yasal.html#kvkk" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ KVKK</a></li>
+                        <li><a href="yasal.html#cerez" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Çerez Politikası</a></li>
                     </ul>
                 </div>
                 
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-xl">Sosyal Medya</h4>
+                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Sosyal Medya</h4>
                     <div class="flex space-x-4 justify-center sm:justify-start mb-6">
-                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400">
+                        <a href="#" class="social-icon w-12 h-12 glassmorphism rounded-xl flex items-center justify-center text-purple-400">
                             <i class="fab fa-linkedin-in text-xl"></i>
                         </a>
-                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400">
+                        <a href="#" class="social-icon w-12 h-12 glassmorphism rounded-xl flex items-center justify-center text-purple-400">
                             <i class="fab fa-twitter text-xl"></i>
                         </a>
-                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400">
+                        <a href="#" class="social-icon w-12 h-12 glassmorphism rounded-xl flex items-center justify-center text-purple-400">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
                     </div>
@@ -531,5 +308,47 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // SSS Akordeon
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Form Gönderme (Web3Forms)
+        const form = document.getElementById('contactForm');
+        const feedback = document.getElementById('formFeedback');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            formData.append('access_key', 'YOUR_ACCESS_KEY_HERE'); // BURAYA KENDİ KEY'İNİ YAZ!
+
+            feedback.classList.remove('hidden', 'text-green-400', 'text-red-400');
+            feedback.innerText = 'Gönderiliyor...';
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    feedback.innerText = 'Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.';
+                    feedback.classList.add('text-green-400');
+                    form.reset();
+                } else {
+                    feedback.innerText = 'Bir hata oluştu: ' + data.message;
+                    feedback.classList.add('text-red-400');
+                }
+            } catch (error) {
+                feedback.innerText = 'Bağlantı hatası! Lütfen daha sonra tekrar deneyin.';
+                feedback.classList.add('text-red-400');
+            }
+        });
+    </script>
 </body>
 </html>
