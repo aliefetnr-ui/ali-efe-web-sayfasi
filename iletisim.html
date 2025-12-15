@@ -131,9 +131,13 @@
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 
-                <div class="glassmorphism rounded-3xl p-8 sm:p-12" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 class="text-3xl font-bold mb-8 gradient-text font-heading">Mesaj Gönderin</h2>
-                    <form id="contactForm" class="space-y-6">
+                <div class="glassmorphism rounded-3xl p-8 sm:p-12" data-aos="fade-up" data-aos-duration="800">
+                    
+                    <h2 class="text-3xl font-bold mb-8 gradient-text font-heading" data-aos="fade-up" data-aos-delay="200">
+                        Mesaj Gönderin
+                    </h2>
+                    
+                    <form id="contactForm" class="space-y-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Adınız Soyadınız</label>
@@ -162,7 +166,8 @@
                             <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Mesajınız</label>
                             <textarea id="message" name="message" rows="4" required class="form-input w-full px-4 py-3 rounded-xl" placeholder="Projenizden kısaca bahsedin..."></textarea>
                         </div>
-                        <button type="submit" class="glow-button w-full text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center group">
+                        
+                        <button type="submit" class="glow-button w-full text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center group transform transition-all duration-300 hover:scale-[1.02]">
                             <span>Gönder</span>
                             <svg class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -172,8 +177,10 @@
                     <div id="formFeedback" class="mt-4 hidden p-4 rounded-xl glassmorphism text-center"></div>
                 </div>
                 
-                <div class="space-y-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                    <div class="glassmorphism rounded-3xl p-8 flex items-start space-x-6 hover:border-purple-500/30 transition-colors duration-300">
+                <div class="space-y-8">
+                    
+                    <div class="glassmorphism rounded-3xl p-8 flex items-start space-x-6 hover:border-purple-500/30 transition-colors duration-300" 
+                         data-aos="fade-left" data-aos-delay="400">
                         <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-2xl text-purple-400 flex-shrink-0">
                             <i class="fa-solid fa-envelope"></i>
                         </div>
@@ -184,10 +191,10 @@
                         </div>
                     </div>
 
-                    <div class="glassmorphism rounded-3xl p-8 sm:p-12">
+                    <div class="glassmorphism rounded-3xl p-8 sm:p-12" data-aos="fade-up" data-aos-delay="500">
                         <h2 class="text-2xl font-bold mb-8 gradient-text font-heading">Sıkça Sorulan Sorular</h2>
                         <div class="space-y-4">
-                            <div class="faq-item">
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
                                 <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
                                     <span class="text-lg font-medium group-hover:text-purple-400 transition-colors">Danışmanlık ücretli mi?</span>
                                     <svg class="faq-icon w-6 h-6 text-purple-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -195,10 +202,11 @@
                                     </svg>
                                 </button>
                                 <div class="faq-answer">
-                                    <p class="text-gray-400 pb-4">Hayır, ilk keşif ve danışmanlık görüşmemiz tamamen ücretsizdir. İşletmenizin ihtiyaçlarını analiz edip size özel bir yol haritası sunuyoruz.</p>
+                                    <p class="text-gray-400 pb-4">Hayır, ilk keşif ve danışmanlık görüşmemiz tamamen ücretsizdir.</p>
                                 </div>
                             </div>
-                            <div class="faq-item">
+                            
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
                                 <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
                                     <span class="text-lg font-medium group-hover:text-purple-400 transition-colors">Kurulum ne kadar sürer?</span>
                                     <svg class="faq-icon w-6 h-6 text-purple-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,18 +214,19 @@
                                     </svg>
                                 </button>
                                 <div class="faq-answer">
-                                    <p class="text-gray-400 pb-4">Projenin kapsamına göre değişmekle birlikte, standart bir chatbot kurulumu genellikle 2-4 hafta içinde tamamlanıp canlıya alınmaktadır.</p>
+                                    <p class="text-gray-400 pb-4">Standart bir chatbot kurulumu genellikle 2-4 hafta içinde tamamlanıp canlıya alınmaktadır.</p>
                                 </div>
                             </div>
-                            <div class="faq-item">
+
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="800">
                                 <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
-                                    <span class="text-lg font-medium group-hover:text-purple-400 transition-colors">Teknik destek sağlıyor musunuz?</span>
+                                    <span class="text-lg font-medium group-hover:text-purple-400 transition-colors">Teknik destek var mı?</span>
                                     <svg class="faq-icon w-6 h-6 text-purple-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="faq-answer">
-                                    <p class="text-gray-400 pb-4">Evet, tüm paketlerimizde kurulum sonrası bakım ve teknik destek hizmeti sunuyoruz. Sisteminizin sorunsuz çalışması bizim önceliğimizdir.</p>
+                                    <p class="text-gray-400 pb-4">Evet, tüm paketlerimizde kurulum sonrası 7/24 teknik destek hizmeti sunuyoruz.</p>
                                 </div>
                             </div>
                         </div>
@@ -227,7 +236,7 @@
             </div>
         </div>
     </section>
-
+    
 <footer class="relative border-t border-purple-500/10 py-16 sm:py-20 bg-[#0B0C15]">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
