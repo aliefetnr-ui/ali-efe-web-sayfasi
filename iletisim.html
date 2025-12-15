@@ -1,47 +1,28 @@
-<!-- ========================================
-     DOSYA: iletisim.html (AURA AI BRANDING)
-     ======================================== -->
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
-    <title>İletişim | Aura AI</title>
-    <meta name="description" content="Aura AI ile iletişime geçin! Ücretsiz demo talep edin, işletmeniz için özel AI otomasyon çözümü alın. 24 saat içinde yanıt garantisi. İstanbul, Türkiye merkezli profesyonel destek!">
-    <meta name="keywords" content="AI bot teklif al, chatbot demo, ücretsiz danışmanlık, aura ai iletişim, yapay zeka otomasyon danışmanlığı, whatsapp bot kurulum">
+    <title>İletişim | Aura AI - Ücretsiz Danışmanlık</title>
+    <meta name="description" content="Aura AI ile iletişime geçin. Ücretsiz danışmanlık alın ve işletmenizi yapay zeka ile dönüştürün. Hemen toplantı planlayın.">
+    <meta name="keywords" content="aura ai iletişim, chatbot danışmanlık, AI otomasyon toplantı, ücretsiz danışmanlık">
     <meta name="author" content="Aura AI">
-    <meta name="robots" content="index, follow">
     
-    <!-- Favicon - AI Brain Icon (SVG Data URI) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238B5CF6'/%3E%3Cstop offset='100%25' style='stop-color:%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='%230B0C15'/%3E%3Cpath d='M50 20 Q30 25 25 45 L25 55 Q30 75 50 80 Q70 75 75 55 L75 45 Q70 25 50 20 Z' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ccircle cx='35' cy='40' r='5' fill='%238B5CF6'/%3E%3Ccircle cx='65' cy='40' r='5' fill='%2306B6D4'/%3E%3Cpath d='M35 40 L50 30 L65 40 M35 40 L50 50 L65 40 M50 50 L50 65' stroke='url(%23g)' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='50' cy='30' r='4' fill='%2306B6D4'/%3E%3Ccircle cx='50' cy='50' r='4' fill='%238B5CF6'/%3E%3Ccircle cx='50' cy='65' r='4' fill='%2306B6D4'/%3E%3Cpath d='M30 60 Q50 70 70 60' stroke='url(%23g)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Aura AI İletişim - Ücretsiz Demo & Teklif">
-    <meta property="og:description" content="AI otomasyon çözümleri için bizimle iletişime geçin. Ücretsiz demo, 24 saat içinde yanıt garantisi!">
-    <meta property="og:url" content="https://auraai.com/iletisim.html">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Aura AI - İletişim & Demo">
-    <meta name="twitter:description" content="Ücretsiz demo talep edin, AI ile tanışın!">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 15 L20 85 L80 85 Z' stroke='url(%23g)' stroke-width='4' fill='none'/%3E%3Ccircle cx='50' cy='40' r='10' stroke='url(%23g)' stroke-width='4'/%3E%3C/svg%3E">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts - Space Grotesk -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -61,6 +42,7 @@
             }
         }
     </script>
+    
     <style>
         * {
             font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -68,6 +50,10 @@
         
         body {
             overflow-x: hidden;
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
         
         .animated-bg {
@@ -185,16 +171,6 @@
             border-color: rgba(139, 92, 246, 0.7);
         }
         
-        .tilt-card {
-            transition: transform 0.6s ease, box-shadow 0.6s ease;
-            transform-style: preserve-3d;
-        }
-        
-        .tilt-card:hover {
-            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
-            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4), 0 0 80px rgba(6, 182, 212, 0.3);
-        }
-        
         .social-icon {
             transition: all 0.3s ease;
         }
@@ -213,25 +189,15 @@
             max-height: 500px;
         }
         
-        .error-message {
-            display: none;
-            font-size: 0.875rem;
-            color: #f87171;
-            margin-top: 0.5rem;
-        }
-        
-        .error-message.show {
-            display: block;
-        }
-        
-        input.error, textarea.error {
-            border-color: #f87171 !important;
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
         }
     </style>
 </head>
 <body class="bg-[#0B0C15] text-white">
     
-    <!-- Animated Background -->
     <div class="animated-bg">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
@@ -239,24 +205,30 @@
     </div>
     <div class="grid-bg"></div>
     
-    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
         <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3" data-aos="fade-right">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-purple-500/50">
-                        <span class="text-white font-bold text-xl">A</span>
-                    </div>
+                <div class="flex items-center space-x-3 group">
+                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 100 100" fill="none">
+                        <defs>
+                            <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#8B5CF6"/>
+                                <stop offset="100%" stop-color="#06B6D4"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g)" stroke-width="4" fill="none"/>
+                        <circle cx="50" cy="40" r="10" stroke="url(#g)" stroke-width="4" fill="none"/>
+                    </svg>
                     <span class="text-xl sm:text-2xl font-bold gradient-text">Aura AI</span>
                 </div>
-                <div class="hidden md:flex space-x-8" data-aos="fade-down" data-aos-delay="100">
-                    <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300 hover:scale-110">Ana Sayfa</a>
-                    <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300 hover:scale-110">Hizmetler</a>
-                    <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300 hover:scale-110">Vaka Çalışmaları</a>
-                    <a href="iletisim.html" class="text-purple-400 font-semibold hover:text-purple-300 transition-all duration-300 hover:scale-110">İletişim</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
+                    <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
+                    <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Vaka Çalışmaları</a>
+                    <a href="iletisim.html" class="text-purple-400 font-semibold hover:text-purple-300 transition-all duration-300">İletişim</a>
                 </div>
-                <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm" data-aos="fade-left" data-aos-delay="200">
-                    Ücretsiz Demo
+                <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">
+                    Ücretsiz Danışmanlık
                 </a>
                 <button id="mobileMenuBtn" class="md:hidden text-purple-400 p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -264,168 +236,227 @@
                     </svg>
                 </button>
             </div>
-            <div id="mobileMenu" class="md:hidden">
+            <div id="mobileMenu">
                 <div class="pt-4 pb-2 space-y-2">
-                    <a href="index.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">Ana Sayfa</a>
-                    <a href="hizmetler.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">Hizmetler</a>
-                    <a href="vaka-calismalari.html" class="block py-2 text-gray-400 hover:text-purple-400 transition-colors">Vaka Çalışmaları</a>
+                    <a href="index.html" class="block py-2 text-gray-400 hover:text-purple-400">Ana Sayfa</a>
+                    <a href="hizmetler.html" class="block py-2 text-gray-400 hover:text-purple-400">Hizmetler</a>
+                    <a href="vaka-calismalari.html" class="block py-2 text-gray-400 hover:text-purple-400">Vaka Çalışmaları</a>
                     <a href="iletisim.html" class="block py-2 text-purple-400 font-semibold">İletişim</a>
                     <a href="iletisim.html" class="block mt-4 glow-button text-white px-6 py-3 rounded-xl font-semibold text-sm text-center">
-                        Ücretsiz Demo
+                        Ücretsiz Danışmanlık
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20">
+    <section class="pt-32 pb-16">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center max-w-4xl mx-auto">
-                <div class="inline-block mb-6 px-4 sm:px-6 py-2 sm:py-3 glassmorphism rounded-full glow-border" data-aos="fade-down" data-aos-duration="1000">
-                    <span class="gradient-text text-xs sm:text-sm font-bold tracking-wide">💬 BİZE ULAŞIN</span>
+                <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
+                    <span class="gradient-text text-sm font-bold tracking-wide">📞 İLETİŞİM</span>
                 </div>
-                <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 px-4" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
-                    Hemen <span class="gradient-text">İletişime Geçin</span>
+                <h1 class="text-5xl sm:text-7xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="200">
+                    <span class="gradient-text">Ücretsiz Toplantı</span> Planlayın
                 </h1>
-                <p class="text-lg sm:text-xl text-gray-400 leading-relaxed px-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    İşletmeniz için en uygun çözümü birlikte belirleyelim. Ücretsiz danışmanlık için formu doldurun.
+                <p class="text-xl text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                    İşletmenizi nasıl dönüştürebileceğimizi konuşalım. Size özel çözümler sunalım.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form & Info Section -->
-    <section class="pb-20">
+    <section class="py-20">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 
-                <!-- Contact Form -->
-                <div class="glassmorphism rounded-3xl p-8 sm:p-12 glow-border" data-aos="fade-right" data-aos-duration="1000">
-                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Ücretsiz Demo Talep Edin</h2>
+                <div class="glassmorphism p-10 rounded-3xl glow-border" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="text-3xl font-bold mb-8 gradient-text">Bilgi Formu</h2>
                     
                     <form id="contactForm" class="space-y-6">
                         <div>
-                            <label for="name" class="block text-gray-300 mb-2 text-sm sm:text-base">İsim Soyisim *</label>
+                            <label for="name" class="block text-sm font-semibold text-gray-300 mb-2">Ad Soyad *</label>
                             <input 
                                 type="text" 
                                 id="name" 
                                 name="name" 
                                 required
-                                class="w-full px-4 py-3 sm:py-4 rounded-xl glassmorphism border border-purple-500/20 focus:border-purple-500/60 focus:outline-none transition-all text-white text-sm sm:text-base"
-                                placeholder="Ahmet Yılmaz"
+                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all"
+                                placeholder="Adınız Soyadınız"
                             >
-                            <span class="error-message" id="nameError">Lütfen isminizi girin</span>
                         </div>
                         
                         <div>
-                            <label for="email" class="block text-gray-300 mb-2 text-sm sm:text-base">E-posta Adresi *</label>
+                            <label for="email" class="block text-sm font-semibold text-gray-300 mb-2">E-posta *</label>
                             <input 
                                 type="email" 
                                 id="email" 
                                 name="email" 
                                 required
-                                class="w-full px-4 py-3 sm:py-4 rounded-xl glassmorphism border border-purple-500/20 focus:border-purple-500/60 focus:outline-none transition-all text-white text-sm sm:text-base"
-                                placeholder="ahmet@sirket.com"
+                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all"
+                                placeholder="ornek@email.com"
                             >
-                            <span class="error-message" id="emailError">Lütfen geçerli bir e-posta adresi girin</span>
                         </div>
                         
                         <div>
-                            <label for="company" class="block text-gray-300 mb-2 text-sm sm:text-base">Şirket Adı</label>
+                            <label for="phone" class="block text-sm font-semibold text-gray-300 mb-2">Telefon *</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                required
+                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all"
+                                placeholder="+90 555 123 45 67"
+                            >
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-semibold text-gray-300 mb-2">Şirket Adı</label>
                             <input 
                                 type="text" 
                                 id="company" 
                                 name="company"
-                                class="w-full px-4 py-3 sm:py-4 rounded-xl glassmorphism border border-purple-500/20 focus:border-purple-500/60 focus:outline-none transition-all text-white text-sm sm:text-base"
-                                placeholder="Şirket A.Ş."
+                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all"
+                                placeholder="Şirketinizin Adı"
                             >
                         </div>
                         
                         <div>
-                            <label for="message" class="block text-gray-300 mb-2 text-sm sm:text-base">Mesajınız *</label>
+                            <label for="service" class="block text-sm font-semibold text-gray-300 mb-2">İlgilendiğiniz Hizmet *</label>
+                            <select 
+                                id="service" 
+                                name="service" 
+                                required
+                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white focus:border-purple-500 transition-all"
+                            >
+                                <option value="">Seçiniz</option>
+                                <option value="envanter">Envanter Yönetimi Botu</option>
+                                <option value="musteri-hizmetleri">Müşteri Hizmetleri Botu</option>
+                                <option value="satis">Satış Otomasyonu Botu</option>
+                                <option value="ozel">Özel Çözüm</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-300 mb-2">Mesajınız</label>
                             <textarea 
                                 id="message" 
                                 name="message" 
-                                rows="5" 
-                                required
-                                class="w-full px-4 py-3 sm:py-4 rounded-xl glassmorphism border border-purple-500/20 focus:border-purple-500/60 focus:outline-none transition-all text-white resize-none text-sm sm:text-base"
-                                placeholder="Hangi alanlarda otomasyon ihtiyacınız var?"
+                                rows="4"
+                                class="w-full px-4 py-3 bg-dark-800 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 transition-all resize-none"
+                                placeholder="Projeniz hakkında kısaca bilgi verin..."
                             ></textarea>
-                            <span class="error-message" id="messageError">Lütfen mesajınızı girin</span>
                         </div>
                         
                         <div class="flex items-start">
                             <input 
                                 type="checkbox" 
-                                id="privacy" 
-                                name="privacy" 
+                                id="terms" 
+                                name="terms" 
                                 required
-                                class="mt-1 w-5 h-5 rounded border-purple-500/20 bg-transparent focus:ring-purple-500"
+                                class="mt-1 mr-3 w-5 h-5 rounded border-purple-500/30 bg-dark-800 text-purple-500 focus:ring-purple-500"
                             >
-                            <label for="privacy" class="ml-3 text-gray-400 text-xs sm:text-sm">
-                                <a href="#" class="text-purple-400 hover:text-purple-300">KVKK</a> kapsamında kişisel verilerimin işlenmesini kabul ediyorum. *
+                            <label for="terms" class="text-sm text-gray-400">
+                                <a href="yasal.html#kvkk" class="text-purple-400 hover:text-purple-300">KVKK Aydınlatma Metni</a>'ni okudum, kabul ediyorum. *
                             </label>
                         </div>
-                        <span class="error-message" id="privacyError">Lütfen KVKK metnini onaylayın</span>
                         
-                        <button type="submit" class="w-full glow-button text-white py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg flex items-center justify-center group">
-                            <svg class="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                            <span>Mesajı Gönder</span>
-                            <svg class="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                            </svg>
+                        <button type="submit" class="w-full glow-button text-white py-4 rounded-xl font-bold text-lg transition-all">
+                            Ücretsiz Toplantı Planla
                         </button>
                         
-                        <div class="glassmorphism p-4 rounded-xl flex items-center border border-purple-500/20">
-                            <svg class="w-6 h-6 text-purple-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                            <p class="text-gray-400 text-xs sm:text-sm">Verileriniz 256-bit SSL ile şifrelenir ve güvenle saklanır.</p>
-                        </div>
+                        <p class="text-xs text-gray-500 text-center">
+                            * İşaretli alanlar zorunludur
+                        </p>
                     </form>
                 </div>
                 
-                <!-- Contact Info Cards -->
-                <div class="space-y-6 sm:space-y-8" data-aos="fade-left" data-aos-duration="1000">
+                <div class="space-y-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     
-                    <!-- Email Card -->
-                    <div class="glassmorphism rounded-3xl p-8 sm:p-10 glow-border tilt-card">
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
+                    <div class="glassmorphism p-8 rounded-3xl glow-border">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">E-posta</h3>
+                                <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-purple-300 transition-colors text-lg">
+                                    info@auraai.com
+                                </a>
+                                <p class="text-gray-400 text-sm mt-2">7/24 e-posta desteği</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3">E-posta</h3>
-                        <p class="text-gray-400 mb-4 text-sm sm:text-base">7/24 e-posta desteği</p>
-                        <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-purple-300 font-semibold text-base sm:text-lg">info@auraai.com</a>
                     </div>
                     
-                    <!-- Phone Card -->
-                    <div class="glassmorphism rounded-3xl p-8 sm:p-10 glow-border tilt-card">
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                            </svg>
+                    <div class="glassmorphism p-8 rounded-3xl glow-border">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Telefon</h3>
+                                <a href="tel:+905551234567" class="text-purple-400 hover:text-purple-300 transition-colors text-lg">
+                                    +90 555 123 45 67
+                                </a>
+                                <p class="text-gray-400 text-sm mt-2">Hafta içi 09:00 - 18:00</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Telefon</h3>
-                        <p class="text-gray-400 mb-4 text-sm sm:text-base">Hafta içi 09:00 - 18:00</p>
-                        <a href="tel:+905551234567" class="text-purple-400 hover:text-purple-300 font-semibold text-base sm:text-lg">+90 555 123 45 67</a>
                     </div>
                     
-                    <!-- Address Card -->
-                    <div class="glassmorphism rounded-3xl p-8 sm:p-10 glow-border tilt-card">
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
+                    <div class="glassmorphism p-8 rounded-3xl glow-border">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Adres</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    Maslak, Büyükdere Cad. No:123<br>
+                                    Sarıyer / İstanbul, Türkiye
+                                </p>
+                            </div>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Adres</h3>
-                        <p class="text-gray-400 mb-4 text-sm sm:text-base">Merkez Ofis</p>
-                        <p class="text-purple-400 font-semibold text-base sm:text-lg">Maslak, Büyükdere Cad. No:123<br>Sarıyer, İstanbul, Türkiye</p>
+                    </div>
+                    
+                    <div class="glassmorphism p-8 rounded-3xl glow-border">
+                        <h3 class="text-xl font-bold mb-6 text-white">Sosyal Medya</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon w-14 h-14 glassmorphism rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300 glow-border">
+                                <i class="fab fa-linkedin-in text-2xl"></i>
+                            </a>
+                            <a href="#" class="social-icon w-14 h-14 glassmorphism rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300 glow-border">
+                                <i class="fab fa-twitter text-2xl"></i>
+                            </a>
+                            <a href="#" class="social-icon w-14 h-14 glassmorphism rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300 glow-border">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" class="social-icon w-14 h-14 glassmorphism rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300 glow-border">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="glassmorphism p-8 rounded-3xl border-2 border-green-500/30">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Hızlı Yanıt Garantisi</h3>
+                                <p class="text-gray-400 leading-relaxed">
+                                    Formunuzu gönderdikten sonra <span class="text-green-400 font-semibold">24 saat içinde</span> size geri dönüş yapacağız.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
@@ -434,36 +465,74 @@
         </div>
     </section>
 
-    <!-- Success Modal (Hidden by default) -->
-    <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeSuccessModal()"></div>
-        <div class="relative glassmorphism rounded-3xl p-12 max-w-md mx-4 glow-border" data-aos="zoom-in">
-            <div class="text-center">
-                <div class="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
+    <section class="py-20 border-y border-purple-500/10">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-6xl font-bold mb-6" data-aos="zoom-in">
+                    <span class="gradient-text">Sıkça Sorulan</span> Sorular
+                </h2>
+                <p class="text-xl text-gray-400" data-aos="fade-up" data-aos-delay="200">
+                    Merak ettiklerinizin cevapları
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                
+                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-3 text-white">Chatbot ne kadar sürede hazır olur?</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Standart çözümlerimiz 48 saat içinde kurulur ve aktif hale getirilir. Özel geliştirmeler için süre projenin kapsamına göre 1-2 hafta arasında değişir.
+                    </p>
                 </div>
-                <h3 class="text-3xl font-bold mb-4 gradient-text">Mesajınız Alındı!</h3>
-                <p class="text-gray-400 mb-6">Ekibimiz en kısa sürede sizinle iletişime geçecektir. Teşekkür ederiz!</p>
-                <button onclick="closeSuccessModal()" class="glow-button text-white px-8 py-3 rounded-xl font-semibold">
-                    Tamam
-                </button>
+                
+                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-3 text-white">Fiyatlandırma nasıl çalışıyor?</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Aylık abonelik modeliyle çalışıyoruz. Fiyatlandırma, seçtiğiniz hizmet paketine, kullanıcı sayısına ve özelleştirme ihtiyaçlarınıza göre değişir. Ücretsiz danışmanlıkta size özel teklif hazırlarız.
+                    </p>
+                </div>
+                
+                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-3 text-white">Mevcut sistemlerimle entegre olur mu?</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Evet! CRM sistemleri, e-ticaret platformları, ERP yazılımları ve WhatsApp Business gibi popüler araçlarla entegrasyon sağlıyoruz.
+                    </p>
+                </div>
+                
+                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-3 text-white">Teknik bilgi gerekli mi?</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Hayır! Sistemimiz kullanıcı dostu bir arayüze sahip. Kurulum ve eğitim konusunda size tam destek sağlıyoruz. Ekibiniz günlük kullanımda hiçbir teknik zorluk yaşamaz.
+                    </p>
+                </div>
+                
+                <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl font-bold mb-3 text-white">Destek hizmeti sunuyor musunuz?</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Kesinlikle! 7/24 teknik destek, düzenli sistem güncellemeleri ve aylık performans raporları sunuyoruz. Ayrıca ihtiyaç duyduğunuzda chatbot'unuzu optimize etmek için danışmanlık hizmeti veriyoruz.
+                    </p>
+                </div>
+                
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Premium Footer -->
-    <footer class="relative border-t border-purple-500/10 py-16 sm:py-20">
+    <footer class="relative border-t border-purple-500/10 py-20">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12" data-aos="fade-up">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 
-                <!-- Column 1: Logo & Slogan -->
                 <div class="text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-purple-500/50">
-                            <span class="text-white font-bold text-2xl">A</span>
-                        </div>
+                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group">
+                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 100 100" fill="none">
+                            <defs>
+                                <linearGradient id="g-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#8B5CF6"/>
+                                    <stop offset="100%" stop-color="#06B6D4"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g-footer)" stroke-width="4" fill="none"/>
+                            <circle cx="50" cy="40" r="10" stroke="url(#g-footer)" stroke-width="4" fill="none"/>
+                        </svg>
                         <span class="text-3xl font-bold gradient-text">Aura AI</span>
                     </div>
                     <p class="text-gray-400 leading-relaxed text-sm sm:text-base mb-6">
@@ -474,54 +543,36 @@
                     </div>
                 </div>
                 
-                <!-- Column 2: Quick Links -->
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-lg sm:text-xl flex items-center justify-center sm:justify-start">
-                        <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                        Hızlı Linkler
-                    </h4>
+                    <h4 class="text-white font-bold mb-6 text-xl">Hızlı Linkler</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Ana Sayfa</a></li>
-                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Hizmetler</a></li>
-                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Vaka Çalışmaları</a></li>
-                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ İletişim</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Ana Sayfa</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Hizmetler</a></li>
+                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Vaka Çalışmaları</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all">→ İletişim</a></li>
                     </ul>
                 </div>
                 
-                <!-- Column 3: Legal -->
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-lg sm:text-xl flex items-center justify-center sm:justify-start">
-                        <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                        Yasal
-                    </h4>
+                    <h4 class="text-white font-bold mb-6 text-xl">Yasal</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Gizlilik Politikası</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Kullanım Şartları</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ KVKK</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-all hover:translate-x-2 inline-block text-sm sm:text-base">→ Çerez Politikası</a></li>
+                        <li><a href="yasal.html#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all">→ Gizlilik Politikası</a></li>
+                        <li><a href="yasal.html#kullanim" class="text-gray-400 hover:text-purple-400 transition-all">→ Kullanım Şartları</a></li>
+                        <li><a href="yasal.html#kvkk" class="text-gray-400 hover:text-purple-400 transition-all">→ KVKK</a></li>
+                        <li><a href="yasal.html#cerez" class="text-gray-400 hover:text-purple-400 transition-all">→ Çerez Politikası</a></li>
                     </ul>
                 </div>
                 
-                <!-- Column 4: Social Media -->
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-lg sm:text-xl flex items-center justify-center sm:justify-start">
-                        <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
-                        </svg>
-                        Sosyal Medya
-                    </h4>
+                    <h4 class="text-white font-bold mb-6 text-xl">Sosyal Medya</h4>
                     <div class="flex space-x-4 justify-center sm:justify-start mb-6">
-                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
+                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400">
                             <i class="fab fa-linkedin-in text-xl"></i>
                         </a>
-                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
+                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400">
                             <i class="fab fa-twitter text-xl"></i>
                         </a>
-                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400 hover:text-purple-300">
+                        <a href="#" class="social-icon w-12 h-12 glassmorphism glow-border rounded-xl flex items-center justify-center text-purple-400">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
                     </div>
@@ -533,7 +584,6 @@
                 
             </div>
             
-            <!-- Copyright -->
             <div class="border-t border-purple-500/10 pt-8 text-center">
                 <p class="text-gray-500 text-sm sm:text-base">
                     © 2025 <span class="gradient-text font-semibold">Aura AI</span>. Tüm Hakları Saklıdır.
@@ -545,71 +595,17 @@
         </div>
     </footer>
 
-    <!-- AOS Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     
-    <!-- Form Validation Script -->
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form fields
-            const name = document.getElementById('name');
-            const email = document.getElementById('email');
-            const message = document.getElementById('message');
-            const privacy = document.getElementById('privacy');
+            alert('Teşekkürler! Formunuz alındı. 24 saat içinde size geri dönüş yapacağız.');
             
-            // Get error messages
-            const nameError = document.getElementById('nameError');
-            const emailError = document.getElementById('emailError');
-            const messageError = document.getElementById('messageError');
-            const privacyError = document.getElementById('privacyError');
-            
-            // Reset errors
-            [name, email, message].forEach(field => field.classList.remove('error'));
-            [nameError, emailError, messageError, privacyError].forEach(error => error.classList.remove('show'));
-            
-            let isValid = true;
-            
-            // Validate name
-            if (name.value.trim() === '') {
-                name.classList.add('error');
-                nameError.classList.add('show');
-                isValid = false;
-            }
-            
-            // Validate email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email.value.trim())) {
-                email.classList.add('error');
-                emailError.classList.add('show');
-                isValid = false;
-            }
-            
-            // Validate message
-            if (message.value.trim() === '') {
-                message.classList.add('error');
-                messageError.classList.add('show');
-                isValid = false;
-            }
-            
-            // Validate privacy checkbox
-            if (!privacy.checked) {
-                privacyError.classList.add('show');
-                isValid = false;
-            }
-            
-            // If form is valid, show success modal
-            if (isValid) {
-                document.getElementById('successModal').classList.remove('hidden');
-                this.reset();
-            }
+            this.reset();
         });
-        
-        function closeSuccessModal() {
-            document.getElementById('successModal').classList.add('hidden');
-        }
     </script>
 </body>
 </html>
