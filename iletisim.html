@@ -53,8 +53,6 @@
         .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
         .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
         .glow-border:hover { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3); border-color: rgba(139, 92, 246, 0.7); transform: translateY(-8px); }
-        .social-icon { transition: all 0.3s ease; }
-        .social-icon:hover { transform: translateY(-5px) scale(1.1); }
         #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         #mobileMenu.show { max-height: 500px; }
         .form-input { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); color: white; transition: all 0.3s ease; }
@@ -139,15 +137,16 @@
 
     <section class="py-10 lg:py-20">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            
+            <div class="max-w-4xl mx-auto space-y-10">
                 
-                <div class="glassmorphism rounded-3xl p-6 sm:p-12" data-aos="fade-up" data-aos-duration="800">
-                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 gradient-text font-heading" data-aos="fade-up" data-aos-delay="200">
+                <div class="glassmorphism rounded-3xl p-8 sm:p-12 md:p-16" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="text-3xl font-bold mb-8 gradient-text font-heading text-center" data-aos="fade-up" data-aos-delay="200">
                         Mesaj Gönderin
                     </h2>
                     
-                    <form id="contactForm" class="space-y-4 sm:space-y-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                    <form id="contactForm" class="space-y-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Adınız Soyadınız</label>
                                 <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 rounded-xl text-sm" placeholder="İsminiz">
@@ -176,61 +175,69 @@
                         
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Mesajınız</label>
-                            <textarea id="message" name="message" rows="4" required class="form-input w-full px-4 py-3 rounded-xl text-sm resize-none" placeholder="Mesajınız..."></textarea>
+                            <textarea id="message" name="message" rows="6" required class="form-input w-full px-4 py-3 rounded-xl text-sm resize-none" placeholder="Projenizden kısaca bahsedin..."></textarea>
                         </div>
                         
-                        <button type="submit" class="glow-button w-full text-white px-6 py-4 rounded-xl font-bold text-base flex items-center justify-center group transform transition-all duration-300 hover:scale-[1.02]">
+                        <button type="submit" class="glow-button w-full text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center group transform transition-all duration-300 hover:scale-[1.01]">
                             <span>Gönder</span>
-                            <i class="fa-solid fa-paper-plane ml-2 group-hover:translate-x-1 transition-transform"></i>
+                            <i class="fa-solid fa-paper-plane ml-3 group-hover:translate-x-1 transition-transform"></i>
                         </button>
                     </form>
                     <div id="formFeedback" class="mt-4 hidden p-4 rounded-xl glassmorphism text-center text-sm"></div>
                 </div>
                 
-                <div class="space-y-6" data-aos="fade-up" data-aos-delay="400">
-                    
-                    <div class="glassmorphism rounded-3xl p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-4 sm:space-y-0 sm:space-x-6 hover:border-purple-500/30 transition-colors">
-                        <div class="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center text-xl text-purple-400 flex-shrink-0">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-white mb-1 font-heading">E-posta</h3>
-                            <p class="text-gray-400 text-sm mb-2">7/24 Destek:</p>
-                            <a href="mailto:info@auraai.com" class="text-purple-400 font-medium hover:text-white transition-colors break-all">info@auraai.com</a>
-                        </div>
+                <div class="glassmorphism rounded-3xl p-8 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left space-y-4 sm:space-y-0 sm:space-x-6 hover:border-purple-500/30 transition-colors" 
+                     data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-2xl text-purple-400 flex-shrink-0">
+                        <i class="fa-solid fa-envelope"></i>
                     </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-1 font-heading">E-posta</h3>
+                        <p class="text-gray-400 text-sm mb-2">7/24 Destek için bize yazabilirsiniz:</p>
+                        <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-purple-300 transition-colors text-lg font-medium">info@auraai.com</a>
+                    </div>
+                </div>
 
-                    <div class="glassmorphism rounded-3xl p-6 sm:p-8" data-aos="fade-up" data-aos-delay="500">
-                        <h2 class="text-xl font-bold mb-6 gradient-text">Sıkça Sorulanlar</h2>
-                        <div class="space-y-4">
-                            <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
-                                <button class="faq-question w-full flex justify-between items-center py-3 text-left group">
-                                    <span class="text-sm sm:text-base font-medium group-hover:text-purple-400 transition-colors">Danışmanlık ücretli mi?</span>
-                                    <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
-                                </button>
-                                <div class="faq-answer">
-                                    <p class="text-gray-400 text-sm pb-3">Hayır, ilk keşif ve danışmanlık görüşmemiz tamamen ücretsizdir.</p>
-                                </div>
+                <div class="glassmorphism rounded-3xl p-8 sm:p-12" data-aos="fade-up" data-aos-delay="500">
+                    <h2 class="text-2xl font-bold mb-8 gradient-text font-heading text-center">Sıkça Sorulan Sorular</h2>
+                    <div class="space-y-4">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                            <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
+                                <span class="text-base font-medium group-hover:text-purple-400 transition-colors">Chatbot kurulum süresi ne kadar sürüyor?</span>
+                                <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="text-gray-400 text-sm pb-4">Standart bir yapay zeka asistanını 3-5 iş günü içinde, tam entegre sistemleri ise ortalama 2-4 hafta içinde anahtar teslim sunuyoruz.</p>
                             </div>
-                            
-                            <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
-                                <button class="faq-question w-full flex justify-between items-center py-3 text-left group">
-                                    <span class="text-sm sm:text-base font-medium group-hover:text-purple-400 transition-colors">Kurulum süresi nedir?</span>
-                                    <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
-                                </button>
-                                <div class="faq-answer">
-                                    <p class="text-gray-400 text-sm pb-3">Projenin kapsamına göre değişmekle birlikte ortalama 2-4 hafta sürer.</p>
-                                </div>
+                        </div>
+                        
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
+                            <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
+                                <span class="text-base font-medium group-hover:text-purple-400 transition-colors">Veri güvenliği ve KVKK uyumluluğu sağlanıyor mu?</span>
+                                <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="text-gray-400 text-sm pb-4">Evet, veri güvenliği önceliğimizdir. Tüm veriler uçtan uca şifrelenir ve sistemlerimiz KVKK/GDPR standartlarına tam uyumludur.</p>
                             </div>
+                        </div>
 
-                            <div class="faq-item" data-aos="fade-up" data-aos-delay="800">
-                                <button class="faq-question w-full flex justify-between items-center py-3 text-left group">
-                                    <span class="text-sm sm:text-base font-medium group-hover:text-purple-400 transition-colors">Teknik destek var mı?</span>
-                                    <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
-                                </button>
-                                <div class="faq-answer">
-                                    <p class="text-gray-400 text-sm pb-3">Evet, kurulum sonrası 7/24 teknik destek hizmetimiz mevcuttur.</p>
-                                </div>
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="800">
+                            <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
+                                <span class="text-base font-medium group-hover:text-purple-400 transition-colors">Mevcut yazılımlarımla (CRM, E-Ticaret) çalışır mı?</span>
+                                <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="text-gray-400 text-sm pb-4">Kesinlikle. Shopify, Woocommerce, İkas, Salesforce, Hubspot gibi popüler sistemlerle %100 uyumlu çalışır. API desteği mevcuttur.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="900">
+                            <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
+                                <span class="text-base font-medium group-hover:text-purple-400 transition-colors">Kurulum sonrası teknik destek var mı?</span>
+                                <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="text-gray-400 text-sm pb-4">Evet. Tüm paketlerimizde 7/24 teknik destek, aylık performans raporlaması ve düzenli iyileştirmeler standarttır.</p>
                             </div>
                         </div>
                     </div>
