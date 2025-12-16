@@ -53,15 +53,12 @@
         .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
         .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
         .glow-border:hover { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3); border-color: rgba(139, 92, 246, 0.7); transform: translateY(-8px); }
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-5px) scale(1.1); }
         #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         #mobileMenu.show { max-height: 500px; }
         .form-input { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); color: white; transition: all 0.3s ease; }
         .form-input:focus { border-color: #8B5CF6; box-shadow: 0 0 15px rgba(139, 92, 246, 0.3); outline: none; }
-        .faq-item { border-bottom: 1px solid rgba(139, 92, 246, 0.2); }
-        .faq-question { cursor: pointer; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-        .faq-item.active .faq-answer { max-height: 500px; }
-        .faq-item.active .faq-icon { transform: rotate(180deg); }
     </style>
 </head>
 <body class="bg-[#0B0C15] text-white">
@@ -138,7 +135,7 @@
     <section class="py-10 lg:py-20">
         <div class="container mx-auto px-4 sm:px-6">
             
-            <div class="max-w-4xl mx-auto space-y-10">
+            <div class="max-w-4xl mx-auto space-y-12">
                 
                 <div class="glassmorphism rounded-3xl p-8 sm:p-12 md:p-16" data-aos="fade-up" data-aos-duration="800">
                     <h2 class="text-3xl font-bold mb-8 gradient-text font-heading text-center" data-aos="fade-up" data-aos-delay="200">
@@ -198,48 +195,52 @@
                     </div>
                 </div>
 
-                <div class="glassmorphism rounded-3xl p-8 sm:p-12" data-aos="fade-up" data-aos-delay="500">
-                    <h2 class="text-2xl font-bold mb-8 gradient-text font-heading text-center">Sıkça Sorulan Sorular</h2>
-                    <div class="space-y-4">
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
-                            <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
-                                <span class="text-base font-medium group-hover:text-purple-400 transition-colors">Chatbot kurulum süresi ne kadar sürüyor?</span>
-                                <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
-                            </button>
-                            <div class="faq-answer">
-                                <p class="text-gray-400 text-sm pb-4">Standart bir yapay zeka asistanını 3-5 iş günü içinde, tam entegre sistemleri ise ortalama 2-4 hafta içinde anahtar teslim sunuyoruz.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
-                            <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
-                                <span class="text-base font-medium group-hover:text-purple-400 transition-colors">Veri güvenliği ve KVKK uyumluluğu sağlanıyor mu?</span>
-                                <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
-                            </button>
-                            <div class="faq-answer">
-                                <p class="text-gray-400 text-sm pb-4">Evet, veri güvenliği önceliğimizdir. Tüm veriler uçtan uca şifrelenir ve sistemlerimiz KVKK/GDPR standartlarına tam uyumludur.</p>
-                            </div>
-                        </div>
+                <div class="text-center mb-10" data-aos="fade-up">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 gradient-text font-heading">Sıkça Sorulan <span class="text-white">Sorular</span></h2>
+                    <p class="text-gray-400">Merak ettiklerinizin yanıtları</p>
+                </div>
 
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="800">
-                            <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
-                                <span class="text-base font-medium group-hover:text-purple-400 transition-colors">Mevcut yazılımlarımla (CRM, E-Ticaret) çalışır mı?</span>
-                                <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
-                            </button>
-                            <div class="faq-answer">
-                                <p class="text-gray-400 text-sm pb-4">Kesinlikle. Shopify, Woocommerce, İkas, Salesforce, Hubspot gibi popüler sistemlerle %100 uyumlu çalışır. API desteği mevcuttur.</p>
-                            </div>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-white mb-3">Chatbot kurulum süresi ne kadar sürüyor?</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Projenizin kapsamına göre değişmekle birlikte; standart bir yapay zeka asistanını 3-5 iş günü içinde, tam entegre sistemleri ise ortalama 2-4 hafta içinde anahtar teslim sunuyoruz.
+                        </p>
+                    </div>
 
-                        <div class="faq-item" data-aos="fade-up" data-aos-delay="900">
-                            <button class="faq-question w-full flex justify-between items-center py-4 text-left group">
-                                <span class="text-base font-medium group-hover:text-purple-400 transition-colors">Kurulum sonrası teknik destek var mı?</span>
-                                <i class="fa-solid fa-chevron-down text-purple-400 faq-icon transition-transform"></i>
-                            </button>
-                            <div class="faq-answer">
-                                <p class="text-gray-400 text-sm pb-4">Evet. Tüm paketlerimizde 7/24 teknik destek, aylık performans raporlaması ve düzenli iyileştirmeler standarttır.</p>
-                            </div>
-                        </div>
+                    <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-white mb-3">Mevcut yazılımlarımla entegre çalışır mı?</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Kesinlikle. Aura AI; Shopify, Woocommerce, İkas gibi e-ticaret altyapılarıyla ve Salesforce, Zoho, Hubspot gibi CRM sistemleriyle %100 uyumlu çalışır.
+                        </p>
+                    </div>
+
+                    <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-lg font-bold text-white mb-3">Veri güvenliği ve KVKK uyumluluğu?</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Veri güvenliği önceliğimizdir. Tüm veriler uçtan uca şifreleme (E2EE) ile korunur. Sistemlerimiz KVKK ve GDPR standartlarına tam uyumludur.
+                        </p>
+                    </div>
+
+                    <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="text-lg font-bold text-white mb-3">Yapay zeka yanlış cevap verirse?</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Botlarımız "Güvenli Mod" ile çalışır. Emin olmadığı bir soruda uydurma cevap vermek yerine konuşmayı nazikçe müşteri temsilcisine devreder.
+                        </p>
+                    </div>
+
+                    <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="500">
+                        <h3 class="text-lg font-bold text-white mb-3">Fiyatlandırma modeliniz nedir?</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Aylık abonelik veya proje bazlı kurulum seçeneklerimiz mevcuttur. Sunucu maliyetleri ve bakım dahil şeffaf bir teklif sunarız.
+                        </p>
+                    </div>
+
+                    <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="600">
+                        <h3 class="text-lg font-bold text-white mb-3">Teknik destek veriyor musunuz?</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Evet. Tüm paketlerimizde 7/24 teknik destek, aylık performans raporlaması ve düzenli yapay zeka iyileştirmeleri standarttır.
+                        </p>
                     </div>
                 </div>
                 
@@ -320,14 +321,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
-        // SSS Akordeon
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                item.classList.toggle('active');
-            });
-        });
-
         // Form Gönderme (Web3Forms)
         const form = document.getElementById('contactForm');
         const feedback = document.getElementById('formFeedback');
