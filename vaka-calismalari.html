@@ -15,13 +15,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
     
     <script>
         tailwind.config = {
@@ -39,10 +37,10 @@
     </script>
     
     <style>
-        * { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-        body { overflow-x: hidden; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
         html { scroll-behavior: smooth; }
-        .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #0B0C15; }
+        .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #0B0C15; }
         .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
         .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%); top: -10%; left: -10%; }
         .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%); bottom: -10%; right: -10%; animation-delay: 5s; }
@@ -77,16 +75,25 @@
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
         <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3 group">
-                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 100 100" fill="none">
+                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
+                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#8B5CF6"/>
-                                <stop offset="100%" stop-color="#06B6D4"/>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                             </linearGradient>
+                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
                         </defs>
-                        <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g)" stroke-width="4" fill="none"/>
-                        <circle cx="50" cy="40" r="10" stroke="url(#g)" stroke-width="4" fill="none"/>
+                        <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.3" />
+                        <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.6" />
+                        <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.8" />
+                        <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow)" />
                     </svg>
                     <span class="text-xl sm:text-2xl font-bold gradient-text">Aura AI</span>
                 </div>
@@ -488,25 +495,33 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
                 
                 <div class="text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group">
-                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 100 100" fill="none">
+                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
+                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="g-footer-univ" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#8B5CF6"/>
-                                    <stop offset="100%" stop-color="#06B6D4"/>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                                 </linearGradient>
+                                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
                             </defs>
-                            <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g-footer-univ)" stroke-width="4" fill="none"/>
-                            <circle cx="50" cy="40" r="10" stroke="url(#g-footer-univ)" stroke-width="4" fill="none"/>
+                            <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.3" />
+                            <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.6" />
+                            <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.8" />
+                            <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow)" />
                         </svg>
                         <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
                     </div>
                     <p class="text-gray-400 leading-relaxed text-sm sm:text-base mb-6">
                         Yapay zeka destekli otomasyon çözümleriyle işletmenizi geleceğe taşıyoruz.
                     </p>
-                    <div class="glassmorphism inline-block px-4 py-2 rounded-lg flex items-center justify-center sm:justify-start gap-2">
-                        <i class="fa-solid fa-shuttle-space text-purple-400"></i>
-                        <span class="text-purple-400 text-xs font-semibold">2025'te Daha Güçlüyüz</span>
+                    <div class="glassmorphism inline-block px-4 py-2 rounded-lg">
+                        <span class="text-purple-400 text-xs font-semibold">🚀 2025'te Daha Güçlüyüz</span>
                     </div>
                 </div>
                 
