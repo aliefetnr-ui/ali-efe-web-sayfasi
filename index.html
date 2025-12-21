@@ -15,7 +15,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -28,12 +28,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'dark': {
-                            900: '#0B0C15',
-                            800: '#13141F',
-                            700: '#1A1B2E',
-                            600: '#252640',
-                        }
+                        'dark': { 900: '#0B0C15', 800: '#13141F', 700: '#1A1B2E', 600: '#252640' }
                     },
                     fontFamily: {
                         'sans': ['Space Grotesk', 'system-ui', 'sans-serif'],
@@ -44,163 +39,30 @@
     </script>
     
     <style>
-        * {
-            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-        
-        body {
-            overflow-x: hidden;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            background: #0B0C15;
-        }
-        
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 20s infinite ease-in-out;
-        }
-        
-        .orb-1 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
-            top: -10%;
-            left: -10%;
-        }
-        
-        .orb-2 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
-            bottom: -10%;
-            right: -10%;
-            animation-delay: 5s;
-        }
-        
-        .orb-3 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: 10s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(100px, -100px) scale(1.1); }
-            66% { transform: translate(-100px, 100px) scale(0.9); }
-        }
-        
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-            z-index: -1;
-        }
-        
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        
-        .glassmorphism {
-            background: rgba(26, 27, 46, 0.5);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-        }
-        
-        .navbar-scrolled {
-            background: rgba(19, 20, 31, 0.8) !important;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glow-button {
-            background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%);
-            box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4);
-            transition: all 0.4s ease;
-        }
-        
-        .glow-button:hover {
-            box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6);
-            transform: translateY(-4px) scale(1.02);
-        }
-        
-        .glow-border {
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-            border: 1px solid rgba(139, 92, 246, 0.4);
-            transition: all 0.4s ease;
-        }
-        
-        .glow-border:hover {
-            box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3);
-            border-color: rgba(139, 92, 246, 0.7);
-            transform: translateY(-8px);
-        }
-        
-        .tilt-card {
-            transition: transform 0.6s ease, box-shadow 0.6s ease;
-            transform-style: preserve-3d;
-        }
-        
-        .tilt-card:hover {
-            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
-            box-shadow: 
-                0 20px 60px rgba(139, 92, 246, 0.4),
-                0 0 80px rgba(6, 182, 212, 0.3);
-        }
-        
-        .social-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            transform: translateY(-5px) scale(1.1);
-        }
-        
-        #mobileMenu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        
-        #mobileMenu.show {
-            max-height: 500px;
-        }
+        * { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        body { overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+        .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #0B0C15; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
+        .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%); top: -10%; left: -10%; }
+        .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%); bottom: -10%; right: -10%; animation-delay: 5s; }
+        .orb-3 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 10s; }
+        @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(100px, -100px) scale(1.1); } 66% { transform: translate(-100px, 100px) scale(0.9); } }
+        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
+        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
+        .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
+        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
+        .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
+        .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
+        .glow-border:hover { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3); border-color: rgba(139, 92, 246, 0.7); transform: translateY(-8px); }
+        .tilt-card { transition: transform 0.6s ease, box-shadow 0.6s ease; transform-style: preserve-3d; }
+        .tilt-card:hover { transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px); box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4), 0 0 80px rgba(6, 182, 212, 0.3); }
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-5px) scale(1.1); }
+        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        #mobileMenu.show { max-height: 500px; }
     </style>
 </head>
 <body class="bg-[#0B0C15] text-white">
@@ -215,16 +77,25 @@
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
         <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3 group">
-                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 100 100" fill="none">
+                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
+                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#8B5CF6"/>
-                                <stop offset="100%" stop-color="#06B6D4"/>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                             </linearGradient>
+                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
                         </defs>
-                        <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g)" stroke-width="4" fill="none"/>
-                        <circle cx="50" cy="40" r="10" stroke="url(#g)" stroke-width="4" fill="none"/>
+                        <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.3" />
+                        <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.6" />
+                        <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.8" />
+                        <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow)" />
                     </svg>
                     <span class="text-xl sm:text-2xl font-bold gradient-text">Aura AI</span>
                 </div>
@@ -261,9 +132,9 @@
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center max-w-5xl mx-auto">
                 <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-    <i class="fa-solid fa-robot text-purple-400 text-xl mr-2 flex-shrink-0"></i>
-    <span class="gradient-text text-sm font-bold tracking-wide">YAPAY ZEKA DESTEKLİ OTOMASYON</span>
-</div>
+                    <i class="fa-solid fa-robot text-purple-400 text-xl mr-2 flex-shrink-0"></i>
+                    <span class="gradient-text text-sm font-bold tracking-wide">YAPAY ZEKA DESTEKLİ OTOMASYON</span>
+                </div>
                 <h1 class="text-6xl sm:text-8xl font-bold mb-8 leading-tight" data-aos="zoom-in" data-aos-delay="200">
                     İşletmenizi <span class="gradient-text">Otomatikleştirin</span>
                 </h1>
@@ -315,9 +186,9 @@
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-20">
                 <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-    <i class="fa-solid fa-rocket text-purple-400 text-xl mr-2 flex-shrink-0"></i>
-    <span class="gradient-text text-sm font-bold tracking-wide">HİZMETLERİMİZ</span>
-</div>
+                    <i class="fa-solid fa-rocket text-purple-400 text-xl mr-2 flex-shrink-0"></i>
+                    <span class="gradient-text text-sm font-bold tracking-wide">HİZMETLERİMİZ</span>
+                </div>
                 <h2 class="text-5xl sm:text-6xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="100">
                     <span class="gradient-text">Yapay Zeka</span> Çözümlerimiz
                 </h2>
@@ -327,34 +198,33 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
                 <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-right" data-aos-duration="1000">
                     <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
-                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                        </svg>
+                        <i class="fa-solid fa-paper-plane text-purple-400 text-3xl"></i>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 gradient-text">Envanter Yönetimi</h3>
+                    <h3 class="text-3xl font-bold mb-4 gradient-text">Soğuk E-posta Botu</h3>
                     <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Stok seviyelerini otomatik takip edin, kritik seviyelerde uyarı alın, siparişleri otomatikleştirin.
+                        Potansiyel müşterilere otomatik ulaşın, kişiselleştirilmiş maillerle dönüşüm oranlarını artırın.
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center text-gray-300">
                             <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Gerçek zamanlı stok takibi
+                            Otomatik e-posta gönderimi
                         </li>
                         <li class="flex items-center text-gray-300">
                             <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Otomatik sipariş oluşturma
+                            Kişiselleştirilmiş içerik
                         </li>
                         <li class="flex items-center text-gray-300">
                             <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Satış trendleri analizi
+                            Akıllı takip (Follow-up)
                         </li>
                     </ul>
                     <a href="hizmetler.html" class="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-all group">
@@ -367,9 +237,7 @@
 
                 <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
-                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
-                        </svg>
+                        <i class="fa-solid fa-headset text-purple-400 text-3xl"></i>
                     </div>
                     <h3 class="text-3xl font-bold mb-4 gradient-text">Müşteri Hizmetleri</h3>
                     <p class="text-gray-400 text-lg leading-relaxed mb-6">
@@ -405,9 +273,7 @@
 
                 <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                     <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
-                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+                        <i class="fa-solid fa-chart-line text-purple-400 text-3xl"></i>
                     </div>
                     <h3 class="text-3xl font-bold mb-4 gradient-text">Satış Otomasyonu</h3>
                     <p class="text-gray-400 text-lg leading-relaxed mb-6">
@@ -444,65 +310,6 @@
         </div>
     </section>
 
-    <section class="py-20 border-y border-purple-500/10">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl sm:text-6xl font-bold mb-6" data-aos="zoom-in">
-                    Sıkça Sorulan <span class="gradient-text">Sorular</span>
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                    Merak ettiklerinizin yanıtları
-                </p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto space-y-6">
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Chatbot kurulum süreci ne kadar sürüyor?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Projenizin kapsamına göre değişmekle birlikte; standart bir yapay zeka asistanını 3-5 iş günü içinde, tam entegre sistemleri ise ortalama 2-4 hafta içinde anahtar teslim sunuyoruz.
-                    </p>
-                </div>
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Mevcut yazılımlarımla (CRM, E-Ticaret) entegre çalışır mı?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Kesinlikle. Aura AI; Shopify, Woocommerce, İkas gibi e-ticaret altyapılarıyla ve Salesforce, Zoho, Hubspot gibi CRM sistemleriyle %100 uyumlu çalışır.
-                    </p>
-                </div>
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Veri güvenliği ve KVKK uyumluluğu nasıl sağlanıyor?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Veri güvenliği önceliğimizdir. Tüm veriler uçtan uca şifreleme (E2EE) ile korunur. Sistemlerimiz KVKK ve GDPR standartlarına tam uyumludur.
-                    </p>
-                </div>
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Yapay zeka yanlış cevap verirse ne olur?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Botlarımız "Güvenli Mod" ile çalışır. Emin olmadığı bir soruda uydurma cevap vermek yerine konuşmayı nazikçe müşteri temsilcisine devreder veya iletişim bilgilerinizi alır.
-                    </p>
-                </div>
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Fiyatlandırma modeliniz nedir?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Aylık abonelik veya proje bazlı kurulum seçeneklerimiz mevcuttur. Sunucu maliyetleri ve bakım dahil şeffaf bir teklif sunarız. Sürpriz ek ücret çıkmaz.
-                    </p>
-                </div>
-                
-                <div class="glassmorphism glow-border p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="500">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Kurulum sonrası teknik destek veriyor musunuz?</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        Evet. Tüm paketlerimizde 7/24 teknik destek, aylık performans raporlaması ve düzenli yapay zeka iyileştirmeleri standarttır.
-                    </p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
     <section class="py-40">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="glassmorphism glow-border p-20 rounded-[3rem] text-center relative overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
@@ -523,23 +330,32 @@
         </div>
     </section>
 
-    <footer class="relative border-t border-purple-500/10 py-20">
+    <footer class="relative border-t border-purple-500/10 py-16 sm:py-20 bg-[#0B0C15]">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
                 
                 <div class="text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group">
-                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 100 100" fill="none">
+                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
+                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="g-footer" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#8B5CF6"/>
-                                    <stop offset="100%" stop-color="#06B6D4"/>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                                 </linearGradient>
+                                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
                             </defs>
-                            <path d="M50 15 L20 85 L80 85 Z" stroke="url(#g-footer)" stroke-width="4" fill="none"/>
-                            <circle cx="50" cy="40" r="10" stroke="url(#g-footer)" stroke-width="4" fill="none"/>
+                            <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.3" />
+                            <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.6" />
+                            <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.8" />
+                            <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow)" />
                         </svg>
-                        <span class="text-3xl font-bold gradient-text">Aura AI</span>
+                        <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
                     </div>
                     <p class="text-gray-400 leading-relaxed text-sm sm:text-base mb-6">
                         Yapay zeka destekli otomasyon çözümleriyle işletmenizi geleceğe taşıyoruz.
@@ -550,34 +366,37 @@
                 </div>
                 
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-xl">Hızlı Linkler</h4>
+                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Hızlı Linkler</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Ana Sayfa</a></li>
-                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Hizmetler</a></li>
-                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all">→ Bize Güvenenler</a></li>
-                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all">→ İletişim</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Ana Sayfa</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Hizmetler</a></li>
+                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Bize Güvenenler</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ İletişim</a></li>
                     </ul>
                 </div>
                 
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-xl">Yasal</h4>
+                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Yasal</h4>
                     <ul class="space-y-3">
-                        <li><a href="yasal.html#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all">→ Gizlilik Politikası</a></li>
-                        <li><a href="yasal.html#kullanim" class="text-gray-400 hover:text-purple-400 transition-all">→ Kullanım Şartları</a></li>
-                        <li><a href="yasal.html#kvkk" class="text-gray-400 hover:text-purple-400 transition-all">→ KVKK</a></li>
-                        <li><a href="yasal.html#cerez" class="text-gray-400 hover:text-purple-400 transition-all">→ Çerez Politikası</a></li>
+                        <li><a href="yasal.html#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
+                        <li><a href="yasal.html#kullanim" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Kullanım Şartları</a></li>
+                        <li><a href="yasal.html#kvkk" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ KVKK</a></li>
+                        <li><a href="yasal.html#cerez" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Çerez Politikası</a></li>
                     </ul>
                 </div>
                 
                 <div class="text-center sm:text-left">
-    <h4 class="text-white font-bold mb-6 text-lg font-heading">Destek</h4>
-    <div class="glassmorphism p-5 rounded-xl border border-white/5">
-        <p class="text-gray-400 text-sm mb-3">Destek için buraya yazabilirsiniz:</p>
-        <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-white transition-all text-sm font-bold flex items-center justify-center sm:justify-start gap-2">
-            <i class="fa-solid fa-envelope"></i> info@auraai.com
-        </a>
-    </div>
-</div>
+                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Destek</h4>
+                    <div class="glassmorphism p-5 rounded-xl border border-white/5">
+                        <p class="text-gray-400 text-sm mb-3">Destek için buraya yazabilirsiniz:</p>
+                        <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-white transition-all text-sm font-bold flex items-center justify-center sm:justify-start gap-2">
+                            <i class="fa-solid fa-envelope"></i> info@auraai.com
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            
             <div class="border-t border-purple-500/10 pt-8 text-center">
                 <p class="text-gray-500 text-sm sm:text-base">
                     © 2025 <span class="gradient-text font-semibold">Aura AI</span>. Tüm Hakları Saklıdır.
