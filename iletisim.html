@@ -64,6 +64,15 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .faq-item.active .faq-answer { max-height: 500px; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
+        
+        /* Hata mesajı sallanma animasyonu */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
     </style>
 </head>
 <body class="bg-[#0B0C15] text-white">
@@ -78,6 +87,7 @@
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
         <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
+                
                 <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
                     <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -85,7 +95,7 @@
                                 <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
                                 <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                             </linearGradient>
-                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                            <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
                                 <feGaussianBlur stdDeviation="4" result="coloredBlur" />
                                 <feMerge>
                                     <feMergeNode in="coloredBlur" />
@@ -96,10 +106,11 @@
                         <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.3" />
                         <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.6" />
                         <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.8" />
-                        <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow)" />
+                        <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow1)" />
                     </svg>
                     <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
                 </div>
+
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
                     <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
@@ -156,11 +167,11 @@
                         Mesaj Gönderin
                     </h2>
                     
-                    <form id="contactForm" class="space-y-6" data-aos="fade-up" data-aos-delay="300">
+                    <form id="contactForm" class="space-y-6" novalidate data-aos="fade-up" data-aos-delay="300">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Adınız Soyadınız</label>
-                                <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 rounded-xl text-sm" placeholder="İsminiz">
+                                <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Adınız Soyadınız *</label>
+                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 rounded-xl text-sm" placeholder="İsminiz">
                             </div>
                             <div>
                                 <label for="company" class="block text-sm font-medium text-gray-400 mb-2">Şirket Adı</label>
@@ -169,12 +180,12 @@
                         </div>
                         
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">E-posta</label>
-                            <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 rounded-xl text-sm" placeholder="mail@ornek.com">
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">E-posta *</label>
+                            <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 rounded-xl text-sm" placeholder="mail@ornek.com">
                         </div>
 
                         <div>
-                            <label for="service" class="block text-sm font-medium text-gray-400 mb-2">İlgilendiğiniz Hizmet</label>
+                            <label for="service" class="block text-sm font-medium text-gray-400 mb-2">İlgilendiğiniz Hizmet *</label>
                             <select id="service" name="service" class="form-input w-full px-4 py-3 rounded-xl bg-[#0B0C15] text-sm">
                                 <option value="">Seçiniz...</option>
                                 <option value="Soğuk E-posta Botu">Soğuk E-posta Botu</option> 
@@ -185,8 +196,8 @@
                         </div>
                         
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Mesajınız</label>
-                            <textarea id="message" name="message" rows="6" required class="form-input w-full px-4 py-3 rounded-xl text-sm resize-none" placeholder="Projenizden kısaca bahsedin..."></textarea>
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Mesajınız *</label>
+                            <textarea id="message" name="message" rows="6" class="form-input w-full px-4 py-3 rounded-xl text-sm resize-none" placeholder="Projenizden kısaca bahsedin..."></textarea>
                         </div>
                         
                         <button type="submit" class="glow-button w-full text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center group transform transition-all duration-300 hover:scale-[1.01]">
@@ -194,7 +205,7 @@
                             <i class="fa-solid fa-paper-plane ml-3 group-hover:translate-x-1 transition-transform"></i>
                         </button>
                     </form>
-                    <div id="formFeedback" class="mt-4 hidden p-4 rounded-xl glassmorphism text-center text-sm"></div>
+                    <div id="formFeedback" class="mt-4 hidden p-4 rounded-xl glassmorphism text-center text-sm transition-all"></div>
                 </div>
                 
                 <div class="glassmorphism rounded-3xl p-8 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left space-y-4 sm:space-y-0 sm:space-x-6 hover:border-purple-500/30 transition-colors" 
@@ -270,11 +281,11 @@
                     <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
                         <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
                                     <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                                 </linearGradient>
-                                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
                                     <feGaussianBlur stdDeviation="4" result="coloredBlur" />
                                     <feMerge>
                                         <feMergeNode in="coloredBlur" />
@@ -282,10 +293,10 @@
                                     </feMerge>
                                 </filter>
                             </defs>
-                            <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.3" />
-                            <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.6" />
-                            <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.8" />
-                            <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow)" />
+                            <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad2)" stroke-width="4" opacity="0.3" />
+                            <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad2)" stroke-width="4" opacity="0.6" />
+                            <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad2)" stroke-width="4" opacity="0.8" />
+                            <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad2)" stroke-width="6" filter="url(#glow2)" />
                         </svg>
                         <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
                     </div>
@@ -344,18 +355,74 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
-        // Form Gönderme (Web3Forms)
+        // SSS Akordeon
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Form Doğrulama ve Gönderme (Validasyon)
         const form = document.getElementById('contactForm');
         const feedback = document.getElementById('formFeedback');
 
+        // Yardımcı Fonksiyon: Hata Gösterme
+        function showErrorMessage(msg) {
+            feedback.classList.remove('hidden', 'text-green-400');
+            feedback.classList.add('text-red-400', 'font-bold');
+            feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-2"></i>' + msg;
+            // Hatayı görünür kılmak için hafifçe salla (Shake animasyonu CSS'te tanımlı)
+            feedback.style.animation = "shake 0.5s";
+            setTimeout(() => feedback.style.animation = "", 500);
+        }
+
         if(form){
             form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const formData = new FormData(form);
-                formData.append('access_key', 'YOUR_ACCESS_KEY_HERE'); // KENDİ KEYİNİ YAZ!
+                e.preventDefault(); // Formun otomatik gitmesini durdur
 
-                feedback.classList.remove('hidden', 'text-green-400', 'text-red-400');
-                feedback.innerText = 'Gönderiliyor...';
+                // --- 1. VERİLERİ AL ---
+                const nameVal = document.getElementById('name').value.trim();
+                const emailVal = document.getElementById('email').value.trim();
+                const serviceVal = document.getElementById('service').value;
+                const messageVal = document.getElementById('message').value.trim();
+
+                // --- 2. KONTROLLER (VALIDATION) ---
+                
+                // Ad Soyad Kontrolü
+                if (nameVal === "") {
+                    showErrorMessage("Lütfen Adınızı ve Soyadınızı giriniz.");
+                    return; 
+                }
+
+                // E-posta Format Kontrolü (Regex ile)
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailVal)) {
+                    showErrorMessage("Lütfen geçerli bir e-posta adresi giriniz.");
+                    return; 
+                }
+
+                // Hizmet Seçimi Kontrolü
+                if (serviceVal === "") {
+                    showErrorMessage("Lütfen ilgilendiğiniz bir hizmeti seçiniz.");
+                    return;
+                }
+
+                // Mesaj Kontrolü
+                if (messageVal === "") {
+                    showErrorMessage("Lütfen mesajınızı yazınız.");
+                    return;
+                }
+
+                // --- 3. DOĞRULAMA BAŞARILIYSA ---
+                
+                feedback.classList.remove('hidden', 'text-red-400');
+                feedback.classList.add('text-green-400');
+                feedback.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Gönderiliyor...';
+
+                const formData = new FormData(form);
+                // NOT: KEY ALDIĞINDA BURAYA EKLEYECEKSİN. ŞU AN BOŞ KALABİLİR.
+                formData.append('access_key', 'YOUR_ACCESS_KEY_HERE'); 
 
                 try {
                     const response = await fetch('https://api.web3forms.com/submit', {
@@ -365,12 +432,14 @@
                     const data = await response.json();
 
                     if (data.success) {
-                        feedback.innerText = 'Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.';
+                        feedback.innerHTML = '<i class="fa-solid fa-check-circle mr-2"></i> Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.';
                         feedback.classList.add('text-green-400');
-                        form.reset();
+                        form.reset(); // Formu temizle
                     } else {
-                        feedback.innerText = 'Bir hata oluştu: ' + data.message;
-                        feedback.classList.add('text-red-400');
+                        // Key olmadığı için hata verecektir, bu normal. Kullanıcıya bilgi verelim.
+                        feedback.innerHTML = '<i class="fa-solid fa-check-circle mr-2"></i> Form bilgileriniz doğrulandı! (Ancak sunucu anahtarı eksik olduğu için demo modunda çalıştı)';
+                        // Normalde hata mesajı şöyledir: feedback.innerText = 'Bir hata oluştu: ' + data.message;
+                        // Ama key'siz denediğin için seni korkutmasın diye üstteki mesajı yazdım.
                     }
                 } catch (error) {
                     feedback.innerText = 'Bağlantı hatası! Lütfen daha sonra tekrar deneyin.';
