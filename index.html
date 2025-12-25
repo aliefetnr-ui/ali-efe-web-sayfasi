@@ -31,7 +31,8 @@
                         'dark': { 900: '#0B0C15', 800: '#13141F', 700: '#1A1B2E', 600: '#252640' }
                     },
                     fontFamily: {
-                        'sans': ['Space Grotesk', 'system-ui', 'sans-serif'],
+                        'heading': ['Space Grotesk', 'system-ui', 'sans-serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
                     }
                 }
             }
@@ -39,8 +40,8 @@
     </script>
     
     <style>
-        * { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-        body { overflow-x: hidden; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
         html { scroll-behavior: smooth; }
         .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; background: #0B0C15; }
         .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
@@ -75,44 +76,47 @@
     <div class="grid-bg"></div>
     
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
-        <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
-    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <linearGradient id="grad-nav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
-            </linearGradient>
-            <filter id="glow-nav" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="4" result="coloredBlur" />
-                <feMerge>
-                    <feMergeNode in="coloredBlur" />
-                    <feMergeNode in="SourceGraphic" />
-                </feMerge>
-            </filter>
-        </defs>
-        <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad-nav)" stroke-width="4" opacity="0.3" />
-        <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad-nav)" stroke-width="4" opacity="0.6" />
-        <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad-nav)" stroke-width="4" opacity="0.8" />
-        <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad-nav)" stroke-width="6" filter="url(#glow-nav)" />
-    </svg>
-    <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
-</div>
-    <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
-</div>
+        <div class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                
+                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
+                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad-nav" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow-nav" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad-nav)" stroke-width="4" opacity="0.3" />
+                        <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad-nav)" stroke-width="4" opacity="0.6" />
+                        <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad-nav)" stroke-width="4" opacity="0.8" />
+                        <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad-nav)" stroke-width="6" filter="url(#glow-nav)" />
+                    </svg>
+                    <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
+                </div>
+
+                <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-purple-400 font-semibold hover:text-purple-300 transition-all duration-300">Ana Sayfa</a>
                     <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
                     <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Bize Güvenenler</a>
                     <a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">İletişim</a>
                 </div>
+
                 <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">
                     Ücretsiz Danışmanlık
                 </a>
                 <button id="mobileMenuBtn" class="md:hidden text-purple-400 p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
+                    <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
+
             <div id="mobileMenu">
                 <div class="pt-4 pb-2 space-y-2">
                     <a href="index.html" class="block py-2 text-purple-400 font-semibold">Ana Sayfa</a>
@@ -134,7 +138,7 @@
                     <i class="fa-solid fa-robot text-purple-400 text-xl mr-2 flex-shrink-0"></i>
                     <span class="gradient-text text-sm font-bold tracking-wide">YAPAY ZEKA DESTEKLİ OTOMASYON</span>
                 </div>
-                <h1 class="text-6xl sm:text-8xl font-bold mb-8 leading-tight" data-aos="zoom-in" data-aos-delay="200">
+                <h1 class="text-6xl sm:text-8xl font-bold mb-8 leading-tight font-heading" data-aos="zoom-in" data-aos-delay="200">
                     İşletmenizi <span class="gradient-text">Otomatikleştirin</span>
                 </h1>
                 <p class="text-xl sm:text-2xl text-gray-400 mb-12 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="400">
@@ -188,7 +192,7 @@
                     <i class="fa-solid fa-rocket text-purple-400 text-xl mr-2 flex-shrink-0"></i>
                     <span class="gradient-text text-sm font-bold tracking-wide">HİZMETLERİMİZ</span>
                 </div>
-                <h2 class="text-5xl sm:text-6xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="100">
+                <h2 class="text-5xl sm:text-6xl font-bold mb-6 font-heading" data-aos="zoom-in" data-aos-delay="100">
                     <span class="gradient-text">Yapay Zeka</span> Çözümlerimiz
                 </h2>
                 <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
@@ -208,22 +212,13 @@
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Otomatik e-posta gönderimi
+                            <i class="fa-solid fa-check text-green-400 mr-3"></i> Otomatik e-posta gönderimi
                         </li>
                         <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Kişiselleştirilmiş içerik
+                            <i class="fa-solid fa-check text-green-400 mr-3"></i> Kişiselleştirilmiş içerik
                         </li>
                         <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Akıllı takip (Follow-up)
+                            <i class="fa-solid fa-check text-green-400 mr-3"></i> Akıllı takip (Follow-up)
                         </li>
                     </ul>
                     <a href="hizmetler.html" class="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-all group">
@@ -244,22 +239,13 @@
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Çok dilli destek
+                            <i class="fa-solid fa-check text-green-400 mr-3"></i> Çok dilli destek
                         </li>
                         <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Sipariş durumu sorgulama
+                            <i class="fa-solid fa-check text-green-400 mr-3"></i> Sipariş durumu sorgulama
                         </li>
                         <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Randevu oluşturma sistemi
+                            <i class="fa-solid fa-check text-green-400 mr-3"></i> Randevu oluşturma sistemi
                         </li>
                     </ul>
                     <a href="hizmetler.html" class="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-all group">
@@ -280,22 +266,13 @@
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Otomatik lead nitelendirme
+                            <i class="fa-solid fa-check text-green-400 mr-3"></i> Otomatik lead nitelendirme
                         </li>
                         <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Kişiselleştirilmiş kampanyalar
+                            <i class="fa-solid fa-check text-green-400 mr-3"></i> Kişiselleştirilmiş kampanyalar
                         </li>
                         <li class="flex items-center text-gray-300">
-                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Satış performans raporları
+                            <i class="fa-solid fa-check text-green-400 mr-3"></i> Satış performans raporları
                         </li>
                     </ul>
                     <a href="hizmetler.html" class="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-all group">
@@ -314,7 +291,7 @@
             <div class="glassmorphism glow-border p-20 rounded-[3rem] text-center relative overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
                 <div class="relative z-10">
-                    <h2 class="text-6xl font-bold mb-8">Başlamaya Hazır mısınız?</h2>
+                    <h2 class="text-6xl font-bold mb-8 font-heading">Başlamaya Hazır mısınız?</h2>
                     <p class="text-2xl text-gray-400 mb-12 max-w-3xl mx-auto">
                         İşletmenizi otomatikleştirmek için bugün harekete geçin. Ücretsiz danışmanlık ile başlayın.
                     </p>
@@ -337,11 +314,11 @@
                     <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
                         <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
                                     <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                                 </linearGradient>
-                                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
                                     <feGaussianBlur stdDeviation="4" result="coloredBlur" />
                                     <feMerge>
                                         <feMergeNode in="coloredBlur" />
@@ -349,10 +326,10 @@
                                     </feMerge>
                                 </filter>
                             </defs>
-                            <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.3" />
-                            <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.6" />
-                            <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.8" />
-                            <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow)" />
+                            <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad2)" stroke-width="4" opacity="0.3" />
+                            <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad2)" stroke-width="4" opacity="0.6" />
+                            <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad2)" stroke-width="4" opacity="0.8" />
+                            <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad2)" stroke-width="6" filter="url(#glow2)" />
                         </svg>
                         <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
                     </div>
@@ -388,7 +365,7 @@
                     <h4 class="text-white font-bold mb-6 text-lg font-heading">Destek</h4>
                     <div class="glassmorphism p-5 rounded-xl border border-white/5">
                         <p class="text-gray-400 text-sm mb-3">Destek için buraya yazabilirsiniz:</p>
-                        <a href="mailto:info@auraai.com" class="text-purple-400 hover:text-white transition-all text-sm font-bold flex items-center justify-center sm:justify-start gap-2">
+                        <a href="mailto:info@auraaı.com" class="text-purple-400 hover:text-white transition-all text-sm font-bold flex items-center justify-center sm:justify-start gap-2">
                             <i class="fa-solid fa-envelope"></i> info@auraaı.com
                         </a>
                     </div>
