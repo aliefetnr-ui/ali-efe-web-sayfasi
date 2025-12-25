@@ -75,31 +75,30 @@
     <div class="grid-bg"></div>
     
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
-        <div class="container mx-auto px-4 sm:px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
-                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
-                            </linearGradient>
-                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="4" result="coloredBlur" />
-                                <feMerge>
-                                    <feMergeNode in="coloredBlur" />
-                                    <feMergeNode in="SourceGraphic" />
-                                </feMerge>
-                            </filter>
-                        </defs>
-                        <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.3" />
-                        <circle cx="100" cy="100" r="50" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.6" />
-                        <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad1)" stroke-width="4" opacity="0.8" />
-                        <path d="M100 40 L60 160 L140 160 Z" fill="none" stroke="url(#grad1)" stroke-width="6" filter="url(#glow)" />
-                    </svg>
-                    <span class="text-xl sm:text-2xl font-bold gradient-text">Aura AI</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
+        <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
+    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="grad-nav-A" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+            </linearGradient>
+            <filter id="glow-nav-A" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+                <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                </feMerge>
+            </filter>
+        </defs>
+        
+        <path d="M 50 170 L 100 30 L 150 170" stroke="url(#grad-nav-A)" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-nav-A)"/>
+        <path d="M 75 115 L 125 115" stroke="url(#grad-nav-A)" stroke-width="10" fill="none" stroke-linecap="round" filter="url(#glow-nav-A)"/>
+        
+        <circle cx="50" cy="170" r="8" fill="url(#grad-nav-A)" filter="url(#glow-nav-A)"/>
+        <circle cx="150" cy="170" r="8" fill="url(#grad-nav-A)" filter="url(#glow-nav-A)"/>
+        <circle cx="100" cy="30" r="10" fill="white" filter="url(#glow-nav-A)"/> </svg>
+    <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
+</div>
                     <a href="index.html" class="text-purple-400 font-semibold hover:text-purple-300 transition-all duration-300">Ana Sayfa</a>
                     <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
                     <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Bize Güvenenler</a>
