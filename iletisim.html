@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim | Aura AI</title>
-    <meta name="description" content="Aura AI ile iletişime geçin. Yapay zeka otomasyon çözümleri için ücretsiz danışmanlık alın.">
+    <title>İletişim | Aura AI - Bize Ulaşın</title>
+    <meta name="description" content="Aura AI ile iletişime geçin. Yapay zeka otomasyon çözümlerimiz hakkında ücretsiz danışmanlık alın.">
     <meta name="author" content="Aura AI">
 
     <meta property="og:title" content="Aura AI | İletişim">
-    <meta property="og:description" content="Projeleriniz için bizimle iletişime geçin. Ücretsiz danışmanlık fırsatını kaçırmayın.">
+    <meta property="og:description" content="İşletmenizi dönüştürmek için bugün bizimle iletişime geçin.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1596524430615-b46476ddc820?q=80&w=1200&auto=format&fit=crop">
     <meta property="og:url" content="https://www.auraaı.com/iletisim.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Aura AI">
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M100 20 L160 55 L160 145 L100 180 L40 145 L40 55 Z M100 20 L100 70 M40 55 L100 70 L160 55 M40 145 L100 130 L160 145 M100 180 L100 130' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M100 70 L135 100 L100 130 L65 100 Z' fill='url(%23g)'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='20' fill='url(%23g)'/%3E%3Cpath d='M100 40 Q 140 40 160 80 T 160 160' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 160 Q 60 160 40 120 T 40 40' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='160' cy='80' r='10' fill='url(%23g)'/%3E%3Ccircle cx='40' cy='120' r='10' fill='url(%23g)'/%3E%3Cpath d='M100 80 L100 120 M80 100 L120 100' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,8 +35,8 @@
     </script>
     
     <style>
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow-x: hidden; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
         html { scroll-behavior: smooth; }
         .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #0B0C15; }
         .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
@@ -46,9 +46,9 @@
         @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(100px, -100px) scale(1.1); } 66% { transform: translate(-100px, 100px) scale(0.9); } }
         .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
         @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
-        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
-        .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
-        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
+        .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); }
+        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
         .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
         .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
@@ -64,6 +64,7 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .faq-item.active .faq-answer { max-height: 500px; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
+        
         @keyframes shake {
             0% { transform: translateX(0); } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-5px); } 100% { transform: translateX(0); }
         }
@@ -81,7 +82,6 @@
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
         <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
-                
                 <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
                     <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -90,21 +90,24 @@
                                 <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                             </linearGradient>
                             <filter id="glow-neuro-nav" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+                                <feGaussianBlur stdDeviation="8" result="coloredBlur" />
                                 <feMerge>
                                     <feMergeNode in="coloredBlur" />
                                     <feMergeNode in="SourceGraphic" />
                                 </feMerge>
                             </filter>
                         </defs>
-                        <path d="M100 20 L160 55 L160 145 L100 180 L40 145 L40 55 Z M100 20 L100 70 M40 55 L100 70 L160 55 M40 145 L100 130 L160 145 M100 180 L100 130" 
-                              fill="none" stroke="url(#grad-neuro-nav)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow-neuro-nav)"/>
-                        <path d="M100 70 L135 100 L100 130 L65 100 Z" 
-                              fill="url(#grad-neuro-nav)" filter="url(#glow-neuro-nav)"/>
+                        <g filter="url(#glow-neuro-nav)">
+                            <circle cx="100" cy="100" r="20" fill="url(#grad-neuro-nav)"/>
+                            <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-neuro-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                            <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-neuro-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                            <circle cx="160" cy="80" r="10" fill="url(#grad-neuro-nav)"/>
+                            <circle cx="40" cy="120" r="10" fill="url(#grad-neuro-nav)"/>
+                            <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-neuro-nav)" stroke-width="4" stroke-linecap="round"/>
+                        </g>
                     </svg>
                     <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
                 </div>
-
                 <div class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
                     <a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
@@ -124,9 +127,7 @@
                     <a href="hizmetler.html" class="block py-2 text-gray-400 hover:text-purple-400">Hizmetler</a>
                     <a href="vaka-calismalari.html" class="block py-2 text-gray-400 hover:text-purple-400">Bize Güvenenler</a>
                     <a href="iletisim.html" class="block py-2 text-purple-400 font-semibold">İletişim</a>
-                    <a href="iletisim.html" class="block mt-4 glow-button text-white px-6 py-3 rounded-xl font-semibold text-sm text-center">
-                        Ücretsiz Danışmanlık
-                    </a>
+                    <a href="iletisim.html" class="block mt-4 glow-button text-white px-6 py-3 rounded-xl font-semibold text-sm text-center">Ücretsiz Danışmanlık</a>
                 </div>
             </div>
         </div>
@@ -139,9 +140,11 @@
                     <i class="fa-solid fa-phone text-purple-400 text-xl mr-2 flex-shrink-0"></i>
                     <span class="gradient-text text-sm font-bold tracking-wide">BİZE ULAŞIN</span>
                 </div>
+                
                 <h1 class="text-5xl sm:text-7xl font-bold mb-6 font-heading" data-aos="zoom-in" data-aos-delay="200">
                     <span class="gradient-text">Geleceği</span> Birlikte Planlayalım
                 </h1>
+                
                 <p class="text-xl text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
                     İşletmeniz için en uygun yapay zeka çözümlerini konuşmak için ücretsiz bir danışmanlık görüşmesi planlayın.
                 </p>
@@ -151,6 +154,7 @@
 
     <section class="py-10 lg:py-20">
         <div class="container mx-auto px-4 sm:px-6">
+            
             <div class="max-w-4xl mx-auto space-y-12">
                 
                 <div class="glassmorphism rounded-3xl p-8 sm:p-12 md:p-16" data-aos="fade-up" data-aos-duration="800">
@@ -196,7 +200,7 @@
                             <i class="fa-solid fa-paper-plane ml-3 group-hover:translate-x-1 transition-transform"></i>
                         </button>
                     </form>
-                    <div id="formFeedback" class="mt-4 p-4 rounded-xl glassmorphism text-center text-sm font-bold hidden"></div>
+                    <div id="formFeedback" class="mt-4 hidden p-4 rounded-xl glassmorphism text-center text-sm transition-all"></div>
                 </div>
                 
                 <div class="glassmorphism rounded-3xl p-8 flex flex-col sm:flex-row items-center justify-center text-center sm:text-left space-y-4 sm:space-y-0 sm:space-x-6 hover:border-purple-500/30 transition-colors" 
@@ -223,30 +227,35 @@
                             Projenizin kapsamına göre değişmekle birlikte; standart bir yapay zeka asistanını 3-5 iş günü içinde, tam entegre sistemleri ise ortalama 2-4 hafta içinde anahtar teslim sunuyoruz.
                         </p>
                     </div>
+
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="text-lg font-bold text-white mb-3">Mevcut yazılımlarımla entegre çalışır mı?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             Kesinlikle. Aura AI; Shopify, Woocommerce, İkas gibi e-ticaret altyapılarıyla ve Salesforce, Zoho, Hubspot gibi CRM sistemleriyle %100 uyumlu çalışır.
                         </p>
                     </div>
+
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="300">
                         <h3 class="text-lg font-bold text-white mb-3">Veri güvenliği ve KVKK uyumluluğu?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             Veri güvenliği önceliğimizdir. Tüm veriler uçtan uca şifreleme (E2EE) ile korunur. Sistemlerimiz KVKK ve GDPR standartlarına tam uyumludur.
                         </p>
                     </div>
+
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="400">
                         <h3 class="text-lg font-bold text-white mb-3">Yapay zeka yanlış cevap verirse?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             Botlarımız "Güvenli Mod" ile çalışır. Emin olmadığı bir soruda uydurma cevap vermek yerine konuşmayı nazikçe müşteri temsilcisine devreder.
                         </p>
                     </div>
+
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="500">
                         <h3 class="text-lg font-bold text-white mb-3">Fiyatlandırma modeliniz nedir?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             Aylık abonelik veya proje bazlı kurulum seçeneklerimiz mevcuttur. Sunucu maliyetleri ve bakım dahil şeffaf bir teklif sunarız.
                         </p>
                     </div>
+
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="600">
                         <h3 class="text-lg font-bold text-white mb-3">Teknik destek veriyor musunuz?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
@@ -254,6 +263,7 @@
                         </p>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -266,22 +276,26 @@
                     <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
                         <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="grad-footer-core" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <linearGradient id="grad-footer-neuro" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
                                     <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                                 </linearGradient>
-                                <filter id="glow-footer-core" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+                                <filter id="glow-footer-neuro" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="8" result="coloredBlur" />
                                     <feMerge>
                                         <feMergeNode in="coloredBlur" />
                                         <feMergeNode in="SourceGraphic" />
                                     </feMerge>
                                 </filter>
                             </defs>
-                            <path d="M100 20 L160 55 L160 145 L100 180 L40 145 L40 55 Z M100 20 L100 70 M40 55 L100 70 L160 55 M40 145 L100 130 L160 145 M100 180 L100 130" 
-                                  fill="none" stroke="url(#grad-footer-core)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow-footer-core)"/>
-                            <path d="M100 70 L135 100 L100 130 L65 100 Z" 
-                                  fill="url(#grad-footer-core)" filter="url(#glow-footer-core)"/>
+                            <g filter="url(#glow-footer-neuro)">
+                                <circle cx="100" cy="100" r="20" fill="url(#grad-footer-neuro)"/>
+                                <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-footer-neuro)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                                <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-footer-neuro)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                                <circle cx="160" cy="80" r="10" fill="url(#grad-footer-neuro)"/>
+                                <circle cx="40" cy="120" r="10" fill="url(#grad-footer-neuro)"/>
+                                <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-footer-neuro)" stroke-width="4" stroke-linecap="round"/>
+                            </g>
                         </svg>
                         <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
                     </div>
@@ -300,7 +314,7 @@
                         <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Ana Sayfa</a></li>
                         <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Hizmetler</a></li>
                         <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Bize Güvenenler</a></li>
-                        <li><a href="iletisim.html" class="text-purple-400 font-semibold transition-all text-sm sm:text-base">→ İletişim</a></li>
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ İletişim</a></li>
                     </ul>
                 </div>
                 
@@ -349,56 +363,38 @@
                 });
             });
 
+            // Form Gönderme ve Validasyon
             const form = document.getElementById('contactForm');
             const feedback = document.getElementById('formFeedback');
 
             function showErrorMessage(msg) {
                 feedback.style.display = 'block';
-                feedback.classList.remove('hidden', 'text-green-400', 'bg-green-500/10', 'border-green-500/20');
-                feedback.classList.add('text-red-400', 'bg-red-500/10', 'border', 'border-red-500/20');
+                feedback.classList.remove('hidden', 'text-green-400');
+                feedback.classList.add('text-red-400', 'font-bold');
                 feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-2"></i>' + msg;
-                feedback.style.animation = "none";
-                feedback.offsetHeight; 
                 feedback.style.animation = "shake 0.5s";
+                setTimeout(() => feedback.style.animation = "", 500);
             }
 
-            if (form) {
-                form.addEventListener('submit', async function(e) {
-                    e.preventDefault(); // Sayfa yenilenmesini engelle
+            if(form){
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault(); 
 
-                    // Değerleri Al
                     const nameVal = document.getElementById('name').value.trim();
                     const emailVal = document.getElementById('email').value.trim();
                     const serviceVal = document.getElementById('service').value;
                     const messageVal = document.getElementById('message').value.trim();
 
-                    // 1. KONTROLLER (VALIDATION)
-                    if (nameVal.length < 2) {
-                        showErrorMessage("Lütfen geçerli bir Ad Soyad giriniz.");
-                        return;
-                    }
+                    if (nameVal === "") { showErrorMessage("Lütfen Adınızı ve Soyadınızı giriniz."); return; }
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(emailVal)) { showErrorMessage("Lütfen geçerli bir e-posta adresi giriniz."); return; }
+                    if (serviceVal === "") { showErrorMessage("Lütfen ilgilendiğiniz bir hizmeti seçiniz."); return; }
+                    if (messageVal === "") { showErrorMessage("Lütfen mesajınızı yazınız."); return; }
 
-                    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                    if (emailVal === "" || !emailRegex.test(emailVal)) {
-                        showErrorMessage("Lütfen geçerli bir e-posta adresi giriniz.");
-                        return;
-                    }
-
-                    if (serviceVal === "") {
-                        showErrorMessage("Lütfen listeden bir hizmet seçiniz.");
-                        return;
-                    }
-
-                    if (messageVal.length < 5) {
-                        showErrorMessage("Lütfen mesajınızı biraz daha detaylı yazınız.");
-                        return;
-                    }
-
-                    // 2. GERÇEK GÖNDERİM
                     feedback.style.display = 'block';
-                    feedback.classList.remove('hidden', 'text-red-400', 'bg-red-500/10', 'border-red-500/20');
-                    feedback.classList.add('text-green-400', 'bg-green-500/10', 'border', 'border-green-500/20');
-                    feedback.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> Gönderiliyor...';
+                    feedback.classList.remove('hidden', 'text-red-400');
+                    feedback.classList.add('text-green-400');
+                    feedback.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Gönderiliyor...';
 
                     const formData = new FormData(form);
                     formData.append('access_key', '0a3fdc7a-1cae-49dd-b79f-ccfd407704cc'); 
@@ -411,16 +407,15 @@
                         const data = await response.json();
 
                         if (data.success) {
-                            feedback.innerHTML = '<i class="fa-solid fa-check-circle mr-2"></i> Mesajınız başarıyla iletildi! En kısa sürede dönüş yapacağız.';
-                            form.reset();
+                            feedback.innerHTML = '<i class="fa-solid fa-check-circle mr-2"></i> Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.';
+                            feedback.classList.add('text-green-400');
+                            form.reset(); 
                         } else {
-                            feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-2"></i> Hata: ' + data.message;
-                            feedback.classList.remove('text-green-400');
+                            feedback.innerHTML = 'Bir hata oluştu: ' + data.message;
                             feedback.classList.add('text-red-400');
                         }
                     } catch (error) {
-                        feedback.innerHTML = '<i class="fa-solid fa-wifi mr-2"></i> Bağlantı hatası! Lütfen internetinizi kontrol edin.';
-                        feedback.classList.remove('text-green-400');
+                        feedback.innerText = 'Bağlantı hatası! Lütfen daha sonra tekrar deneyin.';
                         feedback.classList.add('text-red-400');
                     }
                 });
