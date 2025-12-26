@@ -10,18 +10,22 @@
     <meta property="og:title" content="Aura AI | İletişim">
     <meta property="og:description" content="İşletmenizi dönüştürmek için bugün bizimle iletişime geçin.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1596524430615-b46476ddc820?q=80&w=1200&auto=format&fit=crop">
-    <meta property="og:url" content="https://www.auraaı.com/iletisim.html">
+    <meta property="og:url" content="https://www.auraaı.com/iletisim/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Aura AI">
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='20' fill='url(%23g)'/%3E%3Cpath d='M100 40 Q 140 40 160 80 T 160 160' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 160 Q 60 160 40 120 T 40 40' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='160' cy='80' r='10' fill='url(%23g)'/%3E%3Ccircle cx='40' cy='120' r='10' fill='url(%23g)'/%3E%3Cpath d='M100 80 L100 120 M80 100 L120 100' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     
     <script>
         tailwind.config = {
@@ -47,8 +51,8 @@
         .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
         @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
         .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
-        .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); }
-        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
+        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
         .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
         .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
@@ -82,7 +86,8 @@
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
         <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
+                
+                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='/'">
                     <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="grad-neuro-nav" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -108,28 +113,32 @@
                     </svg>
                     <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
                 </div>
+
                 <div class="hidden md:flex space-x-8">
-    <a href="/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
-    
-    <a href="/hizmetler/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
-    <a href="/vaka-calismalari/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Bize Güvenenler</a>
-    <a href="/iletisim/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">İletişim</a>
-</div>
-                <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">
+                    <a href="/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
+                    <a href="/hizmetler/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
+                    <a href="/vaka-calismalari/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Bize Güvenenler</a>
+                    <a href="/iletisim/" class="text-purple-400 font-semibold hover:text-purple-300 transition-all duration-300">İletişim</a>
+                </div>
+                
+                <a href="/iletisim/" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">
                     Ücretsiz Danışmanlık
                 </a>
                 <button id="mobileMenuBtn" class="md:hidden text-purple-400 p-2">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
+
             <div id="mobileMenu">
-                <div class="hidden md:flex space-x-8">
-    <a href="/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
-    
-    <a href="/hizmetler/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
-    <a href="/vaka-calismalari/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Bize Güvenenler</a>
-    <a href="/iletisim/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">İletişim</a>
-</div>
+                <div class="pt-4 pb-2 space-y-2">
+                    <a href="/" class="block py-2 text-gray-400 hover:text-purple-400">Ana Sayfa</a>
+                    <a href="/hizmetler/" class="block py-2 text-gray-400 hover:text-purple-400">Hizmetler</a>
+                    <a href="/vaka-calismalari/" class="block py-2 text-gray-400 hover:text-purple-400">Bize Güvenenler</a>
+                    <a href="/iletisim/" class="block py-2 text-purple-400 font-semibold">İletişim</a>
+                    <a href="/iletisim/" class="block mt-4 glow-button text-white px-6 py-3 rounded-xl font-semibold text-sm text-center">
+                        Ücretsiz Danışmanlık
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -155,7 +164,6 @@
 
     <section class="py-10 lg:py-20">
         <div class="container mx-auto px-4 sm:px-6">
-            
             <div class="max-w-4xl mx-auto space-y-12">
                 
                 <div class="glassmorphism rounded-3xl p-8 sm:p-12 md:p-16" data-aos="fade-up" data-aos-duration="800">
@@ -228,35 +236,30 @@
                             Projenizin kapsamına göre değişmekle birlikte; standart bir yapay zeka asistanını 3-5 iş günü içinde, tam entegre sistemleri ise ortalama 2-4 hafta içinde anahtar teslim sunuyoruz.
                         </p>
                     </div>
-
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="text-lg font-bold text-white mb-3">Mevcut yazılımlarımla entegre çalışır mı?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             Kesinlikle. Aura AI; Shopify, Woocommerce, İkas gibi e-ticaret altyapılarıyla ve Salesforce, Zoho, Hubspot gibi CRM sistemleriyle %100 uyumlu çalışır.
                         </p>
                     </div>
-
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="300">
                         <h3 class="text-lg font-bold text-white mb-3">Veri güvenliği ve KVKK uyumluluğu?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             Veri güvenliği önceliğimizdir. Tüm veriler uçtan uca şifreleme (E2EE) ile korunur. Sistemlerimiz KVKK ve GDPR standartlarına tam uyumludur.
                         </p>
                     </div>
-
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="400">
                         <h3 class="text-lg font-bold text-white mb-3">Yapay zeka yanlış cevap verirse?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             Botlarımız "Güvenli Mod" ile çalışır. Emin olmadığı bir soruda uydurma cevap vermek yerine konuşmayı nazikçe müşteri temsilcisine devreder.
                         </p>
                     </div>
-
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="500">
                         <h3 class="text-lg font-bold text-white mb-3">Fiyatlandırma modeliniz nedir?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
                             Aylık abonelik veya proje bazlı kurulum seçeneklerimiz mevcuttur. Sunucu maliyetleri ve bakım dahil şeffaf bir teklif sunarız.
                         </p>
                     </div>
-
                     <div class="glassmorphism p-6 rounded-2xl glow-border" data-aos="fade-up" data-aos-delay="600">
                         <h3 class="text-lg font-bold text-white mb-3">Teknik destek veriyor musunuz?</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
@@ -264,7 +267,6 @@
                         </p>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -277,11 +279,11 @@
                     <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
                         <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="grad-footer-neuro" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <linearGradient id="grad-footer-core" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
                                     <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                                 </linearGradient>
-                                <filter id="glow-footer-neuro" x="-50%" y="-50%" width="200%" height="200%">
+                                <filter id="glow-footer-core" x="-50%" y="-50%" width="200%" height="200%">
                                     <feGaussianBlur stdDeviation="8" result="coloredBlur" />
                                     <feMerge>
                                         <feMergeNode in="coloredBlur" />
@@ -289,13 +291,13 @@
                                     </feMerge>
                                 </filter>
                             </defs>
-                            <g filter="url(#glow-footer-neuro)">
-                                <circle cx="100" cy="100" r="20" fill="url(#grad-footer-neuro)"/>
-                                <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-footer-neuro)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                                <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-footer-neuro)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                                <circle cx="160" cy="80" r="10" fill="url(#grad-footer-neuro)"/>
-                                <circle cx="40" cy="120" r="10" fill="url(#grad-footer-neuro)"/>
-                                <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-footer-neuro)" stroke-width="4" stroke-linecap="round"/>
+                            <g filter="url(#glow-footer-core)">
+                                <circle cx="100" cy="100" r="20" fill="url(#grad-footer-core)"/>
+                                <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-footer-core)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                                <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-footer-core)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                                <circle cx="160" cy="80" r="10" fill="url(#grad-footer-core)"/>
+                                <circle cx="40" cy="120" r="10" fill="url(#grad-footer-core)"/>
+                                <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-footer-core)" stroke-width="4" stroke-linecap="round"/>
                             </g>
                         </svg>
                         <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
@@ -315,17 +317,17 @@
                         <li><a href="/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Ana Sayfa</a></li>
                         <li><a href="/hizmetler/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Hizmetler</a></li>
                         <li><a href="/vaka-calismalari/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Bize Güvenenler</a></li>
-                        <li><a href="/iletisim/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ İletişim</a></li>
+                        <li><a href="/iletisim/" class="text-purple-400 font-semibold transition-all text-sm sm:text-base">→ İletişim</a></li>
                     </ul>
                 </div>
                 
                 <div class="text-center sm:text-left">
                     <h4 class="text-white font-bold mb-6 text-lg font-heading">Yasal</h4>
                     <ul class="space-y-3">
-                        <li><a href="yasal.html#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
-                        <li><a href="yasal.html#kullanim" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Kullanım Şartları</a></li>
-                        <li><a href="yasal.html#kvkk" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ KVKK</a></li>
-                        <li><a href="yasal.html#cerez" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Çerez Politikası</a></li>
+                        <li><a href="/yasal/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
+                        <li><a href="/yasal/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Kullanım Şartları</a></li>
+                        <li><a href="/yasal/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ KVKK</a></li>
+                        <li><a href="/yasal/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Çerez Politikası</a></li>
                     </ul>
                 </div>
                 
@@ -353,7 +355,7 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // SSS Akordeon
@@ -364,17 +366,18 @@
                 });
             });
 
-            // Form Gönderme ve Validasyon
+            // Form Gönderme
             const form = document.getElementById('contactForm');
             const feedback = document.getElementById('formFeedback');
 
             function showErrorMessage(msg) {
                 feedback.style.display = 'block';
-                feedback.classList.remove('hidden', 'text-green-400');
-                feedback.classList.add('text-red-400', 'font-bold');
+                feedback.classList.remove('hidden', 'text-green-400', 'bg-green-500/10', 'border-green-500/20');
+                feedback.classList.add('text-red-400', 'bg-red-500/10', 'border', 'border-red-500/20');
                 feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-2"></i>' + msg;
+                feedback.style.animation = "none";
+                feedback.offsetHeight; 
                 feedback.style.animation = "shake 0.5s";
-                setTimeout(() => feedback.style.animation = "", 500);
             }
 
             if(form){
