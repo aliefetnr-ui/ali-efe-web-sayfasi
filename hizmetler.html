@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Hizmetlerimiz | Aura AI - Yapay Zeka Otomasyon Çözümleri</title>
     <meta name="description" content="Soğuk e-posta, müşteri hizmetleri ve satış otomasyonu chatbot'larıyla işinizi büyütün. %85 maliyet tasarrufu, 7/24 kesintisiz hizmet.">
     <meta name="keywords" content="chatbot hizmetleri, envanter botu, müşteri hizmetleri botu, satış otomasyonu, AI chatbot">
@@ -34,13 +33,8 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'dark': { 900: '#0B0C15', 800: '#13141F', 700: '#1A1B2E', 600: '#252640' }
-                    },
-                    fontFamily: {
-                        'heading': ['Space Grotesk', 'system-ui', 'sans-serif'],
-                        'body': ['Inter', 'system-ui', 'sans-serif'],
-                    }
+                    colors: { 'dark': { 900: '#0B0C15', 800: '#13141F', 700: '#1A1B2E', 600: '#252640' } },
+                    fontFamily: { 'heading': ['Space Grotesk', 'system-ui', 'sans-serif'], 'body': ['Inter', 'system-ui', 'sans-serif'] }
                 }
             }
         }
@@ -58,7 +52,7 @@
         @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(100px, -100px) scale(1.1); } 66% { transform: translate(-100px, 100px) scale(0.9); } }
         .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
         @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
-        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
+        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
         .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
         .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
@@ -71,8 +65,6 @@
         .social-icon:hover { transform: translateY(-5px) scale(1.1); }
         #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         #mobileMenu.show { max-height: 500px; }
-        .form-input { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); color: white; transition: all 0.3s ease; }
-        .form-input:focus { border-color: #8B5CF6; box-shadow: 0 0 15px rgba(139, 92, 246, 0.3); outline: none; }
     </style>
 </head>
 <body class="bg-[#0B0C15] text-white">
@@ -87,6 +79,7 @@
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
         <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
+                
                 <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
                     <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -148,7 +141,7 @@
                     <i class="fa-solid fa-rocket text-purple-400 text-xl mr-2 flex-shrink-0"></i>
                     <span class="gradient-text text-sm font-bold tracking-wide">HİZMETLERİMİZ</span>
                 </div>
-                <h1 class="text-5xl sm:text-7xl font-bold mb-6 font-heading" data-aos="zoom-in" data-aos-delay="100">
+                <h1 class="text-5xl sm:text-7xl font-bold mb-6 font-heading" data-aos="zoom-in" data-aos-delay="200">
                     <span class="gradient-text">Yapay Zeka</span> Çözümleri
                 </h1>
                 <p class="text-xl text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
@@ -237,70 +230,9 @@
                         Manuel gönderimden kurtulun, binlerce kişiye aynı anda ama özel hissederek ulaşın.
                     </p>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-right">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-paper-plane text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Kitlesel Gönderim</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Binlerce potansiyel müşteriye saniyeler içinde ulaşın. Spam filtrelerine takılmadan, doğrudan gelen kutusuna düşün.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-left" data-aos-delay="100">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-wand-magic-sparkles text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Yapay Zeka Yazarlığı</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Her müşteriye özel, açılma oranı yüksek başlıklar ve içerikler yazar. Kişinin ismine ve sektörüne göre metni özelleştirir.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-right" data-aos-delay="200">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-clock-rotate-left text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Otomatik Takip</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Cevap vermeyenlere otomatik hatırlatma mailleri atar. "Mailimi gördünüz mü?" diye sorarak dönüş oranlarını 3 katına çıkarır.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-left" data-aos-delay="300">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-magnifying-glass-chart text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">A/B Testleri</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Hangi başlığın daha iyi çalıştığını analiz eder ve optimize eder. En çok dönüş getiren mail şablonlarını otomatik belirler.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                
                 <div class="glassmorphism p-12 rounded-3xl glow-border text-center" data-aos="zoom-in">
                     <h3 class="text-3xl font-bold mb-6">Outreach Botunu Deneyin</h3>
-                    <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-                        Satış huninizi otomatik doldurun. İlk kampanyanızda farkı görün.
-                    </p>
                     <a href="iletisim.html" class="glow-button text-white px-12 py-5 rounded-2xl font-bold text-xl inline-flex items-center justify-center group">
                         <span>Ücretsiz Toplantı Planla</span>
                         <i class="fa-solid fa-calendar-check ml-3 group-hover:translate-x-1 transition-transform"></i>
@@ -309,212 +241,14 @@
             </div>
         </div>
     </section>
-
-    <section id="musteri-detay" class="py-40 border-b border-purple-500/10 scroll-mt-20">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-20">
-                    <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-                        <i class="fa-solid fa-headset text-purple-400 text-xl mr-2 flex-shrink-0"></i>
-                        <span class="gradient-text text-sm font-bold tracking-wide">MÜŞTERİ HİZMETLERİ</span>
-                    </div>
-                    <h2 class="text-5xl sm:text-6xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="100">
-                        <span class="gradient-text">7/24 Aktif</span> Müşteri Desteği
-                    </h2>
-                    <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                        Müşterileriniz gece 3'te bile destek alabilsin, her soruya anında cevap
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-right">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-language text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Çok Dilli Destek</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Türkçe, İngilizce, Almanca ve daha fazlası. Müşterileriniz hangi dilde konuşursa konuşsun, bot anlar ve yanıtlar.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-left" data-aos-delay="100">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-truck-fast text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Sipariş Takibi</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    "Siparişim nerede?" sorusuna anında cevap. Müşteriler sipariş numarası ile sorgulama yapar, bot kargo bilgisini paylaşır.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-right" data-aos-delay="200">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-calendar-days text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Randevu Sistemi</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Restoran, kuaför, doktor... Müşteriler bota yazarak randevu alır. Takvim entegrasyonu ile çakışma olmaz.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-left" data-aos-delay="300">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-circle-question text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Sıkça Sorulan Sorular</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    "Kargo ücreti ne kadar?", "İade süresi kaç gün?" gibi tekrar eden soruları bot yanıtlar.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glassmorphism p-12 rounded-3xl glow-border text-center" data-aos="zoom-in">
-                    <h3 class="text-3xl font-bold mb-6">Müşteri Hizmetleri Botunu Test Edin</h3>
-                    <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-                        Müşteri memnuniyetinizi artırın. Yanıt sürelerinizi %90 azaltın. Hemen başlayın.
-                    </p>
-                    <a href="iletisim.html" class="glow-button text-white px-12 py-5 rounded-2xl font-bold text-xl inline-flex items-center justify-center group">
-                        <span>Ücretsiz Toplantı Planla</span>
-                        <i class="fa-solid fa-calendar-check ml-3 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="satis-detay" class="py-40 scroll-mt-20">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-20">
-                    <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-                        <i class="fa-solid fa-chart-line text-purple-400 text-xl mr-2 flex-shrink-0"></i>
-                        <span class="gradient-text text-sm font-bold tracking-wide">SATIŞ OTOMASYONU</span>
-                    </div>
-                    <h2 class="text-5xl sm:text-6xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="100">
-                        Her Lead'i <span class="gradient-text">Satışa Dönüştürün</span>
-                    </h2>
-                    <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                        Potansiyel müşteri kaçırmayın, takip süreçlerini otomatikleştirin, gelir artırın
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-right">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-filter text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Lead Nitelendirme</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Bot potansiyel müşteriye soru sorar: Bütçesi ne? Ne zaman alım yapacak? Yanıtlara göre lead'i etiketler.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-left" data-aos-delay="100">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-bullhorn text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Kişiselleştirilmiş Kampanyalar</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Her müşteriye özel mesajlar. "Baktığınız ürünlerde %20 indirim var" gibi. Müşteri ilgisine göre içerik değişir.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-right" data-aos-delay="200">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-rotate text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Otomatik Takip</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Müşteri cevap vermedi mi? Bot 3 gün sonra tekrar hatırlatma mesajı atar. Sepeti terk eden müşteriye uyarı gider.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glassmorphism p-8 rounded-2xl glow-border" data-aos="fade-left" data-aos-delay="300">
-                        <div class="flex items-start space-x-4 mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-2xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-chart-column text-purple-400 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-3 text-white">Performans Raporları</h3>
-                                <p class="text-gray-400 leading-relaxed">
-                                    Kaç lead geldi? Kaçı satışa dönüştü? Hangi kampanya daha iyi çalıştı? Haftalık raporlar alın.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glassmorphism p-12 rounded-3xl glow-border text-center" data-aos="zoom-in">
-                    <h3 class="text-3xl font-bold mb-6">Satış Botunu Aktif Edin</h3>
-                    <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-                        Lead'lerinizi satışa dönüştürün. İlk ayda %30+ dönüşüm artışı görün. Hemen başlayın.
-                    </p>
-                    <a href="iletisim.html" class="glow-button text-white px-12 py-5 rounded-2xl font-bold text-xl inline-flex items-center justify-center group">
-                        <span>Ücretsiz Toplantı Planla</span>
-                        <i class="fa-solid fa-calendar-check ml-3 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <footer class="relative border-t border-purple-500/10 py-16 sm:py-20 bg-[#0B0C15]">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
                 
                 <div class="text-center sm:text-left">
                     <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
-                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="grad-neuro-footer" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
-                                </linearGradient>
-                                <filter id="glow-neuro-footer" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="8" result="coloredBlur" />
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur" />
-                                        <feMergeNode in="SourceGraphic" />
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <g filter="url(#glow-neuro-footer)">
-                                <circle cx="100" cy="100" r="20" fill="url(#grad-neuro-footer)"/>
-                                <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-neuro-footer)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                                <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-neuro-footer)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                                <circle cx="160" cy="80" r="10" fill="url(#grad-neuro-footer)"/>
-                                <circle cx="40" cy="120" r="10" fill="url(#grad-neuro-footer)"/>
-                                <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-neuro-footer)" stroke-width="4" stroke-linecap="round"/>
-                            </g>
-                        </svg>
+                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-footer-neuro" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" /><stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" /></linearGradient><filter id="glow-footer-neuro" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" result="coloredBlur" /><feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><g filter="url(#glow-footer-neuro)"><circle cx="100" cy="100" r="20" fill="url(#grad-footer-neuro)"/><path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-footer-neuro)" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-footer-neuro)" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="160" cy="80" r="10" fill="url(#grad-footer-neuro)"/><circle cx="40" cy="120" r="10" fill="url(#grad-footer-neuro)"/><path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-footer-neuro)" stroke-width="4" stroke-linecap="round"/></g></svg>
                         <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
                     </div>
                     <p class="text-gray-400 leading-relaxed text-sm sm:text-base mb-6">
@@ -530,7 +264,7 @@
                     <h4 class="text-white font-bold mb-6 text-lg font-heading">Hızlı Linkler</h4>
                     <ul class="space-y-3">
                         <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Ana Sayfa</a></li>
-                        <li><a href="hizmetler.html" class="text-purple-400 font-semibold transition-all text-sm sm:text-base">→ Hizmetler</a></li>
+                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Hizmetler</a></li>
                         <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Bize Güvenenler</a></li>
                         <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ İletişim</a></li>
                     </ul>
@@ -539,10 +273,7 @@
                 <div class="text-center sm:text-left">
                     <h4 class="text-white font-bold mb-6 text-lg font-heading">Yasal</h4>
                     <ul class="space-y-3">
-                        <li><a href="yasal.html#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
-                        <li><a href="yasal.html#kullanim" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Kullanım Şartları</a></li>
-                        <li><a href="yasal.html#kvkk" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ KVKK</a></li>
-                        <li><a href="yasal.html#cerez" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Çerez Politikası</a></li>
+                        <li><a href="yasal.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
                     </ul>
                 </div>
                 
