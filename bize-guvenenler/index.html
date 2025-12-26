@@ -4,27 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bize Güvenenler | Aura AI - Başarı Hikayeleri</title>
-    <meta name="description" content="Aura AI chatbot çözümleriyle müşterilerimizin elde ettiği sonuçları keşfedin. Gayrimenkul, e-ticaret ve sağlık sektöründeki başarı hikayeleri.">
-    <meta name="author" content="Aura AI">
-
-    <meta property="og:title" content="Aura AI | Başarı Hikayeleri">
-    <meta property="og:description" content="Müşterilerimizin Aura AI ile elde ettiği %85'e varan maliyet tasarrufu ve başarı hikayelerini inceleyin.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop">
-    <meta property="og:url" content="https://www.auraaı.com/bize-guvenenler/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Aura AI">
+    <meta name="description" content="Aura AI başarı hikayeleri.">
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='20' fill='url(%23g)'/%3E%3Cpath d='M100 40 Q 140 40 160 80 T 160 160' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 160 Q 60 160 40 120 T 40 40' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='160' cy='80' r='10' fill='url(%23g)'/%3E%3Ccircle cx='40' cy='120' r='10' fill='url(%23g)'/%3E%3Cpath d='M100 80 L100 120 M80 100 L120 100' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
     
     <script>
         tailwind.config = {
@@ -40,57 +29,33 @@
     <style>
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
         h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
-        html { scroll-behavior: smooth; }
-        .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #0B0C15; }
-        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
-        .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%); top: -10%; left: -10%; }
-        .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%); bottom: -10%; right: -10%; animation-delay: 5s; }
-        .orb-3 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 10s; }
-        @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(100px, -100px) scale(1.1); } 66% { transform: translate(-100px, 100px) scale(0.9); } }
-        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
-        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
         .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
         .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); }
         .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
-        .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
         .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
-        .glow-border:hover { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3); border-color: rgba(139, 92, 246, 0.7); transform: translateY(-8px); }
         .tilt-card { transition: transform 0.6s ease, box-shadow 0.6s ease; transform-style: preserve-3d; }
         .tilt-card:hover { transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px); box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4), 0 0 80px rgba(6, 182, 212, 0.3); }
-        .social-icon { transition: all 0.3s ease; }
-        .social-icon:hover { transform: translateY(-5px) scale(1.1); }
         #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         #mobileMenu.show { max-height: 500px; }
     </style>
 </head>
 <body class="bg-[#0B0C15] text-white">
     
-    <div class="animated-bg">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-    </div>
-    <div class="grid-bg"></div>
+    <div class="fixed top-0 left-0 w-full h-full -z-10 bg-[#0B0C15]"></div>
     
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
         <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
                 
-                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='/'">
-                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='../index.html'">
+                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200">
                         <defs>
                             <linearGradient id="grad-neuro-nav" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
                                 <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                             </linearGradient>
-                            <filter id="glow-neuro-nav" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="8" result="coloredBlur" />
-                                <feMerge>
-                                    <feMergeNode in="coloredBlur" />
-                                    <feMergeNode in="SourceGraphic" />
-                                </feMerge>
-                            </filter>
+                            <filter id="glow-neuro-nav"><feGaussianBlur stdDeviation="8" result="coloredBlur" /><feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
                         </defs>
                         <g filter="url(#glow-neuro-nav)">
                             <circle cx="100" cy="100" r="20" fill="url(#grad-neuro-nav)"/>
@@ -105,29 +70,22 @@
                 </div>
 
                 <div class="hidden md:flex space-x-8">
-                    <a href="/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
-                    <a href="/hizmetler/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
-                    <a href="/bize-guvenenler/" class="text-purple-400 font-semibold hover:text-purple-300 transition-all duration-300">Bize Güvenenler</a>
-                    <a href="/iletisim/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">İletişim</a>
+                    <a href="../index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
+                    <a href="../hizmetler/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Hizmetler</a>
+                    <a href="#" class="text-purple-400 font-semibold transition-all duration-300">Bize Güvenenler</a>
+                    <a href="../iletisim/" class="text-gray-400 hover:text-purple-400 transition-all duration-300">İletişim</a>
                 </div>
                 
-                <a href="/iletisim/" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">
-                    Ücretsiz Danışmanlık
-                </a>
-                <button id="mobileMenuBtn" class="md:hidden text-purple-400 p-2">
-                    <i class="fa-solid fa-bars text-2xl"></i>
-                </button>
+                <a href="../iletisim/" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">Ücretsiz Danışmanlık</a>
+                <button id="mobileMenuBtn" class="md:hidden text-purple-400 p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
             </div>
             
-            <div id="mobileMenu">
+            <div id="mobileMenu" class="hidden">
                 <div class="pt-4 pb-2 space-y-2">
-                    <a href="/" class="block py-2 text-gray-400 hover:text-purple-400">Ana Sayfa</a>
-                    <a href="/hizmetler/" class="block py-2 text-gray-400 hover:text-purple-400">Hizmetler</a>
-                    <a href="/bize-guvenenler/" class="block py-2 text-purple-400 font-semibold">Bize Güvenenler</a>
-                    <a href="/iletisim/" class="block py-2 text-gray-400 hover:text-purple-400">İletişim</a>
-                    <a href="/iletisim/" class="block mt-4 glow-button text-white px-6 py-3 rounded-xl font-semibold text-sm text-center">
-                        Ücretsiz Danışmanlık
-                    </a>
+                    <a href="../index.html" class="block py-2 text-gray-400">Ana Sayfa</a>
+                    <a href="../hizmetler/" class="block py-2 text-gray-400">Hizmetler</a>
+                    <a href="#" class="block py-2 text-purple-400">Bize Güvenenler</a>
+                    <a href="../iletisim/" class="block py-2 text-gray-400">İletişim</a>
                 </div>
             </div>
         </div>
@@ -137,13 +95,13 @@
         <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center max-w-4xl mx-auto">
                 <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-                    <i class="fa-solid fa-handshake text-purple-400 text-xl mr-2 flex-shrink-0"></i>
+                    <i class="fa-solid fa-handshake text-purple-400 text-xl mr-2"></i>
                     <span class="gradient-text text-sm font-bold tracking-wide">BİZE GÜVENENLER</span>
                 </div>
-                <h1 class="text-5xl sm:text-7xl font-bold mb-6 font-heading" data-aos="zoom-in" data-aos-delay="200">
+                <h1 class="text-5xl sm:text-7xl font-bold mb-6 font-heading" data-aos="zoom-in">
                     <span class="gradient-text">Başarı</span> Hikayeleri
                 </h1>
-                <p class="text-xl text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                <p class="text-xl text-gray-400 leading-relaxed" data-aos="fade-up">
                     Müşterilerimizin Aura AI ile elde ettiği sonuçlar
                 </p>
             </div>
@@ -153,122 +111,84 @@
     <section class="py-20">
         <div class="container mx-auto px-4 sm:px-6">
             
-            <div class="glassmorphism tilt-card p-6 md:p-12 rounded-3xl glow-border mb-16" data-aos="fade-right" data-aos-duration="1000">
+            <div class="glassmorphism tilt-card p-6 md:p-12 rounded-3xl glow-border mb-16" data-aos="fade-right">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                         <div class="inline-block px-4 py-2 bg-purple-500/20 rounded-full mb-6">
                             <span class="text-purple-400 font-bold text-sm">🏢 GAYRİMENKUL</span>
                         </div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Premium Estates Gayrimenkul</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Premium Estates</h2>
                         <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                            Premium Estates, lüks konut satışında müşteri takibi ve randevu yönetimi konusunda zorluk yaşıyordu. Aura AI chatbot sistemi ile süreçlerini otomatikleştirdiler.
+                            Lüks konut satışında müşteri takibi ve randevu yönetimi süreçlerini otomatikleştirdik.
                         </p>
                         <div class="space-y-4 mb-8">
-                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">Otomatik Lead Nitelendirme</p><p class="text-gray-400 text-sm">Chatbot, müşteri bütçesini ve tercihlerini otomatik belirliyor</p></div></div>
-                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">7/24 Randevu Sistemi</p><p class="text-gray-400 text-sm">Müşteriler gece bile randevu alabiliyorlar</p></div></div>
-                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">WhatsApp Entegrasyonu</p><p class="text-gray-400 text-sm">Müşterilerle WhatsApp üzerinden anlık iletişim</p></div></div>
+                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">Otomatik Lead Nitelendirme</p></div></div>
+                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">7/24 Randevu Sistemi</p></div></div>
                         </div>
-                        <div class="grid grid-cols-3 gap-4 md:gap-6 p-4 md:p-6 bg-gradient-to-br from-purple-500/10 to-cyan-500/10 rounded-2xl border border-purple-500/20">
-                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text mb-2">%60</div><p class="text-gray-400 text-xs md:text-sm">Daha Fazla Lead</p></div>
-                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text mb-2">%45</div><p class="text-gray-400 text-xs md:text-sm">Randevu Artışı</p></div>
-                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text mb-2">3 Ay</div><p class="text-gray-400 text-xs md:text-sm">ROI Süresi</p></div>
+                        <div class="grid grid-cols-3 gap-4 md:gap-6 p-4 md:p-6 bg-purple-500/10 rounded-2xl border border-purple-500/20">
+                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text">%60</div><p class="text-gray-400 text-xs">Daha Fazla Lead</p></div>
+                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text">%45</div><p class="text-gray-400 text-xs">Randevu Artışı</p></div>
+                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text">3 Ay</div><p class="text-gray-400 text-xs">ROI Süresi</p></div>
                         </div>
                     </div>
-                    <div class="relative">
-                        <div class="glassmorphism p-6 md:p-8 rounded-2xl border-2 border-purple-500/30">
-                            <div class="space-y-4">
-                                <div class="flex items-start space-x-3"><div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-user text-purple-400"></i></div><div class="flex-1"><p class="text-gray-400 text-sm">Müşteri</p><p class="text-white">"Merhaba, 2+1 daire arıyorum."</p></div></div>
-                                <div class="flex items-start space-x-3"><div class="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-robot text-cyan-400"></i></div><div class="flex-1"><p class="text-gray-400 text-sm">Aura AI Bot</p><p class="text-white">"Merhaba! Bütçeniz nedir?"</p></div></div>
-                                <div class="flex items-start space-x-3"><div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-user text-purple-400"></i></div><div class="flex-1"><p class="text-gray-400 text-sm">Müşteri</p><p class="text-white">"2-3 milyon TL arası"</p></div></div>
-                                <div class="flex items-start space-x-3"><div class="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-robot text-cyan-400"></i></div><div class="flex-1"><p class="text-gray-400 text-sm">Aura AI Bot</p><p class="text-white">"Harika! Size uygun 5 daire buldum. Görüşme randevusu oluşturayım mı?"</p></div></div>
-                            </div>
+                    <div class="glassmorphism p-6 md:p-8 rounded-2xl border-2 border-purple-500/30">
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3"><div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center"><i class="fa-solid fa-user text-purple-400"></i></div><div class="flex-1"><p class="text-gray-400 text-sm">Müşteri</p><p class="text-white">"2-3 milyon TL arası daire arıyorum"</p></div></div>
+                            <div class="flex items-start space-x-3"><div class="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center"><i class="fa-solid fa-robot text-cyan-400"></i></div><div class="flex-1"><p class="text-gray-400 text-sm">Aura Bot</p><p class="text-white">"Size uygun 5 portföyümüz var. Randevu oluşturalım mı?"</p></div></div>
                         </div>
-                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="glassmorphism tilt-card p-6 md:p-12 rounded-3xl glow-border mb-16" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="glassmorphism tilt-card p-6 md:p-12 rounded-3xl glow-border mb-16" data-aos="fade-left">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 lg:order-1 relative">
-                        <div class="glassmorphism p-6 md:p-8 rounded-2xl border-2 border-cyan-500/30">
-                            <h4 class="text-xl font-bold text-white mb-3">📧 Kampanya Başarısı</h4>
-                            <div class="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 mb-4">
-                                <p class="text-blue-400 text-sm font-semibold">🚀 "Yaza Hazırlık" Kampanyası</p>
-                                <p class="text-gray-400 text-xs mt-1">Gönderim: 2.500 Kişi - Açılma: %85</p>
-                            </div>
-                            <div class="mb-6"><h4 class="text-xl font-bold text-white mb-3">💬 Müşteri Etkileşimi</h4><div class="space-y-2"><div class="flex items-start space-x-3 p-3 bg-purple-500/10 rounded-lg"><i class="fa-solid fa-user text-purple-400 mt-1"></i><div><p class="text-gray-300 text-xs">Ayşe K.</p><p class="text-white text-sm">"Kampanyayı gördüm, randevu almak istiyorum."</p></div></div><div class="flex items-start space-x-3 p-3 bg-cyan-500/10 rounded-lg"><i class="fa-solid fa-robot text-cyan-400 mt-1"></i><div><p class="text-gray-300 text-xs">Aura Bot</p><p class="text-white text-sm">"Tabii Ayşe Hanım, yarın 14:00 uygun mu?"</p></div></div></div></div>
-                            <div class="text-center p-4 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl"><p class="text-green-400 font-bold">✓ 35 Yeni Randevu</p></div>
+                    <div class="order-2 lg:order-1 glassmorphism p-6 md:p-8 rounded-2xl border-2 border-cyan-500/30">
+                        <h4 class="text-xl font-bold text-white mb-3">📧 Kampanya Başarısı</h4>
+                        <div class="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 mb-4">
+                            <p class="text-blue-400 text-sm font-semibold">🚀 "Yaza Hazırlık" Kampanyası</p>
+                            <p class="text-gray-400 text-xs mt-1">Açılma Oranı: %85</p>
                         </div>
-                        <div class="absolute -top-4 -left-4 w-32 h-32 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
+                        <div class="text-center p-4 bg-cyan-500/10 rounded-xl"><p class="text-green-400 font-bold">✓ 35 Yeni Randevu</p></div>
                     </div>
                     <div class="order-1 lg:order-2">
                         <div class="inline-block px-4 py-2 bg-cyan-500/20 rounded-full mb-6"><span class="text-cyan-400 font-bold text-sm">💅 GÜZELLİK MERKEZİ</span></div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Madam Beauty Antalya</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Madam Beauty</h2>
                         <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                            Madam Beauty, yerel müşteri kitlesini genişletmek istiyordu. Aura AI Soğuk E-posta Botu ile kişiselleştirilmiş kampanyalar düzenleyerek yeni müşterilere ulaştılar.
+                            Soğuk E-posta Botu ile kişiselleştirilmiş kampanyalar düzenleyerek yeni müşterilere ulaştılar.
                         </p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">Kişiselleştirilmiş E-postalar</p><p class="text-gray-400 text-sm">Her müşteriye ismiyle hitap eden özel fırsatlar</p></div></div>
-                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">Otomatik Randevu Takibi</p><p class="text-gray-400 text-sm">Mailden gelen dönüşleri otomatik randevuya çevirme</p></div></div>
-                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">Yüksek Dönüşüm</p><p class="text-gray-400 text-sm">İlgilenmeyenleri eleyen, odaklı pazarlama</p></div></div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 md:gap-6 p-4 md:p-6 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl border border-cyan-500/20">
-                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text mb-2">%85</div><p class="text-gray-400 text-xs md:text-sm">Açılma Oranı</p></div>
-                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text mb-2">%50</div><p class="text-gray-400 text-xs md:text-sm">Yeni Müşteri</p></div>
-                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text mb-2">1 Ay</div><p class="text-gray-400 text-xs md:text-sm">ROI Süresi</p></div>
+                        <div class="grid grid-cols-3 gap-4 md:gap-6 p-4 md:p-6 bg-cyan-500/10 rounded-2xl border border-cyan-500/20">
+                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text">%85</div><p class="text-gray-400 text-xs">Açılma</p></div>
+                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text">%50</div><p class="text-gray-400 text-xs">Yeni Müşteri</p></div>
+                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text">1 Ay</div><p class="text-gray-400 text-xs">ROI</p></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="glassmorphism tilt-card p-6 md:p-12 rounded-3xl glow-border" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+            <div class="glassmorphism tilt-card p-6 md:p-12 rounded-3xl glow-border" data-aos="fade-right">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <div class="inline-block px-4 py-2 bg-green-500/20 rounded-full mb-6">
-                            <span class="text-green-400 font-bold text-sm">📢 REKLAM AJANSI</span>
-                        </div>
+                        <div class="inline-block px-4 py-2 bg-green-500/20 rounded-full mb-6"><span class="text-green-400 font-bold text-sm">📢 REKLAM AJANSI</span></div>
                         <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Prenses Reklam</h2>
                         <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                            Prenses Reklam, potansiyel müşteri (lead) toplama süreçlerini otomatize etmek istiyordu. Aura AI ile web sitelerine gelen ziyaretçileri analiz edip, nitelikli satış fırsatlarına dönüştürdüler.
+                            Potansiyel müşteri toplama süreçlerini otomatize ederek satış ekibinin iş yükünü azalttılar.
                         </p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">7/24 Lead Toplama</p><p class="text-gray-400 text-sm">Ziyaretçileri mesai saatleri dışında da yakalama</p></div></div>
-                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">Otomatik Nitelendirme</p><p class="text-gray-400 text-sm">Müşteri bütçesini ve ihtiyacını önceden öğrenme</p></div></div>
-                            <div class="flex items-start"><i class="fa-solid fa-check text-green-400 mr-3 mt-1"></i><div><p class="text-white font-semibold">Anlık Bildirimler</p><p class="text-gray-400 text-sm">Sıcak satış fırsatlarını anında satış ekibine iletme</p></div></div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 md:gap-6 p-4 md:p-6 bg-gradient-to-br from-green-500/10 to-cyan-500/10 rounded-2xl border border-green-500/20">
-                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text mb-2">4x</div><p class="text-gray-400 text-xs md:text-sm">Lead Hızı</p></div>
-                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text mb-2">%95</div><p class="text-gray-400 text-xs md:text-sm">Veri Doğruluğu</p></div>
-                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text mb-2">15 Saat</div><p class="text-gray-400 text-xs md:text-sm">Haftalık Tasarruf</p></div>
+                        <div class="grid grid-cols-3 gap-4 md:gap-6 p-4 md:p-6 bg-green-500/10 rounded-2xl border border-green-500/20">
+                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text">4x</div><p class="text-gray-400 text-xs">Lead Hızı</p></div>
+                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text">%95</div><p class="text-gray-400 text-xs">Veri Doğruluğu</p></div>
+                            <div class="text-center"><div class="text-2xl md:text-4xl font-bold gradient-text">15h</div><p class="text-gray-400 text-xs">Haftalık Tasarruf</p></div>
                         </div>
                     </div>
-                    <div class="relative">
-                        <div class="glassmorphism p-6 md:p-8 rounded-2xl border-2 border-green-500/30">
-                            <div class="text-center mb-6">
-                                <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fa-solid fa-filter-circle-dollar text-green-400 text-3xl"></i></div>
-                                <h4 class="text-2xl font-bold text-white mb-2">Gelen Lead Listesi</h4>
-                                <p class="text-gray-400 text-sm">Son 1 Saat</p>
+                    <div class="glassmorphism p-6 md:p-8 rounded-2xl border-2 border-green-500/30">
+                        <div class="text-center mb-6"><h4 class="text-2xl font-bold text-white">Gelen Leadler</h4></div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between p-4 bg-green-500/10 rounded-xl border border-green-500/20">
+                                <div><p class="text-white font-semibold">Oto Galeri</p><p class="text-gray-400 text-xs">Bütçe: 50k+</p></div><span class="text-green-400 text-xs">🔥 Sıcak</span>
                             </div>
-                            <div class="space-y-3">
-                                <div class="flex items-center justify-between p-4 bg-green-500/10 rounded-xl border border-green-500/20">
-                                    <div><p class="text-white font-semibold">Oto Galeri Projesi</p><p class="text-gray-400 text-xs">Bütçe: 50.000₺+</p></div>
-                                    <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">🔥 Sıcak</span>
-                                </div>
-                                <div class="flex items-center justify-between p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
-                                    <div><p class="text-white font-semibold">Logo Tasarımı</p><p class="text-gray-400 text-xs">Bütçe: Belirsiz</p></div>
-                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">Takipte</span>
-                                </div>
-                                <div class="flex items-center justify-between p-4 bg-cyan-500/10 rounded-xl border border-cyan-500/20">
-                                    <div><p class="text-white font-semibold">Sosyal Medya Yön.</p><p class="text-gray-400 text-xs">Bütçe: 20.000₺</p></div>
-                                    <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Yeni</span>
-                                </div>
-                            </div>
-                            <div class="mt-6 text-center">
-                                <button class="w-full py-3 bg-gradient-to-r from-green-500 to-cyan-500 text-white rounded-xl font-semibold hover:opacity-90 transition-opacity">CRM'e Aktar</button>
+                            <div class="flex justify-between p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
+                                <div><p class="text-white font-semibold">Logo</p><p class="text-gray-400 text-xs">Bütçe: ?</p></div><span class="text-purple-400 text-xs">Takipte</span>
                             </div>
                         </div>
-                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-green-500/20 to-cyan-500/20 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
@@ -278,16 +198,13 @@
 
     <section class="py-40">
         <div class="container mx-auto px-4 sm:px-6">
-            <div class="glassmorphism glow-border p-10 md:p-20 rounded-[2rem] md:rounded-[3rem] text-center relative overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="glassmorphism glow-border p-10 md:p-20 rounded-[2rem] md:rounded-[3rem] text-center relative overflow-hidden" data-aos="zoom-in">
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
                 <div class="relative z-10">
-                    <h2 class="text-4xl md:text-6xl font-bold mb-6 md:mb-8 font-heading">Sıradaki Başarı Hikayesi Sizin mi?</h2>
-                    <p class="text-lg md:text-2xl text-gray-400 mb-8 md:mb-12 max-w-3xl mx-auto">
-                        İşletmenizi dönüştürmek için bugün harekete geçin. Ücretsiz danışmanlık ile başlayın.
-                    </p>
-                    <a href="/iletisim/" class="glow-button text-white px-10 md:px-16 py-5 md:py-7 rounded-2xl font-bold text-xl md:text-2xl inline-flex items-center justify-center group w-full sm:w-auto">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6 font-heading">Sıradaki Başarı Hikayesi Sizin mi?</h2>
+                    <a href="../iletisim/" class="glow-button text-white px-10 md:px-16 py-5 md:py-7 rounded-2xl font-bold text-xl inline-flex items-center justify-center group">
                         <span>Ücretsiz Toplantı Planla</span>
-                        <svg class="w-6 h-6 md:w-7 md:h-7 ml-3 md:ml-4 group-hover:translate-x-3 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        <i class="fa-solid fa-arrow-right ml-3"></i>
                     </a>
                 </div>
             </div>
@@ -297,87 +214,57 @@
     <footer class="relative border-t border-purple-500/10 py-16 sm:py-20 bg-[#0B0C15]">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
-                
                 <div class="text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
-                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="grad-neuro-footer" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
-                                </linearGradient>
-                                <filter id="glow-neuro-footer" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="8" result="coloredBlur" />
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur" />
-                                        <feMergeNode in="SourceGraphic" />
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <g filter="url(#glow-neuro-footer)">
-                                <circle cx="100" cy="100" r="20" fill="url(#grad-neuro-footer)"/>
-                                <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-neuro-footer)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                                <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-neuro-footer)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                                <circle cx="160" cy="80" r="10" fill="url(#grad-neuro-footer)"/>
-                                <circle cx="40" cy="120" r="10" fill="url(#grad-neuro-footer)"/>
-                                <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-neuro-footer)" stroke-width="4" stroke-linecap="round"/>
-                            </g>
-                        </svg>
+                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6">
                         <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
                     </div>
-                    <p class="text-gray-400 leading-relaxed text-sm sm:text-base mb-6">
-                        Yapay zeka destekli otomasyon çözümleriyle işletmenizi geleceğe taşıyoruz.
-                    </p>
-                    <div class="glassmorphism inline-block px-4 py-2 rounded-lg flex items-center justify-center sm:justify-start gap-2">
-                        <i class="fa-solid fa-shuttle-space text-purple-400"></i>
-                        <span class="text-purple-400 text-xs font-semibold">2025'te Daha Güçlüyüz</span>
-                    </div>
+                    <p class="text-gray-400 text-sm mb-6">Yapay zeka ile güçlendirilmiş otomasyon.</p>
                 </div>
                 
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Hızlı Linkler</h4>
+                    <h4 class="text-white font-bold mb-6">Hızlı Linkler</h4>
                     <ul class="space-y-3">
-                        <li><a href="/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Ana Sayfa</a></li>
-                        <li><a href="/hizmetler/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Hizmetler</a></li>
-                        <li><a href="/bize-guvenenler/" class="text-purple-400 font-semibold transition-all text-sm sm:text-base">→ Bize Güvenenler</a></li>
-                        <li><a href="/iletisim/" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ İletişim</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-purple-400 text-sm">→ Ana Sayfa</a></li>
+                        <li><a href="../hizmetler/" class="text-gray-400 hover:text-purple-400 text-sm">→ Hizmetler</a></li>
+                        <li><a href="#" class="text-purple-400 font-semibold text-sm">→ Bize Güvenenler</a></li>
+                        <li><a href="../iletisim/" class="text-gray-400 hover:text-purple-400 text-sm">→ İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-center sm:text-left">
+                    <h4 class="text-white font-bold mb-6">Yasal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../yasal/#gizlilik" class="text-gray-400 hover:text-purple-400 text-sm">→ Gizlilik Politikası</a></li>
                     </ul>
                 </div>
                 
                 <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Yasal</h4>
-                    <ul class="space-y-3">
-                        <li><a href="/yasal/#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
-                        <li><a href="/yasal/#kullanim" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Kullanım Şartları</a></li>
-                        <li><a href="/yasal/#kvkk" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ KVKK</a></li>
-                        <li><a href="/yasal/#cerez" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Çerez Politikası</a></li>
-                    </ul>
-                </div>
-                
-                <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Destek</h4>
+                    <h4 class="text-white font-bold mb-6">Destek</h4>
                     <div class="glassmorphism p-5 rounded-xl border border-white/5">
-                        <p class="text-gray-400 text-sm mb-3">Destek için buraya yazabilirsiniz:</p>
-                        <a href="mailto:info@auraaı.com" class="text-purple-400 hover:text-white transition-all text-sm font-bold flex items-center justify-center sm:justify-start gap-2">
-                            <i class="fa-solid fa-envelope"></i> info@auraaı.com
-                        </a>
+                        <a href="mailto:info@auraaı.com" class="text-purple-400 hover:text-white text-sm font-bold">info@auraaı.com</a>
                     </div>
                 </div>
-                
             </div>
             
             <div class="border-t border-purple-500/10 pt-8 text-center">
-                <p class="text-gray-500 text-sm sm:text-base">
-                    © 2025 <span class="gradient-text font-semibold">Aura AI</span>. Tüm Hakları Saklıdır.
-                </p>
-                <p class="text-gray-600 text-xs sm:text-sm mt-2">
-                    Yapay Zeka ile Güçlendirilmiş 🤖
-                </p>
+                <p class="text-gray-500 text-sm">© 2025 Aura AI. Tüm Hakları Saklıdır.</p>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init();
+            
+            // Mobil Menü
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
