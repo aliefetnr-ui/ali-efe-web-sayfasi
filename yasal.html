@@ -15,7 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Aura AI">
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M100 20 L160 55 L160 145 L100 180 L40 145 L40 55 Z M100 20 L100 70 M40 55 L100 70 L160 55 M40 145 L100 130 L160 145 M100 180 L100 130' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M100 70 L135 100 L100 130 L65 100 Z' fill='url(%23g)'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='20' fill='url(%23g)'/%3E%3Cpath d='M100 40 Q 140 40 160 80 T 160 160' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 160 Q 60 160 40 120 T 40 40' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='160' cy='80' r='10' fill='url(%23g)'/%3E%3Ccircle cx='40' cy='120' r='10' fill='url(%23g)'/%3E%3Cpath d='M100 80 L100 120 M80 100 L120 100' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,17 +89,21 @@
                                 <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                             </linearGradient>
                             <filter id="glow-neuro-nav" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+                                <feGaussianBlur stdDeviation="8" result="coloredBlur" />
                                 <feMerge>
                                     <feMergeNode in="coloredBlur" />
                                     <feMergeNode in="SourceGraphic" />
                                 </feMerge>
                             </filter>
                         </defs>
-                        <path d="M100 20 L160 55 L160 145 L100 180 L40 145 L40 55 Z M100 20 L100 70 M40 55 L100 70 L160 55 M40 145 L100 130 L160 145 M100 180 L100 130" 
-                              fill="none" stroke="url(#grad-neuro-nav)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow-neuro-nav)"/>
-                        <path d="M100 70 L135 100 L100 130 L65 100 Z" 
-                              fill="url(#grad-neuro-nav)" filter="url(#glow-neuro-nav)"/>
+                        <g filter="url(#glow-neuro-nav)">
+                            <circle cx="100" cy="100" r="20" fill="url(#grad-neuro-nav)"/>
+                            <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-neuro-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                            <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-neuro-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                            <circle cx="160" cy="80" r="10" fill="url(#grad-neuro-nav)"/>
+                            <circle cx="40" cy="120" r="10" fill="url(#grad-neuro-nav)"/>
+                            <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-neuro-nav)" stroke-width="4" stroke-linecap="round"/>
+                        </g>
                     </svg>
                     <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
                 </div>
@@ -323,7 +327,7 @@
         </div>
     </section>
 
-    <footer class="relative border-t border-purple-500/10 py-16 sm:py-20 bg-[#0B0C15]">
+  <footer class="relative border-t border-purple-500/10 py-16 sm:py-20 bg-[#0B0C15]">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
                 
@@ -331,22 +335,26 @@
                     <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
                         <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="grad-footer-core" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <linearGradient id="grad-neuro-footer" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
                                     <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                                 </linearGradient>
-                                <filter id="glow-footer-core" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+                                <filter id="glow-neuro-footer" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="8" result="coloredBlur" />
                                     <feMerge>
                                         <feMergeNode in="coloredBlur" />
                                         <feMergeNode in="SourceGraphic" />
                                     </feMerge>
                                 </filter>
                             </defs>
-                            <path d="M100 20 L160 55 L160 145 L100 180 L40 145 L40 55 Z M100 20 L100 70 M40 55 L100 70 L160 55 M40 145 L100 130 L160 145 M100 180 L100 130" 
-                                  fill="none" stroke="url(#grad-footer-core)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow-footer-core)"/>
-                            <path d="M100 70 L135 100 L100 130 L65 100 Z" 
-                                  fill="url(#grad-footer-core)" filter="url(#glow-footer-core)"/>
+                            <g filter="url(#glow-neuro-footer)">
+                                <circle cx="100" cy="100" r="20" fill="url(#grad-neuro-footer)"/>
+                                <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-neuro-footer)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                                <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-neuro-footer)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                                <circle cx="160" cy="80" r="10" fill="url(#grad-neuro-footer)"/>
+                                <circle cx="40" cy="120" r="10" fill="url(#grad-neuro-footer)"/>
+                                <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-neuro-footer)" stroke-width="4" stroke-linecap="round"/>
+                            </g>
                         </svg>
                         <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
                     </div>
@@ -372,10 +380,10 @@
                 <div class="text-center sm:text-left">
                     <h4 class="text-white font-bold mb-6 text-lg font-heading">Yasal</h4>
                     <ul class="space-y-3">
-                        <li><a href="yasal.html#gizlilik" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
-                        <li><a href="yasal.html#kullanim" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Kullanım Şartları</a></li>
-                        <li><a href="yasal.html#kvkk" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ KVKK</a></li>
-                        <li><a href="yasal.html#cerez" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Çerez Politikası</a></li>
+                        <li><a href="yasal.html#gizlilik" class="text-purple-400 font-semibold transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
+                        <li><a href="yasal.html#kullanim" class="text-purple-400 font-semibold transition-all text-sm sm:text-base">→ Kullanım Şartları</a></li>
+                        <li><a href="yasal.html#kvkk" class="text-purple-400 font-semibold transition-all text-sm sm:text-base">→ KVKK</a></li>
+                        <li><a href="yasal.html#cerez" class="text-purple-400 font-semibold transition-all text-sm sm:text-base">→ Çerez Politikası</a></li>
                     </ul>
                 </div>
                 
