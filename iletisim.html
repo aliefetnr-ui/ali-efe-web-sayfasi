@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim | Aura AI</title>
+    <title>İletişim | Aura AI - Bize Ulaşın</title>
+    <meta name="description" content="Aura AI ile iletişime geçin. Yapay zeka otomasyon çözümlerimiz hakkında ücretsiz danışmanlık alın.">
+    <meta name="author" content="Aura AI">
+
+    <meta property="og:title" content="Aura AI | İletişim">
+    <meta property="og:description" content="İşletmenizi dönüştürmek için bugün bizimle iletişime geçin.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1596524430615-b46476ddc820?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:url" content="https://www.auraaı.com/iletisim.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aura AI">
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='20' fill='url(%23g)'/%3E%3Cpath d='M100 40 Q 140 40 160 80 T 160 160' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 160 Q 60 160 40 120 T 40 40' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='160' cy='80' r='10' fill='url(%23g)'/%3E%3Ccircle cx='40' cy='120' r='10' fill='url(%23g)'/%3E%3Cpath d='M100 80 L100 120 M80 100 L120 100' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 
@@ -35,16 +44,28 @@
         .form-input { background: rgba(255,255,255,0.05); border: 1px solid rgba(139,92,246,0.2); color: white; transition: 0.3s; }
         .form-input:focus { border-color: #8B5CF6; box-shadow: 0 0 15px rgba(139,92,246,0.3); outline: none; }
         
-        /* Animasyon */
+        /* GÜNCELLENMİŞ ARKA PLAN ANİMASYONLARI (GRID + ORBS) */
         .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; z-index: -1; animation: float 10s infinite ease-in-out; }
         .orb-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: #8B5CF6; }
         .orb-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: #06B6D4; animation-delay: 2s; }
         @keyframes float { 0%,100%{transform:translate(0,0)} 50%{transform:translate(20px,-20px)} }
+        
+        /* NEON IZGARA (GRID) */
+        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
+        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+
+        /* SSS Akordeon */
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
     </style>
 </head>
 <body>
     
-    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+    <div class="fixed top-0 left-0 w-full h-full -z-10 bg-[#0B0C15]">
+        <div class="orb orb-1"></div><div class="orb orb-2"></div>
+    </div>
+    <div class="grid-bg"></div>
 
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
@@ -90,10 +111,10 @@
             <span class="gradient-text font-bold text-sm">BİZE ULAŞIN</span>
         </div>
         <h1 class="text-5xl md:text-7xl font-bold mb-6 font-heading" data-aos="zoom-in">
-            <span class="gradient-text">Projelerinizi</span> Konuşalım
+            <span class="gradient-text">Geleceği</span> Planlayalım
         </h1>
         <p class="text-gray-400 text-xl max-w-2xl mx-auto" data-aos="fade-up">
-            İşletmenizi bir üst seviyeye taşıyacak otomasyon çözümleri için formu doldurun.
+            İşletmeniz için en uygun yapay zeka çözümlerini konuşmak için form doldurun veya bize yazın.
         </p>
     </section>
 
@@ -147,46 +168,64 @@
             <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center gradient-text font-heading" data-aos="fade-up">Sıkça Sorulan Sorular</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glassmorphism rounded-2xl overflow-hidden p-6 hover:border-purple-500/30 transition-all" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-clock text-purple-400"></i> Kurulum ne kadar sürer?</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Standart chatbot çözümlerimiz için kurulum süresi ortalama <strong>3-5 iş günüdür</strong>. CRM entegrasyonu ve özel eğitim gerektiren daha kapsamlı projeler ise 2-4 hafta arasında tamamlanarak teslim edilir.
-                    </p>
+                <div class="glassmorphism rounded-2xl overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6 flex justify-between items-center faq-question cursor-pointer hover:bg-white/5 transition-colors">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2"><i class="fa-solid fa-clock text-purple-400"></i> Kurulum ne kadar sürer?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        <p class="pt-2 border-t border-white/10">Standart chatbot çözümlerimiz için kurulum süresi ortalama <strong>3-5 iş günüdür</strong>. CRM entegrasyonu ve özel veri eğitimi gerektiren daha kapsamlı projeler ise projenin büyüklüğüne bağlı olarak 2-4 hafta arasında tamamlanarak teslim edilir.</p>
+                    </div>
                 </div>
 
-                <div class="glassmorphism rounded-2xl overflow-hidden p-6 hover:border-cyan-500/30 transition-all" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-plug text-cyan-400"></i> Hangi sistemlerle çalışır?</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Aura AI; <strong>Shopify, WordPress, Wix</strong> gibi web altyapılarıyla ve <strong>Salesforce, HubSpot, Zoho</strong> gibi popüler CRM sistemleriyle %100 uyumlu çalışır. API desteği olan her sisteme entegre olabiliriz.
-                    </p>
+                <div class="glassmorphism rounded-2xl overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6 flex justify-between items-center faq-question cursor-pointer hover:bg-white/5 transition-colors">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2"><i class="fa-solid fa-plug text-cyan-400"></i> Hangi sistemlerle çalışır?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        <p class="pt-2 border-t border-white/10">Aura AI; <strong>Shopify, WordPress (WooCommerce), Wix</strong> gibi popüler e-ticaret ve web altyapılarıyla, ayrıca <strong>Salesforce, HubSpot, Zoho</strong> gibi CRM sistemleriyle %100 uyumlu çalışır. API desteği olan neredeyse her sisteme entegre olabiliriz.</p>
+                    </div>
                 </div>
 
-                <div class="glassmorphism rounded-2xl overflow-hidden p-6 hover:border-green-500/30 transition-all" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-green-400"></i> Veri güvenliği nasıl sağlanıyor?</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Veri güvenliği önceliğimizdir. Tüm veriler <strong>uçtan uca şifreleme (E2EE)</strong> ile korunur. Sistemlerimiz KVKK ve GDPR (Avrupa Veri Koruma Tüzüğü) standartlarına tam uyumludur.
-                    </p>
+                <div class="glassmorphism rounded-2xl overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-6 flex justify-between items-center faq-question cursor-pointer hover:bg-white/5 transition-colors">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2"><i class="fa-solid fa-shield-halved text-green-400"></i> Veri güvenliği nasıl sağlanıyor?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        <p class="pt-2 border-t border-white/10">Veri güvenliği en büyük önceliğimizdir. Tüm veriler <strong>uçtan uca şifreleme (E2EE)</strong> ile korunur ve sunucularımızda güvenle saklanır. Sistemlerimiz KVKK ve GDPR (Avrupa Veri Koruma Tüzüğü) standartlarına tam uyumludur.</p>
+                    </div>
                 </div>
 
-                <div class="glassmorphism rounded-2xl overflow-hidden p-6 hover:border-pink-500/30 transition-all" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation text-pink-400"></i> Bot yanlış cevap verirse?</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Botlarımız "Güvenli Mod" ile çalışır. Emin olmadığı bir soruda uydurma cevap vermek yerine (halüsinasyon görmez), konuyu nazikçe ve geçmiş verisiyle birlikte <strong>insan temsilciye devreder.</strong>
-                    </p>
+                <div class="glassmorphism rounded-2xl overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="p-6 flex justify-between items-center faq-question cursor-pointer hover:bg-white/5 transition-colors">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation text-pink-400"></i> Bot yanlış cevap verirse?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        <p class="pt-2 border-t border-white/10">Botlarımız "Güvenli Mod" ile çalışır. Emin olmadığı bir konuda asla uydurma cevap (halüsinasyon) vermez. Bunun yerine, konuyu nazikçe ve geçmiş konuşma verisiyle birlikte <strong>insan temsilciye devreder.</strong></p>
+                    </div>
                 </div>
 
-                <div class="glassmorphism rounded-2xl overflow-hidden p-6 hover:border-yellow-500/30 transition-all" data-aos="fade-up" data-aos-delay="500">
-                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-coins text-yellow-400"></i> Fiyatlandırma modeliniz nedir?</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        İki modelimiz var: 1) Tek seferlik kurulum ücreti + düşük aylık bakım bedeli. 2) Sadece aylık abonelik modeli. İşletmenizin büyüklüğüne göre en uygun teklifi sunuyoruz.
-                    </p>
+                <div class="glassmorphism rounded-2xl overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="p-6 flex justify-between items-center faq-question cursor-pointer hover:bg-white/5 transition-colors">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2"><i class="fa-solid fa-coins text-yellow-400"></i> Fiyatlandırma modeliniz nedir?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        <p class="pt-2 border-t border-white/10">İhtiyacınıza göre iki model sunuyoruz: 1) Tek seferlik kurulum ücreti ve daha düşük aylık bakım/sunucu bedeli. 2) Kurulum ücreti olmayan, sadece aylık abonelik modeli. İşletmenizin büyüklüğüne göre en uygun teklifi hazırlarız.</p>
+                    </div>
                 </div>
 
-                <div class="glassmorphism rounded-2xl overflow-hidden p-6 hover:border-blue-500/30 transition-all" data-aos="fade-up" data-aos-delay="600">
-                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2"><i class="fa-solid fa-headset text-blue-400"></i> Teknik destek veriyor musunuz?</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Evet. Tüm paketlerimizde <strong>7/24 teknik destek</strong>, aylık performans raporlaması ve yapay zeka modelinin düzenli olarak eğitilmesi hizmeti standart olarak sunulmaktadır.
-                    </p>
+                <div class="glassmorphism rounded-2xl overflow-hidden faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="p-6 flex justify-between items-center faq-question cursor-pointer hover:bg-white/5 transition-colors">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2"><i class="fa-solid fa-headset text-blue-400"></i> Teknik destek veriyor musunuz?</h3>
+                        <i class="fa-solid fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        <p class="pt-2 border-t border-white/10">Kesinlikle. Tüm paketlerimizde <strong>7/24 teknik destek</strong>, aylık performans raporlaması ve yapay zeka modelinin yeni verilerle düzenli olarak eğitilmesi hizmeti standart olarak sunulmaktadır.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -248,65 +287,68 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-        
-        // Mobil Menü
-        const btn = document.getElementById('mobileMenuBtn');
-        const menu = document.getElementById('mobileMenu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-        
-        // Navbar Scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if(window.scrollY > 50) {
-                nav.classList.add('navbar-scrolled');
-            } else {
-                nav.classList.remove('navbar-scrolled');
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init();
+            
+            // Mobil Menü Toggle
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+            
+            // Navbar Scroll
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                if(window.scrollY > 50) nav.classList.add('navbar-scrolled');
+                else nav.classList.remove('navbar-scrolled');
+            });
+
+            // SSS Akordeon
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const item = button.parentElement;
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Form Gönderme
+            const form = document.getElementById('contactForm');
+            const feedback = document.getElementById('formFeedback');
+
+            if(form){
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    // Basit Validasyon
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const msg = document.getElementById('message').value;
+                    
+                    if(!name || !email || !msg) {
+                        feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-2"></i> Lütfen zorunlu alanları doldurun.';
+                        feedback.className = "mt-6 p-4 rounded-xl text-center text-sm font-bold block bg-red-500/10 text-red-400 border border-red-500/20";
+                        return;
+                    }
+
+                    feedback.className = "mt-6 p-4 rounded-xl text-center text-sm font-bold block bg-green-500/10 text-green-400 border border-green-500/20";
+                    feedback.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Gönderiliyor...';
+                    
+                    const formData = new FormData(form);
+                    formData.append('access_key', '0a3fdc7a-1cae-49dd-b79f-ccfd407704cc');
+
+                    try {
+                        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+                        const data = await res.json();
+                        if(data.success) { 
+                            feedback.innerHTML = '<i class="fa-solid fa-check-circle mr-2"></i> Mesajınız başarıyla iletildi! En kısa sürede dönüş yapacağız.'; 
+                            form.reset(); 
+                        } else { throw new Error('Hata'); }
+                    } catch (err) {
+                        feedback.className = "mt-6 p-4 rounded-xl text-center text-sm font-bold block bg-red-500/10 text-red-400 border border-red-500/20";
+                        feedback.innerHTML = 'Bir hata oluştu. Lütfen tekrar deneyin.';
+                    }
+                });
             }
         });
-
-        // Form İşlemleri
-        const form = document.getElementById('contactForm');
-        const feedback = document.getElementById('formFeedback');
-
-        if(form){
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const msg = document.getElementById('message').value;
-                
-                if(!name || !email || !msg) {
-                    feedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-2"></i> Lütfen zorunlu alanları doldurun.';
-                    feedback.className = "mt-6 p-4 rounded-xl text-center text-sm font-bold block bg-red-500/10 text-red-400 border border-red-500/20";
-                    return;
-                }
-
-                feedback.className = "mt-6 p-4 rounded-xl text-center text-sm font-bold block bg-green-500/10 text-green-400 border border-green-500/20";
-                feedback.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Gönderiliyor...';
-                
-                const formData = new FormData(form);
-                formData.append('access_key', '0a3fdc7a-1cae-49dd-b79f-ccfd407704cc');
-
-                try {
-                    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
-                    const data = await res.json();
-                    if(data.success) { 
-                        feedback.innerHTML = '<i class="fa-solid fa-check-circle mr-2"></i> Mesajınız başarıyla iletildi! En kısa sürede dönüş yapacağız.'; 
-                        form.reset(); 
-                    } else { throw new Error('Hata'); }
-                } catch (err) {
-                    feedback.className = "mt-6 p-4 rounded-xl text-center text-sm font-bold block bg-red-500/10 text-red-400 border border-red-500/20";
-                    feedback.innerHTML = 'Bir hata oluştu. Lütfen tekrar deneyin.';
-                }
-            });
-        }
     </script>
 </body>
 </html>
