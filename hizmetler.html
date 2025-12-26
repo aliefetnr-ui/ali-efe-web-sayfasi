@@ -34,7 +34,7 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; background: #0B0C15; color: white; overflow-x: hidden; }
-        .glassmorphism { background: rgba(26, 27, 46, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(139, 92, 246, 0.2); }
+        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
         .navbar-scrolled { background: rgba(19, 20, 31, 0.95); border-bottom: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); }
         .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.3s ease; }
@@ -44,16 +44,24 @@
         .tilt-card { transition: transform 0.3s ease; }
         .tilt-card:hover { transform: translateY(-10px); }
         
-        /* Arka Plan Animasyonu */
-        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; z-index: -1; animation: float 10s infinite ease-in-out; }
-        .orb-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: #8B5CF6; }
-        .orb-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: #06B6D4; animation-delay: 2s; }
-        @keyframes float { 0%,100%{transform:translate(0,0)} 50%{transform:translate(20px,-20px)} }
+        /* GÜNCELLENMİŞ ARKA PLAN ANİMASYONLARI (GRID + ORBS) */
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
+        @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(100px, -100px) scale(1.1); } 66% { transform: translate(-100px, 100px) scale(0.9); } }
+        .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%); top: -10%; left: -10%; }
+        .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%); bottom: -10%; right: -10%; animation-delay: 5s; }
+        .orb-3 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 10s; }
+        
+        /* NEON IZGARA (GRID) */
+        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
+        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
     </style>
 </head>
-<body>
+<body class="bg-[#0B0C15] text-white">
     
-    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+    <div class="fixed top-0 left-0 w-full h-full -z-10 bg-[#0B0C15]">
+        <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+    </div>
+    <div class="grid-bg"></div>
 
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
