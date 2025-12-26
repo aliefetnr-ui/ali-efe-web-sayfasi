@@ -4,303 +4,401 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hizmetlerimiz | Aura AI - Yapay Zeka Otomasyon Çözümleri</title>
-    <meta name="description" content="Soğuk e-posta, müşteri hizmetleri ve satış otomasyonu chatbot'larıyla işinizi büyütün. %85 maliyet tasarrufu, 7/24 kesintisiz hizmet.">
-    <meta name="keywords" content="chatbot hizmetleri, envanter botu, müşteri hizmetleri botu, satış otomasyonu, AI chatbot">
+    <meta name="description" content="Soğuk e-posta, müşteri hizmetleri ve satış otomasyonu chatbot'larıyla işinizi büyütün.">
     <meta name="author" content="Aura AI">
 
     <meta property="og:title" content="Aura AI | Hizmetlerimiz">
     <meta property="og:description" content="İşletmenizi %85 daha verimli hale getiren yapay zeka çözümlerimizi keşfedin.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop">
     <meta property="og:url" content="https://www.auraaı.com/hizmetler.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Aura AI">
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='20' fill='url(%23g)'/%3E%3Cpath d='M100 40 Q 140 40 160 80 T 160 160' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 160 Q 60 160 40 120 T 40 40' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='160' cy='80' r='10' fill='url(%23g)'/%3E%3Ccircle cx='40' cy='120' r='10' fill='url(%23g)'/%3E%3Cpath d='M100 80 L100 120 M80 100 L120 100' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { 'dark': { 900: '#0B0C15', 800: '#13141F', 700: '#1A1B2E', 600: '#252640' } },
-                    fontFamily: { 'heading': ['Space Grotesk', 'system-ui', 'sans-serif'], 'body': ['Inter', 'system-ui', 'sans-serif'] }
+                    colors: { 'dark': { 900: '#0B0C15', 800: '#13141F' } },
+                    fontFamily: { 'heading': ['Space Grotesk', 'sans-serif'], 'body': ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
     
     <style>
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow-x: hidden; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-        html { scroll-behavior: smooth; }
-        .animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #0B0C15; }
-        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s infinite ease-in-out; }
-        .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%); top: -10%; left: -10%; }
-        .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%); bottom: -10%; right: -10%; animation-delay: 5s; }
-        .orb-3 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 10s; }
-        @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(100px, -100px) scale(1.1); } 66% { transform: translate(-100px, 100px) scale(0.9); } }
-        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
-        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
-        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
-        .navbar-scrolled { background: rgba(19, 20, 31, 0.8) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
-        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
-        .glow-button:hover { box-shadow: 0 8px 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.6); transform: translateY(-4px) scale(1.02); }
-        .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.4s ease; }
-        .glow-border:hover { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(6, 182, 212, 0.3); border-color: rgba(139, 92, 246, 0.7); transform: translateY(-8px); }
-        .tilt-card { transition: transform 0.6s ease, box-shadow 0.6s ease; transform-style: preserve-3d; }
-        .tilt-card:hover { transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px); box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4), 0 0 80px rgba(6, 182, 212, 0.3); }
-        .social-icon { transition: all 0.3s ease; }
-        .social-icon:hover { transform: translateY(-5px) scale(1.1); }
-        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-        #mobileMenu.show { max-height: 500px; }
+        body { font-family: 'Inter', sans-serif; background: #0B0C15; color: white; overflow-x: hidden; }
+        .glassmorphism { background: rgba(26, 27, 46, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(139, 92, 246, 0.2); }
+        .navbar-scrolled { background: rgba(19, 20, 31, 0.95); border-bottom: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); }
+        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.3s ease; }
+        .glow-button:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(139, 92, 246, 0.6); }
+        .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.2); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.3s ease; }
+        .glow-border:hover { border-color: #8B5CF6; box-shadow: 0 0 40px rgba(139, 92, 246, 0.4); }
+        .tilt-card { transition: transform 0.3s ease; }
+        .tilt-card:hover { transform: translateY(-10px); }
+        
+        /* Arka Plan Animasyonu */
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; z-index: -1; animation: float 10s infinite ease-in-out; }
+        .orb-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: #8B5CF6; }
+        .orb-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: #06B6D4; animation-delay: 2s; }
+        @keyframes float { 0%,100%{transform:translate(0,0)} 50%{transform:translate(20px,-20px)} }
     </style>
 </head>
-<body class="bg-[#0B0C15] text-white">
+<body>
     
-    <div class="animated-bg">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-    </div>
-    <div class="grid-bg"></div>
-    
-    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-500">
-        <div class="container mx-auto px-4 sm:px-6 py-4">
-            <div class="flex justify-between items-center">
-                
-                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
-                    <svg class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="grad-neuro-nav" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
-                            </linearGradient>
-                            <filter id="glow-neuro-nav" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="8" result="coloredBlur" />
-                                <feMerge>
-                                    <feMergeNode in="coloredBlur" />
-                                    <feMergeNode in="SourceGraphic" />
-                                </feMerge>
-                            </filter>
-                        </defs>
-                        <g filter="url(#glow-neuro-nav)">
-                            <circle cx="100" cy="100" r="20" fill="url(#grad-neuro-nav)"/>
-                            <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-neuro-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                            <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-neuro-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                            <circle cx="160" cy="80" r="10" fill="url(#grad-neuro-nav)"/>
-                            <circle cx="40" cy="120" r="10" fill="url(#grad-neuro-nav)"/>
-                            <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-neuro-nav)" stroke-width="4" stroke-linecap="round"/>
-                        </g>
-                    </svg>
-                    <span class="text-xl sm:text-2xl font-bold gradient-text font-heading">Aura AI</span>
-                </div>
+    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
 
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Ana Sayfa</a>
-                    <a href="hizmetler.html" class="text-purple-400 font-semibold hover:text-purple-300 transition-all duration-300">Hizmetler</a>
-                    <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">Bize Güvenenler</a>
-                    <a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all duration-300">İletişim</a>
-                </div>
-                <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2.5 rounded-xl font-semibold text-sm">
-                    Ücretsiz Danışmanlık
-                </a>
-                <button id="mobileMenuBtn" class="md:hidden text-purple-400 p-2">
-                    <i class="fa-solid fa-bars text-2xl"></i>
-                </button>
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            
+            <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
+                <svg class="w-10 h-10 group-hover:scale-110 transition-transform" viewBox="0 0 200 200">
+                    <defs>
+                        <linearGradient id="g-nav"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient>
+                        <filter id="glow-nav"><feGaussianBlur stdDeviation="8" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    </defs>
+                    <g filter="url(#glow-nav)">
+                        <circle cx="100" cy="100" r="20" fill="url(#g-nav)"/>
+                        <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#g-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                        <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#g-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                        <circle cx="160" cy="80" r="10" fill="url(#g-nav)"/><circle cx="40" cy="120" r="10" fill="url(#g-nav)"/>
+                        <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#g-nav)" stroke-width="4" stroke-linecap="round"/>
+                    </g>
+                </svg>
+                <span class="text-xl font-bold gradient-text font-heading">Aura AI</span>
             </div>
-            <div id="mobileMenu">
-                <div class="pt-4 pb-2 space-y-2">
-                    <a href="index.html" class="block py-2 text-gray-400 hover:text-purple-400">Ana Sayfa</a>
-                    <a href="hizmetler.html" class="block py-2 text-purple-400 font-semibold">Hizmetler</a>
-                    <a href="vaka-calismalari.html" class="block py-2 text-gray-400 hover:text-purple-400">Bize Güvenenler</a>
-                    <a href="iletisim.html" class="block py-2 text-gray-400 hover:text-purple-400">İletişim</a>
-                    <a href="iletisim.html" class="block mt-4 glow-button text-white px-6 py-3 rounded-xl font-semibold text-sm text-center">
-                        Ücretsiz Danışmanlık
-                    </a>
-                </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-colors">Ana Sayfa</a>
+                <a href="hizmetler.html" class="text-purple-400 font-semibold">Hizmetler</a>
+                <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-colors">Bize Güvenenler</a>
+                <a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-colors">İletişim</a>
             </div>
+            <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2 rounded-xl text-sm font-semibold">Ücretsiz Danışmanlık</a>
+            <button id="mobileMenuBtn" class="md:hidden text-purple-400 text-2xl"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        
+        <div id="mobileMenu" class="hidden bg-dark-900 absolute w-full left-0 top-full border-b border-white/10 p-4">
+            <a href="index.html" class="block py-2 text-gray-400">Ana Sayfa</a>
+            <a href="hizmetler.html" class="block py-2 text-purple-400">Hizmetler</a>
+            <a href="vaka-calismalari.html" class="block py-2 text-gray-400">Bize Güvenenler</a>
+            <a href="iletisim.html" class="block py-2 text-gray-400">İletişim</a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-16">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="text-center max-w-4xl mx-auto">
-                <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-                    <i class="fa-solid fa-rocket text-purple-400 text-xl mr-2 flex-shrink-0"></i>
-                    <span class="gradient-text text-sm font-bold tracking-wide">HİZMETLERİMİZ</span>
+    <section class="pt-32 pb-16 text-center px-4">
+        <div class="inline-block mb-6 px-6 py-2 glassmorphism rounded-full glow-border" data-aos="fade-down">
+            <i class="fa-solid fa-layer-group text-purple-400 mr-2"></i>
+            <span class="gradient-text font-bold text-sm">HİZMETLERİMİZ</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 font-heading" data-aos="zoom-in">
+            <span class="gradient-text">Yapay Zeka</span> Çözümleri
+        </h1>
+        <p class="text-gray-400 text-xl max-w-2xl mx-auto" data-aos="fade-up">
+            İşletmenizi otomatikleştiren, 7/24 çalışan ve sürekli öğrenen akıllı asistanlar.
+        </p>
+    </section>
+
+    <section class="py-20 container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-right">
+                <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 text-3xl text-purple-400">
+                    <i class="fa-solid fa-paper-plane"></i>
                 </div>
-                <h1 class="text-5xl sm:text-7xl font-bold mb-6 font-heading" data-aos="zoom-in" data-aos-delay="200">
-                    <span class="gradient-text">Yapay Zeka</span> Çözümleri
-                </h1>
-                <p class="text-xl text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-                    İşletmenizi otomatikleştiren, 7/24 çalışan akıllı asistanlar
+                <h3 class="text-2xl font-bold mb-4">Soğuk E-posta Botu</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    Binlerce potansiyel müşteriye kişiselleştirilmiş, yüksek dönüşümlü e-postalarla otomatik ulaşın.
                 </p>
+                <a href="#soguk-eposta" class="text-purple-400 font-bold hover:text-white flex items-center gap-2 group">
+                    Detaylı İncele <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
+                </a>
             </div>
-        </div>
-    </section>
 
-    <section class="py-20">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                
-                <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
-                        <i class="fa-solid fa-paper-plane text-purple-400 text-3xl"></i>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4 gradient-text">Soğuk E-posta Botu</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Potansiyel müşterilere otomatik ulaşın, kişiselleştirilmiş maillerle dönüşüm oranlarını artırın.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-green-400 mt-1 mr-3"></i> Otomatik e-posta gönderimi</li>
-                        <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-green-400 mt-1 mr-3"></i> Kişiselleştirilmiş içerik</li>
-                        <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-green-400 mt-1 mr-3"></i> Akıllı takip (Follow-up)</li>
-                    </ul>
-                    <a href="#soguk-eposta-detay" class="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-all group">
-                        <span>Detaylı Bilgi</span>
-                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+            <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mb-6 text-3xl text-cyan-400">
+                    <i class="fa-solid fa-headset"></i>
                 </div>
-                
-                <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
-                        <i class="fa-solid fa-headset text-purple-400 text-3xl"></i>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4 gradient-text">Müşteri Hizmetleri Botu</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        7/24 müşterilerinize anında yanıt verin. Sıkça sorulan sorular, sipariş takibi, iade süreçleri otomatik yönetilsin.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-green-400 mt-1 mr-3"></i> Çok dilli destek (TR/EN/DE)</li>
-                        <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-green-400 mt-1 mr-3"></i> Sipariş durumu sorgulama</li>
-                        <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-green-400 mt-1 mr-3"></i> Randevu oluşturma sistemi</li>
-                    </ul>
-                    <a href="#musteri-detay" class="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-all group">
-                        <span>Detaylı Bilgi</span>
-                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-                
-                <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 rounded-3xl flex items-center justify-center mb-8">
-                        <i class="fa-solid fa-chart-line text-purple-400 text-3xl"></i>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4 gradient-text">Satış Otomasyonu Botu</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Potansiyel müşterileri yakala, takip et, satışa dönüştür. Lead'lerinizi hiçbir zaman kaybetmeyin.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-green-400 mt-1 mr-3"></i> Otomatik lead nitelendirme</li>
-                        <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-green-400 mt-1 mr-3"></i> Kişiselleştirilmiş kampanyalar</li>
-                        <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-green-400 mt-1 mr-3"></i> Otomatik takip hatırlatmaları</li>
-                    </ul>
-                    <a href="#satis-detay" class="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-all group">
-                        <span>Detaylı Bilgi</span>
-                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
+                <h3 class="text-2xl font-bold mb-4">Müşteri Hizmetleri</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    Web sitenizde 7/24 canlı destek verin. Soruları yanıtlayan, sipariş sorgulayan akıllı chatbot.
+                </p>
+                <a href="#musteri-hizmetleri" class="text-cyan-400 font-bold hover:text-white flex items-center gap-2 group">
+                    Detaylı İncele <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
+                </a>
             </div>
-        </div>
-    </section>
 
-    <section id="soguk-eposta-detay" class="py-40 border-y border-purple-500/10 scroll-mt-20">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-20">
-                    <div class="inline-block mb-6 px-6 py-3 glassmorphism rounded-full glow-border" data-aos="fade-down">
-                        <i class="fa-solid fa-envelope text-purple-400 text-xl mr-2 flex-shrink-0"></i>
-                        <span class="gradient-text text-sm font-bold tracking-wide">SOĞUK E-POSTA</span>
-                    </div>
-                    <h2 class="text-5xl sm:text-6xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="100">
-                        Müşteri Kazanımında <span class="gradient-text">Yeni Güç</span>
-                    </h2>
-                    <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                        Manuel gönderimden kurtulun, binlerce kişiye aynı anda ama özel hissederek ulaşın.
-                    </p>
+            <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-left" data-aos-delay="200">
+                <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 text-3xl text-green-400">
+                    <i class="fa-solid fa-chart-line"></i>
                 </div>
-                
-                <div class="glassmorphism p-12 rounded-3xl glow-border text-center" data-aos="zoom-in">
-                    <h3 class="text-3xl font-bold mb-6">Outreach Botunu Deneyin</h3>
-                    <a href="iletisim.html" class="glow-button text-white px-12 py-5 rounded-2xl font-bold text-xl inline-flex items-center justify-center group">
-                        <span>Ücretsiz Toplantı Planla</span>
-                        <i class="fa-solid fa-calendar-check ml-3 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer class="relative border-t border-purple-500/10 py-16 sm:py-20 bg-[#0B0C15]">
-        <div class="container mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
-                
-                <div class="text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-6 group cursor-pointer" onclick="window.location.href='index.html'">
-                        <svg class="w-12 h-12 group-hover:scale-110 transition-transform" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-footer-neuro" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" /><stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" /></linearGradient><filter id="glow-footer-neuro" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" result="coloredBlur" /><feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><g filter="url(#glow-footer-neuro)"><circle cx="100" cy="100" r="20" fill="url(#grad-footer-neuro)"/><path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#grad-footer-neuro)" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#grad-footer-neuro)" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="160" cy="80" r="10" fill="url(#grad-footer-neuro)"/><circle cx="40" cy="120" r="10" fill="url(#grad-footer-neuro)"/><path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#grad-footer-neuro)" stroke-width="4" stroke-linecap="round"/></g></svg>
-                        <span class="text-3xl font-bold gradient-text font-heading">Aura AI</span>
-                    </div>
-                    <p class="text-gray-400 leading-relaxed text-sm sm:text-base mb-6">
-                        Yapay zeka destekli otomasyon çözümleriyle işletmenizi geleceğe taşıyoruz.
-                    </p>
-                    <div class="glassmorphism inline-block px-4 py-2 rounded-lg flex items-center justify-center sm:justify-start gap-2">
-                        <i class="fa-solid fa-shuttle-space text-purple-400"></i>
-                        <span class="text-purple-400 text-xs font-semibold">2025'te Daha Güçlüyüz</span>
-                    </div>
-                </div>
-                
-                <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Hızlı Linkler</h4>
-                    <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Ana Sayfa</a></li>
-                        <li><a href="hizmetler.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Hizmetler</a></li>
-                        <li><a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Bize Güvenenler</a></li>
-                        <li><a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ İletişim</a></li>
-                    </ul>
-                </div>
-                
-                <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Yasal</h4>
-                    <ul class="space-y-3">
-                        <li><a href="yasal.html" class="text-gray-400 hover:text-purple-400 transition-all text-sm sm:text-base">→ Gizlilik Politikası</a></li>
-                    </ul>
-                </div>
-                
-                <div class="text-center sm:text-left">
-                    <h4 class="text-white font-bold mb-6 text-lg font-heading">Destek</h4>
-                    <div class="glassmorphism p-5 rounded-xl border border-white/5">
-                        <p class="text-gray-400 text-sm mb-3">Destek için buraya yazabilirsiniz:</p>
-                        <a href="mailto:info@auraaı.com" class="text-purple-400 hover:text-white transition-all text-sm font-bold flex items-center justify-center sm:justify-start gap-2">
-                            <i class="fa-solid fa-envelope"></i> info@auraaı.com
-                        </a>
-                    </div>
-                </div>
-                
+                <h3 class="text-2xl font-bold mb-4">Satış Otomasyonu</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    Sıcak satış fırsatlarını (lead) yakalayın, puanlayın ve CRM sisteminize otomatik olarak işleyin.
+                </p>
+                <a href="#satis-otomasyonu" class="text-green-400 font-bold hover:text-white flex items-center gap-2 group">
+                    Detaylı İncele <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
+                </a>
             </div>
             
-            <div class="border-t border-purple-500/10 pt-8 text-center">
-                <p class="text-gray-500 text-sm sm:text-base">
-                    © 2025 <span class="gradient-text font-semibold">Aura AI</span>. Tüm Hakları Saklıdır.
+        </div>
+    </section>
+
+    <section id="soguk-eposta" class="py-32 border-t border-white/5 scroll-mt-20">
+        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-block px-4 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-bold mb-6">OUTREACH & PAZARLAMA</div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">
+                    Müşteri Kazanımında <br><span class="gradient-text">Otomatik Güç</span>
+                </h2>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                    Manuel e-posta gönderimiyle zaman kaybetmeyin. Aura AI Soğuk E-posta Botu, hedef kitlenizi analiz eder, onlara isimleriyle hitap eden özel mesajlar oluşturur ve en uygun zamanda gönderir.
                 </p>
-                <p class="text-gray-600 text-xs sm:text-sm mt-2">
-                    Yapay Zeka ile Güçlendirilmiş 🤖
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center p-4 glassmorphism rounded-xl border-l-4 border-purple-500">
+                        <i class="fa-solid fa-check-circle text-purple-400 text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-bold text-white">Inbox Garantisi</h4>
+                            <p class="text-sm text-gray-400">Gelişmiş algoritmalarla spam filtrelerine takılmadan doğrudan gelen kutusuna ulaşın.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 glassmorphism rounded-xl border-l-4 border-purple-500">
+                        <i class="fa-solid fa-clock-rotate-left text-purple-400 text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-bold text-white">Akıllı Takip (Follow-up)</h4>
+                            <p class="text-sm text-gray-400">Yanıt vermeyen müşterilere otomatik hatırlatma mailleri göndererek dönüşümü artırın.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="iletisim.html" class="glow-button px-8 py-4 rounded-xl font-bold text-white inline-flex items-center group">
+                    Botu Deneyin <i class="fa-solid fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            
+            <div class="glassmorphism p-8 rounded-3xl relative" data-aos="fade-left">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/30 rounded-full blur-3xl -z-10"></div>
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-5 rounded-2xl border border-white/10 shadow-lg">
+                        <div class="flex justify-between items-center mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-xs font-bold">AI</div>
+                                <div>
+                                    <p class="text-sm font-bold text-white">Aura Bot</p>
+                                    <p class="text-xs text-gray-500">Kime: Ahmet Yılmaz</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">10:42 AM</span>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Merhaba Ahmet Bey, firmanızın son dönemdeki büyümesini takip ediyorum. Sizin için hazırladığımız özel teklifi incelemek ister misiniz?
+                        </p>
+                    </div>
+
+                    <div class="bg-purple-500/10 p-5 rounded-2xl border border-purple-500/30 shadow-lg ml-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center text-xs font-bold">AY</div>
+                                <div>
+                                    <p class="text-sm font-bold text-white">Ahmet Yılmaz</p>
+                                    <p class="text-xs text-purple-300">Durum: İlgileniyor</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">10:55 AM</span>
+                        </div>
+                        <p class="text-sm text-white leading-relaxed">
+                            Selamlar, evet kulağa ilginç geliyor. Detayları ne zaman görüşebiliriz?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="musteri-hizmetleri" class="py-32 border-t border-white/5 scroll-mt-20 relative overflow-hidden">
+        <div class="absolute top-1/2 left-0 w-full h-full bg-gradient-to-b from-transparent to-cyan-900/10 -z-10"></div>
+        
+        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="order-2 lg:order-1 glassmorphism p-8 rounded-3xl" data-aos="fade-right">
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-user"></i></div>
+                        <div class="bg-white/5 p-4 rounded-2xl rounded-tl-none text-sm text-gray-300">
+                            Kargo ücretiniz ne kadar? Ve siparişim ne zaman gelir?
+                        </div>
+                    </div>
+                    <div class="flex gap-4 flex-row-reverse">
+                        <div class="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-500/20"><i class="fa-solid fa-robot text-white"></i></div>
+                        <div class="bg-cyan-500/10 border border-cyan-500/20 p-4 rounded-2xl rounded-tr-none text-sm text-white">
+                            Merhaba! 👋<br><br>
+                            📦 <strong>Kargo:</strong> 500 TL üzeri alışverişlerde ücretsizdir.<br>
+                            🚚 <strong>Teslimat:</strong> Siparişiniz genellikle 2 iş günü içinde kargoya verilir.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2" data-aos="fade-left">
+                <div class="inline-block px-4 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-bold mb-6">7/24 DESTEK</div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Akıllı Chatbot Asistanı</h2>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                    Müşterilerinizi bekletmeyin. Yapay zeka asistanınız, web sitenizde, WhatsApp'ta veya Instagram'da gelen soruları anında yanıtlasın, sipariş durumunu sorgulasın ve hatta randevu oluştursun.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                    <div class="flex items-center text-gray-400"><i class="fa-solid fa-language text-cyan-400 mr-3 text-xl"></i> 50+ Dilde Çeviri</div>
+                    <div class="flex items-center text-gray-400"><i class="fa-solid fa-box-open text-cyan-400 mr-3 text-xl"></i> Sipariş Entegrasyonu</div>
+                    <div class="flex items-center text-gray-400"><i class="fa-brands fa-whatsapp text-cyan-400 mr-3 text-xl"></i> WhatsApp Desteği</div>
+                    <div class="flex items-center text-gray-400"><i class="fa-solid fa-calendar-check text-cyan-400 mr-3 text-xl"></i> Randevu Sistemi</div>
+                </div>
+                <a href="iletisim.html" class="glow-button px-8 py-4 rounded-xl font-bold text-white inline-block">
+                    Demoyu İncele
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="satis-otomasyonu" class="py-32 border-t border-white/5 scroll-mt-20">
+        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-block px-4 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-bold mb-6">CRM & SATIŞ</div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Satış Otomasyonu</h2>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                    Her ziyaretçi bir müşteriye dönüşebilir. Botumuz ziyaretçi davranışlarını analiz eder, potansiyeli yüksek olanları (hot lead) puanlar ve satış ekibinize anlık bildirim olarak sunar.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start text-gray-400">
+                        <i class="fa-solid fa-circle-check text-green-400 mt-1 mr-3"></i>
+                        <div>
+                            <strong class="text-white block">Otomatik Lead Puanlama</strong>
+                            Müşterinin ilgisine göre 0-100 arası puan verin.
+                        </div>
+                    </li>
+                    <li class="flex items-start text-gray-400">
+                        <i class="fa-solid fa-circle-check text-green-400 mt-1 mr-3"></i>
+                        <div>
+                            <strong class="text-white block">CRM Entegrasyonu</strong>
+                            HubSpot, Salesforce ve Zoho ile %100 uyumlu çalışır.
+                        </div>
+                    </li>
+                    <li class="flex items-start text-gray-400">
+                        <i class="fa-solid fa-circle-check text-green-400 mt-1 mr-3"></i>
+                        <div>
+                            <strong class="text-white block">Satış Hunisi Takibi</strong>
+                            Müşterinin hangi aşamada olduğunu anlık görün.
+                        </div>
+                    </li>
+                </ul>
+                <a href="iletisim.html" class="glow-button px-8 py-4 rounded-xl font-bold text-white inline-block">
+                    Bilgi Alın
+                </a>
+            </div>
+            
+            <div class="glassmorphism p-8 rounded-3xl" data-aos="fade-left">
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold mb-4 border-b border-white/10 pb-2">Canlı Satış Paneli</h4>
+                    
+                    <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
+                        <div>
+                            <p class="text-sm text-gray-400">Yeni Lead Geldi</p>
+                            <p class="text-white font-bold">Mehmet Demir</p>
+                        </div>
+                        <span class="text-green-400 font-bold bg-green-500/10 px-3 py-1 rounded-lg">+150 Puan</span>
+                    </div>
+
+                    <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
+                        <div>
+                            <p class="text-sm text-gray-400">Randevu Oluşturuldu</p>
+                            <p class="text-white font-bold">Yarın, 14:00</p>
+                        </div>
+                        <span class="text-purple-400 font-bold bg-purple-500/10 px-3 py-1 rounded-lg">Toplantı</span>
+                    </div>
+
+                    <div class="flex justify-between items-center bg-green-500/10 p-4 rounded-xl border border-green-500/20">
+                        <div>
+                            <p class="text-sm text-green-300">Tahmini Ciro</p>
+                            <p class="text-white font-bold text-xl">$2,500</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-trend-up text-green-400 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 py-12 bg-dark-900 mt-20">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                     <svg class="w-8 h-8" viewBox="0 0 200 200"><defs><linearGradient id="g-foot"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient></defs><g stroke="url(#g-foot)" stroke-width="6" fill="none"><circle cx="100" cy="100" r="20" fill="url(#g-foot)" stroke="none"/><path d="M100 40 Q 140 40 160 80 T 160 160"/><path d="M100 160 Q 60 160 40 120 T 40 40"/><circle cx="160" cy="80" r="10" fill="url(#g-foot)" stroke="none"/><circle cx="40" cy="120" r="10" fill="url(#g-foot)" stroke="none"/></g></svg>
+                    <span class="text-xl font-bold gradient-text font-heading">Aura AI</span>
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    İşletmenizi geleceğe taşıyan yapay zeka çözümleri.
                 </p>
             </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Hızlı Linkler</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-purple-400 transition-colors">Ana Sayfa</a></li>
+                    <li><a href="hizmetler.html" class="hover:text-purple-400 transition-colors">Hizmetler</a></li>
+                    <li><a href="vaka-calismalari.html" class="hover:text-purple-400 transition-colors">Bize Güvenenler</a></li>
+                    <li><a href="iletisim.html" class="hover:text-purple-400 transition-colors">İletişim</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Yasal</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">Gizlilik Politikası</a></li>
+                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">Kullanım Şartları</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">İletişim</h4>
+                <div class="glassmorphism p-4 rounded-xl inline-block">
+                    <a href="mailto:info@auraaı.com" class="text-purple-400 hover:text-white text-sm font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> info@auraaı.com
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-600 text-xs mt-12 border-t border-white/5 pt-8">
+            © 2025 Aura AI. Tüm hakları saklıdır.
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Mobil Menü Toggle
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
+        // Navbar Scroll Efekti
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if(window.scrollY > 50) {
+                nav.classList.add('navbar-scrolled');
+            } else {
+                nav.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
