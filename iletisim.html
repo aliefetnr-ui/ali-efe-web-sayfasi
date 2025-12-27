@@ -36,16 +36,38 @@
         .tilt-card { transition: transform 0.3s ease; }
         .tilt-card:hover { transform: translateY(-5px); }
         
-        /* Animasyon */
+        /* Animasyonlu Işık Topları */
         .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; z-index: -1; animation: float 10s infinite ease-in-out; }
         .orb-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: #8B5CF6; }
         .orb-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: #06B6D4; animation-delay: 2s; }
         @keyframes float { 0%,100%{transform:translate(0,0)} 50%{transform:translate(20px,-20px)} }
+
+        /* NEON IZGARA (GRID) ARKA PLAN - EKLENDİ */
+        .grid-bg { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), 
+            linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); 
+            background-size: 50px 50px; 
+            animation: gridMove 20s linear infinite; 
+            z-index: -1; 
+        }
+        @keyframes gridMove { 
+            0% { transform: translate(0, 0); } 
+            100% { transform: translate(50px, 50px); } 
+        }
+
+        /* SSS Akordeon */
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
     </style>
 </head>
-<body>
+<body class="bg-[#0B0C15] text-white">
     
-    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+    <div class="fixed top-0 left-0 w-full h-full -z-10 bg-[#0B0C15]">
+        <div class="orb orb-1"></div><div class="orb orb-2"></div>
+    </div>
+    <div class="grid-bg"></div>
 
     <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
@@ -61,7 +83,7 @@
                         <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#g-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
                         <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#g-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
                         <circle cx="160" cy="80" r="10" fill="url(#g-nav)"/><circle cx="40" cy="120" r="10" fill="url(#g-nav)"/>
-                        <path d="M100 80 L100 120 M80 100 L120 100" stroke-width="4" stroke="url(#g-nav)" stroke-linecap="round"/>
+                        <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#g-nav)" stroke-width="4" stroke-linecap="round"/>
                     </g>
                 </svg>
                 <span class="text-xl font-bold gradient-text font-heading">Aura AI</span>
@@ -79,9 +101,9 @@
         
         <div id="mobileMenu" class="hidden bg-dark-900 absolute w-full left-0 top-full border-b border-white/10 p-4">
             <a href="index.html" class="block py-2 text-gray-400">Ana Sayfa</a>
-            <a href="hizmetler.html" class="block py-2 text-purple-400">Hizmetler</a>
+            <a href="hizmetler.html" class="block py-2 text-gray-400">Hizmetler</a>
             <a href="vaka-calismalari.html" class="block py-2 text-gray-400">Bize Güvenenler</a>
-            <a href="iletisim.html" class="block py-2 text-gray-400">İletişim</a>
+            <a href="iletisim.html" class="block py-2 text-purple-400">İletişim</a>
         </div>
     </nav>
 
@@ -122,7 +144,8 @@
                 <div>
                     <label class="block text-sm text-gray-400 mb-2 ml-1">Hizmet Seçimi</label>
                     <select id="service" name="service" class="form-input w-full p-4 rounded-xl bg-dark-900">
-                        <option value="">Seçiniz...</option> <option value="Soğuk E-posta">Soğuk E-posta Botu</option>
+                        <option value="">Seçiniz...</option>
+                        <option value="Soğuk E-posta">Soğuk E-posta Botu</option>
                         <option value="Müşteri Hizmetleri">Müşteri Hizmetleri</option>
                         <option value="Satış Otomasyonu">Satış Otomasyonu</option>
                         <option value="Diğer">Diğer</option>
