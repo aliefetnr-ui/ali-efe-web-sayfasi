@@ -408,54 +408,62 @@
     </section>
 
     <footer class="border-t border-white/10 py-12 bg-dark-900 mt-20">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
             <div>
-                <div class="flex items-center space-x-3 mb-4">
-                     <svg class="w-8 h-8" viewBox="0 0 200 200"><defs><linearGradient id="g-foot"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient></defs><g stroke="url(#g-foot)" stroke-width="6" fill="none"><circle cx="100" cy="100" r="20" fill="url(#g-foot)" stroke="none"/><path d="M100 40 Q 140 40 160 80 T 160 160"/><path d="M100 160 Q 60 160 40 120 T 40 40"/><circle cx="160" cy="80" r="10" fill="url(#g-foot)" stroke="none"/><circle cx="40" cy="120" r="10" fill="url(#g-foot)" stroke="none"/></g></svg>
-                    <span class="text-xl font-bold gradient-text font-heading">Aura AI</span>
+                <div class="flex items-center space-x-3 mb-4 cursor-pointer" onclick="window.location.href='index.html'">
+                     <svg class="w-10 h-10" viewBox="0 0 200 200"><defs><linearGradient id="g-foot"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient></defs><g stroke="url(#g-foot)" stroke-width="6" fill="none"><circle cx="100" cy="100" r="20" fill="url(#g-foot)" stroke="none"/><path d="M100 40 Q 140 40 160 80 T 160 160"/><path d="M100 160 Q 60 160 40 120 T 40 40"/><circle cx="160" cy="80" r="10" fill="url(#g-foot)" stroke="none"/><circle cx="40" cy="120" r="10" fill="url(#g-foot)" stroke="none"/></g></svg>
+                    <span class="text-2xl font-bold gradient-text font-heading">Aura AI</span>
                 </div>
-                <p class="text-gray-500 text-sm leading-relaxed">
-                    İşletmenizi geleceğe taşıyan yapay zeka çözümleri.
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Yapay zeka destekli otomasyon çözümleriyle işletmenizi geleceğe taşıyoruz.
                 </p>
+                <div class="inline-block px-4 py-2 rounded-lg bg-[#1A1B2E] border border-purple-500/20">
+                    <i class="fa-solid fa-shuttle-space text-purple-400 mr-2"></i>
+                    <span class="text-purple-400 text-xs font-semibold">2025'te Daha Güçlüyüz</span>
+                </div>
             </div>
+
             <div>
-                <h4 class="font-bold text-white mb-4">Hızlı Linkler</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="index.html" class="hover:text-purple-400 transition-colors">Ana Sayfa</a></li>
-                    <li><a href="hizmetler.html" class="hover:text-purple-400 transition-colors">Hizmetler</a></li>
-                    <li><a href="vaka-calismalari.html" class="hover:text-purple-400 transition-colors">Bize Güvenenler</a></li>
-                    <li><a href="iletisim.html" class="hover:text-purple-400 transition-colors">İletişim</a></li>
+                <h4 class="font-bold text-white mb-6 text-lg">Hızlı Linkler</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-purple-400 transition-colors">→ Ana Sayfa</a></li>
+                    <li><a href="hizmetler.html" class="hover:text-purple-400 transition-colors">→ Hizmetler</a></li>
+                    <li><a href="vaka-calismalari.html" class="hover:text-purple-400 transition-colors">→ Bize Güvenenler</a></li>
+                    <li><a href="iletisim.html" class="hover:text-purple-400 transition-colors">→ İletişim</a></li>
                 </ul>
             </div>
+
             <div>
-                <h4 class="font-bold text-white mb-4">Yasal</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">Gizlilik Politikası</a></li>
-                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">Kullanım Şartları</a></li>
+                <h4 class="font-bold text-white mb-6 text-lg">Yasal</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">→ Gizlilik Politikası</a></li>
+                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">→ Kullanım Şartları</a></li>
+                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">→ KVKK</a></li>
+                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">→ Çerez Politikası</a></li>
                 </ul>
             </div>
+
             <div>
-                <h4 class="font-bold text-white mb-4">İletişim</h4>
-                <div class="glassmorphism p-4 rounded-xl inline-block">
-                    <a href="mailto:info@auraaı.com" class="text-purple-400 hover:text-white text-sm font-bold flex items-center gap-2">
+                <h4 class="font-bold text-white mb-6 text-lg">Destek</h4>
+                <div class="bg-[#1A1B2E] p-6 rounded-xl border border-white/5">
+                    <p class="text-gray-400 text-xs mb-3">Destek için buraya yazabilirsiniz:</p>
+                    <a href="mailto:info@auraaı.com" class="text-purple-400 hover:text-white text-sm font-bold flex items-center gap-2 transition-colors">
                         <i class="fa-solid fa-envelope"></i> info@auraaı.com
                     </a>
                 </div>
             </div>
         </div>
-        <div class="text-center text-gray-600 text-xs mt-12 border-t border-white/5 pt-8">
-            © 2025 Aura AI. Tüm hakları saklıdır.
+        
+        <div class="border-t border-purple-500/10 pt-8 mt-4 text-center">
+            <p class="text-gray-500 text-sm">© 2025 <span class="gradient-text font-bold">Aura AI</span>. Tüm Hakları Saklıdır.</p>
+            <p class="text-gray-600 text-xs mt-2">Yapay Zeka ile Güçlendirilmiş 🤖</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
+        AOS.init({ duration: 800, once: true });
         
         // Mobil Menü Toggle
         const btn = document.getElementById('mobileMenuBtn');
