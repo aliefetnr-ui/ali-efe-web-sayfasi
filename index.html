@@ -26,6 +26,10 @@
     </script>
     
     <style>
+        /* Chatbot fontunu sitenin fontuyla eşitleme */
+.n8n-chat-widget {
+    --n8n-chat-font-family: 'Inter', sans-serif !important;
+}
         body { font-family: 'Inter', sans-serif; background: #0B0C15; color: white; overflow-x: hidden; }
         .glassmorphism { background: rgba(26, 27, 46, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(139, 92, 246, 0.2); }
         .navbar-scrolled { background: rgba(19, 20, 31, 0.95); border-bottom: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); }
@@ -285,13 +289,23 @@
         });
     </script>
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-    <script type="module">
-        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+<script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-        createChat({
-            webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat'
-        });
-    </script>
-    ```
+    createChat({
+        webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat',
+        title: 'Aura AI Destek',
+        subtitle: 'Yapay zeka ile geleceği otomatiğe bağlayın', // Sloganına uygun alt başlık
+        mainColor: '#854fff', // Sitedeki mor buton rengi
+        backgroundColor: '#0B0C15', // Sitenin koyu arka plan rengi
+        i18n: {
+            en: {
+                inputPlaceholder: 'Sorunuzu buraya yazın...',
+                sendButtonText: 'Gönder',
+                getStarted: 'Sohbete Başla',
+            }
+        }
+    });
+</script>
 </body>
 </html>
