@@ -288,39 +288,14 @@
             else nav.classList.remove('navbar-scrolled');
         });
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-<style>
-  /* Sitenin fontunu ve renklerini chat'e zorla uygular */
-  :root {
-    --n8n-chat-primary-color: #854fff; /* Sitedeki mor buton rengi */
-    --n8n-chat-background-color: #0B0C15; /* Sitenin arka plan rengi */
-    --n8n-chat-font-family: 'Inter', sans-serif;
-  }
-  
-  /* Chat penceresinin başlık kısmını sitene uydurur */
-  .n8n-chat-widget {
-    --n8n-chat-widget-header-background: linear-gradient(135deg, #854fff 0%, #a78bfa 100%);
-    --n8n-chat-widget-header-text-color: #ffffff;
-    --n8n-chat-widget-message-user-background: #854fff;
-  }
-</style>
+ <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-<script type="module">
-  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-  createChat({
-    webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat',
-    title: 'Aura AI Asistan',
-    subtitle: '7/24 Yanınızdayız',
-    initialMessages: ['Merhaba! Aura AI dünyasına hoş geldiniz. 👋'],
-    i18n: {
-      en: {
-        inputPlaceholder: 'Sorunuzu buraya yazın...',
-        sendButtonText: 'Gönder'
-      }
-    }
-  });
-</script>
-</script>
+        createChat({
+            webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat'
+        });
+    </script>
+    ```    
 </body>
 </html>
