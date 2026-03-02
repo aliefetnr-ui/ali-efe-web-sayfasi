@@ -287,7 +287,7 @@
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <style>
-        /* AURA AI RENK TEMASI */
+        /* 1. AURA AI KOYU TEMA AYARLARI */
         :root {
             --chat--color-primary: #8B5CF6 !important; 
             --chat--color-secondary: #06B6D4 !important; 
@@ -297,44 +297,13 @@
             --chat--color-dark-shade-50: #E5E7EB !important;
         }
 
-        /* 1. N8N'İN İNATÇI SİMGESİNİ KOMPLE SAKLIYORUZ */
-        button[class*="toggle"] {
-            display: none !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-            z-index: -100 !important;
-        }
-
-        /* 2. BİZİM ÖZEL YAPAY BEYİN BUTONUMUZ */
-        #aura-brain-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #8B5CF6, #06B6D4);
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.6);
-            z-index: 9998;
-            transition: transform 0.3s ease;
-        }
-        
-        #aura-brain-btn:hover {
-            transform: scale(1.1) translateY(-5px);
-        }
-
-        /* N8N Chat Penceresi Koyu Tema Estetiği */
+        /* N8N Chat Penceresi Estetiği */
         .chat-container, div[class*="widget"] {
             background: #13141F !important;
             border: 1px solid rgba(139, 92, 246, 0.3) !important;
             border-radius: 20px !important;
             box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(139,92,246,0.3) !important;
-            z-index: 9999 !important;
+            z-index: 2147483646 !important; /* Butondan bir tık altta kalsın */
         }
         
         .chat-header, div[class*="header"] {
@@ -350,10 +319,34 @@
         .chat-submit, button[class*="submit"] {
             background: #8B5CF6 !important;
         }
+
+        /* 2. BİZİM ÖZEL YAPAY BEYİN BUTONUMUZ (Z-INDEX KRALI) */
+        #aura-brain-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.6);
+            z-index: 2147483647 !important; /* Sitedeki EN ÜST katman, kimse ezemez */
+            transition: all 0.3s ease;
+        }
+        
+        #aura-brain-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 6px 25px rgba(6, 182, 212, 0.8);
+        }
     </style>
 
     <button id="aura-brain-btn">
-        <i class="fa-solid fa-brain" style="font-size: 26px; color: white;"></i>
+        <i class="fa-solid fa-brain" id="aura-icon" style="font-size: 26px; color: white;"></i>
     </button>
 
     <script type="module">
@@ -376,12 +369,41 @@
             }
         });
 
-        // 3. BİZİM BEYİN BUTONUMUZA TIKLANINCA N8N'İ GİZLİCE TETİKLE
-        document.getElementById('aura-brain-btn').addEventListener('click', function() {
-            // Arka planda n8n'in gizli butonunu bul
-            const n8nBtn = document.querySelector('button[class*="toggle"]');
+        // 3. N8N YÜKLENDİKTEN SONRA ONUN BUTONUNU GÖM VE BİZİMKİNİ BAĞLA
+        const checkInterval = setInterval(() => {
+            // N8n'in oluşturduğu ana bot butonunu avla
+            const n8nBtn = document.querySelector('.chat-wrapper > button') || document.querySelector('button[class*="toggle"]');
+            
             if (n8nBtn) {
-                n8nBtn.click(); // Ve ona tıkla!
+                // n8n'in butonunu görünmez yap!
+                n8nBtn.style.opacity = '0';
+                n8nBtn.style.visibility = 'hidden';
+                n8nBtn.style.pointerEvents = 'none';
+                
+                clearInterval(checkInterval); // Avı bulduk, döngüyü durdur
+            }
+        }, 100);
+
+        // BİZİM BEYİN BUTONUNA TIKLAMA İŞLEMİ (N8n'i gizlice tetikler)
+        let isChatOpen = false;
+        const brainBtn = document.getElementById('aura-brain-btn');
+        const brainIcon = document.getElementById('aura-icon');
+
+        brainBtn.addEventListener('click', function() {
+            // N8n butonunu bul ve bizim yerimize ona tıkla
+            const n8nBtn = document.querySelector('.chat-wrapper > button') || document.querySelector('button[class*="toggle"]');
+            if (n8nBtn) {
+                n8nBtn.click();
+                
+                // İkonu Beyin ve Çarpı (X) arasında değiştir
+                isChatOpen = !isChatOpen;
+                if (isChatOpen) {
+                    brainIcon.className = 'fa-solid fa-xmark';
+                    brainIcon.style.fontSize = '30px';
+                } else {
+                    brainIcon.className = 'fa-solid fa-brain';
+                    brainIcon.style.fontSize = '26px';
+                }
             }
         });
     </script>
