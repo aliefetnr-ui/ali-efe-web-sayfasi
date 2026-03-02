@@ -308,14 +308,10 @@
 
         /* N8N Orijinal Butonuna Aura AI Makyajı */
         .chat-wrapper > button, button[class*="toggle"] {
-            /* Mor'dan Mavi'ye harika bir geçiş (Gradient) */
             background: linear-gradient(135deg, #8B5CF6, #06B6D4) !important;
             border: none !important;
-            /* Dışa doğru mor neon parlama efekti */
             box-shadow: 0 4px 20px rgba(139, 92, 246, 0.6) !important;
-            /* Butonu biraz büyütüp daha görünür yapıyoruz */
             transform: scale(1.15) !important;
-            /* Kenarlardan biraz daha içe alalım, tam otursun */
             bottom: 30px !important; 
             right: 30px !important;
         }
@@ -327,9 +323,13 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(139,92,246,0.3) !important;
         }
         
-        /* Başlık ve Alt kısımların renkleri */
+        /* Başlık ve Alt kısımların arka planı */
         .chat-header, div[class*="header"], .chat-input, div[class*="input"] {
             background: #0B0C15 !important;
+        }
+
+        /* YAZILARI ZORLA BEYAZ YAPMA (Görünmezlik sorununun çözümü) */
+        .chat-header *, div[class*="header"] *, .chat-input *, div[class*="input"] * {
             color: #FFFFFF !important;
         }
     </style>
