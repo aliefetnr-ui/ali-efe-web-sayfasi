@@ -287,67 +287,52 @@
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <style>
-        /* 1. AURA AI KOYU TEMA AYARLARI */
+        /* AURA AI KOYU TEMA AYARLARI */
         :root {
+            /* Ana Renk (N8N Orijinal Butonunun ve mesajların rengi) */
             --chat--color-primary: #8B5CF6 !important; 
+            --chat--color-primary-shade-50: #7C3AED !important;
             --chat--color-secondary: #06B6D4 !important; 
+            
+            /* Arka Plan Renkleri (Koyu Tema) */
             --chat--color-white: #13141F !important; 
             --chat--color-light: #0B0C15 !important; 
+            --chat--color-light-shade-50: #1A1B2E !important; 
+            
+            /* Yazı Renkleri */
             --chat--color-dark: #FFFFFF !important; 
-            --chat--color-dark-shade-50: #E5E7EB !important;
+            --chat--color-dark-shade-50: #E5E7EB !important; 
+            
+            --chat--border-radius: 20px !important;
         }
 
-        /* N8N Chat Penceresi Estetiği */
+        /* N8N Orijinal Butonuna Aura AI Makyajı */
+        .chat-wrapper > button, button[class*="toggle"] {
+            /* Mor'dan Mavi'ye harika bir geçiş (Gradient) */
+            background: linear-gradient(135deg, #8B5CF6, #06B6D4) !important;
+            border: none !important;
+            /* Dışa doğru mor neon parlama efekti */
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.6) !important;
+            /* Butonu biraz büyütüp daha görünür yapıyoruz */
+            transform: scale(1.15) !important;
+            /* Kenarlardan biraz daha içe alalım, tam otursun */
+            bottom: 30px !important; 
+            right: 30px !important;
+        }
+
+        /* Chat Penceresi Estetiği */
         .chat-container, div[class*="widget"] {
             background: #13141F !important;
             border: 1px solid rgba(139, 92, 246, 0.3) !important;
-            border-radius: 20px !important;
             box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(139,92,246,0.3) !important;
-            z-index: 2147483646 !important; /* Butondan bir tık altta kalsın */
         }
         
-        .chat-header, div[class*="header"] {
+        /* Başlık ve Alt kısımların renkleri */
+        .chat-header, div[class*="header"], .chat-input, div[class*="input"] {
             background: #0B0C15 !important;
-            border-bottom: 1px solid rgba(139, 92, 246, 0.2) !important;
-        }
-        
-        .chat-input, div[class*="input"] {
-            background: #0B0C15 !important;
-            border-top: 1px solid rgba(139, 92, 246, 0.2) !important;
-        }
-        
-        .chat-submit, button[class*="submit"] {
-            background: #8B5CF6 !important;
-        }
-
-        /* 2. BİZİM ÖZEL YAPAY BEYİN BUTONUMUZ (Z-INDEX KRALI) */
-        #aura-brain-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #8B5CF6, #06B6D4);
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.6);
-            z-index: 2147483647 !important; /* Sitedeki EN ÜST katman, kimse ezemez */
-            transition: all 0.3s ease;
-        }
-        
-        #aura-brain-btn:hover {
-            transform: scale(1.1) translateY(-3px);
-            box-shadow: 0 6px 25px rgba(6, 182, 212, 0.8);
+            color: #FFFFFF !important;
         }
     </style>
-
-    <button id="aura-brain-btn">
-        <i class="fa-solid fa-brain" id="aura-icon" style="font-size: 26px; color: white;"></i>
-    </button>
 
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
@@ -366,44 +351,6 @@
                     inputPlaceholder: 'Bir şeyler sorun...',
                     closeButtonTooltip: 'Kapat',
                 },
-            }
-        });
-
-        // 3. N8N YÜKLENDİKTEN SONRA ONUN BUTONUNU GÖM VE BİZİMKİNİ BAĞLA
-        const checkInterval = setInterval(() => {
-            // N8n'in oluşturduğu ana bot butonunu avla
-            const n8nBtn = document.querySelector('.chat-wrapper > button') || document.querySelector('button[class*="toggle"]');
-            
-            if (n8nBtn) {
-                // n8n'in butonunu görünmez yap!
-                n8nBtn.style.opacity = '0';
-                n8nBtn.style.visibility = 'hidden';
-                n8nBtn.style.pointerEvents = 'none';
-                
-                clearInterval(checkInterval); // Avı bulduk, döngüyü durdur
-            }
-        }, 100);
-
-        // BİZİM BEYİN BUTONUNA TIKLAMA İŞLEMİ (N8n'i gizlice tetikler)
-        let isChatOpen = false;
-        const brainBtn = document.getElementById('aura-brain-btn');
-        const brainIcon = document.getElementById('aura-icon');
-
-        brainBtn.addEventListener('click', function() {
-            // N8n butonunu bul ve bizim yerimize ona tıkla
-            const n8nBtn = document.querySelector('.chat-wrapper > button') || document.querySelector('button[class*="toggle"]');
-            if (n8nBtn) {
-                n8nBtn.click();
-                
-                // İkonu Beyin ve Çarpı (X) arasında değiştir
-                isChatOpen = !isChatOpen;
-                if (isChatOpen) {
-                    brainIcon.className = 'fa-solid fa-xmark';
-                    brainIcon.style.fontSize = '30px';
-                } else {
-                    brainIcon.className = 'fa-solid fa-brain';
-                    brainIcon.style.fontSize = '26px';
-                }
             }
         });
     </script>
