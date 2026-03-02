@@ -287,7 +287,7 @@
 <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <style>
-        /* 1. KÖKTEN RENK DEĞİŞTİRİCİ (CSS Değişkenleri) */
+        /* 1. KÖKTEN RENK DEĞİŞTİRİCİ */
         html, body, :root {
             --chat--color-primary: #8B5CF6 !important; 
             --chat--color-primary-shade-50: #7C3AED !important;
@@ -295,68 +295,56 @@
             --chat--color-white: #13141F !important; 
             --chat--color-light: #0B0C15 !important; 
             --chat--color-dark: #FFFFFF !important; 
+            --chat--color-dark-shade-50: #E5E7EB !important;
         }
 
-        /* 2. ZORUNLU SINIF (CLASS) EZİCİLER (n8n'i zorla şekillendiriyoruz) */
-
-        /* Sağ alttaki yüzen balonun (toggle) rengini değiştir */
-        .chat-toggle, .n8n-chat-widget-toggle, button[class*="toggle"] {
-            background: linear-gradient(135deg, #8B5CF6, #06B6D4) !important;
-            border: none !important;
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.5) !important;
-        }
-
-        /* O kırmızı butondaki mesaj simgesini gizle */
-        .chat-toggle svg, .n8n-chat-widget-toggle svg, button[class*="toggle"] svg {
-            display: none !important;
-        }
-
-        /* Gizlenen simgenin yerine FontAwesome BEYİN simgesini koy */
-        .chat-toggle::after, .n8n-chat-widget-toggle::after, button[class*="toggle"]::after {
-            content: '\f5dc'; /* Beyin (brain) icon kodu */
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: white !important;
-            font-size: 26px !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Chat penceresinin üst başlık kısmındaki beyazlığı yok et */
-        .chat-header, .n8n-chat-widget-header, div[class*="header"] {
+        /* 2. ZORUNLU SINIF EZİCİLER */
+        .chat-header, div[class*="header"] {
             background: #0B0C15 !important;
             border-bottom: 1px solid rgba(139, 92, 246, 0.2) !important;
+        }
+
+        .chat-header *, div[class*="header"] * {
             color: #FFFFFF !important;
         }
 
-        /* Başlıktaki yazıları zorla beyaz yap */
-        .chat-header *, .n8n-chat-widget-header *, div[class*="header"] * {
-            color: #FFFFFF !important;
-        }
-
-        /* Mesaj yazma alanı (En alt) */
-        .chat-input, .n8n-chat-widget-message-input, div[class*="input"] {
+        .chat-input, div[class*="input"] {
             background: #0B0C15 !important;
             border-top: 1px solid rgba(139, 92, 246, 0.2) !important;
         }
 
-        /* Gönder butonu ok rengi */
-        .chat-submit, .n8n-chat-widget-message-input-submit-button, button[class*="submit"] {
+        .chat-submit, button[class*="submit"] {
             background: #8B5CF6 !important;
         }
         
-        .chat-submit svg, .n8n-chat-widget-message-input-submit-button svg, button[class*="submit"] svg {
+        .chat-submit svg, button[class*="submit"] svg {
             fill: white !important;
             color: white !important;
         }
 
-        /* Chat genel penceresinin estetiği */
-        .chat-container, .n8n-chat-widget, div[class*="widget"] {
+        .chat-container, div[class*="widget"] {
             background: #13141F !important;
             border: 1px solid rgba(139, 92, 246, 0.3) !important;
             border-radius: 20px !important;
             box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(139,92,246,0.3) !important;
+        }
+
+        /* 3. BEYİN LOGOSU (KESİN ÇÖZÜM) */
+        
+        /* Butonun içindeki eski mesaj ikonunu tamamen görünmez yap */
+        button[class*="toggle"] > * {
+            opacity: 0 !important;
+            display: none !important;
+        }
+
+        /* Beyin logosunu ve Mor/Mavi geçişi direkt arka plan olarak bas */
+        button[class*="toggle"] {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='white'%3E%3Cpath d='M168 184a40 40 0 0 1-40-40 40 40 0 0 1 40-40h20a8 8 0 0 0 0-16h-20a56 56 0 0 0-56 56 56 56 0 0 0 56 56h20a8 8 0 0 0 0-16zm-7.4 126.9L129.2 284a40 40 0 0 1-13.2-28v-12a8 8 0 0 0-16 0v12a56 56 0 0 0 18.5 39.2l31.4 26.9a8 8 0 1 0 10.5-12.2zM400 32a48 48 0 0 0-48 48 48 48 0 0 0-3.3 17.5l-44 44A48 48 0 0 0 288 128h-16a8 8 0 0 0 0 16h16a32 32 0 0 1 32 32v16a32 32 0 0 1-32 32h-16a8 8 0 0 0 0 16h16a48 48 0 0 0 48-48V160A48 48 0 0 0 352 112v1.3l44-44A48 48 0 0 0 400 48a32 32 0 0 1 0 64h-32a8 8 0 0 0 0 16h32A48 48 0 0 0 400 32zm-64 168a32 32 0 0 1-32-32 8 8 0 0 0-16 0 48 48 0 0 0 48 48 8 8 0 0 0 0-16zM32 288a48 48 0 0 1 48-48h16a8 8 0 0 0 0-16H80a32 32 0 0 0-32-32v-16a32 32 0 0 0 32-32h16a8 8 0 0 0 0-16H80a48 48 0 0 1-48 48V256a48 48 0 0 1 48 48h16a8 8 0 0 0 0-16H80A32 32 0 0 0 32 288zM48 384c0-2.8.2-5.5.7-8.2a8 8 0 1 0-15.7-3.1C32.3 376.6 32 380.3 32 384a32 32 0 0 0 32 32h16a8 8 0 0 0 0-16H64a48 48 0 0 1-48-48H0a16 16 0 0 0 0 32a32 32 0 0 0 32 32v12a8 8 0 0 0 16 0v-12zM280.4 468l-31.4 26.9a8 8 0 1 1-10.5-12.2l31.4-26.9a40 40 0 0 0 13.2-28v-12a8 8 0 0 1 16 0v12a56 56 0 0 1-18.5 39.2zM432 360a8 8 0 0 0-8 8v12A32 32 0 0 0 392 412h-20a8 8 0 0 1 0-16h20a40 40 0 0 1 40-40v-12A56 56 0 0 1 376 336a8 8 0 0 1 0-16h20a32 32 0 0 0 32 32v12a8 8 0 0 0 0 16zm-71 14.3l31.4 26.9a8 8 0 1 1-10.5 12.2l-31.4-26.9A40 40 0 0 0 339 374v-12a8 8 0 0 1 16 0v12c0 2.8-.2 5.5-.7 8.2a8 8 0 1 1-15.7 3.1c.3-.9.4-1.9.4-2.9z%27%3E%3C/path%3E%3C/svg%3E"), linear-gradient(135deg, #8B5CF6, #06B6D4) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: 28px, 100% !important;
+            border: none !important;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.5) !important;
         }
     </style>
 
@@ -365,12 +353,10 @@
 
         createChat({
             webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat',
-            
             initialMessages: [
                 '👋 Selam! Aura AI asistanı hazır.',
                 'İşletmenizi otomatize etmeye hazır mısınız? Size nasıl yardımcı olabilirim?'
             ],
-            
             i18n: {
                 en: {
                     title: 'Aura AI',
