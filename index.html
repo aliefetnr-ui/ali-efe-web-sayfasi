@@ -267,7 +267,7 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
@@ -284,96 +284,61 @@
             else nav.classList.remove('navbar-scrolled');
         });
     </script>
-   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <style>
         /* AURA AI PREMİUM KOYU TEMA TASARIMI */
         :root {
-            /* === Temel Marka Renkleri === */
-            --chat--color-primary: #8B5CF6; /* Aura Moru (Kullanıcı Mesajları & Buton) */
+            /* Ana Renkler (Mor ve Mavi) */
+            --chat--color-primary: #8B5CF6; 
             --chat--color-primary-shade-50: #7C3AED;
             --chat--color-primary-shade-100: #6D28D9;
-            --chat--color-secondary: #06B6D4; /* Aura Mavisi (Neon Vurgular) */
+            --chat--color-secondary: #06B6D4; 
             
-            /* === Koyu Tema Arka Plan Ayarları (Beyaz Kısım Kapatıldı) === */
-            --chat--color-white: #13141F; /* Mesaj Paneli Arka Planı (Senin İstediğin Koyu Ton) */
-            --chat--color-light: #0B0C15; /* Başlık & Giriş Alanı Arka Planı */
-            --chat--color-light-shade-50: #1A1B2E; /* Bot Mesaj Arka Planı */
-            --chat--color-light-shade-100: #2D2E42; /* İnce Çizgiler & Borderlar */
+            /* Koyu Tema Arka Planlar */
+            --chat--color-white: #13141F; 
+            --chat--color-light: #0B0C15; 
+            --chat--color-light-shade-50: #1A1B2E; 
+            --chat--color-light-shade-100: #2D2E42; 
             
-            /* === Tipografi & Yazı Renkleri (Koyu Tema Uyumu) === */
-            --chat--color-dark: #FFFFFF; /* Ana Metin Rengi (Karşıtlık için Beyaz) */
-            --chat--color-dark-shade-50: #E5E7EB; /* Alt Başlık & Zaman Damgası Grisi */
+            /* Yazı Renkleri */
+            --chat--color-dark: #FFFFFF; 
+            --chat--color-dark-shade-50: #E5E7EB; 
             
-            /* === Diğer Tasarım Ayarları === */
+            /* Tasarım Hatları */
             --chat--border-radius: 20px;
-            --chat--window--width: 400px; /* Biraz daha geniş, daha premium duruş */
         }
 
-        /* Başlık Fontunu Site Fontuyla Eşitleyelim */
+        /* Başlık ve Gölge Efektleri */
         .chat-container {
             font-family: 'Inter', sans-serif !important;
             border: 1px solid rgba(139, 92, 246, 0.25) !important;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(139, 92, 246, 0.25) !important;
-        }
-
-        /* Başlık Alanı Degrade (Neon Gradient) Efekti */
-        .chat-header {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1)) !important;
-            border-bottom: 1px solid rgba(139, 92, 246, 0.2) !important;
-        }
-
-        /* Mesaj Giriş Alanı Tasarımı */
-        .chat-input {
-            border-top: 1px solid rgba(139, 92, 246, 0.2) !important;
-        }
-        
-        .chat-input input:focus {
-            border-color: #06B6D4 !important; /* Focus olduğunda neon mavi border */
         }
     </style>
 
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-        // 2. FOTORAFTAKİ GOOGLE LOGOSUNU BEYİN SİMGESİYLE DEĞİŞTİRELİM
-        // SerpAPI logosunu da tutarlı olması için beyinle değiştiriyoruz.
-        const brainSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 24px; height: 24px; color: #06B6D4;"><path fill="currentColor" d="M168 184a40 40 0 0 1-40-40 40 40 0 0 1 40-40h20a8 8 0 0 0 0-16h-20a56 56 0 0 0-56 56 56 56 0 0 0 56 56h20a8 8 0 0 0 0-16zm-7.4 126.9L129.2 284a40 40 0 0 1-13.2-28v-12a8 8 0 0 0-16 0v12a56 56 0 0 0 18.5 39.2l31.4 26.9a8 8 0 1 0 10.5-12.2zM400 32a48 48 0 0 0-48 48 48 48 0 0 0-3.3 17.5l-44 44A48 48 0 0 0 288 128h-16a8 8 0 0 0 0 16h16a32 32 0 0 1 32 32v16a32 32 0 0 1-32 32h-16a8 8 0 0 0 0 16h16a48 48 0 0 0 48-48V160A48 48 0 0 0 352 112v1.3l44-44A48 48 0 0 0 400 48a32 32 0 0 1 0 64h-32a8 8 0 0 0 0 16h32A48 48 0 0 0 400 32zm-64 168a32 32 0 0 1-32-32 8 8 0 0 0-16 0 48 48 0 0 0 48 48 8 8 0 0 0 0-16zM32 288a48 48 0 0 1 48-48h16a8 8 0 0 0 0-16H80a32 32 0 0 0-32-32v-16a32 32 0 0 0 32-32h16a8 8 0 0 0 0-16H80a48 48 0 0 1-48 48V256a48 48 0 0 1 48 48h16a8 8 0 0 0 0-16H80A32 32 0 0 0 32 288zM48 384c0-2.8.2-5.5.7-8.2a8 8 0 1 0-15.7-3.1C32.3 376.6 32 380.3 32 384a32 32 0 0 0 32 32h16a8 8 0 0 0 0-16H64a48 48 0 0 1-48-48H0a16 16 0 0 0 0 32a32 32 0 0 0 32 32v12a8 8 0 0 0 16 0v-12zM280.4 468l-31.4 26.9a8 8 0 1 1-10.5-12.2l31.4-26.9a40 40 0 0 0 13.2-28v-12a8 8 0 0 1 16 0v12a56 56 0 0 1-18.5 39.2zM432 360a8 8 0 0 0-8 8v12A32 32 0 0 0 392 412h-20a8 8 0 0 1 0-16h20a40 40 0 0 1 40-40v-12A56 56 0 0 1 376 336a8 8 0 0 1 0-16h20a32 32 0 0 0 32 32v12a8 8 0 0 0 0 16zm-71 14.3l31.4 26.9a8 8 0 1 1-10.5 12.2l-31.4-26.9A40 40 0 0 0 339 374v-12a8 8 0 0 1 16 0v12c0 2.8-.2 5.5-.7 8.2a8 8 0 1 1-15.7 3.1c.3-.9.4-1.9.4-2.9z"></path></svg>`;
-
         createChat({
             webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat',
             
-            // KARŞILAMA MESAJI
             initialMessages: [
-                '👋 Selam! Aura AI Yapay Zeka Ajanı hazır.',
-                madde işaretleri ile bana işletmenizi nasıl otomatize edebileceğimizi sorun.'
+                '👋 Selam! Aura AI asistanı hazır.',
+                'İşletmenizi otomatize etmeye hazır mısınız? Size nasıl yardımcı olabilirim?'
             ],
             
-            // TÜRKÇE DİL DESTEĞİ & MARKA ADI GÜNCELLEMESİ
             i18n: {
                 en: {
                     title: 'Aura AI',
                     subtitle: 'Yapay Zeka Otomasyon Ajansı',
                     getStarted: 'Aura AI ile Sohbet Et',
-                    inputPlaceholder: 'Buraya işletmenizi otomatize etmekle ilgili bir soru sorun...',
+                    inputPlaceholder: 'Bir şeyler sorun...',
                     closeButtonTooltip: 'Kapat',
                 },
-            },
-            
-            // LOGO & BEYİN SİMGESİ AYARI
-            options: {
-                showPoweredBy: false, // Daha kurumsal duruş için
-                logo: brainSvg, // Google Gemini logosu beyin simgesiyle değişti
-                onMessageReceived: (message) => {
-                    // SerpAPI logosunu da beyinle değiştirelim
-                    const toolLogos = document.querySelectorAll('.chat-tool-logo img');
-                    toolLogos.forEach(logo => {
-                        logo.parentNode.innerHTML = brainSvg; // SerpApi logosunu da beyin SVG'si ile değiştiriyoruz
-                    });
-                }
             }
         });
     </script>
-    ```
-</body>
+    </body>
 </html>
