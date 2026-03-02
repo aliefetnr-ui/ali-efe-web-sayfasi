@@ -284,13 +284,68 @@
             else nav.classList.remove('navbar-scrolled');
         });
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    
+    <style>
+        /* AURA AI CHATBOT KOYU TEMA VE RENK AYARLARI */
+        :root {
+            /* Ana Renk - Aura AI Moru (Sağ alt buton ve kullanıcı mesajları) */
+            --chat--color-primary: #8B5CF6;
+            --chat--color-primary-shade-50: #7C3AED;
+            --chat--color-primary-shade-100: #6D28D9;
+            
+            /* İkincil Renk - Aura AI Mavisi */
+            --chat--color-secondary: #06B6D4;
+            --chat--color-secondary-shade-50: #0891B2;
+            
+            /* Arka Plan Renkleri (Sitenle Uyumlu Koyu Tema) */
+            --chat--color-white: #13141F; /* Mesajlaşma alanı arka planı */
+            --chat--color-light: #0B0C15; /* Başlık ve mesaj yazma alanı arka planı */
+            --chat--color-light-shade-50: #1A1B2E; /* Botun mesaj arka planı */
+            --chat--color-light-shade-100: #2D2E42;
+            
+            /* Yazı Renkleri */
+            --chat--color-dark: #FFFFFF; /* Ana yazı rengi (Beyaz) */
+            --chat--color-dark-shade-50: #E5E7EB; /* Alt başlık gri yazılar */
+            
+            /* Genel Tasarım */
+            --chat--border-radius: 16px;
+            --chat--window--width: 380px;
+        }
+
+        /* Başlık fontunu sitenle aynı yapalım */
+        .chat-container {
+            font-family: 'Inter', sans-serif !important;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 92, 246, 0.2) !important;
+        }
+    </style>
+
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
         createChat({
-            webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat'
+            webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat',
+            
+            // Bota varsayılan bir karşılama mesajı ekliyoruz
+            initialMessages: [
+                '👋 Merhaba! Ben Aura AI asistanı.',
+                'İşletmenizi otomatize etmeye hazır mısınız? Size nasıl yardımcı olabilirim?'
+            ],
+            
+            // Botun arayüzünü Türkçeleştirip ismini Aura AI yapıyoruz
+            i18n: {
+                en: {
+                    title: 'Aura AI',
+                    subtitle: 'Yapay Zeka Otomasyon Ajansı',
+                    footer: '',
+                    getStarted: 'Sohbete Başla',
+                    inputPlaceholder: 'Bir şeyler sorun...',
+                    closeButtonTooltip: 'Kapat',
+                },
+            },
         });
     </script>
+    ```
 </body>
 </html>
