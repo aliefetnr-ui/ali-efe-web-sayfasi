@@ -284,26 +284,79 @@
             else nav.classList.remove('navbar-scrolled');
         });
     </script>
-
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <style>
-        /* n8n'in pembe temasını zorla ezmek için !important kullanıyoruz */
-        :root {
+        /* 1. KÖKTEN RENK DEĞİŞTİRİCİ (CSS Değişkenleri) */
+        html, body, :root {
             --chat--color-primary: #8B5CF6 !important; 
             --chat--color-primary-shade-50: #7C3AED !important;
-            --chat--color-primary-shade-100: #6D28D9 !important;
             --chat--color-secondary: #06B6D4 !important; 
-            
-            --chat--color-white: #13141F !important; /* Mesajlaşma alanı */
-            --chat--color-light: #0B0C15 !important; /* Başlık ve mesaj yazma alanı */
-            --chat--color-light-shade-50: #1A1B2E !important; /* Bot mesaj arka planı */
-            --chat--color-light-shade-100: #2D2E42 !important; /* Kenarlıklar */
-            
-            --chat--color-dark: #FFFFFF !important; /* Ana yazı rengi */
-            --chat--color-dark-shade-50: #E5E7EB !important; /* Alt başlık rengi */
-            
-            --chat--border-radius: 20px !important;
+            --chat--color-white: #13141F !important; 
+            --chat--color-light: #0B0C15 !important; 
+            --chat--color-dark: #FFFFFF !important; 
+        }
+
+        /* 2. ZORUNLU SINIF (CLASS) EZİCİLER (n8n'i zorla şekillendiriyoruz) */
+
+        /* Sağ alttaki yüzen balonun (toggle) rengini değiştir */
+        .chat-toggle, .n8n-chat-widget-toggle, button[class*="toggle"] {
+            background: linear-gradient(135deg, #8B5CF6, #06B6D4) !important;
+            border: none !important;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.5) !important;
+        }
+
+        /* O kırmızı butondaki mesaj simgesini gizle */
+        .chat-toggle svg, .n8n-chat-widget-toggle svg, button[class*="toggle"] svg {
+            display: none !important;
+        }
+
+        /* Gizlenen simgenin yerine FontAwesome BEYİN simgesini koy */
+        .chat-toggle::after, .n8n-chat-widget-toggle::after, button[class*="toggle"]::after {
+            content: '\f5dc'; /* Beyin (brain) icon kodu */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: white !important;
+            font-size: 26px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Chat penceresinin üst başlık kısmındaki beyazlığı yok et */
+        .chat-header, .n8n-chat-widget-header, div[class*="header"] {
+            background: #0B0C15 !important;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2) !important;
+            color: #FFFFFF !important;
+        }
+
+        /* Başlıktaki yazıları zorla beyaz yap */
+        .chat-header *, .n8n-chat-widget-header *, div[class*="header"] * {
+            color: #FFFFFF !important;
+        }
+
+        /* Mesaj yazma alanı (En alt) */
+        .chat-input, .n8n-chat-widget-message-input, div[class*="input"] {
+            background: #0B0C15 !important;
+            border-top: 1px solid rgba(139, 92, 246, 0.2) !important;
+        }
+
+        /* Gönder butonu ok rengi */
+        .chat-submit, .n8n-chat-widget-message-input-submit-button, button[class*="submit"] {
+            background: #8B5CF6 !important;
+        }
+        
+        .chat-submit svg, .n8n-chat-widget-message-input-submit-button svg, button[class*="submit"] svg {
+            fill: white !important;
+            color: white !important;
+        }
+
+        /* Chat genel penceresinin estetiği */
+        .chat-container, .n8n-chat-widget, div[class*="widget"] {
+            background: #13141F !important;
+            border: 1px solid rgba(139, 92, 246, 0.3) !important;
+            border-radius: 20px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(139,92,246,0.3) !important;
         }
     </style>
 
@@ -312,10 +365,12 @@
 
         createChat({
             webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat',
+            
             initialMessages: [
                 '👋 Selam! Aura AI asistanı hazır.',
                 'İşletmenizi otomatize etmeye hazır mısınız? Size nasıl yardımcı olabilirim?'
             ],
+            
             i18n: {
                 en: {
                     title: 'Aura AI',
@@ -326,20 +381,7 @@
                 },
             }
         });
-
-        // BEYİN İKONUNU EKLEME (Javascript ile)
-        // Botun sayfaya yüklenmesini bekleyip sadece dış butondaki ikonu beyinle değiştiriyoruz.
-        setTimeout(() => {
-            const chatToggleSvg = document.querySelector('.chat-wrapper > button svg');
-            if (chatToggleSvg) {
-                chatToggleSvg.style.display = 'none'; // Eski mesaj ikonunu gizle
-                const brainIcon = document.createElement('i');
-                brainIcon.className = 'fa-solid fa-brain'; // Beyin ikonu
-                brainIcon.style.fontSize = '26px';
-                brainIcon.style.color = 'white';
-                chatToggleSvg.parentNode.appendChild(brainIcon);
-            }
-        }, 1500); 
     </script>
+    ```
     </body>
 </html>
