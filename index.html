@@ -267,7 +267,7 @@
         </div>
     </footer>
 
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
@@ -288,33 +288,22 @@
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <style>
-        /* AURA AI PREMİUM KOYU TEMA TASARIMI */
+        /* n8n'in pembe temasını zorla ezmek için !important kullanıyoruz */
         :root {
-            /* Ana Renkler (Mor ve Mavi) */
-            --chat--color-primary: #8B5CF6; 
-            --chat--color-primary-shade-50: #7C3AED;
-            --chat--color-primary-shade-100: #6D28D9;
-            --chat--color-secondary: #06B6D4; 
+            --chat--color-primary: #8B5CF6 !important; 
+            --chat--color-primary-shade-50: #7C3AED !important;
+            --chat--color-primary-shade-100: #6D28D9 !important;
+            --chat--color-secondary: #06B6D4 !important; 
             
-            /* Koyu Tema Arka Planlar */
-            --chat--color-white: #13141F; 
-            --chat--color-light: #0B0C15; 
-            --chat--color-light-shade-50: #1A1B2E; 
-            --chat--color-light-shade-100: #2D2E42; 
+            --chat--color-white: #13141F !important; /* Mesajlaşma alanı */
+            --chat--color-light: #0B0C15 !important; /* Başlık ve mesaj yazma alanı */
+            --chat--color-light-shade-50: #1A1B2E !important; /* Bot mesaj arka planı */
+            --chat--color-light-shade-100: #2D2E42 !important; /* Kenarlıklar */
             
-            /* Yazı Renkleri */
-            --chat--color-dark: #FFFFFF; 
-            --chat--color-dark-shade-50: #E5E7EB; 
+            --chat--color-dark: #FFFFFF !important; /* Ana yazı rengi */
+            --chat--color-dark-shade-50: #E5E7EB !important; /* Alt başlık rengi */
             
-            /* Tasarım Hatları */
-            --chat--border-radius: 20px;
-        }
-
-        /* Başlık ve Gölge Efektleri */
-        .chat-container {
-            font-family: 'Inter', sans-serif !important;
-            border: 1px solid rgba(139, 92, 246, 0.25) !important;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(139, 92, 246, 0.25) !important;
+            --chat--border-radius: 20px !important;
         }
     </style>
 
@@ -323,12 +312,10 @@
 
         createChat({
             webhookUrl: 'https://n8n.srv1201585.hstgr.cloud/webhook/53c136fe-3e77-4709-a143-fe82746dd8b6/chat',
-            
             initialMessages: [
                 '👋 Selam! Aura AI asistanı hazır.',
                 'İşletmenizi otomatize etmeye hazır mısınız? Size nasıl yardımcı olabilirim?'
             ],
-            
             i18n: {
                 en: {
                     title: 'Aura AI',
@@ -339,6 +326,20 @@
                 },
             }
         });
+
+        // BEYİN İKONUNU EKLEME (Javascript ile)
+        // Botun sayfaya yüklenmesini bekleyip sadece dış butondaki ikonu beyinle değiştiriyoruz.
+        setTimeout(() => {
+            const chatToggleSvg = document.querySelector('.chat-wrapper > button svg');
+            if (chatToggleSvg) {
+                chatToggleSvg.style.display = 'none'; // Eski mesaj ikonunu gizle
+                const brainIcon = document.createElement('i');
+                brainIcon.className = 'fa-solid fa-brain'; // Beyin ikonu
+                brainIcon.style.fontSize = '26px';
+                brainIcon.style.color = 'white';
+                chatToggleSvg.parentNode.appendChild(brainIcon);
+            }
+        }, 1500); 
     </script>
     </body>
 </html>
