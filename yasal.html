@@ -3,104 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aura AI — Gizlilik Politikası ve Kullanım Koşulları" />
+  <meta name="description" content="Aura AI — Gizlilik Politikası ve Kullanım Koşulları. KVKK uyumlu veri işleme politikası." />
   <title>Yasal — Aura AI</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .legal {
-      padding: 200px 0 120px;
-    }
-    .legal__nav {
-      display: flex;
-      gap: 24px;
-      margin-bottom: 80px;
-    }
-    .legal__nav-btn {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 10px 20px;
-      border: 1px solid var(--border);
+    .legal { padding: 180px 0 120px; }
+    .legal__layout { display: grid; grid-template-columns: 260px 1fr; gap: 80px; align-items: start; }
+
+    /* ── SIDEBAR NAV ── */
+    .legal__sidebar { position: sticky; top: 120px; }
+    .legal__sidebar-title { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; display: block; }
+    .legal__sidebar-links { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); }
+    .legal__sidebar-link {
+      display: block; padding: 16px 20px;
+      font-size: 0.82rem; font-weight: 500;
       color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      transition: color 0.3s, background 0.3s;
       cursor: pointer;
-      background: none;
-      transition: all 0.3s;
-      font-family: var(--font-body);
     }
-    .legal__nav-btn.active,
-    .legal__nav-btn:hover {
-      border-color: var(--accent);
-      color: var(--text);
-    }
+    .legal__sidebar-link:last-child { border-bottom: none; }
+    .legal__sidebar-link:hover { color: var(--text); background: rgba(255,255,255,0.02); }
+    .legal__sidebar-link.active { color: var(--accent); background: rgba(var(--accent-rgb),0.04); border-left: 2px solid var(--accent); }
+
+    /* ── PANEL ── */
     .legal__panel { display: none; }
     .legal__panel.active { display: block; }
-    .legal__title {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-    .legal__date {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-bottom: 60px;
-      letter-spacing: 0.05em;
-    }
-    .legal__content {
-      max-width: 760px;
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
-    }
-    .legal__section h2 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin-bottom: 16px;
-      color: var(--text);
-    }
-    .legal__section p,
-    .legal__section li {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.85;
-    }
-    .legal__section ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 12px;
-    }
-    .legal__section ul li {
-      display: flex;
-      gap: 12px;
-    }
-    .legal__section ul li::before {
-      content: '—';
-      color: var(--accent);
-      flex-shrink: 0;
+
+    .legal__hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1; margin-bottom: 12px; }
+    .legal__date { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 16px; letter-spacing: 0.05em; }
+    .legal__summary { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; padding: 20px 24px; border: 1px solid var(--border); background: rgba(var(--accent-rgb),0.03); margin-bottom: 56px; border-left: 2px solid var(--accent); }
+
+    .legal__content { display: flex; flex-direction: column; gap: 0; }
+    .legal__section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+    .legal__section:last-child { border-bottom: none; }
+    .legal__section h2 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+    .legal__section h2::before { content: attr(data-num); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent); font-family: var(--font-body); }
+    .legal__section p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.85; }
+    .legal__section p + p { margin-top: 12px; }
+    .legal__list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .legal__list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
+    .legal__list li::before { content: '—'; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+    .legal__highlight { background: rgba(var(--accent-rgb),0.05); border: 1px solid rgba(var(--accent-rgb),0.15); padding: 16px 20px; margin-top: 16px; }
+    .legal__highlight p { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    .legal__link { color: var(--accent); text-decoration: none; }
+    .legal__link:hover { text-decoration: underline; }
+
+    @media (max-width: 1024px) {
+      .legal__layout { grid-template-columns: 1fr; gap: 48px; }
+      .legal__sidebar { position: static; }
+      .legal__sidebar-links { flex-direction: row; flex-wrap: wrap; }
+      .legal__sidebar-link { border-right: 1px solid var(--border); flex: 1; text-align: center; }
     }
     @media (max-width: 768px) {
-      .legal { padding: 160px 0 80px; }
+      .legal { padding: 140px 0 80px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="preloader">
-    <span class="preloader__logo">AURA AI</span>
-    <div class="preloader__bar"></div>
-  </div>
-
+  <div class="preloader"><span class="preloader__logo">AURA AI</span><div class="preloader__bar"></div></div>
   <div class="noise"></div>
   <div class="cursor-dot"></div>
   <div class="cursor-ring"></div>
@@ -114,12 +79,9 @@
         <a href="iletisim.html">İletişim</a>
       </div>
       <a href="iletisim.html" class="nav__cta"><span>Başlayalım →</span></a>
-      <button class="nav__burger" aria-label="Menüyü aç/kapat">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav__burger" aria-label="Menüyü aç/kapat"><span></span><span></span><span></span></button>
     </div>
   </nav>
-
   <div class="mobile-menu">
     <div class="mobile-menu__links">
       <a href="hizmetler.html">Hizmetler</a>
@@ -132,98 +94,224 @@
   <main>
     <section class="legal">
       <div class="container">
-        <span class="section-label reveal">Yasal</span>
+        <span class="section-label reveal">Yasal Bilgiler</span>
+        <div class="legal__layout">
 
-        <div class="legal__nav reveal">
-          <button class="legal__nav-btn active" data-target="privacy">Gizlilik Politikası</button>
-          <button class="legal__nav-btn" data-target="terms">Kullanım Koşulları</button>
-        </div>
+          <!-- SIDEBAR -->
+          <aside class="legal__sidebar reveal">
+            <span class="legal__sidebar-title">Belgeler</span>
+            <nav class="legal__sidebar-links">
+              <span class="legal__sidebar-link active" data-target="privacy">Gizlilik Politikası</span>
+              <span class="legal__sidebar-link" data-target="terms">Kullanım Koşulları</span>
+              <span class="legal__sidebar-link" data-target="kvkk">KVKK Aydınlatma</span>
+            </nav>
+          </aside>
 
-        <!-- PRIVACY -->
-        <div class="legal__panel active" id="privacy">
-          <h1 class="legal__title reveal">Gizlilik<br>Politikası</h1>
-          <p class="legal__date reveal">Son güncelleme: Ocak 2025</p>
+          <!-- CONTENT -->
+          <div class="legal__content-area reveal">
 
-          <div class="legal__content reveal">
-            <div class="legal__section">
-              <h2>1. Giriş</h2>
-              <p>Aura AI olarak kişisel verilerinizin gizliliğini ciddiye alıyoruz. Bu politika, web sitemizi ziyaret ettiğinizde veya hizmetlerimizi kullandığınızda hangi verileri topladığımızı, bu verileri nasıl kullandığımızı ve haklarınızın neler olduğunu açıklamaktadır.</p>
+            <!-- PRIVACY -->
+            <div class="legal__panel active" id="privacy">
+              <h1 class="legal__hero-title">Gizlilik<br>Politikası</h1>
+              <p class="legal__date">Son güncelleme: 1 Ocak 2025 · Sürüm 1.2</p>
+              <div class="legal__summary">
+                Bu politika, Aura AI olarak kişisel verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklamaktadır. KVKK ve GDPR kapsamında haklarınızı özetler.
+              </div>
+              <div class="legal__content">
+                <div class="legal__section">
+                  <h2 data-num="01">Veri Sorumlusu</h2>
+                  <p>Veri sorumlusu sıfatıyla Aura AI, İstanbul, Türkiye adresinde faaliyet göstermektedir. İletişim: <a href="mailto:hello@aura-ai.com" class="legal__link">hello@aura-ai.com</a></p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="02">Toplanan Kişisel Veriler</h2>
+                  <p>Yalnızca hizmet sunmak için gerekli olan verileri topluyoruz:</p>
+                  <ul class="legal__list">
+                    <li>Ad, soyad ve iletişim bilgileri (e-posta, telefon) — iletişim formu aracılığıyla</li>
+                    <li>Şirket adı, sektör ve pozisyon bilgisi — teklif hazırlama amacıyla</li>
+                    <li>Görüşme notları ve proje kapsamı bilgisi — hizmet sunumu için</li>
+                    <li>Web sitesi kullanım verileri (anonim, IP adresi olmadan) — analitik amaçlı</li>
+                    <li>E-posta iletişim geçmişi — müşteri ilişkileri yönetimi için</li>
+                  </ul>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="03">Verilerin İşlenme Amaçları</h2>
+                  <p>Kişisel verileriniz aşağıdaki yasal dayanaklar ve amaçlar çerçevesinde işlenmektedir:</p>
+                  <ul class="legal__list">
+                    <li>Ücretsiz keşif görüşmesi organize etmek ve teklif sunmak</li>
+                    <li>Sözleşme kapsamındaki hizmetleri yerine getirmek</li>
+                    <li>Teknik destek ve müşteri hizmetleri sağlamak</li>
+                    <li>Yasal yükümlülükleri yerine getirmek (muhasebe, vergi vb.)</li>
+                    <li>Hizmet kalitesini ve web sitesini geliştirmek (anonim verilerle)</li>
+                  </ul>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="04">Veri Saklama Süreleri</h2>
+                  <p>Verilerinizi yalnızca gerektiği süre boyunca saklıyoruz:</p>
+                  <ul class="legal__list">
+                    <li>Müşteri iletişim verileri: Sözleşme süresince + 3 yıl</li>
+                    <li>Potansiyel müşteri verileri: Son temastan itibaren 2 yıl</li>
+                    <li>Yasal yükümlülük kapsamındaki veriler: İlgili mevzuat süresince (genellikle 5–10 yıl)</li>
+                    <li>Anonim analitik veriler: Süresiz (kişisel veri içermez)</li>
+                  </ul>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="05">Üçüncü Taraflarla Paylaşım</h2>
+                  <p>Kişisel verilerinizi satmıyor, kiralamıyor ve ticari amaçla paylaşmıyoruz. Yalnızca aşağıdaki durumlarda sınırlı paylaşım yapılmaktadır:</p>
+                  <ul class="legal__list">
+                    <li>Hizmet altyapısı sağlayıcıları (CRM, e-posta platformu) — sözleşmeyle bağlı, güvenli</li>
+                    <li>Yasal zorunluluk halinde yetkili kamu kurumları</li>
+                  </ul>
+                  <div class="legal__highlight"><p>Kullandığımız tüm üçüncü taraf hizmet sağlayıcıları GDPR/KVKK uyumludur ve verilerinizi amaç dışı kullanamaz.</p></div>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="06">Güvenlik Önlemleri</h2>
+                  <p>Kişisel verilerinizi korumak için endüstri standardı güvenlik önlemleri uyguluyoruz: SSL/TLS şifreleme, erişim kontrolü ve düzenli güvenlik denetimleri. Ancak internet üzerinden hiçbir iletimin %100 güvenli olmadığını kabul ediyoruz.</p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="07">KVKK Kapsamındaki Haklarınız</h2>
+                  <p>6698 sayılı KVKK kapsamında aşağıdaki haklara sahipsiniz:</p>
+                  <ul class="legal__list">
+                    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme hakkı</li>
+                    <li>İşlenen veriler hakkında bilgi talep etme hakkı</li>
+                    <li>Verilerin işlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme</li>
+                    <li>Verilerin silinmesini veya yok edilmesini talep etme hakkı</li>
+                    <li>Düzeltilmesini veya güncellenmesini isteme hakkı</li>
+                    <li>Otomatik sistemlerle analiz edilmesine itiraz etme hakkı</li>
+                  </ul>
+                  <p style="margin-top:16px">Haklarınızı kullanmak için: <a href="mailto:hello@aura-ai.com" class="legal__link">hello@aura-ai.com</a></p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="08">Çerezler (Cookies)</h2>
+                  <p>Web sitemiz yalnızca temel analitik amaçlı anonim çerezler kullanmaktadır. Kişisel tanımlama, reklam takibi veya üçüncü taraf pazarlama çerezi kullanılmamaktadır. Tarayıcı ayarlarınızdan çerezleri devre dışı bırakabilirsiniz.</p>
+                </div>
+              </div>
             </div>
-            <div class="legal__section">
-              <h2>2. Toplanan Veriler</h2>
-              <p>Aşağıdaki kişisel verileri toplayabiliriz:</p>
-              <ul>
-                <li>Ad, soyad ve iletişim bilgileri (e-posta, telefon)</li>
-                <li>Şirket adı ve unvan bilgileri</li>
-                <li>Hizmetlerimiz hakkındaki mesajlarınız ve notlarınız</li>
-                <li>Web sitesi kullanım verileri (anonim analytics)</li>
-                <li>İletişim formları aracılığıyla paylaştığınız bilgiler</li>
-              </ul>
+
+            <!-- TERMS -->
+            <div class="legal__panel" id="terms">
+              <h1 class="legal__hero-title">Kullanım<br>Koşulları</h1>
+              <p class="legal__date">Son güncelleme: 1 Ocak 2025 · Sürüm 1.1</p>
+              <div class="legal__summary">
+                Bu koşullar, Aura AI web sitesini ve hizmetlerini kullanımınızı düzenler. Siteyi kullanmaya devam ederek bu koşulları kabul etmiş sayılırsınız.
+              </div>
+              <div class="legal__content">
+                <div class="legal__section">
+                  <h2 data-num="01">Taraflar</h2>
+                  <p>Bu sözleşme; İstanbul, Türkiye'de faaliyet gösteren Aura AI ("Şirket") ile web sitesini ve hizmetleri kullanan gerçek veya tüzel kişi ("Kullanıcı") arasında akdedilmiştir.</p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="02">Hizmetlerin Kapsamı</h2>
+                  <p>Aura AI, yapay zeka destekli otomasyon çözümleri sunan bir ajans olarak faaliyet göstermektedir. Sunulan hizmetler şunlardır:</p>
+                  <ul class="legal__list">
+                    <li>Cold email otomasyon sistemleri kurulumu ve yönetimi</li>
+                    <li>Müşteri hizmetleri AI chatbot entegrasyonu</li>
+                    <li>Satış süreci ve CRM otomasyon sistemleri</li>
+                    <li>İş akışı tasarımı ve platform entegrasyonları</li>
+                  </ul>
+                  <p style="margin-top:14px">Her hizmetin detayları, ayrı bir hizmet sözleşmesinde belirlenir ve imzalanır.</p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="03">Kullanıcı Yükümlülükleri</h2>
+                  <p>Web sitemizi ve hizmetlerimizi kullanırken:</p>
+                  <ul class="legal__list">
+                    <li>Yanlış veya yanıltıcı bilgi vermemeyi kabul edersiniz</li>
+                    <li>Sistemi yasadışı, zararlı veya yetkisiz amaçlarla kullanmayacağınızı taahhüt edersiniz</li>
+                    <li>Üçüncü tarafların haklarını ihlal eden içerik paylaşmayacaksınız</li>
+                    <li>Web sitesine zarar verecek teknik saldırı girişiminde bulunmayacaksınız</li>
+                  </ul>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="04">Fikri Mülkiyet</h2>
+                  <p>Bu web sitesindeki tüm içerikler — metin, tasarım, logo, yazılım kodu ve görseller — Aura AI'ın münhasır mülkiyetindedir ve Türkiye Cumhuriyeti fikri mülkiyet mevzuatıyla korunmaktadır. Önceden yazılı izin alınmadan kopyalanamaz, çoğaltılamaz veya ticari amaçla kullanılamaz.</p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="05">Fiyatlandırma ve Ödeme</h2>
+                  <p>Hizmet bedelleri her proje için ayrıca belirlenir ve hizmet sözleşmesinde yazılı olarak belirtilir. Ödeme koşulları şunlardır:</p>
+                  <ul class="legal__list">
+                    <li>Kurulum ücreti: Proje başlangıcında %50, teslimatta %50</li>
+                    <li>Aylık bakım ücreti: Her ayın başında peşin ödenir</li>
+                    <li>Geç ödeme durumunda aylık %2 gecikme faizi uygulanır</li>
+                  </ul>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="06">Sorumluluk Sınırları</h2>
+                  <p>Aura AI, web sitesinin kesintisiz veya hatasız çalışmasını garanti etmez. Üçüncü taraf platformlardan (n8n, Make, OpenAI vb.) kaynaklanan hizmet kesintileri Aura AI'ın sorumluluğunda değildir. Azami sorumluluk, ilgili takvim ayında ödenen hizmet bedeliyle sınırlıdır.</p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="07">Gizlilik ve NDA</h2>
+                  <p>Hizmet süresince paylaşılan tüm iş bilgileri, süreçler ve veriler gizli tutulur. Taraflar, birbirinin ticari sırlarını üçüncü taraflarla paylaşmamayı taahhüt eder. Talep halinde ayrı bir NDA (gizlilik sözleşmesi) imzalanabilir.</p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="08">Fesih</h2>
+                  <p>Her iki taraf da 30 gün önceden yazılı bildirimde bulunarak sözleşmeyi feshedebilir. Fesih durumunda tamamlanan çalışma dilimlerine ait ücretler tahsil edilir; başlanmamış kısımlar iade edilir.</p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="09">Uygulanacak Hukuk ve Yetki</h2>
+                  <p>Bu koşullar Türkiye Cumhuriyeti kanunlarına tabidir. Taraflar arasında doğabilecek uyuşmazlıklarda İstanbul (Merkez) Mahkemeleri ve İcra Daireleri yetkilidir.</p>
+                </div>
+              </div>
             </div>
-            <div class="legal__section">
-              <h2>3. Verilerin Kullanımı</h2>
-              <p>Toplanan veriler şu amaçlarla kullanılmaktadır:</p>
-              <ul>
-                <li>Hizmet tekliflerimizi sunmak ve geliştirmek</li>
-                <li>Sizinle iletişim kurmak ve destek sağlamak</li>
-                <li>Yasal yükümlülüklerimizi yerine getirmek</li>
-                <li>Web sitemizin performansını analiz etmek</li>
-              </ul>
+
+            <!-- KVKK -->
+            <div class="legal__panel" id="kvkk">
+              <h1 class="legal__hero-title">KVKK<br>Aydınlatma</h1>
+              <p class="legal__date">Son güncelleme: 1 Ocak 2025</p>
+              <div class="legal__summary">
+                6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında, veri sorumlusu sıfatıyla Aura AI olarak kişisel verilerinizin işlenmesine ilişkin sizi bilgilendirme yükümlülüğümüzü yerine getiriyoruz.
+              </div>
+              <div class="legal__content">
+                <div class="legal__section">
+                  <h2 data-num="01">Veri Sorumlusu Kimliği</h2>
+                  <p><strong style="color:var(--text)">Ticaret Unvanı:</strong> Aura AI<br><strong style="color:var(--text)">Adres:</strong> İstanbul, Türkiye<br><strong style="color:var(--text)">E-Posta:</strong> <a href="mailto:hello@aura-ai.com" class="legal__link">hello@aura-ai.com</a></p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="02">İşlenen Kişisel Veri Kategorileri</h2>
+                  <ul class="legal__list">
+                    <li><strong style="color:var(--text)">Kimlik:</strong> Ad, soyad</li>
+                    <li><strong style="color:var(--text)">İletişim:</strong> E-posta adresi, telefon numarası</li>
+                    <li><strong style="color:var(--text)">Mesleki:</strong> Şirket adı, pozisyon, sektör</li>
+                    <li><strong style="color:var(--text)">İşlem:</strong> Talep ve görüşme notları, sözleşme bilgileri</li>
+                  </ul>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="03">İşlemenin Hukuki Dayanağı</h2>
+                  <p>Kişisel verileriniz KVKK Madde 5 kapsamında aşağıdaki hukuki dayanaklar çerçevesinde işlenmektedir:</p>
+                  <ul class="legal__list">
+                    <li>Sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması (Md. 5/2-c)</li>
+                    <li>Meşru menfaat kapsamında olması (Md. 5/2-f)</li>
+                    <li>Kanuni yükümlülüğün yerine getirilmesi (Md. 5/2-ç)</li>
+                    <li>Açık rızanıza dayalı işlemler (Md. 5/1) — yalnızca rıza gösterilen durumlar</li>
+                  </ul>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="04">Yurt Dışına Veri Aktarımı</h2>
+                  <p>Kullandığımız bazı yazılım altyapıları (CRM, bulut depolama) yurt dışında sunucu barındırabilir. Bu aktarımlar, KVKK Madde 9 kapsamında yeterli koruma sağlanan ülkelere veya veri aktarım taahhütnamesi imzalanmış sağlayıcılara yapılmaktadır.</p>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="05">İlgili Kişi Hakları (KVKK Md. 11)</h2>
+                  <p>Aşağıdaki haklarınızı kullanmak için <a href="mailto:hello@aura-ai.com" class="legal__link">hello@aura-ai.com</a> adresine yazılı başvurabilirsiniz:</p>
+                  <ul class="legal__list">
+                    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                    <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+                    <li>İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme</li>
+                    <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
+                    <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+                    <li>Kişisel verilerin silinmesini veya yok edilmesini isteme</li>
+                    <li>Düzeltme/silme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
+                    <li>Otomatik sistemlerle analiz edilmesi sonucu aleyhinize çıkan kararına itiraz etme</li>
+                    <li>Kanuna aykırı işlenmesi nedeniyle zararınızın giderilmesini talep etme</li>
+                  </ul>
+                  <div class="legal__highlight"><p>Başvurularınız en geç 30 gün içinde yanıtlanır. Kimlik doğrulama gerekebilir.</p></div>
+                </div>
+                <div class="legal__section">
+                  <h2 data-num="06">Kişisel Verileri Koruma Kurulu</h2>
+                  <p>Başvurunuzun sonucundan memnun kalmamanız halinde Kişisel Verileri Koruma Kurulu'na (<a href="https://www.kvkk.gov.tr" target="_blank" rel="noopener" class="legal__link">kvkk.gov.tr</a>) şikayette bulunma hakkınız saklıdır.</p>
+                </div>
+              </div>
             </div>
-            <div class="legal__section">
-              <h2>4. Veri Güvenliği</h2>
-              <p>Kişisel verilerinizi yetkisiz erişim, değişiklik, açıklama veya imhaya karşı korumak için endüstri standardı teknik ve idari önlemler uyguluyoruz. Ancak internet üzerinden hiçbir iletim yönteminin %100 güvenli olmadığını belirtmek isteriz.</p>
-            </div>
-            <div class="legal__section">
-              <h2>5. Haklarınız</h2>
-              <p>KVKK kapsamında aşağıdaki haklara sahipsiniz:</p>
-              <ul>
-                <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
-                <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme</li>
-                <li>Kişisel verilerinizin silinmesini veya yok edilmesini isteme</li>
-                <li>İşlenen verilerin aktarıldığı üçüncü kişileri bilme</li>
-              </ul>
-            </div>
-            <div class="legal__section">
-              <h2>6. İletişim</h2>
-              <p>Gizlilik politikamızla ilgili sorularınız için <a href="mailto:hello@aura-ai.com" style="color:var(--accent)">hello@aura-ai.com</a> adresine ulaşabilirsiniz.</p>
-            </div>
+
           </div>
         </div>
-
-        <!-- TERMS -->
-        <div class="legal__panel" id="terms">
-          <h1 class="legal__title">Kullanım<br>Koşulları</h1>
-          <p class="legal__date">Son güncelleme: Ocak 2025</p>
-
-          <div class="legal__content">
-            <div class="legal__section">
-              <h2>1. Kabul</h2>
-              <p>Bu web sitesini kullanarak aşağıdaki kullanım koşullarını kabul etmiş sayılırsınız. Bu koşulları kabul etmiyorsanız lütfen siteyi kullanmayın.</p>
-            </div>
-            <div class="legal__section">
-              <h2>2. Hizmetler</h2>
-              <p>Aura AI, yapay zeka otomasyon çözümleri sunan bir ajans olarak faaliyet göstermektedir. Sunulan hizmetler, müşteri ile imzalanan sözleşme şartlarına tabidir.</p>
-            </div>
-            <div class="legal__section">
-              <h2>3. Fikri Mülkiyet</h2>
-              <p>Bu web sitesindeki tüm içerikler (metin, görseller, yazılım, tasarım) Aura AI'a aittir ve fikri mülkiyet yasalarıyla korunmaktadır. İzinsiz kullanım yasaktır.</p>
-            </div>
-            <div class="legal__section">
-              <h2>4. Sorumluluk Sınırları</h2>
-              <p>Aura AI, web sitesinin kesintisiz veya hatasız çalışmasını garanti etmez. Hizmet kesintilerinden, veri kayıplarından veya üçüncü taraf hizmetlerinden kaynaklanan zararlardan sorumlu tutulamaz.</p>
-            </div>
-            <div class="legal__section">
-              <h2>5. Değişiklikler</h2>
-              <p>Bu kullanım koşullarını önceden bildirim yapmaksızın değiştirme hakkını saklı tutarız. Değişiklikler web sitesinde yayımlandığı anda yürürlüğe girer.</p>
-            </div>
-            <div class="legal__section">
-              <h2>6. Uygulanacak Hukuk</h2>
-              <p>Bu koşullar Türkiye Cumhuriyeti kanunlarına tabidir. Uyuşmazlıklar İstanbul mahkemelerinde çözüme kavuşturulur.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   </main>
@@ -231,58 +319,39 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer__brand">
-          <span class="footer__logo">AURA AI</span>
-          <p class="footer__tagline">Geleceği bugünden otomatize et.</p>
-        </div>
+        <div class="footer__brand"><span class="footer__logo">AURA AI</span><p class="footer__tagline">Geleceği bugünden otomatize et.</p></div>
         <div class="footer__links">
-          <div class="footer__col">
-            <span class="footer__col-title">Sayfalar</span>
-            <div class="footer__col-links">
-              <a href="hizmetler.html">Hizmetler</a>
-              <a href="vaka-calismalari.html">Vaka Çalışmaları</a>
-              <a href="iletisim.html">İletişim</a>
-            </div>
-          </div>
-          <div class="footer__col">
-            <span class="footer__col-title">Yasal</span>
-            <div class="footer__col-links">
-              <a href="yasal.html">Gizlilik Politikası</a>
-              <a href="yasal.html">Kullanım Koşulları</a>
-            </div>
-          </div>
-          <div class="footer__col">
-            <span class="footer__col-title">Sosyal</span>
-            <div class="footer__col-links">
-              <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="#" target="_blank" rel="noopener">Instagram</a>
-              <a href="#" target="_blank" rel="noopener">Twitter / X</a>
-            </div>
-          </div>
+          <div class="footer__col"><span class="footer__col-title">Sayfalar</span><div class="footer__col-links"><a href="hizmetler.html">Hizmetler</a><a href="vaka-calismalari.html">Vaka Çalışmaları</a><a href="iletisim.html">İletişim</a></div></div>
+          <div class="footer__col"><span class="footer__col-title">Yasal</span><div class="footer__col-links"><a href="yasal.html">Gizlilik Politikası</a><a href="yasal.html">Kullanım Koşulları</a></div></div>
+          <div class="footer__col"><span class="footer__col-title">Sosyal</span><div class="footer__col-links"><a href="#" target="_blank" rel="noopener">LinkedIn</a><a href="#" target="_blank" rel="noopener">Instagram</a><a href="#" target="_blank" rel="noopener">Twitter / X</a></div></div>
         </div>
       </div>
-      <div class="footer__bottom">
-        <span class="footer__copy">© 2025 Aura AI. Tüm hakları saklıdır.</span>
-        <span class="footer__made">Türkiye'de <span>♥</span> ile yapıldı.</span>
-      </div>
+      <div class="footer__bottom"><span class="footer__copy">© 2025 Aura AI. Tüm hakları saklıdır.</span><span class="footer__made">İstanbul'da <span>♥</span> ile yapıldı.</span></div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
   <script>
-    // Legal tab switcher
-    const navBtns = document.querySelectorAll('.legal__nav-btn');
-    const panels  = document.querySelectorAll('.legal__panel');
+    const links = document.querySelectorAll('.legal__sidebar-link');
+    const panels = document.querySelectorAll('.legal__panel');
 
-    navBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.dataset.target;
-        navBtns.forEach(b => b.classList.remove('active'));
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        const target = link.dataset.target;
+        links.forEach(l => l.classList.remove('active'));
         panels.forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
+        link.classList.add('active');
         document.getElementById(target)?.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
+
+    // Open correct panel from URL hash
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      const targetLink = document.querySelector(`[data-target="${hash}"]`);
+      if (targetLink) targetLink.click();
+    }
   </script>
 </body>
 </html>
