@@ -3,55 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aura AI — İşletmenizin tekrarlayan süreçlerini yapay zeka ile otomatize edin. Cold email, müşteri hizmetleri ve satış otomasyonu." />
+  <meta name="description" content="Aura AI — Yapay zeka otomasyon ajansı. Cold email, müşteri hizmetleri AI ve satış otomasyonu ile işletmenizi büyütün." />
   <title>Aura AI — Geleceği Otomatize Et</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── WHY US ── */
+    .why { border-top: 1px solid var(--border); }
+    .why__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: start;
+    }
+    .why__left { position: sticky; top: 120px; }
+    .why__items { display: flex; flex-direction: column; }
+    .why__item {
+      padding: 36px 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 24px;
+      align-items: start;
+      transition: background 0.3s;
+    }
+    .why__item:first-child { border-top: 1px solid var(--border); }
+    .why__item-num {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      padding-top: 4px;
+    }
+    .why__item h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .why__item p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { border-top: 1px solid var(--border); }
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border);
+      margin-top: 60px;
+    }
+    .tcard {
+      padding: 48px 40px;
+      border-right: 1px solid var(--border);
+      position: relative;
+    }
+    .tcard:last-child { border-right: none; }
+    .tcard__stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 24px;
+    }
+    .tcard__star {
+      width: 10px;
+      height: 10px;
+      background: var(--accent);
+      clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+    }
+    .tcard__text {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.85;
+      margin-bottom: 36px;
+      font-style: italic;
+    }
+    .tcard__author { display: flex; align-items: center; gap: 14px; }
+    .tcard__avatar {
+      width: 40px; height: 40px;
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700; font-size: 0.8rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .tcard__name {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .tcard__role { font-size: 0.72rem; color: var(--text-muted); }
+
+    /* ── TRUSTED BY ── */
+    .trusted {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 0;
+    }
+    .trusted__inner {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+    }
+    .trusted__label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .trusted__logos {
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .trusted__logo {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      transition: color 0.3s;
+    }
+    .trusted__logo:hover { color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 1024px) {
+      .why__grid { grid-template-columns: 1fr; gap: 48px; }
+      .why__left { position: static; }
+      .testimonials__grid { grid-template-columns: 1fr; }
+      .tcard { border-right: none; border-bottom: 1px solid var(--border); }
+      .tcard:last-child { border-bottom: none; }
+      .trusted__inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+    }
+    @media (max-width: 768px) {
+      .why__item { grid-template-columns: 32px 1fr; gap: 16px; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Preloader -->
   <div class="preloader">
     <span class="preloader__logo">AURA AI</span>
     <div class="preloader__bar"></div>
   </div>
 
-  <!-- Noise -->
   <div class="noise"></div>
-
-  <!-- Page Transition -->
-  <div class="page-transition" style="position:fixed;inset:0;background:#000;z-index:99996;pointer-events:none;transition:opacity 0.4s;opacity:0;" class="hidden"></div>
-
-  <!-- Custom Cursor -->
   <div class="cursor-dot"></div>
   <div class="cursor-ring"></div>
 
-  <!-- ──────────────── NAV ──────────────── -->
-  <nav class="nav" aria-label="Ana navigasyon">
+  <nav class="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">AURA AI</a>
-
       <div class="nav__links">
         <a href="hizmetler.html">Hizmetler</a>
         <a href="vaka-calismalari.html">Vaka Çalışmaları</a>
         <a href="iletisim.html">İletişim</a>
       </div>
-
       <a href="iletisim.html" class="nav__cta"><span>Başlayalım →</span></a>
-
-      <button class="nav__burger" aria-label="Menüyü aç/kapat" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="nav__burger" aria-label="Menüyü aç/kapat">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobil menü">
+  <div class="mobile-menu">
     <div class="mobile-menu__links">
       <a href="hizmetler.html">Hizmetler</a>
       <a href="vaka-calismalari.html">Vaka Çalışmaları</a>
@@ -62,65 +189,78 @@
 
   <main>
 
-    <!-- ──────────────── HERO ──────────────── -->
-    <section class="hero" aria-label="Ana banner">
-      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
-      <div class="hero__gradient" aria-hidden="true"></div>
-
+    <!-- HERO -->
+    <section class="hero">
+      <canvas class="hero__canvas" id="heroCanvas"></canvas>
+      <div class="hero__gradient"></div>
       <div class="hero__content">
         <div class="hero__label reveal">
-          AI Otomasyon Ajansı
+          Yapay Zeka Otomasyon Ajansı — İstanbul
         </div>
-
         <h1 class="hero__title">
           <span class="hero__line reveal stagger-1">GELECEĞİ</span>
           <span class="hero__line hero__line--outline reveal stagger-2">OTOMATİZE</span>
           <span class="hero__line reveal stagger-3">ET.</span>
         </h1>
-
         <div class="hero__meta">
           <p class="hero__desc reveal stagger-4">
-            İşletmenizin tekrarlayan süreçlerini akıllı otomasyon sistemleriyle dönüştürüyoruz. Siz büyümeye odaklanın, teknoloji sizin için çalışsın.
+            Haftalarca manuel iş yükünü saatlere indirin. Satıştan müşteri hizmetlerine, e-postadan CRM'e — tüm tekrarlayan süreçlerinizi yapay zeka ile otomatize ediyoruz. Siz işinizi büyütün, teknoloji sizin için çalışsın.
           </p>
           <div class="hero__actions reveal">
             <a href="iletisim.html" class="btn btn--primary">Ücretsiz Danışmanlık Al</a>
-            <a href="hizmetler.html" class="btn btn--ghost">Hizmetleri İncele</a>
+            <a href="vaka-calismalari.html" class="btn btn--ghost">Sonuçları Gör</a>
           </div>
         </div>
       </div>
-
-      <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll">
         <span>Kaydır</span>
         <div class="hero__scroll-line"></div>
       </div>
     </section>
 
-    <!-- ──────────────── MARQUEE ──────────────── -->
-    <div class="marquee" aria-hidden="true">
+    <!-- MARQUEE -->
+    <div class="marquee">
       <div class="marquee__track">
-        <span>AI OTOMASYON</span><span class="marquee__sep">·</span>
-        <span>COLD EMAIL</span><span class="marquee__sep">·</span>
-        <span>MÜŞTERİ HİZMETLERİ</span><span class="marquee__sep">·</span>
-        <span>SATIŞ OTOMASYONU</span><span class="marquee__sep">·</span>
+        <span>COLD EMAIL OTOMASYonu</span><span class="marquee__sep">·</span>
+        <span>MÜŞTERİ HİZMETLERİ AI</span><span class="marquee__sep">·</span>
+        <span>SATIŞ OTOMASYonu</span><span class="marquee__sep">·</span>
         <span>CRM ENTEGRASYONU</span><span class="marquee__sep">·</span>
         <span>İŞ AKIŞI TASARIMI</span><span class="marquee__sep">·</span>
-        <span>N8N & MAKE</span><span class="marquee__sep">·</span>
-        <!-- Duplicate for seamless loop -->
-        <span>AI OTOMASYON</span><span class="marquee__sep">·</span>
-        <span>COLD EMAIL</span><span class="marquee__sep">·</span>
-        <span>MÜŞTERİ HİZMETLERİ</span><span class="marquee__sep">·</span>
-        <span>SATIŞ OTOMASYONU</span><span class="marquee__sep">·</span>
+        <span>n8n & MAKE & ZAPIER</span><span class="marquee__sep">·</span>
+        <span>LEAD SKORLAMA</span><span class="marquee__sep">·</span>
+        <span>AI CHATBOT</span><span class="marquee__sep">·</span>
+        <span>COLD EMAIL OTOMASYonu</span><span class="marquee__sep">·</span>
+        <span>MÜŞTERİ HİZMETLERİ AI</span><span class="marquee__sep">·</span>
+        <span>SATIŞ OTOMASYonu</span><span class="marquee__sep">·</span>
         <span>CRM ENTEGRASYONU</span><span class="marquee__sep">·</span>
         <span>İŞ AKIŞI TASARIMI</span><span class="marquee__sep">·</span>
-        <span>N8N & MAKE</span><span class="marquee__sep">·</span>
+        <span>n8n & MAKE & ZAPIER</span><span class="marquee__sep">·</span>
+        <span>LEAD SKORLAMA</span><span class="marquee__sep">·</span>
+        <span>AI CHATBOT</span><span class="marquee__sep">·</span>
       </div>
     </div>
 
-    <!-- ──────────────── ABOUT ──────────────── -->
-    <section class="about section" aria-labelledby="about-title">
+    <!-- TRUSTED BY -->
+    <div class="trusted">
+      <div class="container">
+        <div class="trusted__inner">
+          <span class="trusted__label">Güvenen İşletmeler</span>
+          <div class="trusted__logos">
+            <span class="trusted__logo">TechStartup</span>
+            <span class="trusted__logo">GrowthCo</span>
+            <span class="trusted__logo">SalesPro</span>
+            <span class="trusted__logo">DataBridge</span>
+            <span class="trusted__logo">FlowLabs</span>
+            <span class="trusted__logo">NexGen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about section">
       <div class="container">
         <div class="about__grid">
-
           <div class="about__visual reveal">
             <div class="about__visual-inner">
               <div class="about__visual-grid"></div>
@@ -130,219 +270,244 @@
               <div class="about__visual-center"></div>
             </div>
           </div>
-
           <div class="about__right">
-            <span class="section-label reveal">Hakkımızda</span>
-            <h2 class="section-title reveal" id="about-title">
-              Yapay Zeka,<br><em>Sizin İçin</em><br>Çalışıyor.
+            <span class="section-label reveal">Biz Kimiz</span>
+            <h2 class="section-title reveal">
+              Manuel iş yükü<br>işletmenizi<br><em>yavaşlatıyor.</em>
             </h2>
             <p class="about__text reveal">
-              Aura AI olarak, işletmelerin tekrarlayan ve zaman alan süreçlerini akıllı otomasyon sistemleriyle dönüştürüyoruz. Her çözümümüz işletmenize özel tasarlanır; teknoloji sizin için çalışır, siz teknoloji için değil.
+              Türkiye'deki pek çok işletme, gelirini artırabilecek işlere değil — e-posta yazmaya, müşteri sormalarını cevaplamaya, CRM güncellemeye vakit harcıyor. Aura AI bu döngüyü kırıyor.
             </p>
-
+            <p class="about__text reveal" style="margin-top:-24px">
+              n8n, Make ve OpenAI gibi en güncel araçları kullanarak işletmenizin tekrarlayan her sürecini otomatize ediyoruz. Sonuç: daha az maliyet, daha fazla çıktı, sıfır insan hatası.
+            </p>
             <div class="about__stats reveal">
               <div class="stat">
-                <div class="stat__number">
-                  <span class="stat__num" data-target="50">0</span><span class="stat__suffix">+</span>
-                </div>
+                <div class="stat__number"><span class="stat__num" data-target="50">0</span><span class="stat__suffix">+</span></div>
                 <span class="stat__label">Aktif İşletme</span>
               </div>
               <div class="stat">
-                <div class="stat__number">
-                  <span class="stat__num" data-target="300">0</span><span class="stat__suffix">+</span>
-                </div>
-                <span class="stat__label">Otomasyon Kurulumu</span>
+                <div class="stat__number"><span class="stat__num" data-target="300">0</span><span class="stat__suffix">+</span></div>
+                <span class="stat__label">Otomasyon Akışı</span>
               </div>
               <div class="stat">
-                <div class="stat__number">
-                  <span class="stat__num" data-target="40">0</span><span class="stat__suffix">%</span>
-                </div>
+                <div class="stat__number"><span class="stat__num" data-target="40">0</span><span class="stat__suffix">%</span></div>
                 <span class="stat__label">Ortalama Maliyet Azalması</span>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ──────────────── SERVICES ──────────────── -->
-    <section class="services section" aria-labelledby="services-title">
+    <!-- SERVICES -->
+    <section class="services section">
       <div class="container">
-
         <div class="services__header">
           <div>
             <span class="section-label reveal">Hizmetler</span>
-            <h2 class="section-title reveal" id="services-title">Ne Yapıyoruz?</h2>
+            <h2 class="section-title reveal">Ne Yapıyoruz?</h2>
           </div>
           <a href="hizmetler.html" class="services__view-all reveal">
-            Tüm Hizmetler
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/>
-            </svg>
+            Detaylı İncele
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/></svg>
           </a>
         </div>
-
         <div class="services__grid">
-
-          <!-- Card 1 -->
-          <a href="hizmetler.html" class="service-card reveal">
+          <a href="hizmetler.html#cold-email" class="service-card reveal">
             <div class="service-card__top">
               <span class="service-card__num">01</span>
               <div class="service-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M4 4H20V16H4V4Z" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M8 20H16" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M4 8L12 13L20 8" stroke="currentColor" stroke-width="1.2"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 4H20V16H4V4Z" stroke="currentColor" stroke-width="1.2"/><path d="M4 8L12 13L20 8" stroke="currentColor" stroke-width="1.2"/></svg>
               </div>
             </div>
             <h3 class="service-card__title">Cold Email Otomasyonu</h3>
-            <p class="service-card__desc">
-              Hedefli e-posta kampanyaları ile potansiyel müşterilere kişiselleştirilmiş mesajlar gönderin. AI ile yazılmış metinler, otomatik takip dizileri, A/B test optimizasyonu.
-            </p>
-            <span class="service-card__link">
-              Daha Fazla
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/>
-              </svg>
-            </span>
+            <p class="service-card__desc">Günde yüzlerce kişiselleştirilmiş e-posta, sıfır manuel iş. AI ile yazılan metinler, otomatik takip dizileri ve gerçek zamanlı analitik ile potansiyel müşterileri huniye doldurun. Yanıt oranınızı ortalama 3× artırıyoruz.</p>
+            <span class="service-card__link">Detayları Gör <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/></svg></span>
           </a>
-
-          <!-- Card 2 -->
-          <a href="hizmetler.html" class="service-card reveal stagger-1">
+          <a href="hizmetler.html#musteri" class="service-card reveal stagger-1">
             <div class="service-card__top">
               <span class="service-card__num">02</span>
               <div class="service-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M8 10H16M8 14H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" stroke="currentColor" stroke-width="1.2"/><path d="M8 10H16M8 14H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg>
               </div>
             </div>
             <h3 class="service-card__title">Müşteri Hizmetleri AI</h3>
-            <p class="service-card__desc">
-              7/24 kesintisiz çalışan akıllı chatbotlar ile müşteri sorularını anında yanıtlayın. İnsan müdahalesini minimize ederken müşteri memnuniyetini maksimize edin.
-            </p>
-            <span class="service-card__link">
-              Daha Fazla
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/>
-              </svg>
-            </span>
+            <p class="service-card__desc">7/24 kesintisiz çalışan akıllı asistanlar. Müşteri sorularının %85'ini insan müdahalesi olmadan çözüyoruz. Web sitesi, WhatsApp ve sosyal medya entegrasyonu. Ekibiniz yalnızca gerçekten önemli konulara odaklanır.</p>
+            <span class="service-card__link">Detayları Gör <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/></svg></span>
           </a>
-
-          <!-- Card 3 -->
-          <a href="hizmetler.html" class="service-card reveal stagger-2">
+          <a href="hizmetler.html#satis" class="service-card reveal stagger-2">
             <div class="service-card__top">
               <span class="service-card__num">03</span>
               <div class="service-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M3 3H21V15H3V3Z" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M7 21H17M12 15V21" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M8 9L11 12L16 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none"><path d="M3 3V21H21" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/><path d="M7 16L12 10L16 13L21 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg>
               </div>
             </div>
             <h3 class="service-card__title">Satış Otomasyonu</h3>
-            <p class="service-card__desc">
-              CRM entegrasyonu, lead skorlama ve otomatik takip sistemleri ile satış sürecinizi hızlandırın. Doğru müşteriyle doğru zamanda iletişim kurun.
-            </p>
-            <span class="service-card__link">
-              Daha Fazla
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/>
-              </svg>
-            </span>
+            <p class="service-card__desc">Lead'den kapanışa kadar her adım otomatik. Akıllı lead skorlama, otomatik CRM güncellemeleri, kişiselleştirilmiş takip dizileri. Satış döngünüzü kısaltıyor, dönüşüm oranınızı artırıyoruz. HubSpot, Salesforce ve Pipedrive ile tam entegrasyon.</p>
+            <span class="service-card__link">Detayları Gör <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/></svg></span>
           </a>
-
-          <!-- Card 4 -->
-          <a href="hizmetler.html" class="service-card reveal stagger-3">
+          <a href="hizmetler.html#is-akisi" class="service-card reveal stagger-3">
             <div class="service-card__top">
               <span class="service-card__num">04</span>
               <div class="service-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.2"/>
-                  <circle cx="19" cy="6" r="2" stroke="currentColor" stroke-width="1.2"/>
-                  <circle cx="19" cy="18" r="2" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M7 12H12M17 7L13 11M17 17L13 13" stroke="currentColor" stroke-width="1.2"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.2"/><circle cx="19" cy="6" r="2" stroke="currentColor" stroke-width="1.2"/><circle cx="19" cy="18" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M7 12H12M17 7L13 11M17 17L13 13" stroke="currentColor" stroke-width="1.2"/></svg>
               </div>
             </div>
             <h3 class="service-card__title">İş Akışı Tasarımı</h3>
-            <p class="service-card__desc">
-              İşletmenize özel otomasyon akışları tasarlayın. n8n, Make ve Zapier entegrasyonları ile tüm araçlarınızı birbirine bağlayın, verimliliği katlayın.
-            </p>
-            <span class="service-card__link">
-              Daha Fazla
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/>
-              </svg>
-            </span>
+            <p class="service-card__desc">Tüm araçlarınızı birbirine bağlayan akıllı otomasyon mimarisi. n8n, Make ve Zapier ile sınırsız entegrasyon. Faturalamadan raporlamaya, onay süreçlerinden veri senkronizasyonuna — bir tıkla çalışan sistemler kuruyoruz.</p>
+            <span class="service-card__link">Detayları Gör <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1" stroke-linecap="square"/></svg></span>
           </a>
-
         </div>
       </div>
     </section>
 
-    <!-- ──────────────── PROCESS ──────────────── -->
-    <section class="process section" aria-labelledby="process-title">
+    <!-- WHY US -->
+    <section class="why section">
       <div class="container">
+        <div class="why__grid">
+          <div class="why__left">
+            <span class="section-label reveal">Neden Aura AI</span>
+            <h2 class="section-title reveal">Diğerlerinden<br>Farkımız.</h2>
+            <p class="reveal" style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;max-width:380px">
+              Hazır şablon satmıyoruz. Her sistem işletmenize özel sıfırdan tasarlanır, test edilir ve teslim edilir.
+            </p>
+          </div>
+          <div class="why__items">
+            <div class="why__item reveal">
+              <span class="why__item-num">01</span>
+              <div>
+                <h3>Sonuç Odaklı Yaklaşım</h3>
+                <p>Kurduğumuz sistemlerin etkinliğini sayılarla ölçüyoruz. Yanıt oranı, dönüşüm, tasarruf edilen saat — her metriği izliyor ve optimize ediyoruz. Soyut vaatler değil, somut sonuçlar sunuyoruz.</p>
+              </div>
+            </div>
+            <div class="why__item reveal">
+              <span class="why__item-num">02</span>
+              <div>
+                <h3>İşletmenize Özel Mimari</h3>
+                <p>Hangi araçları kullandığınızı, hangi süreçlerin sizi yavaşlattığını ve hedeflerinizi dinleyerek başlıyoruz. Sonra yalnızca size özel bir otomasyon haritası çiziyoruz. Herkese aynı şablonu satmıyoruz.</p>
+              </div>
+            </div>
+            <div class="why__item reveal">
+              <span class="why__item-num">03</span>
+              <div>
+                <h3>Hızlı Kurulum, Anında Etki</h3>
+                <p>Çoğu sistemimizi 1–2 hafta içinde devreye alıyoruz. Uzun aylar süren implementasyon projelerine gerek yok. İlk haftadan itibaren tasarruf ve verimlilik artışını hissetmeye başlıyorsunuz.</p>
+              </div>
+            </div>
+            <div class="why__item reveal">
+              <span class="why__item-num">04</span>
+              <div>
+                <h3>Kesintisiz Destek ve Optimizasyon</h3>
+                <p>Sistemi kurup gitmiyoruz. Aylık performans raporları, proaktif optimizasyon ve 7/24 teknik destek ile yanınızdayız. Sistemleriniz her zaman en verimli şekilde çalışmaya devam eder.</p>
+              </div>
+            </div>
+            <div class="why__item reveal">
+              <span class="why__item-num">05</span>
+              <div>
+                <h3>Mevcut Altyapınızla Tam Uyum</h3>
+                <p>Kullandığınız CRM, e-posta platformu ya da proje yönetim aracından bağımsız çözüm üretiyoruz. Mevcut yazılımları değiştirmenize gerek yok; var olanın üzerine akıllı katmanlar ekliyoruz.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- PROCESS -->
+    <section class="process section">
+      <div class="container">
         <div class="process__header">
           <div>
             <span class="section-label reveal">Süreç</span>
-            <h2 class="section-title reveal" id="process-title">
-              Nasıl<br>Çalışıyoruz?
-            </h2>
+            <h2 class="section-title reveal">Başlangıçtan<br>Sonuca.</h2>
           </div>
           <p class="process__header-desc reveal">
-            Her işletme farklıdır. Bu yüzden önce sizi dinliyor, sonra size özel bir otomasyon yol haritası çiziyoruz.
+            Ücretsiz keşif görüşmesinden başlayarak sisteminiz canlıya alınana kadar her adımda şeffaf iletişim ve net zaman çizelgesi sunuyoruz.
           </p>
         </div>
-
         <div class="process__steps">
           <div class="process__step reveal">
             <div class="process__num">01</div>
-            <h3>Analiz</h3>
-            <p>İşletmenizin mevcut süreçlerini, zaman kayıplarını ve otomasyon fırsatlarını birlikte belirliyoruz.</p>
+            <h3>Keşif Görüşmesi</h3>
+            <p>İşletmenizin mevcut süreçlerini, araçlarını ve hedeflerini birlikte inceliyoruz. Nerede zaman ve para kaybettiğinizi tespit ediyoruz. Bu görüşme tamamen ücretsiz ve bağlayıcı değil.</p>
           </div>
           <div class="process__step reveal stagger-1">
             <div class="process__num">02</div>
-            <h3>Tasarım</h3>
-            <p>Size özel otomasyon mimarisi tasarlıyor, kullanılacak araçları ve entegrasyon planını netleştiriyoruz.</p>
+            <h3>Strateji ve Mimari</h3>
+            <p>Keşif sonrası size özel bir otomasyon haritası sunuyoruz. Kullanılacak araçlar, entegrasyon akışları, tahmini sonuçlar ve maliyet — hepsini netleştiriyoruz. Onaydan sonra geliştirmeye başlıyoruz.</p>
           </div>
           <div class="process__step reveal stagger-2">
             <div class="process__num">03</div>
-            <h3>Kurulum</h3>
-            <p>Sistemleri kuruyoruz, kapsamlı testler yapıyoruz ve işletmenizin mevcut yapısıyla tam entegrasyon sağlıyoruz.</p>
+            <h3>Geliştirme ve Test</h3>
+            <p>Sistemleri adım adım kuruyoruz, her aşamada sizinle test ediyoruz. Gerçek veri ile gerçek senaryolar üzerinde kapsamlı kalite kontrolleri yapıyoruz. Canlıya almadan önce her şey kusursuz çalışıyor.</p>
           </div>
           <div class="process__step reveal stagger-3">
             <div class="process__num">04</div>
-            <h3>Destek</h3>
-            <p>Sürekli izleme ve optimizasyon ile sistemlerinizin her zaman en verimli şekilde çalışmasını sağlıyoruz.</p>
+            <h3>Canlı Destek</h3>
+            <p>Sistem devreye alındıktan sonra aylık optimizasyon raporları, performans izleme ve teknik destek ile yanınızdayız. Sistemleriniz büyüdükçe genişletiyor, değişen ihtiyaçlara göre güncelliyoruz.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ──────────────── CTA ──────────────── -->
-    <section class="cta-section section" aria-labelledby="cta-title">
-      <div class="cta-section__bg" aria-hidden="true"></div>
+    <!-- TESTIMONIALS -->
+    <section class="testimonials section">
+      <div class="container">
+        <span class="section-label reveal">Müşteri Yorumları</span>
+        <h2 class="section-title reveal">Onlar Ne Söylüyor?</h2>
+        <div class="testimonials__grid">
+          <div class="tcard reveal">
+            <div class="tcard__stars"><div class="tcard__star"></div><div class="tcard__star"></div><div class="tcard__star"></div><div class="tcard__star"></div><div class="tcard__star"></div></div>
+            <p class="tcard__text">"Cold email sistemini devreye aldıktan sonra aylık nitelikli lead sayımız 5'ten 40'a çıktı. Üstelik satış ekibimiz artık hiç e-posta yazmıyor. Aura AI'ın kurduğu sistem, beklentilerimizin çok ötesinde sonuç verdi."</p>
+            <div class="tcard__author">
+              <div class="tcard__avatar">AK</div>
+              <div>
+                <p class="tcard__name">Ahmet Kaya</p>
+                <p class="tcard__role">CEO, B2B SaaS Şirketi</p>
+              </div>
+            </div>
+          </div>
+          <div class="tcard reveal stagger-1">
+            <div class="tcard__stars"><div class="tcard__star"></div><div class="tcard__star"></div><div class="tcard__star"></div><div class="tcard__star"></div><div class="tcard__star"></div></div>
+            <p class="tcard__text">"Müşteri hizmetleri botumuz artık soruların %85'ini kendi başına çözüyor. Ekibimiz yalnızca gerçekten karmaşık sorunlara bakıyor. Hem müşteri memnuniyetimiz arttı hem de operasyon maliyetimiz önemli ölçüde düştü."</p>
+            <div class="tcard__author">
+              <div class="tcard__avatar">SY</div>
+              <div>
+                <p class="tcard__name">Selin Yıldız</p>
+                <p class="tcard__role">Operasyon Direktörü, E-Ticaret</p>
+              </div>
+            </div>
+          </div>
+          <div class="tcard reveal stagger-2">
+            <div class="tcard__stars"><div class="tcard__star"></div><div class="tcard__star"></div><div class="tcard__star"></div><div class="tcard__star"></div><div class="tcard__star"></div></div>
+            <p class="tcard__text">"CRM otomasyonunu devreye aldıktan sonra satış döngümüz 45 günden 15 güne indi. Artık hiçbir lead kaybolmuyor, takipler zamanında yapılıyor. Aura AI kesinlikle yatırımın çok üzerinde değer sağladı."</p>
+            <div class="tcard__author">
+              <div class="tcard__avatar">MÇ</div>
+              <div>
+                <p class="tcard__name">Mert Çelik</p>
+                <p class="tcard__role">Satış Müdürü, Fintech Startup</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section">
+      <div class="cta-section__bg"></div>
       <div class="container">
         <div class="cta-section__inner">
-          <span class="section-label reveal">Başlayalım</span>
-          <h2 class="cta-section__title reveal" id="cta-title">
+          <span class="section-label reveal">Hazır mısınız?</span>
+          <h2 class="cta-section__title reveal">
             İşletmenizi<br><span>Dönüştürelim.</span>
           </h2>
           <p class="cta-section__sub reveal">
-            Ücretsiz danışmanlık görüşmesi için hemen başvurun.<br>Size özel bir otomasyon stratejisi hazırlayalım.
+            Ücretsiz keşif görüşmesinde işletmenizin otomasyon potansiyelini birlikte değerlendiriyoruz. Taahhüt yok, baskı yok — sadece dürüst bir analiz.
           </p>
           <div class="reveal">
-            <a href="iletisim.html" class="btn btn--primary btn--lg">
-              Ücretsiz Danışmanlık Al →
-            </a>
+            <a href="iletisim.html" class="btn btn--primary btn--lg">Ücretsiz Görüşme Ayarla →</a>
           </div>
         </div>
       </div>
@@ -350,16 +515,13 @@
 
   </main>
 
-  <!-- ──────────────── FOOTER ──────────────── -->
   <footer class="footer">
     <div class="container">
-
       <div class="footer__top">
         <div class="footer__brand">
           <span class="footer__logo">AURA AI</span>
-          <p class="footer__tagline">Geleceği bugünden otomatize et. İşletmenizi yapay zeka ile büyüt.</p>
+          <p class="footer__tagline">İşletmenizin geleceğini bugünden inşa ediyoruz. Yapay zeka ile büyüyün.</p>
         </div>
-
         <div class="footer__links">
           <div class="footer__col">
             <span class="footer__col-title">Sayfalar</span>
@@ -386,12 +548,10 @@
           </div>
         </div>
       </div>
-
       <div class="footer__bottom">
         <span class="footer__copy">© 2025 Aura AI. Tüm hakları saklıdır.</span>
-        <span class="footer__made">Türkiye'de <span>♥</span> ile yapıldı.</span>
+        <span class="footer__made">İstanbul'da <span>♥</span> ile yapıldı.</span>
       </div>
-
     </div>
   </footer>
 
