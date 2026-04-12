@@ -66,11 +66,19 @@ button { cursor: none; }
   align-items: center;
   justify-content: center;
   transition: opacity 0.6s var(--ease), visibility 0.6s;
+  /* CSS fallback: auto-hide after 3s even if JS fails */
+  animation: preloader-auto-hide 0.6s ease 3s forwards;
+}
+
+@keyframes preloader-auto-hide {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
 }
 
 .preloader.hidden {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+  animation: none;
 }
 
 .preloader__logo {
