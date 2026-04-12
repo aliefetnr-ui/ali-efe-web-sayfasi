@@ -3,234 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aura AI Hizmetler — Cold email otomasyonu, müşteri hizmetleri AI, satış otomasyonu ve iş akışı tasarımı." />
+  <meta name="description" content="Aura AI Hizmetler — Cold email, müşteri hizmetleri AI, satış otomasyonu ve iş akışı tasarımı. Detaylı hizmet açıklamaları ve özellikler." />
   <title>Hizmetler — Aura AI</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* ── PAGE HERO ── */
-    .page-hero {
-      padding: 200px 0 120px;
-      border-bottom: 1px solid var(--border);
-    }
-    .page-hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(4rem, 9vw, 8.5rem);
-      font-weight: 800;
-      line-height: 0.92;
-      letter-spacing: -0.04em;
-      max-width: 900px;
-    }
-    .page-hero__title span {
-      color: transparent;
-      -webkit-text-stroke: 1.5px rgba(var(--accent-rgb), 0.7);
-    }
-    .page-hero__sub {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      max-width: 480px;
-      line-height: 1.8;
-      margin-top: 40px;
-    }
+    .page-hero { padding: 200px 0 120px; border-bottom: 1px solid var(--border); }
+    .page-hero__title { font-family: var(--font-display); font-size: clamp(4rem, 9vw, 8.5rem); font-weight: 800; line-height: 0.92; letter-spacing: -0.04em; max-width: 900px; }
+    .page-hero__title span { color: transparent; -webkit-text-stroke: 1.5px rgba(var(--accent-rgb), 0.7); }
+    .page-hero__sub { font-size: 0.95rem; color: var(--text-muted); max-width: 520px; line-height: 1.8; margin-top: 40px; }
 
     /* ── SERVICE DETAIL ── */
-    .service-detail {
-      padding: 100px 0;
-      border-bottom: 1px solid var(--border);
-    }
+    .service-detail { padding: 120px 0; border-bottom: 1px solid var(--border); }
     .service-detail:last-of-type { border-bottom: none; }
+    .service-detail__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; }
+    .service-detail:nth-child(even) .service-detail__grid { direction: rtl; }
+    .service-detail:nth-child(even) .service-detail__grid > * { direction: ltr; }
+    .service-detail__num { font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; display: block; margin-bottom: 20px; }
+    .service-detail__title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 20px; }
+    .service-detail__desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 36px; }
+    .service-detail__tag { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(var(--accent-rgb),0.3); padding: 5px 12px; margin-bottom: 28px; }
+    .service-detail__features { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 40px; border-top: 1px solid var(--border); }
+    .service-detail__features li { display: flex; align-items: flex-start; gap: 16px; font-size: 0.875rem; color: var(--text-muted); padding: 14px 0; border-bottom: 1px solid var(--border); line-height: 1.6; }
+    .service-detail__features li::before { content: '✓'; color: var(--accent); font-size: 0.75rem; flex-shrink: 0; margin-top: 1px; font-weight: 700; }
+    .service-detail__result { background: var(--bg-3); border: 1px solid var(--border); padding: 28px 32px; margin-top: 8px; }
+    .service-detail__result-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
+    .service-detail__result-nums { display: flex; gap: 40px; }
+    .service-detail__result-num { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--accent); letter-spacing: -0.03em; line-height: 1; display: block; margin-bottom: 4px; }
+    .service-detail__result-desc { font-size: 0.72rem; color: var(--text-muted); }
 
-    .service-detail__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 100px;
-      align-items: center;
-    }
+    /* ── VISUAL ── */
+    .sdv { position: relative; border: 1px solid var(--border); aspect-ratio: 1; overflow: hidden; }
+    .sdv__bg { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 48px 48px; }
+    .sdv__glow { position: absolute; width: 60%; height: 60%; border-radius: 50%; background: radial-gradient(circle, rgba(var(--accent-rgb), 0.08) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    .sdv__center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 1; text-align: center; }
+    .sdv__icon { width: 72px; height: 72px; border: 1px solid rgba(var(--accent-rgb),0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .sdv__icon svg { width: 32px; height: 32px; stroke: var(--accent); }
+    .sdv__label { font-family: var(--font-display); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); }
+    .sdv__rings { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    .sdv__ring { position: absolute; border: 1px solid rgba(var(--accent-rgb), 0.08); border-radius: 50%; }
+    .sdv__ring:nth-child(1) { width: 30%; height: 30%; }
+    .sdv__ring:nth-child(2) { width: 55%; height: 55%; }
+    .sdv__ring:nth-child(3) { width: 80%; height: 80%; }
 
-    .service-detail:nth-child(even) .service-detail__grid {
-      direction: rtl;
-    }
-    .service-detail:nth-child(even) .service-detail__grid > * {
-      direction: ltr;
-    }
+    /* ── FAQ ── */
+    .faq { border-top: 1px solid var(--border); }
+    .faq__list { margin-top: 60px; max-width: 800px; }
+    .faq__item { border-bottom: 1px solid var(--border); }
+    .faq__item:first-child { border-top: 1px solid var(--border); }
+    .faq__q { width: 100%; background: none; border: none; display: flex; justify-content: space-between; align-items: center; padding: 24px 0; cursor: pointer; text-align: left; gap: 24px; }
+    .faq__q-text { font-family: var(--font-display); font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; color: var(--text); }
+    .faq__q-icon { width: 24px; height: 24px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.3s, border-color 0.3s; }
+    .faq__q-icon::before { content: '+'; font-size: 1rem; color: var(--text-muted); transition: transform 0.3s, color 0.3s; display: block; line-height: 1; }
+    .faq__item.open .faq__q-icon { background: rgba(var(--accent-rgb),0.1); border-color: rgba(var(--accent-rgb),0.4); }
+    .faq__item.open .faq__q-icon::before { transform: rotate(45deg); color: var(--accent); }
+    .faq__a { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1); }
+    .faq__a-inner { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; padding-bottom: 24px; }
 
-    .service-detail__num {
-      font-family: var(--font-display);
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    .service-detail__title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.05;
-      margin-bottom: 24px;
-    }
-
-    .service-detail__desc {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.85;
-      margin-bottom: 40px;
-    }
-
-    .service-detail__features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .service-detail__features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
-
-    .service-detail__features li::before {
-      content: '';
-      display: block;
-      min-width: 16px;
-      height: 1px;
-      background: var(--accent);
-      margin-top: 10px;
-    }
-
-    .service-detail__visual {
-      position: relative;
-      border: 1px solid var(--border);
-      aspect-ratio: 4/3;
-      overflow: hidden;
-    }
-
-    .service-detail__visual-inner {
-      width: 100%;
-      height: 100%;
-      background: var(--bg-3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .service-detail__visual-icon {
-      width: 64px;
-      height: 64px;
-      border: 1px solid rgba(var(--accent-rgb), 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .service-detail__visual-icon svg {
-      width: 28px;
-      height: 28px;
-      stroke: var(--accent);
-    }
-
-    .service-detail__visual-bg {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-
-    .service-detail__visual-glow {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(var(--accent-rgb), 0.1) 0%, transparent 70%);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    /* ── TOOLS SECTION ── */
-    .tools {
-      border-top: 1px solid var(--border);
-    }
-
-    .tools__title {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 60px;
-    }
-
-    .tools__grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      border: 1px solid var(--border);
-    }
-
-    .tool-item {
-      padding: 40px 24px;
-      border-right: 1px solid var(--border);
-      text-align: center;
-      transition: background 0.3s;
-    }
-
+    /* ── TOOLS ── */
+    .tools { border-top: 1px solid var(--border); }
+    .tools__grid { display: grid; grid-template-columns: repeat(6, 1fr); border: 1px solid var(--border); margin-top: 60px; }
+    .tool-item { padding: 36px 20px; border-right: 1px solid var(--border); text-align: center; transition: background 0.3s; }
     .tool-item:last-child { border-right: none; }
     .tool-item:hover { background: rgba(255,255,255,0.02); }
-
-    .tool-item__name {
-      font-family: var(--font-display);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      transition: color 0.3s;
-    }
-
+    .tool-item__name { font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em; color: var(--text-muted); transition: color 0.3s; display: block; margin-bottom: 6px; }
+    .tool-item__desc { font-size: 0.65rem; color: var(--text-dim); letter-spacing: 0.05em; }
     .tool-item:hover .tool-item__name { color: var(--text); }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       .service-detail__grid { grid-template-columns: 1fr; gap: 48px; }
       .service-detail:nth-child(even) .service-detail__grid { direction: ltr; }
+      .sdv { aspect-ratio: 16/7; max-height: 280px; }
       .tools__grid { grid-template-columns: repeat(3, 1fr); }
       .tool-item:nth-child(3) { border-right: none; }
       .tool-item:nth-child(n+4) { border-top: 1px solid var(--border); }
     }
-
     @media (max-width: 768px) {
       .page-hero { padding: 160px 0 80px; }
       .tools__grid { grid-template-columns: repeat(2, 1fr); }
-      .tool-item:nth-child(2n) { border-right: none; }
-      .tool-item:nth-child(3) { border-right: 1px solid var(--border); }
+      .service-detail__result-nums { flex-wrap: wrap; gap: 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Preloader -->
-  <div class="preloader">
-    <span class="preloader__logo">AURA AI</span>
-    <div class="preloader__bar"></div>
-  </div>
-
+  <div class="preloader"><span class="preloader__logo">AURA AI</span><div class="preloader__bar"></div></div>
   <div class="noise"></div>
   <div class="cursor-dot"></div>
   <div class="cursor-ring"></div>
 
-  <!-- NAV -->
   <nav class="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">AURA AI</a>
@@ -240,12 +103,9 @@
         <a href="iletisim.html">İletişim</a>
       </div>
       <a href="iletisim.html" class="nav__cta"><span>Başlayalım →</span></a>
-      <button class="nav__burger" aria-label="Menüyü aç/kapat">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav__burger" aria-label="Menüyü aç/kapat"><span></span><span></span><span></span></button>
     </div>
   </nav>
-
   <div class="mobile-menu">
     <div class="mobile-menu__links">
       <a href="hizmetler.html">Hizmetler</a>
@@ -257,155 +117,177 @@
 
   <main>
 
-    <!-- PAGE HERO -->
     <section class="page-hero">
       <div class="container">
         <span class="section-label reveal">Hizmetler</span>
-        <h1 class="page-hero__title reveal">
-          Otomasyon<br><span>Çözümleri.</span>
-        </h1>
-        <p class="page-hero__sub reveal">
-          İşletmenizin ihtiyacına özel yapay zeka ve otomasyon sistemleri. Daha az manuel iş, daha fazla büyüme.
-        </p>
+        <h1 class="page-hero__title reveal">Otomasyon<br><span>Çözümleri.</span></h1>
+        <p class="page-hero__sub reveal">İşletmenizin her köşesinde zaman ve para kaybettiren süreçleri tespit ediyor, yapay zeka ile otomatize ediyoruz. Daha az operasyon maliyeti, daha fazla büyüme kapasitesi.</p>
       </div>
     </section>
 
-    <!-- SERVICE 1 — Cold Email -->
-    <section class="service-detail section">
+    <!-- 01 COLD EMAIL -->
+    <section class="service-detail" id="cold-email">
       <div class="container">
         <div class="service-detail__grid">
-          <div class="service-detail__content">
+          <div>
             <span class="service-detail__num reveal">01 — Cold Email</span>
+            <span class="service-detail__tag reveal">En Çok Tercih Edilen</span>
             <h2 class="service-detail__title reveal">Cold Email<br>Otomasyonu</h2>
-            <p class="service-detail__desc reveal">
-              Doğru kişiye, doğru zamanda, doğru mesajı gönderin. AI destekli kişiselleştirme ile yanıt oranlarınızı artırın, manuel iş yükünüzü sıfıra indirin.
-            </p>
+            <p class="service-detail__desc reveal">Manuel e-posta yazmak, listeyi güncellemek, takipleri hatırlamak — bunların hepsini otomatize ediyoruz. AI ile kişiselleştirilmiş mesajlar ve akıllı takip dizileri sayesinde daha az çabayla çok daha fazla nitelikli potansiyel müşteri elde ediyorsunuz.</p>
             <ul class="service-detail__features reveal">
-              <li>Hedef kitleye özel kişiselleştirilmiş e-posta metinleri</li>
-              <li>Otomatik takip dizileri (follow-up sequences)</li>
-              <li>A/B test ve optimizasyon</li>
-              <li>Açılma, tıklama ve yanıt oranı takibi</li>
-              <li>CRM ile entegre lead yönetimi</li>
-              <li>Spam filtresinden kaçınma teknikleri</li>
+              <li>Hedef kitleye göre AI destekli, kişiselleştirilmiş e-posta metinleri</li>
+              <li>Otomatik 3–5 adımlı takip (follow-up) dizileri</li>
+              <li>A/B test ile sürekli konu satırı ve metin optimizasyonu</li>
+              <li>Açılma, tıklama ve yanıt oranı gerçek zamanlı takibi</li>
+              <li>CRM ile tam entegrasyon — yanıtlar otomatik kayıt</li>
+              <li>Spam filtresi & deliverability optimizasyonu (domain ısınma dahil)</li>
+              <li>LinkedIn + e-posta kombine outreach kampanyaları</li>
+              <li>Yanıt sınıflandırma: ilgili / ilgisiz / sonra ara — otomatik etiketleme</li>
             </ul>
-          </div>
-          <div class="service-detail__visual reveal">
-            <div class="service-detail__visual-inner">
-              <div class="service-detail__visual-bg"></div>
-              <div class="service-detail__visual-glow"></div>
-              <div class="service-detail__visual-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 4H20V16H4V4Z" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M4 8L12 13L20 8" stroke="currentColor" stroke-width="1.2"/>
-                </svg>
+            <div class="service-detail__result reveal">
+              <p class="service-detail__result-label">Ortalama Müşteri Sonuçları</p>
+              <div class="service-detail__result-nums">
+                <div><span class="service-detail__result-num">8×</span><span class="service-detail__result-desc">Lead Artışı</span></div>
+                <div><span class="service-detail__result-num">%68</span><span class="service-detail__result-desc">Yanıt Oranı</span></div>
+                <div><span class="service-detail__result-num">20 sa</span><span class="service-detail__result-desc">Haftalık Tasarruf</span></div>
               </div>
+            </div>
+          </div>
+          <div class="sdv reveal">
+            <div class="sdv__bg"></div>
+            <div class="sdv__glow"></div>
+            <div class="sdv__rings"><div class="sdv__ring"></div><div class="sdv__ring"></div><div class="sdv__ring"></div></div>
+            <div class="sdv__center">
+              <div class="sdv__icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 4H20V16H4V4Z" stroke="currentColor" stroke-width="1.2"/><path d="M4 8L12 13L20 8" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <span class="sdv__label">Cold Email</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICE 2 — Müşteri Hizmetleri -->
-    <section class="service-detail section">
+    <!-- 02 MÜŞTERİ HİZMETLERİ -->
+    <section class="service-detail" id="musteri">
       <div class="container">
         <div class="service-detail__grid">
-          <div class="service-detail__content">
+          <div>
             <span class="service-detail__num reveal">02 — Müşteri Hizmetleri</span>
             <h2 class="service-detail__title reveal">Müşteri<br>Hizmetleri AI</h2>
-            <p class="service-detail__desc reveal">
-              7/24 kesintisiz çalışan akıllı asistanlar ile müşterilerinize anında destek sağlayın. Sık sorulan soruları otomatik yanıtlayın, ekibinizi gerçek sorunlara odaklayın.
-            </p>
+            <p class="service-detail__desc reveal">Müşterileriniz soru sorduğunda cevap beklemek zorunda kalmasın. 7/24 kesintisiz çalışan AI asistanımız, markanızın sesiyle konuşur, soruları anında çözer, gerektiğinde ekibinize aktarır. Müşteri memnuniyetini artırırken operasyon maliyetini düşürürsünüz.</p>
             <ul class="service-detail__features reveal">
-              <li>Web sitesi, WhatsApp ve sosyal medya entegrasyonu</li>
-              <li>Çok dilli destek (Türkçe, İngilizce ve daha fazlası)</li>
-              <li>İnsan devralma (human handoff) sistemi</li>
-              <li>Müşteri segmentasyonu ve kişiselleştirme</li>
-              <li>Konuşma analitiği ve raporlama</li>
-              <li>Ticket yönetimi entegrasyonu</li>
+              <li>Web sitesi canlı chat, WhatsApp Business ve Instagram DM entegrasyonu</li>
+              <li>Türkçe ve İngilizce çok dilli destek (istek üzerine ek diller)</li>
+              <li>Sık sorulan soruların %85'ini otomatik çözme kapasitesi</li>
+              <li>Akıllı insan devralma (human handoff) — karmaşık konuları ekibinize iletir</li>
+              <li>Müşteri geçmişi ve sipariş bilgisi ile kişiselleştirilmiş yanıtlar</li>
+              <li>Konuşma analizi ve haftalık performans raporları</li>
+              <li>Ticket oluşturma ve CRM otomatik güncelleme</li>
+              <li>Bot kişiliği ve ton özelleştirme — markanızın sesiyle konuşur</li>
             </ul>
-          </div>
-          <div class="service-detail__visual reveal">
-            <div class="service-detail__visual-inner">
-              <div class="service-detail__visual-bg"></div>
-              <div class="service-detail__visual-glow"></div>
-              <div class="service-detail__visual-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M8 10H16M8 14H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
-                </svg>
+            <div class="service-detail__result reveal">
+              <p class="service-detail__result-label">Ortalama Müşteri Sonuçları</p>
+              <div class="service-detail__result-nums">
+                <div><span class="service-detail__result-num">%85</span><span class="service-detail__result-desc">Otomatik Çözüm</span></div>
+                <div><span class="service-detail__result-num">%94</span><span class="service-detail__result-desc">Memnuniyet Skoru</span></div>
+                <div><span class="service-detail__result-num">2 dk</span><span class="service-detail__result-desc">Ortalama Yanıt</span></div>
               </div>
+            </div>
+          </div>
+          <div class="sdv reveal">
+            <div class="sdv__bg"></div>
+            <div class="sdv__glow"></div>
+            <div class="sdv__rings"><div class="sdv__ring"></div><div class="sdv__ring"></div><div class="sdv__ring"></div></div>
+            <div class="sdv__center">
+              <div class="sdv__icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" stroke="currentColor" stroke-width="1.2"/><path d="M8 10H16M8 14H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg>
+              </div>
+              <span class="sdv__label">AI Chatbot</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICE 3 — Satış -->
-    <section class="service-detail section">
+    <!-- 03 SATIŞ -->
+    <section class="service-detail" id="satis">
       <div class="container">
         <div class="service-detail__grid">
-          <div class="service-detail__content">
+          <div>
             <span class="service-detail__num reveal">03 — Satış</span>
             <h2 class="service-detail__title reveal">Satış<br>Otomasyonu</h2>
-            <p class="service-detail__desc reveal">
-              Satış sürecinizi baştan sona otomatize edin. Lead'lerden kapanışa kadar her adımı sistemleştirin, satış ekibinizin verimliliğini katlayın.
-            </p>
+            <p class="service-detail__desc reveal">Satış ekibinizin en büyük düşmanı kaçan lead'ler ve unutulan takiplerdir. Akıllı lead skorlama, otomatik pipeline yönetimi ve kişiselleştirilmiş iletişim dizileri ile satış döngünüzü kısaltıyor, kapanış oranınızı artırıyoruz.</p>
             <ul class="service-detail__features reveal">
-              <li>Lead skorlama ve önceliklendirme</li>
-              <li>Otomatik CRM güncellemeleri ve takipler</li>
-              <li>Teklif ve sözleşme otomasyon şablonları</li>
-              <li>Pipeline yönetimi ve raporlama</li>
-              <li>Satış performansı analitiği</li>
-              <li>HubSpot, Salesforce, Pipedrive entegrasyonları</li>
+              <li>Davranış ve demografiye göre akıllı lead skorlama ve önceliklendirme</li>
+              <li>Otomatik CRM güncellemeleri — veri girişine son</li>
+              <li>İlgi seviyesine göre tetiklenen kişiselleştirilmiş mesaj dizileri</li>
+              <li>Toplantı sonrası otomatik özet ve sonraki adım hatırlatmaları</li>
+              <li>Teklif ve sözleşme otomasyon şablonları ile hızlı kapanış</li>
+              <li>Gerçek zamanlı satış pipeline görünürlüğü ve raporlama</li>
+              <li>HubSpot, Salesforce, Pipedrive, Notion CRM entegrasyonları</li>
+              <li>Kayıp lead analizi — nerede ve neden kaybettiğinizi görün</li>
             </ul>
-          </div>
-          <div class="service-detail__visual reveal">
-            <div class="service-detail__visual-inner">
-              <div class="service-detail__visual-bg"></div>
-              <div class="service-detail__visual-glow"></div>
-              <div class="service-detail__visual-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 3V21H21" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
-                  <path d="M7 16L12 10L16 13L21 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
-                </svg>
+            <div class="service-detail__result reveal">
+              <p class="service-detail__result-label">Ortalama Müşteri Sonuçları</p>
+              <div class="service-detail__result-nums">
+                <div><span class="service-detail__result-num">3×</span><span class="service-detail__result-desc">Hızlı Döngü</span></div>
+                <div><span class="service-detail__result-num">%52</span><span class="service-detail__result-desc">Dönüşüm Artışı</span></div>
+                <div><span class="service-detail__result-num">0</span><span class="service-detail__result-desc">Kaçan Lead</span></div>
               </div>
+            </div>
+          </div>
+          <div class="sdv reveal">
+            <div class="sdv__bg"></div>
+            <div class="sdv__glow"></div>
+            <div class="sdv__rings"><div class="sdv__ring"></div><div class="sdv__ring"></div><div class="sdv__ring"></div></div>
+            <div class="sdv__center">
+              <div class="sdv__icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M3 3V21H21" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/><path d="M7 16L12 10L16 13L21 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg>
+              </div>
+              <span class="sdv__label">Sales Automation</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICE 4 — İş Akışı -->
-    <section class="service-detail section">
+    <!-- 04 İŞ AKIŞI -->
+    <section class="service-detail" id="is-akisi">
       <div class="container">
         <div class="service-detail__grid">
-          <div class="service-detail__content">
+          <div>
             <span class="service-detail__num reveal">04 — İş Akışı</span>
             <h2 class="service-detail__title reveal">İş Akışı<br>Tasarımı</h2>
-            <p class="service-detail__desc reveal">
-              İşletmenizin tüm araçlarını birbirine bağlayın. Manuel süreçleri otomatik akışlara dönüştürün, insan hatalarını minimize edin.
-            </p>
+            <p class="service-detail__desc reveal">İşletmenizde kullandığınız onlarca araç birbirinden kopuk çalışıyor olabilir. Muhasebe yazılımınız CRM'inizle konuşmuyor, e-posta platformunuz proje yönetiminizle senkronize değil. Tüm bu araçları birbirine bağlayan akıllı otomasyon köprüleri kuruyoruz.</p>
             <ul class="service-detail__features reveal">
-              <li>n8n, Make (Integromat) ve Zapier kurulumu</li>
-              <li>API entegrasyonları ve özel bağlantılar</li>
-              <li>Veri senkronizasyonu ve dönüşümü</li>
-              <li>Tetikleyici bazlı otomatik bildirimler</li>
-              <li>Raporlama ve dashboard otomasyonu</li>
-              <li>Mevcut yazılımlarla tam entegrasyon</li>
+              <li>n8n, Make (Integromat) ve Zapier ile sınırsız platform entegrasyonu</li>
+              <li>Tetikleyici bazlı otomatik bildirimler (Slack, e-posta, WhatsApp)</li>
+              <li>Google Sheets, Airtable ve Notion ile veri senkronizasyonu</li>
+              <li>Fatura, sipariş ve onay süreçlerinin tam otomasyonu</li>
+              <li>Özel API entegrasyonları ve webhook kurulumları</li>
+              <li>Hata yönetimi ve yedekleme mekanizmaları ile güvenilir akışlar</li>
+              <li>Dashboard ve rapor otomasyonu — veriler otomatik toparlanır</li>
+              <li>Mevcut yazılımları değiştirmeden entegrasyon — sıfır kesinti</li>
             </ul>
-          </div>
-          <div class="service-detail__visual reveal">
-            <div class="service-detail__visual-inner">
-              <div class="service-detail__visual-bg"></div>
-              <div class="service-detail__visual-glow"></div>
-              <div class="service-detail__visual-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.2"/>
-                  <circle cx="19" cy="6" r="2" stroke="currentColor" stroke-width="1.2"/>
-                  <circle cx="19" cy="18" r="2" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M7 12H12M17 7L13 11M17 17L13 13" stroke="currentColor" stroke-width="1.2"/>
-                </svg>
+            <div class="service-detail__result reveal">
+              <p class="service-detail__result-label">Ortalama Müşteri Sonuçları</p>
+              <div class="service-detail__result-nums">
+                <div><span class="service-detail__result-num">%70</span><span class="service-detail__result-desc">Manuel İş Azalması</span></div>
+                <div><span class="service-detail__result-num">15+</span><span class="service-detail__result-desc">Araç Entegrasyonu</span></div>
+                <div><span class="service-detail__result-num">0</span><span class="service-detail__result-desc">İnsan Hatası</span></div>
               </div>
+            </div>
+          </div>
+          <div class="sdv reveal">
+            <div class="sdv__bg"></div>
+            <div class="sdv__glow"></div>
+            <div class="sdv__rings"><div class="sdv__ring"></div><div class="sdv__ring"></div><div class="sdv__ring"></div></div>
+            <div class="sdv__center">
+              <div class="sdv__icon">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.2"/><circle cx="19" cy="6" r="2" stroke="currentColor" stroke-width="1.2"/><circle cx="19" cy="18" r="2" stroke="currentColor" stroke-width="1.2"/><path d="M7 12H12M17 7L13 11M17 17L13 13" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <span class="sdv__label">Workflow Design</span>
             </div>
           </div>
         </div>
@@ -415,26 +297,66 @@
     <!-- TOOLS -->
     <section class="tools section">
       <div class="container">
-        <span class="section-label reveal">Teknolojiler</span>
-        <h2 class="tools__title reveal">Kullandığımız Araçlar</h2>
+        <span class="section-label reveal">Teknoloji Yığını</span>
+        <h2 class="section-title reveal">Kullandığımız<br>Araçlar.</h2>
         <div class="tools__grid">
           <div class="tool-item reveal">
             <span class="tool-item__name">n8n</span>
+            <span class="tool-item__desc">İş Akışı</span>
           </div>
           <div class="tool-item reveal stagger-1">
             <span class="tool-item__name">Make</span>
+            <span class="tool-item__desc">Otomasyon</span>
           </div>
           <div class="tool-item reveal stagger-2">
-            <span class="tool-item__name">Zapier</span>
+            <span class="tool-item__name">OpenAI</span>
+            <span class="tool-item__desc">AI / LLM</span>
           </div>
           <div class="tool-item reveal stagger-3">
             <span class="tool-item__name">HubSpot</span>
+            <span class="tool-item__desc">CRM</span>
           </div>
           <div class="tool-item reveal">
-            <span class="tool-item__name">OpenAI</span>
+            <span class="tool-item__name">Zapier</span>
+            <span class="tool-item__desc">Entegrasyon</span>
           </div>
           <div class="tool-item reveal stagger-1">
             <span class="tool-item__name">Airtable</span>
+            <span class="tool-item__desc">Veri Tabanı</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section">
+      <div class="container">
+        <span class="section-label reveal">SSS</span>
+        <h2 class="section-title reveal">Sıkça Sorulan<br>Sorular.</h2>
+        <div class="faq__list reveal">
+          <div class="faq__item">
+            <button class="faq__q"><span class="faq__q-text">Kurulum ne kadar sürer?</span><span class="faq__q-icon"></span></button>
+            <div class="faq__a"><p class="faq__a-inner">Hizmetin kapsamına göre değişmekle birlikte çoğu sistemimizi 1–2 hafta içinde devreye alıyoruz. Cold email sistemleri genellikle 5–7 iş günü, karmaşık iş akışı entegrasyonları 2–3 hafta sürebilir. Keşif görüşmesinde size özel bir zaman çizelgesi sunuyoruz.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q"><span class="faq__q-text">Mevcut araçlarımı değiştirmem gerekiyor mu?</span><span class="faq__q-icon"></span></button>
+            <div class="faq__a"><p class="faq__a-inner">Hayır. Kullandığınız CRM, e-posta platformu veya proje yönetim araçlarını değiştirmenize gerek yok. Mevcut altyapınızın üzerine otomasyon katmanları ekleyerek çalışıyoruz. Zaten kullandığınız araçlar daha akıllı hale geliyor.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q"><span class="faq__q-text">Sistemler ne kadar güvenilir? Hata yaparsa ne olur?</span><span class="faq__q-icon"></span></button>
+            <div class="faq__a"><p class="faq__a-inner">Tüm sistemlerde hata yönetimi ve yedekleme mekanizmaları kuruyoruz. Bir akış beklenmedik şekilde durduğunda sizi anında bilgilendiren uyarı sistemleri aktif oluyor. Aylık destek kapsamında performans izleme ve proaktif müdahale sağlıyoruz.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q"><span class="faq__q-text">Cold email yasal mı? GDPR/KVKK uyumlu mu?</span><span class="faq__q-icon"></span></button>
+            <div class="faq__a"><p class="faq__a-inner">B2B cold email, doğru uygulandığında tamamen yasaldır. GDPR ve KVKK uyumlu listeler, vazgeçme (unsubscribe) mekanizmaları ve veri işleme protokolleri dahil tüm yasal gereklilikleri karşılayan sistemler kuruyoruz. Bu konuda ayrıca rehberlik sağlıyoruz.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q"><span class="faq__q-text">Fiyatlandırma nasıl işliyor?</span><span class="faq__q-icon"></span></button>
+            <div class="faq__a"><p class="faq__a-inner">Sabit kurulum ücreti + aylık bakım modeli uyguluyoruz. Fiyat, ihtiyaç duyulan entegrasyon sayısına ve karmaşıklığına göre değişir. Ücretsiz keşif görüşmesinin ardından size özel detaylı bir teklif sunuyoruz. Gizli ücret veya sürpriz fatura yok.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q"><span class="faq__q-text">Sonuçları ne zaman görmeye başlarım?</span><span class="faq__q-icon"></span></button>
+            <div class="faq__a"><p class="faq__a-inner">Cold email sistemlerinde genellikle ilk kampanyadan itibaren (7–10 gün) yanıtlar gelmeye başlar. Müşteri hizmetleri ve satış otomasyonlarında ilk haftadan itibaren zaman tasarrufu hissedilir. İlk 30 günün ardından somut ROI hesabı çıkartıyoruz.</p></div>
           </div>
         </div>
       </div>
@@ -445,16 +367,10 @@
       <div class="cta-section__bg"></div>
       <div class="container">
         <div class="cta-section__inner">
-          <span class="section-label reveal">Hazır mısınız?</span>
-          <h2 class="cta-section__title reveal">
-            Hemen<br><span>Başlayalım.</span>
-          </h2>
-          <p class="cta-section__sub reveal">
-            Hangi hizmete ihtiyacınız olduğundan emin değil misiniz? Ücretsiz keşif görüşmesinde birlikte değerlendirelim.
-          </p>
-          <div class="reveal">
-            <a href="iletisim.html" class="btn btn--primary btn--lg">Ücretsiz Görüşme Al →</a>
-          </div>
+          <span class="section-label reveal">Hemen Başlayın</span>
+          <h2 class="cta-section__title reveal">Hangi Hizmet<br><span>Sizin İçin?</span></h2>
+          <p class="cta-section__sub reveal">Emin değil misiniz? Ücretsiz keşif görüşmesinde işletmenizi dinliyor, hangi otomasyon çözümünün en fazla değer yaratacağını birlikte belirliyoruz.</p>
+          <div class="reveal"><a href="iletisim.html" class="btn btn--primary btn--lg">Ücretsiz Görüşme Ayarla →</a></div>
         </div>
       </div>
     </section>
@@ -469,38 +385,33 @@
           <p class="footer__tagline">Geleceği bugünden otomatize et.</p>
         </div>
         <div class="footer__links">
-          <div class="footer__col">
-            <span class="footer__col-title">Sayfalar</span>
-            <div class="footer__col-links">
-              <a href="hizmetler.html">Hizmetler</a>
-              <a href="vaka-calismalari.html">Vaka Çalışmaları</a>
-              <a href="iletisim.html">İletişim</a>
-            </div>
-          </div>
-          <div class="footer__col">
-            <span class="footer__col-title">Yasal</span>
-            <div class="footer__col-links">
-              <a href="yasal.html">Gizlilik Politikası</a>
-              <a href="yasal.html">Kullanım Koşulları</a>
-            </div>
-          </div>
-          <div class="footer__col">
-            <span class="footer__col-title">Sosyal</span>
-            <div class="footer__col-links">
-              <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="#" target="_blank" rel="noopener">Instagram</a>
-              <a href="#" target="_blank" rel="noopener">Twitter / X</a>
-            </div>
-          </div>
+          <div class="footer__col"><span class="footer__col-title">Sayfalar</span><div class="footer__col-links"><a href="hizmetler.html">Hizmetler</a><a href="vaka-calismalari.html">Vaka Çalışmaları</a><a href="iletisim.html">İletişim</a></div></div>
+          <div class="footer__col"><span class="footer__col-title">Yasal</span><div class="footer__col-links"><a href="yasal.html">Gizlilik Politikası</a><a href="yasal.html">Kullanım Koşulları</a></div></div>
+          <div class="footer__col"><span class="footer__col-title">Sosyal</span><div class="footer__col-links"><a href="#" target="_blank" rel="noopener">LinkedIn</a><a href="#" target="_blank" rel="noopener">Instagram</a><a href="#" target="_blank" rel="noopener">Twitter / X</a></div></div>
         </div>
       </div>
-      <div class="footer__bottom">
-        <span class="footer__copy">© 2025 Aura AI. Tüm hakları saklıdır.</span>
-        <span class="footer__made">Türkiye'de <span>♥</span> ile yapıldı.</span>
-      </div>
+      <div class="footer__bottom"><span class="footer__copy">© 2025 Aura AI. Tüm hakları saklıdır.</span><span class="footer__made">İstanbul'da <span>♥</span> ile yapıldı.</span></div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq__q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq__item');
+        const answer = item.querySelector('.faq__a');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq__item.open').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq__a').style.maxHeight = '0';
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
