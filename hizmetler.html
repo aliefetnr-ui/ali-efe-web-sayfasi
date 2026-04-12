@@ -1,485 +1,506 @@
 <!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hizmetlerimiz | Aura AI - Yapay Zeka Otomasyon Çözümleri</title>
-    <meta name="description" content="Soğuk e-posta, müşteri hizmetleri ve satış otomasyonu chatbot'larıyla işinizi büyütün.">
-    <meta name="author" content="Aura AI">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aura AI Hizmetler — Cold email otomasyonu, müşteri hizmetleri AI, satış otomasyonu ve iş akışı tasarımı." />
+  <title>Hizmetler — Aura AI</title>
 
-    <meta property="og:title" content="Aura AI | Hizmetlerimiz">
-    <meta property="og:description" content="İşletmenizi %85 daha verimli hale getiren yapay zeka çözümlerimizi keşfedin.">
-    <meta property="og:url" content="https://www.auraaı.com/hizmetler.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Aura AI">
-    
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='20' fill='url(%23g)'/%3E%3Cpath d='M100 40 Q 140 40 160 80 T 160 160' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 160 Q 60 160 40 120 T 40 40' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='160' cy='80' r='10' fill='url(%23g)'/%3E%3Ccircle cx='40' cy='120' r='10' fill='url(%23g)'/%3E%3Cpath d='M100 80 L100 120 M80 100 L120 100' stroke='url(%23g)' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 200px 0 120px;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 9vw, 8.5rem);
+      font-weight: 800;
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      max-width: 900px;
+    }
+    .page-hero__title span {
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(var(--accent-rgb), 0.7);
+    }
+    .page-hero__sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 480px;
+      line-height: 1.8;
+      margin-top: 40px;
+    }
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    /* ── SERVICE DETAIL ── */
+    .service-detail {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-detail:last-of-type { border-bottom: none; }
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { 'dark': { 900: '#0B0C15', 800: '#13141F' } },
-                    fontFamily: { 'heading': ['Space Grotesk', 'sans-serif'], 'body': ['Inter', 'sans-serif'] }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; background: #0B0C15; color: white; overflow-x: hidden; }
-        .glassmorphism { background: rgba(26, 27, 46, 0.5); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); }
-        .navbar-scrolled { background: rgba(19, 20, 31, 0.95); border-bottom: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); }
-        .gradient-text { background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glow-button { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%); box-shadow: 0 4px 24px rgba(139, 92, 246, 0.4); transition: all 0.3s ease; }
-        .glow-button:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(139, 92, 246, 0.6); }
-        .glow-border { box-shadow: 0 0 20px rgba(139, 92, 246, 0.2); border: 1px solid rgba(139, 92, 246, 0.4); transition: all 0.3s ease; }
-        .glow-border:hover { border-color: #8B5CF6; box-shadow: 0 0 40px rgba(139, 92, 246, 0.4); }
-        .tilt-card { transition: transform 0.3s ease; }
-        .tilt-card:hover { transform: translateY(-10px); }
-        
-        /* GÜNCELLENMİŞ ARKA PLAN ANİMASYONLARI (GRID + ORBS) */
-        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.15; z-index: -1; animation: float 10s infinite ease-in-out; }
-        .orb-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: #8B5CF6; }
-        .orb-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: #06B6D4; animation-delay: 2s; }
-        @keyframes float { 0%,100%{transform:translate(0,0)} 50%{transform:translate(20px,-20px)} }
-        
-        /* NEON IZGARA (GRID) */
-        .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px); background-size: 50px 50px; animation: gridMove 20s linear infinite; z-index: -1; }
-        @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
-    </style>
+    .service-detail__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .service-detail:nth-child(even) .service-detail__grid {
+      direction: rtl;
+    }
+    .service-detail:nth-child(even) .service-detail__grid > * {
+      direction: ltr;
+    }
+
+    .service-detail__num {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .service-detail__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .service-detail__desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 40px;
+    }
+
+    .service-detail__features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .service-detail__features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .service-detail__features li::before {
+      content: '';
+      display: block;
+      min-width: 16px;
+      height: 1px;
+      background: var(--accent);
+      margin-top: 10px;
+    }
+
+    .service-detail__visual {
+      position: relative;
+      border: 1px solid var(--border);
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+
+    .service-detail__visual-inner {
+      width: 100%;
+      height: 100%;
+      background: var(--bg-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .service-detail__visual-icon {
+      width: 64px;
+      height: 64px;
+      border: 1px solid rgba(var(--accent-rgb), 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-detail__visual-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--accent);
+    }
+
+    .service-detail__visual-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .service-detail__visual-glow {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(var(--accent-rgb), 0.1) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* ── TOOLS SECTION ── */
+    .tools {
+      border-top: 1px solid var(--border);
+    }
+
+    .tools__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 60px;
+    }
+
+    .tools__grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      border: 1px solid var(--border);
+    }
+
+    .tool-item {
+      padding: 40px 24px;
+      border-right: 1px solid var(--border);
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .tool-item:last-child { border-right: none; }
+    .tool-item:hover { background: rgba(255,255,255,0.02); }
+
+    .tool-item__name {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      transition: color 0.3s;
+    }
+
+    .tool-item:hover .tool-item__name { color: var(--text); }
+
+    @media (max-width: 1024px) {
+      .service-detail__grid { grid-template-columns: 1fr; gap: 48px; }
+      .service-detail:nth-child(even) .service-detail__grid { direction: ltr; }
+      .tools__grid { grid-template-columns: repeat(3, 1fr); }
+      .tool-item:nth-child(3) { border-right: none; }
+      .tool-item:nth-child(n+4) { border-top: 1px solid var(--border); }
+    }
+
+    @media (max-width: 768px) {
+      .page-hero { padding: 160px 0 80px; }
+      .tools__grid { grid-template-columns: repeat(2, 1fr); }
+      .tool-item:nth-child(2n) { border-right: none; }
+      .tool-item:nth-child(3) { border-right: 1px solid var(--border); }
+    }
+  </style>
 </head>
-<body class="bg-[#0B0C15] text-white">
-    
-    <div class="fixed top-0 left-0 w-full h-full -z-10 bg-[#0B0C15]">
-        <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <span class="preloader__logo">AURA AI</span>
+    <div class="preloader__bar"></div>
+  </div>
+
+  <div class="noise"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">AURA AI</a>
+      <div class="nav__links">
+        <a href="hizmetler.html" style="color:var(--text)">Hizmetler</a>
+        <a href="vaka-calismalari.html">Vaka Çalışmaları</a>
+        <a href="iletisim.html">İletişim</a>
+      </div>
+      <a href="iletisim.html" class="nav__cta"><span>Başlayalım →</span></a>
+      <button class="nav__burger" aria-label="Menüyü aç/kapat">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="grid-bg"></div>
+  </nav>
 
-    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            
-            <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
-                <svg class="w-10 h-10 group-hover:scale-110 transition-transform" viewBox="0 0 200 200">
-                    <defs>
-                        <linearGradient id="g-nav"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient>
-                        <filter id="glow-nav"><feGaussianBlur stdDeviation="8" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-                    </defs>
-                    <g filter="url(#glow-nav)">
-                        <circle cx="100" cy="100" r="20" fill="url(#g-nav)"/>
-                        <path d="M100 40 Q 140 40 160 80 T 160 160" stroke="url(#g-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                        <path d="M100 160 Q 60 160 40 120 T 40 40" stroke="url(#g-nav)" stroke-width="6" fill="none" stroke-linecap="round"/>
-                        <circle cx="160" cy="80" r="10" fill="url(#g-nav)"/><circle cx="40" cy="120" r="10" fill="url(#g-nav)"/>
-                        <path d="M100 80 L100 120 M80 100 L120 100" stroke="url(#g-nav)" stroke-width="4" stroke-linecap="round"/>
-                    </g>
-                </svg>
-                <span class="text-xl font-bold gradient-text font-heading">Aura AI</span>
-            </div>
-            
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-400 hover:text-purple-400 transition-colors">Ana Sayfa</a>
-                <a href="hizmetler.html" class="text-purple-400 font-semibold">Hizmetler</a>
-                <a href="vaka-calismalari.html" class="text-gray-400 hover:text-purple-400 transition-colors">Bize Güvenenler</a>
-                <a href="iletisim.html" class="text-gray-400 hover:text-purple-400 transition-colors">İletişim</a>
-            </div>
-            <a href="iletisim.html" class="hidden md:block glow-button text-white px-6 py-2 rounded-xl text-sm font-semibold">Ücretsiz Danışmanlık</a>
-            <button id="mobileMenuBtn" class="md:hidden text-purple-400 text-2xl"><i class="fa-solid fa-bars"></i></button>
-        </div>
-        
-        <div id="mobileMenu" class="hidden bg-dark-900 absolute w-full left-0 top-full border-b border-white/10 p-4">
-            <a href="index.html" class="block py-2 text-gray-400">Ana Sayfa</a>
-            <a href="hizmetler.html" class="block py-2 text-purple-400">Hizmetler</a>
-            <a href="vaka-calismalari.html" class="block py-2 text-gray-400">Bize Güvenenler</a>
-            <a href="iletisim.html" class="block py-2 text-gray-400">İletişim</a>
-        </div>
-    </nav>
+  <div class="mobile-menu">
+    <div class="mobile-menu__links">
+      <a href="hizmetler.html">Hizmetler</a>
+      <a href="vaka-calismalari.html">Vaka Çalışmaları</a>
+      <a href="iletisim.html">İletişim</a>
+    </div>
+    <a href="iletisim.html" class="mobile-menu__cta">Başlayalım →</a>
+  </div>
 
-    <section class="pt-32 pb-16 text-center px-4">
-        <div class="inline-block mb-6 px-6 py-2 glassmorphism rounded-full glow-border" data-aos="fade-down">
-            <i class="fa-solid fa-layer-group text-purple-400 mr-2"></i>
-            <span class="gradient-text font-bold text-sm">HİZMETLERİMİZ</span>
-        </div>
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 font-heading" data-aos="zoom-in">
-            <span class="gradient-text">Yapay Zeka</span> Çözümleri
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label reveal">Hizmetler</span>
+        <h1 class="page-hero__title reveal">
+          Otomasyon<br><span>Çözümleri.</span>
         </h1>
-        <p class="text-gray-400 text-xl max-w-2xl mx-auto" data-aos="fade-up">
-            İşletmenizi otomatikleştiren, 7/24 çalışan ve sürekli öğrenen akıllı asistanlar.
+        <p class="page-hero__sub reveal">
+          İşletmenizin ihtiyacına özel yapay zeka ve otomasyon sistemleri. Daha az manuel iş, daha fazla büyüme.
         </p>
+      </div>
     </section>
 
-    <section class="py-20 container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-right">
-                <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 text-3xl text-purple-400">
-                    <i class="fa-solid fa-paper-plane"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Soğuk E-posta Botu</h3>
-                <p class="text-gray-400 mb-6 leading-relaxed">
-                    Binlerce potansiyel müşteriye kişiselleştirilmiş, yüksek dönüşümlü e-postalarla otomatik ulaşın.
-                </p>
-                <a href="#soguk-eposta" class="text-purple-400 font-bold hover:text-white flex items-center gap-2 group">
-                    Detaylı İncele <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
-                </a>
+    <!-- SERVICE 1 — Cold Email -->
+    <section class="service-detail section">
+      <div class="container">
+        <div class="service-detail__grid">
+          <div class="service-detail__content">
+            <span class="service-detail__num reveal">01 — Cold Email</span>
+            <h2 class="service-detail__title reveal">Cold Email<br>Otomasyonu</h2>
+            <p class="service-detail__desc reveal">
+              Doğru kişiye, doğru zamanda, doğru mesajı gönderin. AI destekli kişiselleştirme ile yanıt oranlarınızı artırın, manuel iş yükünüzü sıfıra indirin.
+            </p>
+            <ul class="service-detail__features reveal">
+              <li>Hedef kitleye özel kişiselleştirilmiş e-posta metinleri</li>
+              <li>Otomatik takip dizileri (follow-up sequences)</li>
+              <li>A/B test ve optimizasyon</li>
+              <li>Açılma, tıklama ve yanıt oranı takibi</li>
+              <li>CRM ile entegre lead yönetimi</li>
+              <li>Spam filtresinden kaçınma teknikleri</li>
+            </ul>
+          </div>
+          <div class="service-detail__visual reveal">
+            <div class="service-detail__visual-inner">
+              <div class="service-detail__visual-bg"></div>
+              <div class="service-detail__visual-glow"></div>
+              <div class="service-detail__visual-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4H20V16H4V4Z" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M4 8L12 13L20 8" stroke="currentColor" stroke-width="1.2"/>
+                </svg>
+              </div>
             </div>
-
-            <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mb-6 text-3xl text-cyan-400">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Müşteri Hizmetleri</h3>
-                <p class="text-gray-400 mb-6 leading-relaxed">
-                    Web sitenizde 7/24 canlı destek verin. Soruları yanıtlayan, sipariş sorgulayan akıllı chatbot.
-                </p>
-                <a href="#musteri-hizmetleri" class="text-cyan-400 font-bold hover:text-white flex items-center gap-2 group">
-                    Detaylı İncele <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
-                </a>
-            </div>
-
-            <div class="glassmorphism tilt-card p-10 rounded-3xl glow-border" data-aos="fade-left" data-aos-delay="200">
-                <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 text-3xl text-green-400">
-                    <i class="fa-solid fa-chart-line"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Satış Otomasyonu</h3>
-                <p class="text-gray-400 mb-6 leading-relaxed">
-                    Sıcak satış fırsatlarını (lead) yakalayın, puanlayın ve CRM sisteminize otomatik olarak işleyin.
-                </p>
-                <a href="#satis-otomasyonu" class="text-green-400 font-bold hover:text-white flex items-center gap-2 group">
-                    Detaylı İncele <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
-                </a>
-            </div>
-            
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="soguk-eposta" class="py-32 border-t border-white/5 scroll-mt-20">
-        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
-                <div class="inline-block px-4 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-bold mb-6">OUTREACH & PAZARLAMA</div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">
-                    Müşteri Kazanımında <br><span class="gradient-text">Otomatik Güç</span>
-                </h2>
-                <p class="text-gray-300 text-lg leading-relaxed mb-8">
-                    Manuel e-posta gönderimiyle zaman kaybetmeyin. Aura AI, hedef kitlenizi analiz eder, spam filtrelerini aşan teknolojisiyle doğrudan gelen kutusuna ulaşır. Her müşteriye özel, sanki siz yazmışsınız gibi kişiselleştirilmiş mesajlar oluşturur.
-                </p>
-                
-                <div class="space-y-6 mb-10">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 mr-4">
-                             <i class="fa-solid fa-shield-halved text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-lg mb-1">%99 Inbox Garantisi</h4>
-                            <p class="text-sm text-gray-400">Gelişmiş algoritmalar ve ısınmış sunucularla spam klasörüne düşmek tarih oldu.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 mr-4">
-                             <i class="fa-solid fa-pen-nib text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-lg mb-1">Yapay Zeka Yazarlığı</h4>
-                            <p class="text-sm text-gray-400">Müşterinin sektörüne ve pozisyonuna göre içeriği dinamik olarak değiştiren akıllı şablonlar.</p>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 mr-4">
-                             <i class="fa-solid fa-clock-rotate-left text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-lg mb-1">Otomatik Takip (Drip)</h4>
-                            <p class="text-sm text-gray-400">Yanıt alana kadar otomatik ve nazik hatırlatma mailleri gönderir. Dönüşümü 3x artırır.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="iletisim.html" class="glow-button px-8 py-4 rounded-xl font-bold text-white inline-flex items-center group">
-                    Detaylı Bilgi Alın <i class="fa-solid fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
-                </a>
+    <!-- SERVICE 2 — Müşteri Hizmetleri -->
+    <section class="service-detail section">
+      <div class="container">
+        <div class="service-detail__grid">
+          <div class="service-detail__content">
+            <span class="service-detail__num reveal">02 — Müşteri Hizmetleri</span>
+            <h2 class="service-detail__title reveal">Müşteri<br>Hizmetleri AI</h2>
+            <p class="service-detail__desc reveal">
+              7/24 kesintisiz çalışan akıllı asistanlar ile müşterilerinize anında destek sağlayın. Sık sorulan soruları otomatik yanıtlayın, ekibinizi gerçek sorunlara odaklayın.
+            </p>
+            <ul class="service-detail__features reveal">
+              <li>Web sitesi, WhatsApp ve sosyal medya entegrasyonu</li>
+              <li>Çok dilli destek (Türkçe, İngilizce ve daha fazlası)</li>
+              <li>İnsan devralma (human handoff) sistemi</li>
+              <li>Müşteri segmentasyonu ve kişiselleştirme</li>
+              <li>Konuşma analitiği ve raporlama</li>
+              <li>Ticket yönetimi entegrasyonu</li>
+            </ul>
+          </div>
+          <div class="service-detail__visual reveal">
+            <div class="service-detail__visual-inner">
+              <div class="service-detail__visual-bg"></div>
+              <div class="service-detail__visual-glow"></div>
+              <div class="service-detail__visual-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M8 10H16M8 14H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
+                </svg>
+              </div>
             </div>
-            
-            <div class="glassmorphism p-8 rounded-3xl relative" data-aos="fade-left">
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/30 rounded-full blur-3xl -z-10"></div>
-                <h4 class="text-white font-bold mb-6 border-b border-white/10 pb-3">Canlı Kampanya Akışı</h4>
-                <div class="space-y-6">
-                    <div class="bg-white/5 p-5 rounded-2xl border border-white/10 shadow-lg">
-                        <div class="flex justify-between items-center mb-3">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-xs font-bold"><i class="fa-solid fa-robot"></i></div>
-                                <div>
-                                    <p class="text-sm font-bold text-white">Aura Bot</p>
-                                    <p class="text-xs text-gray-500">Kime: Ali Yılmaz (CEO)</p>
-                                </div>
-                            </div>
-                            <span class="text-xs text-gray-500">Bugün, 10:42</span>
-                        </div>
-                        <p class="text-sm text-gray-300 leading-relaxed">
-                            "Merhaba Ali Bey, [Şirket Adı]'nın son dönemdeki büyümesini LinkedIn'de gördüm. Özellikle [Sektör] alanındaki yatırımlarınız dikkat çekici..."
-                        </p>
-                    </div>
-
-                    <div class="bg-purple-500/10 p-5 rounded-2xl border border-purple-500/30 shadow-lg ml-8">
-                        <div class="flex justify-between items-center mb-3">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-xs font-bold">AY</div>
-                                <div>
-                                    <p class="text-sm font-bold text-white">Ali Yılmaz</p>
-                                    <span class="inline-block bg-green-500/20 text-green-400 text-xs px-2 py-0.5 rounded-full">Yanıtladı</span>
-                                </div>
-                            </div>
-                            <span class="text-xs text-gray-500">Bugün, 11:15</span>
-                        </div>
-                        <p class="text-sm text-white leading-relaxed">
-                            "Selamlar, evet yaklaşımınız ilgimi çekti. Önümüzdeki hafta bir görüşme ayarlayabilir miyiz?"
-                        </p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="musteri-hizmetleri" class="py-32 border-t border-white/5 scroll-mt-20 relative overflow-hidden">
-        <div class="absolute top-1/2 left-0 w-full h-full bg-gradient-to-b from-transparent to-cyan-900/10 -z-10"></div>
-        
-        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            <div class="order-2 lg:order-1 glassmorphism p-8 rounded-3xl relative" data-aos="fade-right">
-                 <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-cyan-500/30 rounded-full blur-3xl -z-10"></div>
-                 <h4 class="text-white font-bold mb-6 border-b border-white/10 pb-3">Canlı Destek Penceresi</h4>
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-user"></i></div>
-                        <div class="bg-white/5 p-4 rounded-2xl rounded-tl-none text-sm text-gray-300 shadow-lg">
-                            Siparişim hala gelmedi, nerede olduğunu öğrenebilir miyim? Sipariş no: #12345
-                        </div>
-                    </div>
-                    <div class="flex gap-4 flex-row-reverse">
-                        <div class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-500/20"><i class="fa-solid fa-robot text-white text-xl"></i></div>
-                        <div class="bg-cyan-500/10 border border-cyan-500/20 p-4 rounded-2xl rounded-tr-none text-sm text-white shadow-lg">
-                            Merhaba! 👋 Kontrol ettim.<br><br>
-                            📦 <strong>#12345</strong> numaralı siparişiniz şu an dağıtımda görünüyor. Gün içinde teslim edilmesi planlanıyor.<br><br>
-                            Başka bir konuda yardımcı olabilir miyim?
-                        </div>
-                    </div>
-                </div>
+    <!-- SERVICE 3 — Satış -->
+    <section class="service-detail section">
+      <div class="container">
+        <div class="service-detail__grid">
+          <div class="service-detail__content">
+            <span class="service-detail__num reveal">03 — Satış</span>
+            <h2 class="service-detail__title reveal">Satış<br>Otomasyonu</h2>
+            <p class="service-detail__desc reveal">
+              Satış sürecinizi baştan sona otomatize edin. Lead'lerden kapanışa kadar her adımı sistemleştirin, satış ekibinizin verimliliğini katlayın.
+            </p>
+            <ul class="service-detail__features reveal">
+              <li>Lead skorlama ve önceliklendirme</li>
+              <li>Otomatik CRM güncellemeleri ve takipler</li>
+              <li>Teklif ve sözleşme otomasyon şablonları</li>
+              <li>Pipeline yönetimi ve raporlama</li>
+              <li>Satış performansı analitiği</li>
+              <li>HubSpot, Salesforce, Pipedrive entegrasyonları</li>
+            </ul>
+          </div>
+          <div class="service-detail__visual reveal">
+            <div class="service-detail__visual-inner">
+              <div class="service-detail__visual-bg"></div>
+              <div class="service-detail__visual-glow"></div>
+              <div class="service-detail__visual-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 3V21H21" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
+                  <path d="M7 16L12 10L16 13L21 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/>
+                </svg>
+              </div>
             </div>
-
-            <div class="order-1 lg:order-2" data-aos="fade-left">
-                <div class="inline-block px-4 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-bold mb-6">7/24 CANLI DESTEK</div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Kesintisiz Müşteri Memnuniyeti</h2>
-                <p class="text-gray-300 text-lg leading-relaxed mb-8">
-                    Müşterilerinizi asla bekletmeyin. Yapay zeka asistanınız; web siteniz, WhatsApp veya sosyal medya hesaplarınız üzerinden gelen soruları anında yanıtlar. Sadece SSS değil, veritabanınıza bağlanarak karmaşık işlemleri de çözer.
-                </p>
-
-                 <div class="space-y-6 mb-10">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center text-cyan-400 mr-4">
-                             <i class="fa-solid fa-bolt text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-lg mb-1"><1 Dakika Yanıt Süresi</h4>
-                            <p class="text-sm text-gray-400">Gece 3'te bile olsa müşterileriniz anında muhatap bulur. Bekleme süresi sıfırlanır.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center text-cyan-400 mr-4">
-                             <i class="fa-solid fa-language text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-lg mb-1">50+ Dilde Anında Çeviri</h4>
-                            <p class="text-sm text-gray-400">Global müşterilerinizle kendi dillerinde konuşun. Dil bariyerini tamamen kaldırın.</p>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center text-cyan-400 mr-4">
-                             <i class="fa-solid fa-shuffle text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-lg mb-1">Akıllı Devretme</h4>
-                            <p class="text-sm text-gray-400">Botun çözemediği karmaşık durumlarda, konuyu geçmişiyle birlikte insan temsilciye aktarır.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="iletisim.html" class="glow-button px-8 py-4 rounded-xl font-bold text-white inline-block">
-                    İletişime Geçin
-                </a>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="satis-otomasyonu" class="py-32 border-t border-white/5 scroll-mt-20 relative overflow-hidden">
-         <div class="absolute top-1/2 left-0 w-full h-full bg-gradient-to-b from-transparent to-green-900/10 -z-10"></div>
-        <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
-                <div class="inline-block px-4 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-bold mb-6">CRM & LEAD YÖNETİMİ</div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Ziyaretçileri Müşteriye Dönüştürün</h2>
-                <p class="text-gray-300 text-lg leading-relaxed mb-8">
-                    Web sitenize gelen her ziyaretçi bir potansiyel müşteridir. Botumuz ziyaretçi davranışlarını 7/24 analiz eder, satın alma niyeti yüksek olanları (hot lead) tespit eder, puanlar ve satış ekibinize anında bildirir. Hiçbir fırsatı kaçırmazsınız.
-                </p>
-                
-                 <div class="space-y-6 mb-10">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-green-400 mr-4">
-                             <i class="fa-solid fa-bullseye text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-lg mb-1">AI Lead Scoring (Sıcaklık Puanı)</h4>
-                            <p class="text-sm text-gray-400">Ziyaretçinin hareketlerine göre 0-100 arası puan verir. Ekibiniz sadece en sıcak müşterilere odaklanır.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-green-400 mr-4">
-                             <i class="fa-solid fa-bell text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-lg mb-1">Anlık Satış Bildirimleri</h4>
-                            <p class="text-sm text-gray-400">Sıcak bir fırsat yakalandığında satış ekibinize e-posta, Slack veya SMS ile anında haber verir.</p>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-green-400 mr-4">
-                             <i class="fa-solid fa-database text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white text-lg mb-1">Tam CRM Entegrasyonu</h4>
-                            <p class="text-sm text-gray-400">HubSpot, Salesforce, Zoho gibi popüler CRM'lerle %100 uyumlu çalışır. Veri kaybı yaşanmaz.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="iletisim.html" class="glow-button px-8 py-4 rounded-xl font-bold text-white inline-block">
-                    Uzmanla Görüşün
-                </a>
+    <!-- SERVICE 4 — İş Akışı -->
+    <section class="service-detail section">
+      <div class="container">
+        <div class="service-detail__grid">
+          <div class="service-detail__content">
+            <span class="service-detail__num reveal">04 — İş Akışı</span>
+            <h2 class="service-detail__title reveal">İş Akışı<br>Tasarımı</h2>
+            <p class="service-detail__desc reveal">
+              İşletmenizin tüm araçlarını birbirine bağlayın. Manuel süreçleri otomatik akışlara dönüştürün, insan hatalarını minimize edin.
+            </p>
+            <ul class="service-detail__features reveal">
+              <li>n8n, Make (Integromat) ve Zapier kurulumu</li>
+              <li>API entegrasyonları ve özel bağlantılar</li>
+              <li>Veri senkronizasyonu ve dönüşümü</li>
+              <li>Tetikleyici bazlı otomatik bildirimler</li>
+              <li>Raporlama ve dashboard otomasyonu</li>
+              <li>Mevcut yazılımlarla tam entegrasyon</li>
+            </ul>
+          </div>
+          <div class="service-detail__visual reveal">
+            <div class="service-detail__visual-inner">
+              <div class="service-detail__visual-bg"></div>
+              <div class="service-detail__visual-glow"></div>
+              <div class="service-detail__visual-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.2"/>
+                  <circle cx="19" cy="6" r="2" stroke="currentColor" stroke-width="1.2"/>
+                  <circle cx="19" cy="18" r="2" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M7 12H12M17 7L13 11M17 17L13 13" stroke="currentColor" stroke-width="1.2"/>
+                </svg>
+              </div>
             </div>
-            
-            <div class="glassmorphism p-8 rounded-3xl relative" data-aos="fade-left">
-                 <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-green-500/30 rounded-full blur-3xl -z-10"></div>
-                <div class="space-y-4">
-                    <h4 class="text-white font-bold mb-6 border-b border-white/10 pb-3">Canlı Satış Paneli (Demo)</h4>
-                    
-                    <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl border border-white/10 shadow-lg">
-                        <div class="flex items-center gap-3">
-                             <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center"><i class="fa-solid fa-user"></i></div>
-                            <div>
-                                <p class="text-sm text-gray-400">Web Sitesi Ziyaretçisi</p>
-                                <p class="text-white font-bold">Mehmet Demir</p>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                             <span class="text-green-400 font-bold bg-green-500/10 px-3 py-1 rounded-lg text-sm">+185 Puan</span>
-                             <p class="text-xs text-gray-500 mt-1">Durum: Çok Sıcak 🔥</p>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl border border-white/10 shadow-lg">
-                         <div class="flex items-center gap-3">
-                             <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center"><i class="fa-solid fa-calendar-check"></i></div>
-                            <div>
-                                <p class="text-sm text-gray-400">Randevu Alındı</p>
-                                <p class="text-white font-bold">Ayşe Kaya (Global A.Ş.)</p>
-                            </div>
-                        </div>
-                         <div class="text-right">
-                            <span class="text-white font-bold bg-purple-500/20 px-3 py-1 rounded-lg text-sm">Yarın, 14:00</span>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-4 mt-4">
-                        <div class="bg-green-500/10 p-4 rounded-xl border border-green-500/20 text-center">
-                            <p class="text-sm text-green-300 mb-1">Bugünkü Potansiyel</p>
-                            <p class="text-white font-bold text-2xl">$12,500</p>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
-                             <p class="text-sm text-gray-400 mb-1">Aktif Lead</p>
-                            <p class="text-white font-bold text-2xl">42</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer class="border-t border-white/10 py-12 bg-dark-900 mt-20">
-        <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
-            <div>
-                <div class="flex items-center space-x-3 mb-4 cursor-pointer" onclick="window.location.href='index.html'">
-                     <svg class="w-10 h-10" viewBox="0 0 200 200"><defs><linearGradient id="g-foot"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient></defs><g stroke="url(#g-foot)" stroke-width="6" fill="none"><circle cx="100" cy="100" r="20" fill="url(#g-foot)" stroke="none"/><path d="M100 40 Q 140 40 160 80 T 160 160"/><path d="M100 160 Q 60 160 40 120 T 40 40"/><circle cx="160" cy="80" r="10" fill="url(#g-foot)" stroke="none"/><circle cx="40" cy="120" r="10" fill="url(#g-foot)" stroke="none"/></g></svg>
-                    <span class="text-2xl font-bold gradient-text font-heading">Aura AI</span>
-                </div>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                    Yapay zeka destekli otomasyon çözümleriyle işletmenizi geleceğe taşıyoruz.
-                </p>
-                <div class="inline-block px-4 py-2 rounded-lg bg-[#1A1B2E] border border-purple-500/20">
-                    <i class="fa-solid fa-shuttle-space text-purple-400 mr-2"></i>
-                    <span class="text-purple-400 text-xs font-semibold">2025'te Daha Güçlüyüz</span>
-                </div>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-white mb-6 text-lg">Hızlı Linkler</h4>
-                <ul class="space-y-3 text-sm text-gray-400">
-                    <li><a href="index.html" class="hover:text-purple-400 transition-colors">→ Ana Sayfa</a></li>
-                    <li><a href="hizmetler.html" class="hover:text-purple-400 transition-colors">→ Hizmetler</a></li>
-                    <li><a href="vaka-calismalari.html" class="hover:text-purple-400 transition-colors">→ Bize Güvenenler</a></li>
-                    <li><a href="iletisim.html" class="hover:text-purple-400 transition-colors">→ İletişim</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-white mb-6 text-lg">Yasal</h4>
-                <ul class="space-y-3 text-sm text-gray-400">
-                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">→ Gizlilik Politikası</a></li>
-                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">→ Kullanım Şartları</a></li>
-                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">→ KVKK</a></li>
-                    <li><a href="yasal.html" class="hover:text-purple-400 transition-colors">→ Çerez Politikası</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-white mb-6 text-lg">Destek</h4>
-                <div class="bg-[#1A1B2E] p-6 rounded-xl border border-white/5">
-                    <p class="text-gray-400 text-xs mb-3">Destek için buraya yazabilirsiniz:</p>
-                    <a href="mailto:info@auraaı.com" class="text-purple-400 hover:text-white text-sm font-bold flex items-center gap-2 transition-colors">
-                        <i class="fa-solid fa-envelope"></i> info@auraaı.com
-                    </a>
-                </div>
-            </div>
+    <!-- TOOLS -->
+    <section class="tools section">
+      <div class="container">
+        <span class="section-label reveal">Teknolojiler</span>
+        <h2 class="tools__title reveal">Kullandığımız Araçlar</h2>
+        <div class="tools__grid">
+          <div class="tool-item reveal">
+            <span class="tool-item__name">n8n</span>
+          </div>
+          <div class="tool-item reveal stagger-1">
+            <span class="tool-item__name">Make</span>
+          </div>
+          <div class="tool-item reveal stagger-2">
+            <span class="tool-item__name">Zapier</span>
+          </div>
+          <div class="tool-item reveal stagger-3">
+            <span class="tool-item__name">HubSpot</span>
+          </div>
+          <div class="tool-item reveal">
+            <span class="tool-item__name">OpenAI</span>
+          </div>
+          <div class="tool-item reveal stagger-1">
+            <span class="tool-item__name">Airtable</span>
+          </div>
         </div>
-        
-        <div class="border-t border-purple-500/10 pt-8 mt-4 text-center">
-            <p class="text-gray-500 text-sm">© 2025 <span class="gradient-text font-bold">Aura AI</span>. Tüm Hakları Saklıdır.</p>
-            <p class="text-gray-600 text-xs mt-2">Yapay Zeka ile Güçlendirilmiş 🤖</p>
-        </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
-        
-        // Mobil Menü Toggle
-        const btn = document.getElementById('mobileMenuBtn');
-        const menu = document.getElementById('mobileMenu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-        
-        // Navbar Scroll Efekti
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if(window.scrollY > 50) {
-                nav.classList.add('navbar-scrolled');
-            } else {
-                nav.classList.remove('navbar-scrolled');
-            }
-        });
-    </script>
+    <!-- CTA -->
+    <section class="cta-section section">
+      <div class="cta-section__bg"></div>
+      <div class="container">
+        <div class="cta-section__inner">
+          <span class="section-label reveal">Hazır mısınız?</span>
+          <h2 class="cta-section__title reveal">
+            Hemen<br><span>Başlayalım.</span>
+          </h2>
+          <p class="cta-section__sub reveal">
+            Hangi hizmete ihtiyacınız olduğundan emin değil misiniz? Ücretsiz keşif görüşmesinde birlikte değerlendirelim.
+          </p>
+          <div class="reveal">
+            <a href="iletisim.html" class="btn btn--primary btn--lg">Ücretsiz Görüşme Al →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__logo">AURA AI</span>
+          <p class="footer__tagline">Geleceği bugünden otomatize et.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <span class="footer__col-title">Sayfalar</span>
+            <div class="footer__col-links">
+              <a href="hizmetler.html">Hizmetler</a>
+              <a href="vaka-calismalari.html">Vaka Çalışmaları</a>
+              <a href="iletisim.html">İletişim</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title">Yasal</span>
+            <div class="footer__col-links">
+              <a href="yasal.html">Gizlilik Politikası</a>
+              <a href="yasal.html">Kullanım Koşulları</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title">Sosyal</span>
+            <div class="footer__col-links">
+              <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="#" target="_blank" rel="noopener">Instagram</a>
+              <a href="#" target="_blank" rel="noopener">Twitter / X</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2025 Aura AI. Tüm hakları saklıdır.</span>
+        <span class="footer__made">Türkiye'de <span>♥</span> ile yapıldı.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
