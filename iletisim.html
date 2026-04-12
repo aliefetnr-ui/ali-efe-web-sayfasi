@@ -3,250 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aura AI İletişim — Ücretsiz danışmanlık görüşmesi için bizimle iletişime geçin." />
+  <meta name="description" content="Aura AI İletişim — Ücretsiz keşif görüşmesi için hemen başvurun. İşletmenizin otomasyon potansiyelini birlikte değerlendirelim." />
   <title>İletişim — Aura AI</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* ── CONTACT LAYOUT ── */
-    .contact {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+    .contact { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
 
     .contact__left {
-      padding: 200px 80px 100px 48px;
+      padding: 180px 72px 80px 48px;
       border-right: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      display: flex; flex-direction: column;
       position: relative;
     }
+    .contact__title { font-family: var(--font-display); font-size: clamp(3.5rem, 6vw, 6.5rem); font-weight: 800; line-height: 0.92; letter-spacing: -0.04em; margin-bottom: 28px; }
+    .contact__title span { color: transparent; -webkit-text-stroke: 1.5px rgba(var(--accent-rgb), 0.7); }
+    .contact__desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; max-width: 400px; margin-bottom: 56px; }
 
-    .contact__left-top {
-      flex: 1;
-    }
+    .contact__promises { display: flex; flex-direction: column; gap: 0; margin-bottom: 56px; border-top: 1px solid var(--border); }
+    .contact__promise { display: flex; align-items: flex-start; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .contact__promise-icon { width: 32px; height: 32px; border: 1px solid rgba(var(--accent-rgb),0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .contact__promise-icon svg { width: 14px; height: 14px; stroke: var(--accent); }
+    .contact__promise-text h4 { font-family: var(--font-display); font-size: 0.875rem; font-weight: 700; margin-bottom: 3px; }
+    .contact__promise-text p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
 
-    .contact__title {
-      font-family: var(--font-display);
-      font-size: clamp(4rem, 7vw, 7rem);
-      font-weight: 800;
-      line-height: 0.92;
-      letter-spacing: -0.04em;
-      margin-bottom: 40px;
-    }
-
-    .contact__title span {
-      color: transparent;
-      -webkit-text-stroke: 1.5px rgba(var(--accent-rgb), 0.7);
-    }
-
-    .contact__desc {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-      max-width: 380px;
-      margin-bottom: 64px;
-    }
-
-    .contact__info {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-
-    .contact__info-item {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .contact__info-label {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    .contact__info-value {
-      font-size: 0.95rem;
-      color: var(--text);
-      transition: color 0.3s;
-    }
-
+    .contact__info { display: flex; flex-direction: column; gap: 20px; margin-bottom: 48px; }
+    .contact__info-item { display: flex; flex-direction: column; gap: 4px; }
+    .contact__info-label { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
+    .contact__info-value { font-size: 0.9rem; color: var(--text); transition: color 0.3s; }
     .contact__info-value:hover { color: var(--accent); }
 
-    .contact__bottom {
-      padding-top: 48px;
-      border-top: 1px solid var(--border);
-    }
-
-    .contact__social {
-      display: flex;
-      gap: 28px;
-    }
-
-    .contact__social a {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      transition: color 0.3s;
-    }
-
+    .contact__social { display: flex; gap: 24px; margin-top: auto; padding-top: 40px; border-top: 1px solid var(--border); }
+    .contact__social a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); transition: color 0.3s; }
     .contact__social a:hover { color: var(--text); }
 
-    /* ── FORM ── */
-    .contact__right {
-      padding: 200px 48px 100px 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+    /* FORM */
+    .contact__right { padding: 180px 48px 80px 72px; display: flex; flex-direction: column; }
+    .form__title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .form__subtitle { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 48px; line-height: 1.6; }
 
-    .contact__form-title {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 48px;
-    }
+    .form { display: flex; flex-direction: column; gap: 0; }
+    .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .form__row .form__group:first-child { border-right: 1px solid var(--border); }
 
-    .form {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .form__group {
-      border-bottom: 1px solid var(--border);
-      padding: 24px 0;
-      position: relative;
-      transition: border-color 0.3s;
-    }
-
+    .form__group { border-bottom: 1px solid var(--border); padding: 22px 0; position: relative; transition: border-color 0.3s; }
+    .form__row .form__group { padding: 22px 0; }
+    .form__row .form__group:first-child { padding-right: 28px; }
+    .form__row .form__group:last-child { padding-left: 28px; }
     .form__group:first-child { border-top: 1px solid var(--border); }
+    .form__group:focus-within { border-bottom-color: var(--accent); }
 
-    .form__group:focus-within {
-      border-bottom-color: var(--accent);
-    }
+    .form__label { display: block; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; transition: color 0.3s; }
+    .form__group:focus-within .form__label { color: var(--accent); }
 
-    .form__label {
-      display: block;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-      transition: color 0.3s;
+    .form__input, .form__select, .form__textarea {
+      width: 100%; background: transparent; border: none; outline: none;
+      font-family: var(--font-body); font-size: 0.95rem; color: var(--text); padding: 0; resize: none;
     }
+    .form__input::placeholder, .form__textarea::placeholder { color: var(--text-dim); }
+    .form__select { cursor: pointer; -webkit-appearance: none; appearance: none; }
+    .form__select option { background: #111; color: var(--text); }
+    .form__textarea { min-height: 90px; line-height: 1.7; }
 
-    .form__group:focus-within .form__label {
-      color: var(--accent);
-    }
-
-    .form__input,
-    .form__select,
-    .form__textarea {
-      width: 100%;
-      background: transparent;
-      border: none;
-      outline: none;
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      color: var(--text);
-      padding: 0;
-      resize: none;
-    }
-
-    .form__input::placeholder,
-    .form__textarea::placeholder {
-      color: var(--text-dim);
-    }
-
-    .form__select {
-      cursor: none;
-      -webkit-appearance: none;
-      appearance: none;
-    }
-
-    .form__select option {
-      background: var(--bg-3);
-      color: var(--text);
-    }
-
-    .form__textarea {
-      min-height: 100px;
-      line-height: 1.7;
-    }
-
-    .form__submit {
-      margin-top: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .form__submit-note {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      max-width: 200px;
-    }
+    .form__footer { margin-top: 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .form__note { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; max-width: 220px; }
+    .form__note strong { color: rgba(255,255,255,0.4); font-weight: 500; }
 
     .form__success {
-      display: none;
-      padding: 24px;
+      display: none; padding: 24px 28px;
       border: 1px solid rgba(var(--accent-rgb), 0.3);
-      margin-top: 32px;
       background: rgba(var(--accent-rgb), 0.05);
+      margin-top: 28px;
     }
-
-    .form__success p {
-      font-size: 0.9rem;
-      color: var(--accent);
-    }
-
     .form__success.visible { display: block; }
+    .form__success p { font-size: 0.9rem; color: var(--accent); line-height: 1.6; }
+    .form__error-msg { font-size: 0.75rem; color: #ef4444; margin-top: 4px; display: none; }
+    .form__group.has-error .form__error-msg { display: block; }
+    .form__group.has-error { border-bottom-color: #ef4444; }
 
-    @media (max-width: 1024px) {
-      .contact {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-      .contact__left {
-        padding: 160px 32px 80px;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-      }
-      .contact__right {
-        padding: 80px 32px 100px;
-      }
+    @media (max-width: 1200px) {
+      .contact { grid-template-columns: 1fr; min-height: auto; }
+      .contact__left { padding: 160px 32px 64px; border-right: none; border-bottom: 1px solid var(--border); }
+      .contact__right { padding: 64px 32px 80px; }
     }
-
     @media (max-width: 768px) {
-      .contact__left { padding: 140px 24px 64px; }
-      .contact__right { padding: 64px 24px 80px; }
-      .form__submit { flex-direction: column; align-items: flex-start; }
-      .form__submit .btn { width: 100%; justify-content: center; }
+      .contact__left { padding: 140px 24px 56px; }
+      .contact__right { padding: 56px 24px 80px; }
+      .form__row { grid-template-columns: 1fr; }
+      .form__row .form__group { border-right: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+      .form__footer { flex-direction: column; align-items: flex-start; }
+      .form__footer .btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-  <div class="preloader">
-    <span class="preloader__logo">AURA AI</span>
-    <div class="preloader__bar"></div>
-  </div>
-
+  <div class="preloader"><span class="preloader__logo">AURA AI</span><div class="preloader__bar"></div></div>
   <div class="noise"></div>
   <div class="cursor-dot"></div>
   <div class="cursor-ring"></div>
@@ -260,12 +114,9 @@
         <a href="iletisim.html" style="color:var(--text)">İletişim</a>
       </div>
       <a href="iletisim.html" class="nav__cta"><span>Başlayalım →</span></a>
-      <button class="nav__burger" aria-label="Menüyü aç/kapat">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav__burger" aria-label="Menüyü aç/kapat"><span></span><span></span><span></span></button>
     </div>
   </nav>
-
   <div class="mobile-menu">
     <div class="mobile-menu__links">
       <a href="hizmetler.html">Hizmetler</a>
@@ -280,14 +131,53 @@
 
       <!-- LEFT -->
       <div class="contact__left">
-        <div class="contact__left-top">
+        <div>
           <span class="section-label reveal">İletişim</span>
           <h1 class="contact__title reveal">
             Hadi<br><span>Konuşalım.</span>
           </h1>
           <p class="contact__desc reveal">
-            İşletmenizi otomasyonla büyütmek için doğru adrestesiniz. Ücretsiz keşif görüşmesiyle başlayalım.
+            İşletmenizin otomasyon potansiyelini birlikte değerlendirelim. 30 dakikalık ücretsiz keşif görüşmesinde hangi süreçlerin otomatize edileceğini ve ne kadar tasarruf sağlanabileceğini konuşuyoruz.
           </p>
+
+          <div class="contact__promises reveal">
+            <div class="contact__promise">
+              <div class="contact__promise-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+              </div>
+              <div class="contact__promise-text">
+                <h4>Taahhüt Yok</h4>
+                <p>Keşif görüşmesi tamamen ücretsiz ve bağlayıcı değil. Teklif sunmamızı istemeyebilirsiniz.</p>
+              </div>
+            </div>
+            <div class="contact__promise">
+              <div class="contact__promise-icon">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.2"/><path d="M12 7V12L15 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg>
+              </div>
+              <div class="contact__promise-text">
+                <h4>24 Saat İçinde Yanıt</h4>
+                <p>Formunuzu aldıktan sonra 24 saat içinde size ulaşıyor ve görüşme tarihini belirliyoruz.</p>
+              </div>
+            </div>
+            <div class="contact__promise">
+              <div class="contact__promise-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15 9H22L16 14L18 21L12 17L6 21L8 14L2 9H9L12 2Z" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <div class="contact__promise-text">
+                <h4>Size Özel Analiz</h4>
+                <p>Görüşmede size hazır şablonlar değil, işletmenize özel otomasyon fırsatları sunuyoruz.</p>
+              </div>
+            </div>
+            <div class="contact__promise">
+              <div class="contact__promise-icon">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M7 11V7C7 4.8 8.8 3 11 3H13C15.2 3 17 4.8 17 7V11" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <div class="contact__promise-text">
+                <h4>Gizlilik Garantisi</h4>
+                <p>Paylaştığınız bilgiler yalnızca teklif hazırlamak amacıyla kullanılır, üçüncü taraflarla paylaşılmaz.</p>
+              </div>
+            </div>
+          </div>
 
           <div class="contact__info reveal">
             <div class="contact__info-item">
@@ -299,100 +189,104 @@
               <span class="contact__info-value">İstanbul, Türkiye</span>
             </div>
             <div class="contact__info-item">
-              <span class="contact__info-label">Yanıt Süresi</span>
-              <span class="contact__info-value">24 saat içinde</span>
+              <span class="contact__info-label">Çalışma Saatleri</span>
+              <span class="contact__info-value">Hafta içi 09:00 – 18:00</span>
             </div>
           </div>
         </div>
 
-        <div class="contact__bottom reveal">
-          <div class="contact__social">
-            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="#" target="_blank" rel="noopener">Instagram</a>
-            <a href="#" target="_blank" rel="noopener">Twitter / X</a>
-          </div>
+        <div class="contact__social reveal">
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">Twitter / X</a>
         </div>
       </div>
 
       <!-- RIGHT -->
       <div class="contact__right">
-        <h2 class="contact__form-title reveal">Ücretsiz Keşif Görüşmesi</h2>
+        <h2 class="form__title reveal">Ücretsiz Keşif Görüşmesi</h2>
+        <p class="form__subtitle reveal">Formu doldurun, 24 saat içinde sizinle iletişime geçelim.</p>
 
         <form class="form reveal" id="contactForm" novalidate>
 
-          <div class="form__group">
-            <label class="form__label" for="name">Ad Soyad *</label>
-            <input
-              class="form__input"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Adınız ve soyadınız"
-              required
-              autocomplete="name"
-            />
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="name">Ad *</label>
+              <input class="form__input" type="text" id="name" name="name" placeholder="Adınız" required autocomplete="given-name" />
+              <span class="form__error-msg">Bu alan zorunludur.</span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="surname">Soyad *</label>
+              <input class="form__input" type="text" id="surname" name="surname" placeholder="Soyadınız" required autocomplete="family-name" />
+              <span class="form__error-msg">Bu alan zorunludur.</span>
+            </div>
           </div>
 
           <div class="form__group">
             <label class="form__label" for="email">E-Posta *</label>
-            <input
-              class="form__input"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="ornek@sirketiniz.com"
-              required
-              autocomplete="email"
-            />
+            <input class="form__input" type="email" id="email" name="email" placeholder="ornek@sirketiniz.com" required autocomplete="email" />
+            <span class="form__error-msg">Geçerli bir e-posta adresi giriniz.</span>
           </div>
 
-          <div class="form__group">
-            <label class="form__label" for="company">Şirket Adı</label>
-            <input
-              class="form__input"
-              type="text"
-              id="company"
-              name="company"
-              placeholder="Şirketinizin adı"
-              autocomplete="organization"
-            />
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="company">Şirket Adı</label>
+              <input class="form__input" type="text" id="company" name="company" placeholder="Şirketinizin adı" autocomplete="organization" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="size">Şirket Büyüklüğü</label>
+              <select class="form__select" id="size" name="size">
+                <option value="" disabled selected>Seçiniz...</option>
+                <option value="1-5">1–5 kişi</option>
+                <option value="6-20">6–20 kişi</option>
+                <option value="21-50">21–50 kişi</option>
+                <option value="51+">51+ kişi</option>
+              </select>
+            </div>
           </div>
 
           <div class="form__group">
             <label class="form__label" for="service">İlgilendiğiniz Hizmet *</label>
             <select class="form__select" id="service" name="service" required>
-              <option value="" disabled selected>Seçiniz...</option>
+              <option value="" disabled selected>Hangi hizmet sizi ilgilendiriyor?</option>
               <option value="cold-email">Cold Email Otomasyonu</option>
-              <option value="musteri-hizmetleri">Müşteri Hizmetleri AI</option>
+              <option value="musteri">Müşteri Hizmetleri AI</option>
               <option value="satis">Satış Otomasyonu</option>
               <option value="is-akisi">İş Akışı Tasarımı</option>
-              <option value="diger">Diğer / Genel Danışmanlık</option>
+              <option value="birden-fazla">Birden Fazla Hizmet</option>
+              <option value="bilmiyorum">Emin Değilim / Genel Danışmanlık</option>
             </select>
+            <span class="form__error-msg">Lütfen bir hizmet seçiniz.</span>
           </div>
 
           <div class="form__group">
-            <label class="form__label" for="message">Mesajınız</label>
-            <textarea
-              class="form__textarea"
-              id="message"
-              name="message"
-              placeholder="İşletmeniz ve ihtiyaçlarınız hakkında kısaca bilgi verin..."
-              rows="4"
-            ></textarea>
+            <label class="form__label" for="challenge">En Büyük Operasyonel Zorluğunuz Nedir?</label>
+            <textarea class="form__textarea" id="challenge" name="challenge" placeholder="Örn: Haftada çok fazla manuel e-posta yazıyoruz, takipler kaçıyor..." rows="3"></textarea>
           </div>
 
-          <div class="form__submit">
-            <p class="form__submit-note">
-              Bilgileriniz gizli tutulur. Spam göndermiyoruz.
+          <div class="form__group">
+            <label class="form__label" for="budget">Yaklaşık Bütçe (Aylık)</label>
+            <select class="form__select" id="budget" name="budget">
+              <option value="" disabled selected>Seçiniz...</option>
+              <option value="under-1000">1.000 ₺ altı</option>
+              <option value="1000-3000">1.000 – 3.000 ₺</option>
+              <option value="3000-8000">3.000 – 8.000 ₺</option>
+              <option value="8000+">8.000 ₺ üzeri</option>
+              <option value="unknown">Henüz bilmiyorum</option>
+            </select>
+          </div>
+
+          <div class="form__footer">
+            <p class="form__note">
+              <strong>Spam göndermiyoruz.</strong> Bilgileriniz yalnızca görüşme hazırlığı için kullanılır.
             </p>
-            <button type="submit" class="btn btn--primary btn--lg">
-              Gönder →
-            </button>
+            <button type="submit" class="btn btn--primary btn--lg">Gönder →</button>
           </div>
 
           <div class="form__success" id="formSuccess">
-            <p>Mesajınız alındı. En geç 24 saat içinde sizinle iletişime geçeceğiz.</p>
+            <p>✓ &nbsp;Mesajınız alındı. En geç 24 saat içinde sizinle iletişime geçeceğiz. Görüşmeye kadar <a href="vaka-calismalari.html" style="color:var(--accent)">vaka çalışmalarımıza</a> göz atabilirsiniz.</p>
           </div>
+
         </form>
       </div>
 
@@ -402,75 +296,58 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer__brand">
-          <span class="footer__logo">AURA AI</span>
-          <p class="footer__tagline">Geleceği bugünden otomatize et.</p>
-        </div>
+        <div class="footer__brand"><span class="footer__logo">AURA AI</span><p class="footer__tagline">Geleceği bugünden otomatize et.</p></div>
         <div class="footer__links">
-          <div class="footer__col">
-            <span class="footer__col-title">Sayfalar</span>
-            <div class="footer__col-links">
-              <a href="hizmetler.html">Hizmetler</a>
-              <a href="vaka-calismalari.html">Vaka Çalışmaları</a>
-              <a href="iletisim.html">İletişim</a>
-            </div>
-          </div>
-          <div class="footer__col">
-            <span class="footer__col-title">Yasal</span>
-            <div class="footer__col-links">
-              <a href="yasal.html">Gizlilik Politikası</a>
-              <a href="yasal.html">Kullanım Koşulları</a>
-            </div>
-          </div>
-          <div class="footer__col">
-            <span class="footer__col-title">Sosyal</span>
-            <div class="footer__col-links">
-              <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="#" target="_blank" rel="noopener">Instagram</a>
-              <a href="#" target="_blank" rel="noopener">Twitter / X</a>
-            </div>
-          </div>
+          <div class="footer__col"><span class="footer__col-title">Sayfalar</span><div class="footer__col-links"><a href="hizmetler.html">Hizmetler</a><a href="vaka-calismalari.html">Vaka Çalışmaları</a><a href="iletisim.html">İletişim</a></div></div>
+          <div class="footer__col"><span class="footer__col-title">Yasal</span><div class="footer__col-links"><a href="yasal.html">Gizlilik Politikası</a><a href="yasal.html">Kullanım Koşulları</a></div></div>
+          <div class="footer__col"><span class="footer__col-title">Sosyal</span><div class="footer__col-links"><a href="#" target="_blank" rel="noopener">LinkedIn</a><a href="#" target="_blank" rel="noopener">Instagram</a><a href="#" target="_blank" rel="noopener">Twitter / X</a></div></div>
         </div>
       </div>
-      <div class="footer__bottom">
-        <span class="footer__copy">© 2025 Aura AI. Tüm hakları saklıdır.</span>
-        <span class="footer__made">Türkiye'de <span>♥</span> ile yapıldı.</span>
-      </div>
+      <div class="footer__bottom"><span class="footer__copy">© 2025 Aura AI. Tüm hakları saklıdır.</span><span class="footer__made">İstanbul'da <span>♥</span> ile yapıldı.</span></div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
   <script>
-    // Contact form — basic frontend validation + success state
     const form = document.getElementById('contactForm');
     const success = document.getElementById('formSuccess');
 
     form?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const required = form.querySelectorAll('[required]');
       let valid = true;
 
-      required.forEach(field => {
-        if (!field.value.trim()) {
+      form.querySelectorAll('[required]').forEach(field => {
+        const group = field.closest('.form__group');
+        const isEmpty = !field.value.trim();
+        const isInvalidEmail = field.type === 'email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
+
+        if (isEmpty || isInvalidEmail) {
           valid = false;
-          field.closest('.form__group').style.borderBottomColor = '#ef4444';
-          setTimeout(() => {
-            field.closest('.form__group').style.borderBottomColor = '';
-          }, 2000);
+          group.classList.add('has-error');
+        } else {
+          group.classList.remove('has-error');
         }
       });
 
       if (valid) {
-        form.style.opacity = '0.4';
-        form.style.pointerEvents = 'none';
+        const btn = form.querySelector('[type="submit"]');
+        btn.textContent = 'Gönderiliyor...';
+        btn.disabled = true;
         setTimeout(() => {
-          form.style.opacity = '';
-          form.style.pointerEvents = '';
-          form.reset();
+          form.querySelectorAll('.form__input, .form__select, .form__textarea').forEach(f => f.value = '');
+          btn.textContent = 'Gönder →';
+          btn.disabled = false;
           success.classList.add('visible');
-          setTimeout(() => success.classList.remove('visible'), 6000);
-        }, 800);
+          success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          setTimeout(() => success.classList.remove('visible'), 8000);
+        }, 900);
       }
+    });
+
+    form?.querySelectorAll('[required]').forEach(field => {
+      field.addEventListener('input', () => {
+        field.closest('.form__group').classList.remove('has-error');
+      });
     });
   </script>
 </body>
