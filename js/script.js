@@ -10,18 +10,28 @@
 const preloader = document.querySelector('.preloader');
 const preloaderBar = document.querySelector('.preloader__bar');
 
+let preloaderHidden = false;
+
 function hidePreloader() {
-  if (!preloader) return;
+  if (preloaderHidden || !preloader) return;
+  preloaderHidden = true;
   if (preloaderBar) preloaderBar.style.width = '100%';
   setTimeout(() => {
     preloader.classList.add('hidden');
     triggerHeroReveal();
-  }, 400);
+  }, 300);
 }
 
+// Try on DOMContentLoaded (earlier, more reliable than window.load)
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(hidePreloader, 500);
+});
+
+// Also try on window.load
 window.addEventListener('load', hidePreloader);
-// Fallback
-setTimeout(hidePreloader, 2500);
+
+// Hard fallback — always fires
+setTimeout(hidePreloader, 1500);
 
 // ============================================
 // HERO REVEAL
